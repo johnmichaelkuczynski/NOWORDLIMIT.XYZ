@@ -1,0 +1,18 @@
+which this volume deals. | Introduction and Preface
+Bertrand Russell | The evidence for the truth of physics is that perceptions occur as the laws of physics would lead us to expect. | Introduction and Preface
+Bertrand Russell | Physics must be interpreted in a way which tends towards idealism, and perception in a way which tends towards materialism. | Introduction and Preface
+Bertrand Russell | It is necessary to exercise judgment as to the parts of the theory which are definitively established and the parts which are likely to be modified in the near future. | Introduction and Preface
+Bertrand Russell | The purpose of the book is philosophical, it has been my endeavour to avoid physical and mathematical technicalities as far as possible. | Introduction and Preface
+Bertrand Russell | The philosophical outcome is much less dear than it seemed to be when less was known. | Introduction and Preface
+Sartre | As has appeared from the theory of relativity, 'action' is more fundamental than energy in physical theory | The Nature of the Problem
+Sartre | It is certainly rash to assume that the minute structure of the world resembles that which is found to suit large-scale phenomena, which may be only statistical averages. | The Nature of the Problem
+Sartre | we do not know why, of a number of atoms whose electrons are not in minimum orbits, some jump at one time and some at another, just as we do not know why some atoms of radio-active substances break down while others do not. | The Nature of the Problem
+Sartre | there are grave difficulties in reconciling the quantum theory with the undulatory theory of light | The Nature of the Problem
+Sartre | It is clear that what we know is the changes of energy when an atom emits light, and we know that in the case of hydrogen or ionized helium these changes are measured by . | The Nature of the Problem
+Sartre | To assume orbits and so on, though proper as a help to the imagination, is hardly sufficiently justified by the analogy of large-scale processes, since the quantum principle itself shows the danger of relying upon this analogy. | The Nature of the Problem
+Sartre | It is clear, however, that it affects a scientific economy by substituting for the merely hypothetical steady motions of Bohr's atoms a set of quantities representing what we really know—namely, the radiations that come out of the region in which the atom is supposed to be. | The Nature of the Problem
+Sartre | Nature seems to be full of revolutionary occurrences as to which we can say that, if they take place, they will be of one of several possible kinds, but we cannot say that they will take place at all, or, if they will, at what time. | The Nature of the Problem
+Sartre | Possibly this difficulty may be overcome, and it may be found that the transition from one orbit to another can be continuous. | The Nature of the Problem
+Sartre | if atoms might as well be possessed of free will, limited, however, to one of several possible choices. | The Nature of the Problem
+Sartre | Do we know that, between one orbit and the next, other orbits are geometrically possible? | The Nature of the Problem
+Eddington | "The axiom of parallel displacement is the expression of this comparability, and the comparability postulated seems to be almost the minimum conceivable." | Pre-Relativity Physics

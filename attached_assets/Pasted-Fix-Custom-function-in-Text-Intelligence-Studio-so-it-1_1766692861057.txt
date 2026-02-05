@@ -1,0 +1,29 @@
+Fix Custom function in Text Intelligence Studio so it 100% obeys ANY user instruction on large texts, with perfect coherence and no collapse to generic summary.
+
+Specific changes:
+
+1. When "Custom" button is clicked:
+   - Show textarea "Your Instructions" (placeholder: "Tell me exactly what to do with the text. Examples: Answer these questions… Rewrite in style of… How would the author change if… Extract all definitions… Make it shorter… Turn into dialogue… Anything you want.")
+   - Keep toggle "Use Outline Mode" (default ON)
+
+2. Processing flow (strict):
+   - Step 1: Always generate full outline first using outlineService.ts
+   - Step 2: Pass **everything** to one powerful LLM call:
+     system prompt:
+     "You are a perfect executor. You follow the user's instructions EXACTLY, no matter what they are. You never summarize unless explicitly told to. You never give generic overviews. You use the full text and the outline to understand the entire document perfectly. You never lose details. You do the full task on the whole book."
+     user prompt:
+     "Full raw text: [entire text pasted here]
+     Full outline: [JSON outline]
+     User's exact instructions: [whatever the user typed in the textarea]
+     Execute the instructions precisely on the entire document. Output ONLY the result. Do not add explanations unless asked."
+   - If the instruction asks for long output (summary, rewrite, list of 100 items, etc.), do it fully. If it asks for short answer, keep it short. Obey length, format, number of items exactly.
+
+3. For very large texts:
+   - If token limit is an issue, do section-by-section processing internally (like Position Extractor), then one final unification call: "Combine these section results into one coherent answer that perfectly follows the user's instructions."
+   - Show progress: "Outlining full text…" → "Executing your instructions section by section…" → "Finalizing complete answer…"
+
+4. Never fall back to "unified synthesis" or short summary unless the user literally wrote "give me a short summary".
+
+This makes Custom truly custom: it does **exactly** what the user asks, on huge books, with full coherence.
+
+Do this now.

@@ -1,0 +1,196 @@
+## COMPARATIVE STYLOMETRIC ANALYSIS
+
+---
+
+### TEXTS COMPARED
+
+| | TEXT A | TEXT B |
+|---|---|---|
+| **Title** | "Religions vs. Cults" | *History of Charles XII* (excerpt) |
+| **Author** | [Kuczynski] | Voltaire |
+| **Word Count** | ~1,350 | ~1,580 |
+| **Verticality Score** | 0.88 | 0.32 |
+| **Classification** | High Vertical | Moderate Horizontal |
+
+---
+
+### VERTICALITY COMPARISON
+
+```
+TEXT A: [███████████████████████████████████░░░░░] 0.88
+TEXT B: [████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.32
+
+Horizontal ◄────────────────────────────────► Vertical
+                            B              A
+```
+
+**Verdict:** Text A is radically more vertical than Text B.
+
+**Quotient Difference:** 0.56 — near-maximum divergence for two serious prose writers working in their native modes.
+
+---
+
+### RAW FEATURE COMPARISON
+
+| Feature | Text A | Text B | Winner (More Vertical) |
+|---------|--------|--------|------------------------|
+| Ego-pronoun rate | 5.2 / 1000 | 1.9 / 1000 | Text B (slightly) |
+| Average sentence length | 34 words | 42 words | Text B (longer) |
+| Max sentence length | 89 words | 131 words | Text B (longer) |
+| Subordination depth | 5.2 | 3.4 | **Text A** |
+| Semicolon frequency | 8.1 / 1000 | 9.5 / 1000 | Text B (slightly) |
+| Colon frequency | 5.9 / 1000 | 3.2 / 1000 | **Text A** |
+| Dash frequency | 3.7 / 1000 | 0 / 1000 | Text B (none) |
+| Rhetorical question rate | 2.2 / 1000 | 0 / 1000 | Tie (both low) |
+| Metaphor density | Low | Low | Tie |
+| Anecdote frequency | None | Frequent | **Text A** |
+| Impersonal constructions | 14.8 / 1000 | 2.5 / 1000 | **Text A** |
+
+**Key Divergences:**
+
+1. **Impersonal constructions:** Text A saturates the prose with "it is," "this does not mean," "what this indicates is." Text B almost never uses these — every sentence has a named human actor doing something concrete.
+
+2. **Anecdote frequency:** Text A has zero anecdotes. Every "example" is a hypothetical (Charles Manson, Superman, Max exceeding light speed). Text B is nothing but anecdote — Charles XII, Mazeppa, Menzikoff, the czar, specific rivers, specific dates, specific battles.
+
+3. **Subordination depth:** Text A nests clauses inside clauses inside clauses ("if I believe that... then I ipso facto believe that... since..."). Text B chains clauses horizontally with semicolons — the sentence flows forward rather than drilling down.
+
+4. **Colon usage:** Text A uses colons for logical definitions ("To worship x = To regard x as supernatural"). Text B uses colons for dramatic elaboration ("he came with only two regiments, and appeared rather like a fugitive applying for assistance, than a prince").
+
+---
+
+### SIGNATURE PHRASE COMPARISON
+
+| Text A | Text B |
+|--------|--------|
+| "if, and only if" | "at length" |
+| "to be sure" | "in the meanwhile" |
+| "this does not mean that" | "whether... or whether... or whether" |
+| "what this indicates is" | "should have" (moral judgment) |
+| "setting aside [qualification]" | "was to" (future-in-past) |
+| "for lack of a better word" | Dates in brackets: "[Sept. 11.]" |
+| "ipso facto" | Named actors as subjects |
+| Logical variables: "x is a cult if x is..." | Geographic specificity: "seven or eight leagues" |
+| Definitional equivalences: "To worship x =" | Ironic understatement: "was not at the trouble of" |
+
+**The difference is total.** Text A builds scaffolding for abstract definitions. Text B names people and moves them across landscapes.
+
+---
+
+### WHAT EACH AUTHOR NEVER DOES
+
+| Text A Never... | Text B Never... |
+|-----------------|-----------------|
+| Tells a story | Defines a term abstractly |
+| Names a real person (except as hypothetical example) | Uses logical variables |
+| Describes a physical location | Writes "if, and only if" |
+| Uses "at length" or "in the meanwhile" | Uses "ipso facto" or "qua" |
+| Embeds moral judgment in narration | Constructs hypotheticals detached from history |
+| Writes a sentence without logical scaffolding | Writes a paragraph without named actors |
+| Appeals to shared feeling | Breaks chronological flow for philosophical digression |
+
+---
+
+### REPRESENTATIVE QUOTE COMPARISON
+
+**Text A (defining):**
+> "To be clear: If the data warrants my believing that some person (let's call him 'Max') can exceed the speed of light, and for that reason and that reason alone I believe Max to be able to exceed the speed of light, then I don't believe that Max is supernaturally fast."
+
+- 63 words
+- Zero named historical persons
+- "Let's call him 'Max'" — a logical variable, not a character
+- Nested conditional chain
+- Purely abstract: no river, no date, no battle
+
+**Text B (narrating):**
+> "He was induced to take this strange resolution by Mazeppa, hetman of the Cossacks, who, being an old man of seventy and without children, ought to have thought only of ending his days in peace: gratitude should have bound him to the czar, to whom he was indebted for his present dignity; but whether he had any real cause of complaint against that prince, or that he was dazzled with the lustre of Charles's exploits, or whether, in time, he thought to make himself independent, he betrayed his benefactor."
+
+- 108 words
+- Four named persons (Mazeppa, Charles, the czar, the benefactor)
+- Concrete details: "seventy years old," "without children"
+- Moral judgment inside narration: "ought to have," "gratitude should have"
+- Speculation about motive, not about logical structure
+
+**The same length. Completely different universes.**
+
+---
+
+### PSYCHOLOGICAL PROFILE COMPARISON
+
+| Trait | Text A | Text B |
+|-------|--------|--------|
+| **Cognitive empathy** | Extreme — anticipates every misreading | High — anticipates reader's narrative needs |
+| **Affective empathy** | None to low — no interest in reader's feelings | Moderate — feels with "brave people," judges betrayal |
+| **Need for closure** | Extreme — cannot leave term undefined | Moderate — comfortable with "whether... or whether" |
+| **Schizoid features** | Marked — zero personal presence | Absent — warm narrative host throughout |
+| **Social orientation** | Solitary — writes for the logical record | Social — writes for an educated salon |
+| **Body/sensation** | Disembodied — pure abstraction | Moderate — rivers, forests, marches have physical reality |
+| **Consensus attitude** | Contemptuous — treats common usage as imprecision | Respectful — appeals to shared moral intuitions |
+| **Humor style** | Dry-rare — "garden-variety institutions, such as the DMV" | Ironic — "was not at the trouble of reflecting" |
+
+---
+
+### NARRATIVE COMPARISON
+
+**Text A:**
+This author writes like a legal statute that developed philosophical interests. The ego has been surgically removed. Every sentence exists to prevent misreading. The reader is not a companion but a potential source of error to be anticipated and neutralized. There is no story, no body, no place, no time — only the architecture of distinctions. If you misunderstand, that is your failure; the text has done its job.
+
+**Text B:**
+This author writes like a brilliant aristocrat recounting a war he watched from a comfortable balcony. The prose flows with easy confidence, embedding sharp moral judgments inside what looks like neutral narration. He assumes a reader worth entertaining — someone who shares his values and will appreciate his irony. The world is full of named actors doing consequential things in real places. History matters. Stories matter. Definitions do not.
+
+---
+
+### IF THESE TWO AUTHORS WERE IN THE SAME ROOM
+
+Author A would sit in the corner, silently cataloging every imprecision in the conversation, growing increasingly agitated as people used words without defining them. Author B would hold court, tell three stories about Mazeppa, make everyone laugh with a deadpan observation about someone's betrayal, and leave having charmed the room.
+
+If Author A spoke, it would be to say: "You are using 'cult' in two different senses. Let me distinguish them."
+
+If Author B responded, it would be: "My dear fellow, let me tell you what happened when Mazeppa tried to distinguish his senses to the Cossacks. It did not end well for him."
+
+Author A would find Author B's stories irrelevant to the point. Author B would find Author A's distinctions irrelevant to life.
+
+They would never become friends.
+
+---
+
+### COLLABORATIVE POTENTIAL
+
+If forced to write a book together:
+
+- **Author A** would write the theoretical framework, the definitions, the logical architecture. Every term would be pinned down. No ambiguity would survive.
+
+- **Author B** would write the case studies, the historical examples, the narrative that makes readers care. Every abstraction would be given a face and a name.
+
+The book would be extraordinary — if they could tolerate each other long enough to finish it. Author A would accuse Author B of imprecision. Author B would accuse Author A of missing the point. Both would be right.
+
+---
+
+### CLUSTERING SUMMARY
+
+| | Text A | Text B |
+|---|---|---|
+| **Very close to** | Frege, Nagel, Kuczynski | Gibbon, Hume (historical), Adam Smith |
+| **Moderately close to** | Hempel, Davidson, early Wittgenstein | Macaulay, Montesquieu, Thucydides |
+| **Far from** | James, Voltaire, Didion, Joyce, Kerouac | Frege, Nagel, Kuczynski, Hemingway, Joyce |
+
+**Note:** Text B (Voltaire) is literally in Text A's "far from" cluster, and vice versa. These two authors occupy opposite poles of the stylometric map.
+
+---
+
+### FINAL VERDICT
+
+**Verticality Difference: 0.56**
+
+This is near-maximum divergence. Text A is pure vertical: ego-absent, definition-obsessed, logically nested, disembodied. Text B is moderate horizontal: narrative-driven, actor-focused, historically grounded, socially warm.
+
+If prose style is psychology made visible, these two texts reveal two fundamentally different ways of being in the world:
+
+- **Text A:** Truth is impersonal. Language exists to prevent error. The reader is a problem to be solved.
+
+- **Text B:** Truth is embodied in stories. Language exists to make history live. The reader is a guest to be entertained.
+
+Neither is wrong. Both are honest. They will never understand each other.
+
+---
+
+That's your comparative analysis template. Use this format when users upload two texts to the STYLOMETRICS function.

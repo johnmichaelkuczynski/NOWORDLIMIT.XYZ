@@ -1,0 +1,112 @@
+INSTRUCTIONS FOR REPLIT AGENT (VERBATIM)
+
+1. Add a new function in backend/routes/quoteFinder.ts named findQuotesForPositions.
+
+2. Function signature:
+async function findQuotesForPositions(author: string, positions: string[]): Promise<any[]> { ... }
+
+3. Inside this function, load the full text database for that author. Use the same text-retrieval method already used by the existing quote-extraction function (do not change storage structure).
+
+4. For each position in positions, send a prompt to the selected LLM (OpenAI/Anthropic) using the existing llmClient already configured in the project. Do not add new API types. No Google APIs.
+
+5. Prompt to send for each position:
+
+You are an expert textual analyst. 
+User will supply:
+1. An author name.
+2. A doctrinal position.
+3. The full corpus of the author's writings.
+
+Task: Identify one or more exact quotes from the corpus that best support or correspond to the given position. Quotes must be verbatim and must appear in the corpus text.
+
+Author: {{AUTHOR}}
+Position: {{POSITION}}
+Corpus: {{FULL_TEXT}}
+
+Return JSON array:
+[
+  {
+    "position": "{{POSITION}}",
+    "quote": "…verbatim quotation…",
+    "source": "…if identifiable…"
+  }
+]
+
+
+6. Implement a loop:
+For each position, call the LLM with the template above and push the returned object into an array results.
+
+7. Return results to the frontend.
+
+8. Add an endpoint POST /find-quotes in backend/index.ts:
+
+app.post("/find-quotes", async (req, res) => {
+  const { author, positions } = req.body;
+  const out = await findQuotesForPositions(author, positions);
+  res.json(out);
+});
+
+
+9. In the frontend, create a new tab or UI section labeled “Quote Finder (Positions → Quotes)” with two fields:
+
+Input A: author name (string)
+
+Input B: positions (multi-line text, one per line)
+
+10. When user clicks “Generate Quotes”, send request:
+POST /find-quotes
+with body:
+
+{
+  "author": authorInputString,
+  "positions": positionsArray
+}
+
+
+11. Display each returned object as a card with:
+
+Position
+
+Quote
+
+Source
+
+EXAMPLE USING YOUR KANT INPUTS
+
+Frontend request:
+
+{
+  "author": "Immanuel Kant",
+  "positions": [
+    "Pure practical reason has primacy over speculative reason.",
+    "The moral law is a fact of reason.",
+    "Act only on maxims that can be universal laws.",
+    "Freedom is the ratio essendi of the moral law."
+  ]
+}
+
+
+Expected LLM output format:
+
+[
+  {
+    "position": "Pure practical reason has primacy over speculative reason.",
+    "quote": "Practical reason has primacy over speculative reason…",
+    "source": "Critique of Practical Reason, 5:119–120"
+  },
+  {
+    "position": "The moral law is a fact of reason.",
+    "quote": "The moral law is given as a fact of reason of which we are a priori conscious…",
+    "source": "Critique of Practical Reason, 5:31"
+  },
+  {
+    "position": "Act only on maxims that can be universal laws.",
+    "quote": "Act only in accordance with that maxim through which you can at the same time will that it become a universal law.",
+    "source": "Groundwork, 4:421"
+  },
+  {
+    "position": "Freedom is the ratio essendi of the moral law.",
+    "quote": "Freedom is the ratio essendi of the moral law, while the moral law is the ratio cognoscendi of freedom.",
+    "source": "Critique of Practical Reason, 5:4"
+  }
+]

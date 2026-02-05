@@ -1,0 +1,603 @@
+﻿Appendix 1
+The Rudiments of Logic
+1.1	The concept of an inference
+To make an inference is to form a new belief on the basis of an old one. Here is an example. My friend Larry has been evicted from his apartment. I let him stay with me until he finds a new place to live. I notice that, shortly after Larry moves in, all of my money and valuables start disappearing. I also notice that purchases that I didn’t make are appearing on my credit card bills. I know that nobody other than Larry had access to my money, valuables, and credit cards. So I infer that Larry has stolen my money and valuables and illicitly used my credit cards. (Thanks, Larry!)
+Inferential knowledge is indirect knowledge. Non-inferential knowledge is direct knowledge. There is some reason to believe that all knowledge is inferential. (This issue is discussed in Chapter 10.) In any case, it’s clear that some knowledge is relatively direct. My knowledge that I am now typing on a keyboard is more direct than my knowledge that heat is molecular motion.
+1.2	Inductive inference vs. deductive inference
+A premise is a belief that one either has or that one is willing to accept for argument’s sake. An inference always begins with certain premises and ends with a conclusion that one accepts on the basis of those premises.
+There are two kinds of inferences: deductive and inductive. An inference is deductive if the premises are intended to make the conclusion 100% likely to be correct. An inference is inductive if the premises are intended to support the conclusion. It’s no easy matter to say what it is exactly for P to “support” Q. It’s typically said that P “supports” Q if P, supposing it to be true, makes it probable but not certain that Q is true. This is what we’ll say for the time being. (But, strictly speaking, it’s false. The reasons for this are given in Section 1.9.)
+Consider the following argument:
+Premise 1: Smith drives a Rolls Royce.
+Premise 2: Smith lives in a large house.
+Conclusion: Smith is very wealthy.
+Here the premises make it probable that Smith is rich, but they don’t make it certain. It’s possible that Smith stole the Rolls Royce or bought it on credit; and it’s possible that, even though Smith lives in a nice house, he cannot afford it and is now in debt. So the premises don’t make the conclusion certain, even though they obviously give it some weight; and the argument is therefore inductive.
+Contrast that argument with this one:
+Premise 1: Smith drives a Rolls Royce.
+Premise 2: A Rolls Royce is a car.
+Conclusion: Smith drives a car.
+Here the premises, supposing them true, make it 100% likely that the conclusion is true. The conclusion can thus be deductively, as opposed to inductively, inferred from the premises.
+1.3	The concept of entailment
+If one statement can be deductively inferred from another, we say that the second entails the first. Let P be the statement that x is a square, and let Q be the statement that x has more than two sides. Since it is impossible for Q to be false if P is true, P entails Q.
+1.4	The concept of confirmation
+If one statement can be inductively inferred from another, we say that the second confirms the first. Let P* be the statement that Smith drives a Rolls Royce and wears extremely expensive clothes, and let Q* be the statement that Smith is wealthy. Since it is unlikely that Q is false if P is true, P* confirms Q*.
+(Strictly speaking, this is only approximately correct. Supposing that Smith drives a Rolls Royce and wears expensive clothes, it isn’t really all that unlikely that he isn’t wealthy—it’s only relatively unlikely. More exactly, if those premises are true, it is more unlikely that he’s not wealthy than it is if, other things being equal, those same premises are false. We’ll clarify this point in Section 1.9.)
+True statements can confirm false ones, but they cannot entail them. Since “Smith drives a Rolls Royce and lives in a big house [etc.]” entails “Smith lives in a house,” the second cannot possibly be false if the first is true. But since “Smith drives a Rolls Royce and lives in a big house [etc.]” merely confirms “Smith is wealthy,” the second can be false if the first is true.
+1.5	Validity vs. soundness
+A valid argument is a deductive argument whose premises, if true, in fact give a probability of 100% to the conclusion. In other words, a valid argument is an argument whose premises are supposed to give 100% probability to the conclusion and whose premises in fact give 100% probability to the conclusion.
+A valid argument can have false premises. For an argument to be valid it is necessary only that if the premises were true, then there would be a 100% chance that the conclusion is true. It may be that Smith doesn’t drive a Rolls Royce or any kind of car for that matter. But it’s still the case that if Smith did drive a Rolls Royce, then, given that all Rolls Royces are cars, there would be no chance that Smith didn’t drive a car.
+A sound argument is a valid argument with true premises. (For example: JMK is a human; all humans are mammals; therefore, JMK is a mammal.)
+A valid argument cannot possibly have true premises and a false conclusion, but it can have false premises and a false conclusion or false premises and a true conclusion. We’ll discuss this in class.
+1.6	Two kinds of induction
+There are two kinds of inductive inference: induction by enumeration and inference to the best explanation.
+If, on the basis of the fact that you know of many x’s that are y’s and of no x’s that aren’t y’s, you infer that all x’s are y’s or that the next x you encounter is a y, you’ve performed a case of induction by enumeration.
+Here is an example. You’ve seen a million swans. They were all white. (Moreover, you knew in each case that what you were seeing was a white swan—you didn’t think it was, for example, a beige duck.) You’ve never seen, or otherwise come to know of, any non-white swan. On this basis, you infer that all swans are white and, therefore, that, if you ever encounter another swan, it will be white.
+If, in order to account for something of which you have knowledge, you posit the existence of something of which you don’t have knowledge; you have made an inference to the best explanation.
+All theories are cases of inference to the best explanation. All the theories put forth by Einstein, Darwin, Freud are instances of this mode of inference. Inference to the best explanation is a very powerful form of inference. (In fact, we’ll see in Section 1.7. that it is the only form of non-deductive inference. So-called “induction by enumeration,” to the extent that it isn’t a spurious method of inference, collapses into inference to the best explanation.)
+The conclusions of inferences to the best explanation are always causal statements. You posit the existence of X, which you don’t know of, in order to explain Y, which you do know of, because, in your judgment, X, if it existed, would cause Y to occur.
+Example #3 is a case of inference to the best explanation. I infer that Larry stole my credit cards (etc.) because the relevant data is easy to explain on the assumption that he did, the reason being that his doing so would have generated that data, and hard to explain on the assumption that he didn’t, the reason being that it’s unclear what else could have generated that data.
+To take another example: if you infer that a mouse has been eating the cheese in your cupboard, it’s because a mouse’s doing so would have generated the relevant data (e.g., the tiny little footprints inside the cupboard), and it’s not clear what else could have generated that data.
+In some cases, the conclusions of inferences to the best explanation aren’t themselves causal statements. Our knowledge that water consists of H2O molecules isn’t itself a causal statement. Cause-effect relations hold between distinct entities (e.g., thunder and lightning). Water and H2O aren’t distinct.
+That said, it is believed that water consists of H2O molecules only because its being so composed would cause various things to happen that do in fact happen. So even though the conclusion of an inference to the best explanation need not itself be a causal statement, all inferences to the best explanation are causal inferences.
+1.7	A fact about induction by enumeration (This section is hard. Skip on first reading.)
+Induction by enumeration isn’t nearly as powerful a form of inference as inference to the best explanation. Given only that every single one of the 5,000 first editions you’ve ever come across smelled like pipe tobacco, you cannot reasonably infer that all first editions smell like pipe tobacco. What if all of those first editions were the property of your pipe-smoking friend Larry? In that case, you’d have good to reason to suspect that their smelling like pipe tobacco had to do, not with their being first editions, but with their being things that had been around Larry. By the same token, so far as you are entitled to infer that all first editions smell like pipe tobacco, it’s only to the extent that you have reason to believe that a thing’s smelling like pipe tobacco is rooted in its being a first edition. But that means that, if the data entitles you to infer that all first editions smell like pipe tobacco, it’s only because it also entitles you to accept some inference to the best explanation (one to the effect that a thing’s being a first edition is, for some reason or other, responsible for its smelling like pipe tobacco). In general, induction by enumeration is parasitic on inference to the best explanation. (In Chapter 12, it is shown how a failure to see this underlies the spurious belief that there is no non-deductive, inferential knowledge.)
+1.8	Two kinds of entailment
+Just as there are two kinds of inductive inference, so there are two kinds of deductive inference. In other words, there are two kinds of entailment: formal entailment and informal entailment.
+An entailment is “informal” if the syntactic structures of the sentences involved are not what make the entailment go through. Consider the following entailment:
+# if Smith is tall and Jones snores, then Smith is tall.
+This sentence has the form:
+If P and Q, then P.
+If a sentence has that form, it constitutes a valid inference. So # is made true by its form—that is, by its syntax.
+But not all valid entailments hold in virtue of syntax. In fact, most do not. Consider the sentence:
+^	If Smith weighs 1000 pounds, and Jones weighs 80 pounds, then Smith weighs more than Jones.
+Obviously ^ is valid. But its form (i.e., its syntax) isn’t what makes it true, since that sentence has the same syntax as:
+^^ If Smith weighs 80 pounds, and Jones weighs 1000 pounds, then Smith weighs more than Jones,
+which is obviously invalid.
+1.9	Confirmation revisited
+A moment ago we said that for (i) “Smith drives a Rolls Royce and wears expensive clothes” to confirm (ii) “Smith is wealthy” is for (i), supposing it correct, to make it likely but not certain that (ii) is true.
+This definition of “confirmation” isn’t 100% accurate. Although it’s a datum that (i) confirms (ii), (i) surely doesn’t make (ii) more than 50% likely to be correct. There are too many penniless con-artists out there who drive Rolls Royces and wear expensive clothes.
+Also, a statement that is already more likely than not to be true can be further confirmed; and this cannot be reconciled with the idea that for P to confirm Q is for P to make Q more than 50% likely to be correct. A story will make this clear. You and I are homicide detectives. We found Smith’s fingerprints on the murder weapon and we already found that his alibi was bogus. Thus, we already have good reason to believe him guilty. But we find a videotape of him at the crime scene. Obviously the video-tape further confirms his guilt. The crime-scene footage doesn’t make it more than 50% likely that Smith is guilty, since he was already more than 50% likely to be guilty.
+The right definition of “confirms” is as follows. P confirms Q iff Q is more likely to be true if P is true than it is if, other things being equal, P is false. Let’s suppose that the only data we have about Smith is very generic. We know that he’s an adult male who has a driver’s license. One day, we discover that Smith drives a Rolls Royce. Obviously, we have more reason than before to believe that Smith is wealthy. So Smith’s driving a Rolls Royce is evidence, however feeble, that he’s wealthy. But if we then discover that Smith stole the Rolls Royce he was driving, that evidence has been neutralized.
+Thus, if we don’t know anything about individual x’s financial situation, and we then discover that x drives a Rolls Royce but otherwise our knowledge of x has remained unchanged, we have more reason than before to believe x to be wealthy. In other words, x is wealthy is more likely to be true if x drives a Rolls Royce is true than it is if, holding everything else constant, x drives a Rolls Royce is false. Thus, for (i*) x drives a Rolls Royce to confirm (ii*) x is wealthy is for (ii*) to be more likely to be correct if (i*) is correct than it is if, holding everything else constant, (i*) is false.
+2.0	Some notational conventions relevant to formal logic
+Statements of the form “if P, then Q” are known as “conditionals.” The expression “→” stands for “if...then.” So “P→Q” means “if P, then Q.” Thus,
+(1) Smith has four cars→Smith has more than one car
+means that
+(2) If Smith has four cars, then Smith has more than one car.
+Thus, “P→Q” can be taken to mean that P implies Q. Thus “→” expresses implication.
+As we will use the expression “→,” the expression “P→Q” means that P entails Q, i.e., that it is impossible for P to be true if Q is false. In other words, “→” expresses what is sometimes referred to as strict entailment. (P strictly entails Q if, supposing that P is true, there is no way that Q can be false. In this work, “entailment” and “strict entailment” are synonymous expressions.)
+This isn’t how “→” is typically used. It is typically used to express a much weaker notion known as material implication. This term is defined below.
+Biconditionals and “↔”: Statements of the form “if P then Q, and if Q then P” are known as “biconditionals.” When stated in non-artificial notation, “if P then Q, and if Q then P” is typically compressed into “P iff Q” (or “P just in case Q” or “P exactly if Q”). We’ll compress it into: “P↔Q.” So “Smith is a father↔Smith is a male parent” says the same thing as “Smith is a father iff Smith is a male parent.”
+Parentheses as indicators of scope: Parentheses are used to indicate how sentences are to be grouped together. Consider the sentence:
+(3) “snow is white and grass is green→grass is green.”
+(3) is ambiguous between:
+(4) it’s the case that snow is white; and it’s also the case that, if grass is green, then grass is green
+and
+(5) supposing that it’s the case that snow is white and that grass is green, it follows that grass is green.
+(4) and (5) have different meanings. (5) doesn’t say that snow is white. Nor does it say that grass is green. It says that if it’s the case that both grass is green and snow is white, then it’s also the case that grass is green. (4), on the other hand, says (among other things) that snow is white. So (4) is false in universes where snow is green. But (5) is true in such universes. (In fact, (5) is true in every possible universe.) Since there are circumstances where (4) is false but (5) is true, they don’t have the same meanings.
+Modern symbolic logic gives us a way of avoiding the laborious ad hoc methods just used to disambiguate (3). To express (5), we say:
+(3.5) (snow is white and grass is green)→grass is green.
+And to express (4), we say:
+(3.4) snow is white and (grass is green→grass is green).
+In general, any two co-parenthetical sentences are more tightly bonded to each other than either is to anything that isn’t co-parenthetical with those sentences.
+Negation: ~P is the negation of P. Thus, “~(snow is not white)” is the negation of “snow is white.” This means that “~(snow is not white)” says the same thing as “it is not the case that snow is white.”
+“~(snow is not white)” doesn’t say that snow is black; nor does it say that snow is green. It says only that snow isn’t white; everything else is left open.
+The negation of a sentence isn’t the same thing as the “opposite” of that sentence. In modern logic, the word “opposite” has no meaning. The use of the “~” makes it easy to negate statements that would otherwise be hard to negate without prejudging important issues or using cumbersome constructions. Consider the sentence:
+(%) If John likes to listen to Mozart, then Larry likes to listen to Brahms or the sky is blue.
+In natural language one way to negate (%) is to put the expression “it is not the case that’’ in front of it. The result of this operation is:
+(%1) “it is not the case that if John likes to listen to Mozart, then Larry likes to listen to Brahms or the sky is blue.”
+But there’s a problem. (%1) is ambiguous, as it could mean either:
+(%2) either the sky is blue or it is not the case Larry likes to listen to Brahms if John likes to listen to Mozart
+or
+(%3) it isn’t the case that the sky is blue; nor is it the case that Larry likes to listen to Brahms if John likes to listen to Mozart.
+It takes work to come up with each of these two sentences. Each of the original two sentences had to be reparsed; and in each case this reparsing involved the use of methods that, being ad hoc, could be arrived at only through a creative insight and logical inference. Such Herculean measures shouldn’t have been necessary, given that the objective was only to perform a purely grammatical operation.
+This problem doesn’t arise in our special symbolic notation. % can be unambiguously disambiguated in a mechanical, thought-free manner. One need only put a ‘~’ before % and then enclose the part one wants negated in parentheses. Thus, the symbolic analogue of:
+(%2S) ~(Larry likes to listen to Brahms if John likes to listen to Mozart) or the sky is blue;
+and the symbolic analogue of (%3) is:
+(%3S) ~(either the sky is blue or (Larry likes to listen to Brahms if John likes to listen to Mozart)).
+In (%3S), the scope of the negation-sign is % in its entirety. (Were it not for the parentheses immediately flanking its second disjunct, (%3S) would be ambiguous between a conditional whose consequent was a disjunction and a disjunction one of whose disjuncts was a conditional.) In (%2S), the scope of the negation-sign is confined to the sentence “if John likes to listen to Mozart, then Larry likes to listen to Brahms.”
+Thus, in our symbolic notation, parentheses are used is to make it clear how much scope is to be given to a given operator. An “operator” is an expression that, given one or more sentences, yields a new sentence. Examples of operators are: “it is not the case that,” “or,” “and,” “because,” “it is possible that,” and “Fred believes that.”
+“Fred believes that” is an operator because, when given the sentence “snow is white,” it yields a new sentence, namely: “Fred believes that snow is white.” “And” is an operator because, when given the sentences “snow is white” and “grass is green,” it yields the sentence “snow is white and grass is green.” “Because” is an operator for the same reason mutatis mutandis. (Since “snow is white because grass is green” has a very different meaning from “grass is green because snow is white,” “because” operates on ordered pairs of sentences.)
+When an operator occurs in some sentence S, the scope of that operator is identical with the set of sentences out of which it is creating a new sentence.
+Consider the sentence:
+(i) “Jim is tired because he went jogging and his wife Sally is a very demanding person.”
+This is ambiguous. It could mean either:
+(ii) Jim’s wife Sally is a very demanding person; moreover, Jim is tired because he went jogging
+or
+(iii) There are two reasons why Jim is tired: first he went jogging; second, Jim’s wife Sally is a very demanding person.
+Thus, in English (or any other natural language), use of the expression “because” may yield a sentences that is ambiguous and, in addition, can be disambiguated only by successfully doing a certain amount of syntax-chopping and, therefore, logic-chopping.
+But in our symbolic notation, one can disambiguate (i) without having to do any logic-chopping. One need only put parentheses around the two sentences that one wants joined by the “because.” Thus, the symbolic analogue of (ii) is:
+(iiS) (Jim is tired because he went jogging) and Sally is a very demanding person.
+And the symbolic analogue of (iii) is:
+(iiiS) Jim is tired because (he went jogging and Sally is a very demanding person).
+Negation in relation to the use of parentheses: Parentheses make it clear what is being negated. (A) ~snow is white or grass is green
+is ambiguous. It could mean either
+(B) either it’s the case that grass is green or it’s the case that snow isn’t white
+or
+(C) it isn’t the case that (snow is white or grass is green).
+(C) is equivalent with:
+(D) snow isn’t white and grass isn’t green.
+(B) isn’t equivalent with (D), since (B), unlike (D), is true in a world where grass is green.
+(A1) ~(snow is white or grass is green)
+says the same thing as (C), and
+(A2) ~(snow is white) or grass is green
+says the same thing as (B). Thus, the parenthesis make it clear how much scope a given occurrence of “~” has—that is, they make it clear how much it is negating.
+The modal operators—the box and the diamond: “□P” means “necessarily P” and “(P” means “possibly P.”
+Note concerning the modal operators: The box and the diamond are to be given minimal scope. So “□P→Q” is not to mean that it’s necessarily the case that P implies Q. Rather, it is to mean that, if it’s necessarily true that P is the case, then it follows that Q is the case. “□(P→Q),” on the other hand, does say that it’s necessarily the case that P implies Q.
+The non-exclusive meaning of “or”: We’ll use “or” in the non-exclusive sense. So, as we’ll be using it “either Smith is having dinner or Smith is in London” is consistent with Smith’s being in London while having dinner. In order for “P or Q” to be true, all that is necessary is one of those two statements be true. So there are three circumstances under which “P or Q” is true: (i) P is true (but Q is false); (ii) Q is true (but P is false); (iii) P is true and Q is also true.
+In contemporary logic, both formal and informal, “or” is always used in the non-exclusive sense.
+2.1	Some general principles relevant to formal logic
+Deduction is truth-preserving: A true statement cannot entail a false one. In other words, a false statement cannot be validly inferred from a true one.
+Deduction is transitive (a corollary of the fact that it’s truth-preserving): R is a transitive relation if, supposing that x bears to R to y, and y bears R to z, x bears R to z. (The relation of being less tall than is transitive.) Deduction is transitive. A statement entails anything entailed by any one of its consequences. For example:
+If Smith is an elephant, then Smith is a mammal.
+If Smith is a mammal, then Smith has hair,
+Therefore, if Smith is an elephant, then Smith has hair.
+Induction isn’t truth-preserving: A true statement may confirm a false one. The statement “Smith smokes eight packs of cigarettes a day” certainly confirms “Smith won’t live to be a hundred.” But there is still a chance that he will live to be a hundred.
+Induction isn’t transitive (a corollary of the fact that it isn’t truth-preserving): A corollary of the non-truthpreserving character of induction is that induction is not transitive. In other words, given only that P confirms Q and that Q confirms R, it doesn’t follow that P confirms R. Let P, Q, and R be defined as follows:
+P: Smith is a morbidly obese man with a heart condition and terminal cancer who is due to be executed in five hours.
+Q: Smith is a morbidly obese man with a heart condition and terminal cancer who is going to die soon.
+R: Smith will soon die of some ailment related to his obesity, his heart-condition, or his cancer.
+P confirms Q; Q confirms R. But P doesn’t confirm R. P makes it a veritable certainty that Smith will be executed in five hours and, therefore, that he won’t die for reasons having to do with his heart or weight or cancer-situation. So P disconfirms R, even though it confirms Q, which, unlike P, does confirm R.
+Contraposition, conversion, inversion (not very important—skip on a first reading): These are operations that are performed on conditional statements (statements of the form “if P, then Q”).
+The contrapositive of (P→Q) is (~Q→~P).
+Thus, the contrapositive of “if Bob is a dog, then Bob is a mammal” is “if Bob is not a mammal, then Bob is not a dog.”
+Statements are equivalent with their contrapositives. In other words, (P→Q)↔(~Q→~P). Bob’s being a dog entails his being a mammal iff his being a non-mammal entails his being a non-dog.
+The converse of (P→Q) is (Q→P). Thus, the converse of “if Bob is a human, then Bob is a mammal” is “if Bob is a mammal, then Bob is human.”
+As this example shows, statements are not generally equivalent with their converses. It’s only when both antecedent and consequent are equivalent that a given conditional is equivalent with its converse. (In (P→Q), P is the antecedent and Q is the consequent.) Thus, the converse of “if Bob is a father then Bob is a male parent is true” is true, since antecedent and consequence are equivalent.
+The inverse of (P→Q) is (not-P→not-Q). Thus, the inverse of “if Bob is a human, then Bob is a mammal” is “if Bob is not a human, then Bob is not a mammal.”
+As this example shows, statements are not generally equivalent with their inverses. It’s only when both antecedent and consequent are equivalent that conditional is equivalent with its inverse. This is because the converse of a proposition is equivalent with its inverse. In other words, (Q→P)↔(not-P→not-Q). The reason why they’re equivalent is that the second is the contrapositive of the first. (As we know, contraposing a conditional produces an equivalent conditional.)
+A sentence-level operation is truth-preserving if, when given a true sentence as input, it cannot possibly yield a false sentence as output. Contraposition is truth-preserving. Conversion and inversion are not.
+Exercise: Prove that, given any conditional sentence S, the contrapositive of S is equivalent with S. Further, prove that it is not the case that, given any conditional sentence S, the converse of S is equivalent with S. Finally, prove that, given any conditional sentence S, the inverse of S is equivalent with the converse of S.
+Material vs. strict vs. formal entailment:
+Logicians distinguish between “formal” and “material” implication, and they distinguish each from “strict” implication (which is usually referred to as “strict entailment”).
+“Strict implication” is synonymous with “entailment.” As previously stated, we’ll use “→” to express strict entailment. So, as we’ll mean it, “P→Q” says that P entails Q, i.e., that Q cannot possibly be false if P is true.
+P formally entails Q if the sentence ‹if P, then Q› is an instance of an open-sentence that is true for all values of its free variables. Thus, a formal truth is a truth that is an instance of an open-sentence that is true for all values of its free variables. “2 = 2” is a ‘formal’ truth, because it is an instance of the open-sentence
+“x = x,” which is true for all values of its variables.
+Formal implication is a kind of strict implication. Any case of formal implication is a case of strict implication, but not vice versa. The reasons for this are given in Chapters 1, 6, and 18 and also in Section 4.5 of the present.
+“P materially implies Q” is true if any one of the following three conditions is met:
+(i) P is false and Q is false; (ii) P is false and Q is true; (iii) P is true and Q is true.
+It is only if
+(iv) P is true and Q is false
+that P does not materially imply Q.
+If P is any false statement P, and Q is any statement at all, “P is true and Q is false” is false. For this reason, any false statement materially implies all statements.
+Material implication isn’t a form of implication at all. So, while it’s a fact that, for any statement Q, any given falsity “materially implies” Q, that fact is an innocuous consequence of a linguistic convention that, although it concerns the word “implication,” has nothing to do with implication at all.
+Material and strict entailment may hold between propositions or between expressions. But formal entailment holds only among expressions. It is typically held to hold among sentence-types. My strongly held 
+view is that it holds only among sentence-tokens. (See Chapter 4 for a defense of this claim.) This is the view of Peter Strawson, Jon Barwise, and John Perry. But, for the sake of brevity, we’ll use the term ‘sentence’ to stand for sentence-type and sentence-tokens.
+Modality: “Modal” means “having to do with necessity or possibility.” Possibility and necessity are properties of statements, not objects. Any statement of the form □P (‘it’s necessarily the case that P’) or (P (‘it’s possibly the case that P’) is a modal statement.
+“Necessary” and “possible” are interdefinable. “Necessary” can be defined as “not possibly not,” and “possibly” can be defined as “not necessarily not.” Thus, □P iff ~(~Q.
+Statements that affirm bearing relations, whether deductive or inductive, are modal. Thus, causal statements are modal statements, since they have the form “□(if P, then Q).”
+Causal necessity isn’t logical necessity, of course. Given that (i) I threw gasoline on the fire, it is causally necessary that (ii) the fire flared up. But (ii) isn’t a logical consequence of (i). In other words, it can’t be known through meaning-analysis or syntax-chopping that (ii) cannot be false if (i) is true.
+2.3	Some rudiments of formal logic
+(Note: during a first reading, skip the commentary.)
+1.	1.	For any x and any y, ((x = y)→(for any property F, (x has F↔y has F))).
+This principle is known as “Leibniz’s Law.”
+Some paraphrases: Given anything x and anything y, if x is the very same thing as y, then x has a given property just in case y has that property.
+If x is the very same thing as y, then anything true of the one is true of the other.
+A necessary condition for identity is sameness of properties.
+Commentary on Principle 1: In Chapter 16, it is argued that, although this principle is clearly true for “synchronic” identity-clams, it is clearly false for “diachronic” identity claims.
+2.	2.	For any x and any y, (given any property F, ((x has F↔y has F)→(x = y)))
+This principle is known as “the identity of indiscernibles.”
+Some paraphrases: Given anything x and anything y, if it the case that x has a given property just in case y has that property, then it follows that x is the very same thing as x.
+If x has no properties that y lacks and y has no properties that x lacks, then x is the very same thing as y. A sufficient condition for identity is sameness of properties.
+Commentary on Principle 2: Though it has been questioned, this principle is clearly correct. Given any object x, x has the property of being identical with x. So, given any object y, if y has every property that x has, then y has the property of being identical with x and is therefore itself identical with x.
+But, while it’s true that anything having that property is identical with x, it’s also trivial. And my suspicion is that those who claim to be asking whether the identity of indiscernibles is correct are really asking a distinct but related question, namely: given an object y that has every property had by x, setting aside those properties that are trivially had by anything identical with x (e.g., the property of being identical with x), is y identical with x?
+That question, unlike the question of whether the identity of indiscernibles is correct, isn’t trivial. That said, the answer to it does seem, quite clearly, to be “yes.” If, at any given moment, x is in the same place as y, has the same mass, is subjected to the same forces, and so on, then surely x is identical with y. (But I’m not
+100% convinced by my reasoning here. Exercise: If you think that the identity of indiscernibles is correct, prove it. If you think that it’s false, prove that.)
+Commentary on Principles 1 and 2: The identity of indiscernibles is often said to be the “converse” of Leibniz’s Law.
+This isn’t correct. For P to be the converse of Q, it is necessary that P be a conditional statement and that Q also be a conditional statement. Leibniz’s Law isn’t expressed by a conditional statement, and neither is the identity of indiscernibles.
+Each is expressed by a universal generalization. In each case, that universal generalization is to the effect that each member of an infinitely large class of conditional statements is correct. But neither is itself expressed by a conditional statement, and neither is itself a conditional proposition.
+Leibniz’s Law says that:
+(LL) for any x and any y, if x is identical with y, it’s impossible for x to lack any property had by y or vice versa.
+LL is not itself a conditional statement. For the same reason mutatis mutandis, the identity of indiscernibles isn’t given by a conditional statement. Therefore, neither principle is the converse of the other.
+3. P or ~P. (The law of excluded middle.)
+Any given statement is either true or false.
+Commentary: Is principle 3 correct? That depends on what the word “statement” is taken to mean. If it’s taken to mean the same thing as “sentence,” then 3 is false. The sentence (in other words, the sentence-type) “I am tired” is neither true nor false. (Certain utterances of it are true and certain utterances of it are false.)
+If the word “statement” is taken to mean the same thing as “sentence-utterance” (or, more generally, “sentence-token”), then, once again, 3 is false. If, while pointing to an empty space, I say “that elephant is in terrible pain,” what I’ve said is neither true nor false. There is no such elephant. Therefore, there is no elephant x such that I am saying that x in terrible pain. If I am saying anything at all, there is some elephant x such that what I am saying is true iff x is in terrible pain. Since there is no such elephant, I’m not saying anything; my utterance is neither true nor false.
+If the word “statement” is taken to mean the same thing as “proposition,” then 3 is correct—or so I believe. (Many disagree. See the entry titled “ambiguity vs. vagueness” in Appendix 2.) What we’re seeing here is that the so-called truths of symbolic logic—the “laws of logic”—aren’t true at all. They’re statement-forms, not statements, and therefore aren’t true or false. And it isn’t easy to find interpretations of those statement-forms that validate them. In other words, it isn’t easy to figure out what sorts of constants must replace the variables occurring in these “laws” if true sentences are to result. This suggests that modern symbolic logic (a.k.a. mathematical logic, a.k.a. formal logic) isn’t logic at all. It’s actually a small and rather unimportant branch of a discipline known as “model theory.” In Section 3.4, we’ll see why, given this fact, it follows that formal logic has little to do with the way in which any actual or even possible being reasons.
+4. ~(P and ~P). (The law of non-contradiction.) No statement is both true and false.
+5.	5.	(P and (P→Q))→Q. (Modus Ponens.) Supposing that P, and supposing that P entails Q, it follows that Q.
+Here is an example, which we’ll refer to as “SD” (short for “Smith is a dog”):
+Premise: Smith is a dog.
+Premise: If Smith is a dog, then Smith is a mammal. Conclusion: Smith is a mammal.
+Commentary: Consider the following argument, which we’ll call “SD#”:
+(1) Smith is a dog.
+(2) All dogs are mammals. (In other words, if a given thing is a dog, then that thing is a mammal.) Therefore, (3) Smith is a mammal.
+SD# is not an instance of modus ponens. To be an instance of modus ponens, an argument must have the form:
+(1*) P.
+(2*) If P then Q. therefore,
+(3*) Q.
+Let’s refer to this argument form as “AF*.” If, in AF, we replace “P” with “Smith is a dog” and we replace “Q” with “Smith is a mammal,” the result is SD, not SD#. There are no sentences such that, if the sentence-level variables in AF are replaced with those sentences, the result is SD#. Therefore, SD# is not an instance of modus ponens.
+SD# is a valid argument. But it isn’t an instance of modus ponens. It’s an instance of the following argument form:
+(1#) A has property P.
+(2#) For any x, if x has P, then x has Q. Therefore, (3#) A has Q.
+Let’s refer to this argument form as “AF#.” SD# makes a statement about SD. SD# says that SD is an instance of modus ponens. If S is a statement that says of some argument A that A is an instance of modus ponens, S is not itself an instance of modus ponens. Thus, SD# is not itself an instance of modus ponens.
+6.	6.	(P→Q) and ~Q) →~P. (Modus tollens.)
+Premise: If Smith is a dog, then Smith is a mammal.
+Premise: Smith isn’t a mammal.
+Conclusion: Smith isn’t a dog.
+7.	7.	(P and ~Q) →~(P→Q)
+Deduction is truth-preserving. No true statement entails a false one.
+Explanation: If P is actually true and Q is actually false, there is obviously a possible circumstance where P is true and Q is false. (After all, what is actual must be possible. The impossible isn’t actual.) An immediate consequence is that P doesn’t entail Q.
+8.	8.	((P→Q) and (Q→R))→(P→R) (If P entails Q and Q entails R, then P entails R.)
+Equivalent with: (P→Q)→((Q→R))→(P→R)). (If P entails Q, then P entails R provided that Q entails R.)
+Entailment is transitive. A statement entails anything that its consequences entail. This is a corollary of Principle (7).
+9. P→~~P. (The law of double-negation.)
+Premise: Smith is a professor.
+Conclusion: It’s not the case that Smith is not a professor.
+10. P→(P or Q).
+No false disjunction contains a true disjunct.
+11. ~(P or Q)↔(~P and ~Q).
+A disjunction is false iff all of its disjuncts are false.
+Exercise: Are principles (10) and (11) equivalent? Defend your answer.
+Note: there is a trivial sense in which any two (correct) logical principles are equivalent. A logical principle is, by definition, one that holds in all possible worlds. Since any two logical principles hold in all possible worlds, they are all equivalent. (That is, they are all model-theoretically equivalent.) But in this context, interpret the term “equivalent” more narrowly. Two sentences are “equivalent,” as we’ll be using this word in this particular context, if they say the same thing, the only differences between them being grammatical. (A good test of whether two statements are equivalent in this narrower sense is whether, given some natural language L (e.g., French, Arabic, Finnish), there is some sentence S of L that is clearly the translation of the one but not the other.
+12. ~P→~(P and Q).
+No true conjunction contains a false conjunct.
+13. ~(P and Q)↔(~P or ~Q).
+A conjunction is false iff at least one of its conjuncts is false.
+Exercise: Are principles (12) and (13) equivalent. Defend your answer. (Remember what we said a moment about what the word “equivalent” is to mean in this section.)
+14. ((P or Q) and ~P)→Q
+Either Jones is a plant or Smith is in the house. Jones isn’t a plant.
+Therefore Smith is in the house.
+Exercise: Are (13) and (14) equivalent? Defend your answer.
+15. ~((~P and Q)→~(P→Q))
+A false statement may entail a true one.
+Explanation: “Paris is in France and Spain is north of Sweden” entails “Paris in France.” Any given true statement is entailed by each of the infinitely many false conjunctions of which it is a conjunct. For that reason, and others, a false statement may entail a true one. (But a true one cannot entail a false one.)
+Exercise: Are (14) and (15) equivalent (in the previously discussed sense of “equivalent”)? What about (13) and (15)? Defend your answer.
+16. ~((P→Q)→(Q→P))
+Propositions aren’t always consequences of their own consequences. Conversion isn’t truth-preserving. “Paris is in France and Spain is north of Sweden” entails “Paris in France,” but not vice versa.
+17. P→P
+Any given proposition entails itself.
+Explanation: P entails P iff it isn’t possible for (P and ~P ) to be true. It isn’t possible for (P and ~P) to be true. (The law of non-contradiction forbids it.) Therefore, P entails P.
+18. ~Q→((P→Q)→~P)
+Anything that entails a falsity is itself false.
+19. (Q→(P and ~P))→~Q.
+Anything that entails a statement and its negation is false.
+Explanation: No true statement entails a false one. (Principle 18.) (P and ~P) is false. (Principle 4.) So for any proposition P, no true statement entails (P and ~P).
+20.(P→~P)→~P
+A statement is false if it entails its own negation.
+Explanation: Any given statement entails itself. (Principle 17.) So if a statement P entails its own negation, it follows that P entails (P and ~P). (P and ~P) is false. (Principle 4.) Therefore, a statement is false if it entails its own negation.
+21. (P and ~P)→Q
+There is nothing that isn’t entailed by a contradiction.
+Explanation: There is no possible circumstance where (P and ~P) is true. Therefore, for any proposition Q, there is no possible circumstance where Q is false and where (P and ~P ) is true.
+Some principles of modal logic:
+1M. P→(P. Whatever is actual is possible.
+2M. □P→P. Whatever is necessary is actual.
+3M. □P→(P. Whatever is necessary is possible.
+Given that squares must have four sides, they do have four sides.
+Commentary: This shows that there is a difference between the possible and the contingently true. The contingently true doesn’t have to be true; but the possible is sometimes necessarily, and therefore non-contingently, true.
+4M. (P→Q)↔~((P and ~Q).
+P entails Q iff P can’t be true if Q is false.
+Explanation: This is a definition, not a principle. To say that P entails Q is to say that it’s impossible for P to be true if Q is false.
+5M. □(P and Q)↔(□P and □Q).
+A conjunction is necessarily true iff each conjunct is necessarily true. Explanation: If P isn’t necessarily true, there is some possible circumstance where it’s false and where, therefore, (P and Q) is false, no matter what Q is. If (P and Q) is necessarily true, there is no circumstance where (P and Q) is false or, therefore, where either P is false or Q is false.
+6M. □~(P or Q)↔(□~P and □~Q).
+A disjunction is necessarily false iff each disjunct is necessarily false.
+Explanation: Each of P and Q must be false in every possible world in order for ~(P or Q) to be false in every possible world; and there’s no way that ~(P or Q) can be true in any possible world if each of P and Q is false in every possible world.
+7M.(□P and (~Q)→~(P→Q).
+Nothing that can be false is a consequence of anything that cannot be false.
+Explanation: If P is necessarily true (true in all circumstances), whereas Q is possibly false (false in some circumstances), there are circumstances where P is true and Q is false (i.e., P doesn’t entail Q).
+
+8M. ~(((P and (Q)→((P and Q)).
+Conjoining two possible statements may yield a necessarily false statement.
+Explanation: “On June 12, 2009, JMK did not at any time leave the state of Virginia” is possible, and so is “On June 12, 2009, JMK did at some point leave the state of Virginia.” But they’re not compossible (i.e., they cannot both be true).
+
+9M.((P and □~Q) → ~(P→Q)
+Nothing that can be true entails anything that cannot be true.
+Explanation: If P is true in some possible circumstance, whereas Q is true in none, there is a possible circumstance where P is true and Q is false, which means that P doesn’t entail Q.
+
+10M. □P→(Q→P)
+Given any necessarily true statement, there is no statement that doesn’t entail it.
+Explanation: If P is necessarily true, there are no possible circumstances where P false. A fortiori, there is no possible circumstances where, for any proposition Q, P is false and Q is true.
+
+11M.~□P→(P→Q)
+Given any statement at all, be it true or false, there is no necessarily false statement that doesn’t entail it.
+Explanation: If P is necessarily false, there is no possible circumstance where P is true. A fortiori, there is no possible circumstance where, for any proposition Q, P is true and Q is false.
+
+12M. □(P→Q)→(□P→□Q).
+A statement is necessary if it’s entailed by a necessary conditional with a necessary antecedent.
+
+Exercise: 13M can be seen as a generalization of Modus ponens. Explain why this is so. Exercise: Is “(□P→□Q)→□(P→Q)” a correct principle? Explain why or why not.
+
+13M. □P→□□P. (“S5.”)
+Whatever is necessary is necessarily necessary.
+Explanation: Point #1: If ~□□P, then there is some possible circumstance where ~□P. By contraposition, if there is no possible circumstance where ~□P, then □□P is true. Point #2: If ~□P, then there is some possible circumstance where ~P. By contraposition, if there is no possible circumstance where ~P, then □P is true. Point #3: Given the first two points, it follows that, if □P, then □□P. Conclusion: S5 is correct.
+
+14M: (P→((P.
+What is possible is possibly possible.
+3.0	Some meta-logical principles
+3.1	Model theoretic entailment
+P model-theoretically entails Q just in case there is no coherently conceivable scenario where P is true and Q is false.
+Thus, 1 + 1 = 2 model-theoretically entails triangles have three sides, even though the two propositions do not, apart from that, have anything to do with each other.
+This last point is important. There isn’t anything about shapes, let alone triangles specifically, in 1 + 1 = 2; and there isn’t anything about addition in triangles have three sides. So even though, technically, each entails the other, there is no significant sense in which the one can be inferred from the other—no sense in which a knowledge of the one yields a knowledge of the other.
+Of course, somebody who knows that 1 + 1 = 2 will probably also know that triangles have three sides, but he won’t know the one on the basis of the other. By contrast, somebody who knows that x is a case of true belief could potentially know that on the basis of the fact that x is knowledge.
+
+Commentary Model-theoretic entailment is an over-valued notion that doesn’t correspond at all well to the conception of entailment embodied in our inferential practices. Nonetheless, because, in the early ‘60’s, some branches of philosophy were (wrongly) thought to be successfully assimilated to a branch of mathematics known as “model theory”—the purpose of this branch being to study model-theoretic entailment—philosophers now tend to treat model-theoretic entailment as the fundamental kind of entailment—when, for the reasons just stated, it is in fact an entirely artificial notion.
+Model-theoretic entailment isn’t really a kind of entailment. It is a theory of entailment. Like other scientists, logicians model data. Where logic is concerned, the data in question are our intuitions concerning bearing-relations—they are to the effect that certain things entail (the negations of) certain other things. We know intuitively that
+(K1) “x is knowledge”
+entails
+(K2) “x is a true belief.”
+Logicians want to make it clear what it is that we know in knowing this; they want to make it clear what it is for the one statement to entail the second.
+Here is the proposal that they came up with:
+
+(MT) for P to entail Q is for there to be no possible circumstance in which the first is true and the second is false.
+
+Why did logicians choose MT when trying to model our intuitions concerning entailment? Because MT is extensionally correct. In other words, for any statements P and Q, P entails Q iff there is no possible circumstance where P is true and Q is false.
+But even though there are no counter-examples to it, MT is false. It’s obviously in virtue of facts about it’s
+structures of K1 and K2 that the former entails the latter. The fact that there are no models in which K1 is true and K2 is false is a mere consequence of that structural fact.
+There is a related point. MT defines entailment in terms of “possible.” This makes it viciously circular. P and Q are compossible (in other words, (P and Q) is possible) iff neither entails the negation of the other. We understand the concept of possibility only to the extent that we can understand it in terms of entailment (and other bearing-relations). So unless we’re willing to take the radically implausible view that “possible” is a primitive expression, MT defines “entailment” in terms of itself. (A primitive expression is one that doesn’t consist of other expressions. Examples of such expressions are “red” or “sweet.”) 
+To make MT non-circular, we must rid it of the word “possible.” Thus modified, MT is:
+
+(MT*) for P to “entail” Q is for there to be no circumstance in which the first is true and the second is false.
+
+In MT*, ‘circumstance’ must be mean actual circumstance. If it means anything else, MT* will be circular, like MT.
+MT* is simply wrong. There is no circumstance in which the moon is made of cheese. And there is no circumstance in which I have ten cars. So there is no circumstance in which “the moon is made of cheese” is true and in which “JMK has ten cars” is false. So, according to MT*, the former entails the latter. But the former doesn’t entail the latter. (The former “materially implies” the latter. But that’s irrelevant, since material implication isn’t entailment.) 
+So model-theoretic entailment isn’t entailment at all. It’s what a wrong theory of entailment says that it is.
+Some of the principles stated in Section 2.3, not all of them, go through only if “entails” (i.e. “→”) is taken to refer to model-theoretic entailment.
+3.2	Formal entailment
+In some cases, one statement’s following from another can be determined entirely on the basis of the structures of those sentences. For any statements P and Q, ‹P and Q› entails ‹P.› For any statement P, ‹not not P› entails ‹P.›”not-not-P entails P” is correct.
+If it can be determined that Q follows from P entirely on the basis of the structural properties of those sentences, P formally entails Q.
+For awhile, it was thought that all entailments could be formalized—that is, that whenever one statement entails another, it is entirely because of the syntactic or structural properties of those sentences. That viewpoint is simply false. Why it is false is explained in Chapter 1, Section 6.0.
+3.3	Formal entailment a relation between expressions
+Only expressions have syntax. So, since P formally entails Q only if P and Q have certain syntactic properties, the relation of formal entailment holds between sentences (or sentence-tokens), whereas the relations of model-theoretic entailment holds between propositions, the same being true of “informal, non-model-theoretic entailment,” which I will now define.
+3.4	The one, genuinely important kind of entailment: the informal, non-model-theoretic kind
+Let P1 be the statement John knows that 1 + 1 = 2, and let Q1 be the statement John believes that 
+1 + 1 = 2. P1 model-theoretically entails Q1. In other words, there is no coherently conceivable scenario where P1 is true and Q1 is false. But the entailment relation that holds between P1 and Q1 is not just an instance of model-theoretic entailment; it is also an instance of another, more significant kind of entailment. This is made clear by the fact that there is a marked difference between the relation that holds between, on the one hand, P1 and Q1 and, on the other hand, the entailment-relation that holds between:
+
+P2: 1 + 1 = 2
+
+and
+
+Q2: triangles have three sides.
+
+The difference is clear. Given the information contained in P1, it can be deduced that Q1 is true. Q1 is, in some important sense, “implicit in” or “contained in” P1. But Q2 isn’t implicit in P2. There isn’t anything concerning triangles in P2—not implicitly or explicitly.
+When we make inferences, they are not of the strictly model-theoretic kind. Rather, they are of the kind where the statement that is inferred is, in some way or other, contained in the statement from which the inference is made. So the inference from:
+
+P1: John knows that 1 + 1 = 2
+
+to
+
+Q1: John believes that 1 + 1 = 2
+
+is an instance of the conception of entailment that is embodied in our actual inferential practices. But that inference isn’t formal; it isn’t like the inference from snow is white and grass is green to snow is white: the formal properties of P1 and Q1 leave it open whether Q1 follows from P1. (After all, those sentences are formally identical with
+
+P3: John is sure that 1 + 1 = 2
+
+and
+
+Q3: John doubts that 1 + 1 = 2.
+
+P1 is syntactically just like P3, and Q1 is syntactically just like Q3. But there is no legitimate inference from P3 to Q3; and since those sentences are syntactically just like P1 and Q1, respectively, it follows there is no legitimate, purely syntactic inference from P1 to Q1.
+Although, as previously discussed, P1 model-theoretically entails Q1, P1 also entails Q1 in some other, much more robust sense. In Kuczynski (2007), I put forth a theory as to the nature of this other, more important sort of entailment.
+3.5	The ampliative character of deduction
+It is often said that, if P entails Q, there is nothing in Q that is not also in P. So deduction (i.e., the identifying of entailments) is, according to this, “non-ampliative”—the consequent doesn’t “amplify” the antecedent (i.e., it doesn’t say anything not said by the antecedent).
+This position is obviously false where model-theoretic entailment is concerned. (Triangles are shapes model-theoretically entails Socrates is identical with Socrates, but there is nothing in the content of the first that has anything to do with Socrates.) And it’s obviously false where formal entailment is concerned. (“Smith is tall” formally entails “either Smith is tall or grass is green,” but there is nothing about grass in “Smith is tall.”)
+3.6	The most important kind of entailment: the non-formal, non-model theoretic kind
+The statement:
+
+(P) 1 + 1 = 2
+
+mode-theoretically entails
+
+(Q) the interior angles of a Euclidean triangle add up to 180°.
+This is all very well. But it’s patently obvious that you can’t infer the truth of P from that of Q, or vice versa. In general, model-theoretical entailment is inferentially useless. A precondition for knowing that P entails Q is that you know, first, that P cannot be false and, second that Q cannot be false. But if you know this, there’s no need to infer the one from the other. What this shows is that knowledge of model-theoretic entailments are parasitic on some other, much more fundamental sort of entailment. And what this shows is that knowledge of model-theoretic entailments have no significant role in the thought-processes of any possible cogitator.
+Unlike model theoretic entailment, formal entailment isn’t inferentially useless. But our ability to make formal inferences is parasitic on our ability to make informal inferences. Actually, so-called “formal” inferences are informal ones.
+Formal entailment is a relation that holds between expressions (more specifically, sentences or sentence-tokens). This means that we have to know what sentences mean to make inferences that are licensed by formal entailments. To infer
+
+(S1) “snow is white”
+
+from
+
+(S2) “snow is white and grass is green,”
+
+I have to know what those two sentences mean, at least up to a point. I have to know that “and” doesn’t mean what is in fact meant by “or.” I also have to know that “snow is white” and “grass is green” are complete sentences—that they aren’t drivel, like “bunga berka der.”
+So in order to infer S1 from S2, I have to know the truth of some proposition of the form:
+
+(S3) given that S2 means such and such and that S1 means thus and such, it follows that S1 is true, given that S2 is true.
+
+But S3 is not formally true. First of all, it’s a proposition, not a sentence. But even the corresponding sentence (the result of putting the verbiage in question in quotation marks) isn’t formally true. It’s an analytic, logical, informal truth.
+Second reason: Formal truths, and thus formally true entailments, are instances of universal generalizations that, although analytically true, are not themselves formal truths. The sentence:
+
+(S4) “if snow is white and grass is green, then snow is white”
+
+is formally true. But why? Because
+
+(S5) for all sentences P and Q, ‹(P and (P→Q))→P›, 
+
+though true, isn’t formally true. It instances (e.g., “if snow is white and grass is green, then snow is white”), but not it itself. This is because it has the same form as:
+
+(S6) For no sentences P and Q, ‹(P and (P→Q))→P›, 
+
+which is false.
+Some logicians say that, because S5 has an “all” in the place where S6 has a “no,” they don’t have the same form. But that’s just a way of saying that they don’t have the same form because, if they did, then S5 wouldn’t be a formal truth anymore. It’s a fact that, in any sense of the expression “same form” that isn’t circularly constructed to validate preexisting theories, S5 and S6 have the same form. They certainly have the same syntactic form, at least as linguists use the word “syntax.” The rules of sentence construction involved in the one case 
+precisely parallel those used in the other. It’s a simple fact, then, than S5 and S6 do not, in any significant sense, differ in form and that S5, though true, isn’t formally so.
+Given that formal truth is parasitic on informal truth, the reason being that instances of formal truths are instances of informal ones, entailment cannot ultimately, or even proximately, be understood in formal terms and, in addition, only a fraction of the inferences that we make are formal. (This is setting aside the fact noted a moment ago that so-called formal reasoning is really informal reasoning in disguise.)
+3.7	Entailment not a limiting case of confirmation
+In some contexts, entailment can be treated as a limiting case of confirmation: P’s entailing Q can be seen as P’s confirming Q to the highest possible degree. 
+It’s tempting to see entailment as maximal confirmation. But that isn’t what it is. For P to entail Q (in other words, for it to be analytic that Q follows from P) isn’t for P to confirm Q to the highest possible degree. Entailment is a logical notion. Confirmation is an explanatory notion. For P to confirm Q to be a high degree is for (P and not-Q) to be counter-explanatory—in other words, it is for (P and not-Q) to be false unless deeply rooted presumptions about how the world works are uprooted and replaced. For P to entail Q is for (P and not-Q) to be counter-conceptual, i.e., it is for the structures of concepts, unassisted by presumptions as to how the world works, to prohibit the falsity of Q, given the truth of P. So P’s confirming Q to the highest possible degree is different from P’s entailing Q.
+3.8	Entailment both an intersentential and an interpropositional relation
+Sometimes the word “entailment” refers to a relationship that holds between propositions (sentence-meanings), and sometimes it refers to a relation that holds between expressions of some kind. Some logicians hold that those expressions are sentence-types. Others, myself included, hold that those relations may hold between sentence-types and also between sentence-tokens. (Peter Strawson (1950) was the first to distinguish token-entailment from type-entailment. In so doing, he performed a major service for philosophy.) 
+With rare exceptions (Strawson being one of them), authors who discuss “entailment” don’t make it clear whether they are talking about a relationship that holds between propositions, sentences, or neither.
+In this book, unless there is an indication to the contrary, “entailment” will refer to a relationship that can hold either propositions or between expressions.
+3.9	The irrelevance of formal logic to thought
+For reasons that were discussed in Chapters 1, 7, and 18, any assistance that knowledge of formal logic can provide one in the way of acquiring knowledge is parasitic on one’s knowledge of informal analytic truths. This has nothing to do with the idiosyncrasies of human psychology. It’s an epistemological consequence of a strictly logical point. Given any open-sentence (or open-proposition) all of whose instances are true, for example:
+
+(1) ‹(P and (P→Q))→Q›, 
+
+the fact that it’s true for all its instances is a consequence of the fact that some informal truth holds—for example:
+
+(2) given any two propositions P and Q, ‹(P and (P→Q))→Q›).
+It must be stressed that (2) is an informal truth. (2) has the same form as the false statement that:
+
+(2#) given no two propositions P and Q, ‹(P and (P→Q))→Q›).
+
+Nothing that has the same form as a false statement is formally true. Therefore, (2), though true, isn’t formally so. (2#) is a statement about a class of formal truths; but, like most statements about formal truths, it is not itself a formal truth.
+Bearing this in mind, consider the following statement, which, unlike (2), is formally true:
+
+(3) “if snow is white, and (if snow is white then snow is not pink), then snow is not pink).”
+
+There are two different reasons why one might accept (3). One is that one knows it to be an instance of (1) and one accepts it for that reason. But in that case, one is accepting (3) on the grounds that it’s a consequence of (2). Since (2) is informal, one’s acceptance of (3), under those circumstances embodies knowledge of an informal truth.
+The same thing holds if one’s acceptance of (3) is based on one’s understanding of the concepts meant by the expressions composing it. Suppose that your reason for accepting (3) is that, given your understanding of the concept expressed by “if...then...,” you know that it would be absurd to deny (3). In that case, your acceptance of (3) is based on your knowledge that, the structure of that concept being what it is, any proposition of that form must be true. Thus, your acceptance of (3) is based on your acceptance of (2). Given that (2) is an informal truth, your acceptance of (3) under those circumstances constitutes informal knowledge. There is no circumstance, therefore, under which your knowledge of (3) is any sense formal. The concept of “formal” (or “mechanical”) thought is therefore an incoherent one.
+4.0	Models
+An open-sentence is an expression that contains a free variable, and is therefore neither true nor false, but is otherwise just like a sentence. So ‹x is an even number› is an open-sentence, since it contains a variable (“x”) where there should be a “2” or a “4” or some such. It often happens that, given a set of one or more open-sentences, we wish to find some way of replacing the variables with constants that yield true sentences. For example, let S1 be the set containing the following two open-sentences (I’ll henceforth omit the use of quasi-quotation marks):
+
+(1) x is an even number that is greater than zero. 
+(2) x2 is less than 20.
+
+If we assign the number two or the number four to x, the result is that both sentences are true. So each of these assignments validates S1.
+In general, given a set of open-sentences, an assignment of constants to the free variables validates that set iff two conditions are met. First, that assignment turns each open-sentence in that set into an actual sentence. Second, every sentence is true.
+An assignment of constants to a set of open-sentences is an interpretation of that set. An interpretation of such a set validates it iff, under that interpretation, every sentence in that set comes out true.
+Let S2 be the set containing only the following open sentences:
+
+(1) x is an odd number. 
+(2) x2 is greater than 80.
+(3) √x is irrational.
+If we assign the number nine to x, (1) and (2) come out true; but (3) does not. But if we assign the number 13 to x, (1)–(3) all come out true. (It is assumed that the universe of discourse is the set of numbers. This assumption will continue to be made until further notice.) 
+An assignment of constants to such a set of open-sentences is an interpretation of that set. Not all such sets are validated by all interpretations of them, as we just saw.
+False interpretations must be distinguished from partial interpretations. A partial interpretation is one that is incomplete but is correct as far as it goes. Let S3 be the set containing only the following open-sentences:
+
+(1) x is a phi.
+(2) x is larger than y.
+(3) y is a phi. 
+(4) y is a psi.
+
+If we assign the numbers 10 and 8 is to x and y respectively, and the property of being even to “phi,” we’ve partially interpreted S3, since, under that interpretation, (1)–(3) come out true. But since we haven’t yet assigned a meaning to “psi,” we haven’t completely interpreted it. We have completely interpreted that set of open sentences if we make the further stipulation that for a thing to be a psi is for it to have the property of being less than 9. In fact, supposing that we make that additional stipulation, we have provided a complete interpretation of them that validates them. If we had instead stipulated that for a thing to be a psi is for it to be less than 5, we would have provided a complete interpretation of those open sentences that failed to validate them.
+Oftentimes, the interpretations that are of interest are very abstract ones. Let S4 be the set containing just the following open-sentences:
+
+(1) x is a phi.
+(2) x bears R to y.
+(3) y is a psi.
+(3) R is “reflexive” (any given thing bears R to itself).
+(4) y bears R to z.
+(5) z is a phi.
+(6) R is “transitive” (if a bears it to b, and b bears it to c, then a bears it to c).
+
+Here’s an interpretation of S4. x, y, and z are, respectively, the numbers two, three, and four. Phi and psi, respectively, are the properties of being even and odd. R is the less relation of being less than or equal to. y is the number.
+Question: Does the following set (S5) have an interpretation that validates it? If so, what is it?
+
+(1) x is a phi.
+(2) x bears R to y.
+(3) Anything that bears R to anything bears R to itself.
+(4) y bears R to z.
+(5) Nothing bears R to anything that has phi.
+
+Some sets of open-sentences are true under all interpretations of them. An example is the set containing: “x is identical with x” and “if, for some phi, x has phi and y does not have phi, then x is not identical with y.” Others (e.g., any set containing “x is not identical with x”) are true under none.
+Any interpretation of a set of the first kind is a formal truth. Thus “JMK is identical with JMK, and anything identical with a professor is identical to nothing that isn’t a professor” is a formal truth.
+ENDNOTES
+Name: ____________________________________ Date: _______________________________
+Exercises
+1.	1.	True or false? Statement A entails statement B:
+	a. Larry is a bird. 
+	b. Larry can fly.
+
+2.	2.	True or false? Statement A entails statement B:
+	a. Larry is wealthy. 
+	b. Larry has good money management skills.
+
+3.	3.	True or false? Statement A confirms statement B: 
+	a. Larry is extremely wealthy. 
+	b. Larry is probably planning on taking a luxury cruise in the next six months.
+
+4.	4.	True or false? The following argument is valid.
+	Premise: Horace is a mouse.
+Premise: Mice enjoy reading anything written by Charles Dickens. 
+Premise: War and Peace was written by Charles Dickens.
+Conclusion: It’s a possibility, but not a certainty, that Horace enjoys reading War and Peace.
+
+5.	5.	True or false? The following argument is valid. 
+	Premise: Horace is a mouse.
+Premise: Mice enjoy reading anything written by Charles Dickens. 
+Premise: War and Peace was written by Charles Dickens.
+Conclusion: It is an absolute certainty that Horace enjoys reading War and Peace.
+
+6.	True or false? A false statement may confirm a true one.
+
+7.	True or false? A true statement may entail a false one.
+
+8.	True or false? The following is a sound argument: Premise #1: four is an even number. Premise #2: all even numbers are divisible by two. Conclusion: Four is divisible by two.
+
+9.	True or false? The following is a valid deductive argument: Premise: Bill has five cars. Conclusion: Bill has more than one car.
+
+10. True or false? The following is a case of inference to the best explanation: Every boa constrictor I’ve seen was green; therefore, the next boa constrictor I see will be green.
+
+11. True or false? Scientific theories are arrived at primarily through a process of induction by enumeration.
+Questions 12–14 are to be answered on the basis of the following argument, which we’ll call “A1” (short for “argument #1”):
+
+12. True or false? A1 is valid.
+
+13. True or false? A1 is sound.
+
+14. True or false? A1 is an inductive argument.
+
+15. True or false? The following is a valid deductive argument: 
+Premise: I insulted you.
+Premise: Immediately after I insulted you, your face reddened and you scowled. 
+Conclusion: My insulting you is what caused you to scowl and your face to redden.
+
+16. True or false? The following is a valid deductive argument:
+Premise: I insulted you.
+Premise: Immediately after I insulted you, your face reddened and you scowled. 
+Premise: Whenever your face reddens, you are angry.
+Conclusion: Immediately after I insulted you, you were angry.
+
+17. True or false? The following is a valid deductive argument: 
+Premise: I insulted you.
+Premise: Immediately after I insulted you, your face reddened and you scowled. 
+Premise: Whenever your face reddens, you are angry.
+Conclusion: My insulting you is what caused you to scowl and your face to redden.
+
+18. The following is a valid deductive argument: 
+Premise: I insulted you.
+Premise: Immediately after I insulted you, your face reddened and you scowled. 
+Premise: Whenever your face reddens, you are angry.
+Conclusion: My insulting you is what caused you to be angry.
+
+19. The following is a valid deductive argument: 
+Premise: By insulting you, I caused you to be angry.
+Conclusion: By insulting you, I caused you to be in a certain sort of mental state.
+
+20. Reminder: you are no longer to assume that I know that, by insulting you, I angered you. Nor are you to assume that I do not know this. You are to use the information embodied in the story to determine whether or not my insulting you angered you.
+True or false? The following (boldfaced) passage is correct in its entirety: Since I can’t personally feel your anger, I must infer that you are angry. Technically speaking, nothing inferred is known. And that’s why I don’t really know that you are angry, even though it can be assumed with reasonable certainty.
+
+21. For argument’s sake, suppose that I know the following: (*) if I angered you, then I caused you to undergo some sort of change in your mental state.
+True or false? My knowledge of (*) is analytic.
+Question 16 is to be answered on the basis of the following argument:
+Premise #1: Tim is at a fraternity party.
+Premise #2: Tim’s speech is slurred and he looks like he is about to barf. 
+Premise #3: Tim is holding a beer can, and he’s saying “I think I overdid it.” 
+Conclusion: Tim had too much to drink.
+
+22. True or false? This argument is a case of inductive reasoning.
+
+23. True or false? The following argument is valid.
+Premise #1: Tim is at a fraternity party.
+Premise #2: All people at fraternity parties are drunk. 
+Conclusion: Tim is drunk.
+
+24. True or false? Supposing that its premises are true, the following argument is sound but not valid.
+Premise #1: Tim is at a fraternity party.
+Premise #2: All people at fraternity parties are drunk. 
+Conclusion: Tim is drunk.
+
+25. True or false? Supposing that its premises are true, the following argument is sound and valid.
+Premise #1: Tim is at a fraternity party.
+Premise #2: All people at fraternity parties are drunk. 
+Conclusion: Tim is drunk.
+
+26. Give three examples of formal entailments. In each case, the antecedent should be “Jerry is not a giraffe.”
+
+27. Give three examples of model-theoretic entailments. In each case, the antecedent should be “Jerry is a giraffe.”
+
+28. Clearly explain the difference between model-theoretic and formal entailment. 
+
+29. Identify three statements that are model-theoretically entailed by every statement. 
+
+30. Identify three statements that model-theoretically entail every statement.
+
+31. True or false? The statement “Smith is a Supreme Court Justice” confirms “Smith is not a complete moron.”
+
+32. True or false? All arguments contain more than one premise.
+
+33. True or false? All arguments that have true premises have a true conclusion.
+
+34. True or false? No valid arguments have false premises.
+
+35. True or false? If you know that somebody is about to do something wrong, it necessarily follows that you have the right to stop them from doing it.

@@ -1,0 +1,50 @@
+Create a new function "Full Document Rewrite" in Text Intelligence Studio, built on the new outlineService.ts.
+
+Requirements:
+
+1. Add a new button in the main UI (below input, next to "Generate Outline") called "Full Document Rewrite".
+
+2. When clicked:
+   - First, call generateOutline on the full input text to get the structured outline.
+   - Show the outline in a collapsible panel (like "Generate Outline").
+   - Then, use the outline to rewrite the full document:
+     - LLM prompt:
+       system: "You are an expert rewriter. Rewrite the entire document coherently using this outline for structure. Preserve all key positions, details, and meaning. Improve clarity, flow, and conciseness without adding or omitting content."
+       user: "Full text: [full input text]
+Outline: [JSON outline]
+Rewrite the full document section-by-section following the outline exactly. Output only the rewritten text."
+
+   - Stream progress: "Rewriting section 1/10...", "Rewriting section 5/10...", etc.
+   - Show final rewritten document in the results area (markdown-formatted, scrollable).
+
+3. Add options:
+   - Text input: "Rewrite instructions" (default: "Improve clarity and flow while preserving all content")
+   - Toggle "Show Outline First" (default ON)
+
+4. For large texts: Use the outline to ensure coherence and no repetitions.
+
+5. Reuse LLM calls from existing code.
+
+This gives a powerful, outline-guided full rewrite — perfect for restructuring long articles/books.
+
+Do this now. Add user-customizable rewrite instructions to the Full Document Rewrite function in Text Intelligence Studio.
+Requirements:
+
+In the UI, next to the "Full Document Rewrite" button:
+Add a textarea labeled "Rewrite Instructions" (default pre-filled with this exact text):textPrecisely restructure and summarize the provided text into a concise, faithful prose document of approximately 8000 words. Preserve all key arguments, definitions, examples, critiques, and logical flow exactly as in the original. Do not add, expand, speculate, or omit any substantive content. Maintain rigorous academic tone and pure prose format.
+Make it editable so user can change it (e.g., "Make it 4000 words", "Make it more accessible", etc.).
+
+When "Full Document Rewrite" clicked:
+Use the user's instructions (or default if unchanged) in the LLM prompt:
+system: "You are an expert rewriter. Follow the user's instructions exactly."
+user: "Full text: [full input text]
+Outline: [JSON outline from generateOutline]
+User instructions: [user's textarea content]
+Rewrite the full document section-by-section following the outline, applying the instructions."
+
+Keep target word count flexible — if user specifies a number in instructions, aim for it; else default ~8000.
+Show the instructions used in the output (e.g., "Rewriting with these instructions: [text]").
+Keep "Show Outline First" toggle.
+
+This gives default precision (your exact text) but full user control.
+Do this now.5.5sFast

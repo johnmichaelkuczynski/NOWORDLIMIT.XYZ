@@ -1,0 +1,340 @@
+KUCZYNSKI QUOTES VOLUME 2 
+
+TEXT INTELLIGENCE REPORT
+Generated: 12/18/2025, 2:56:27 AM
+Source Length: 12722 words
+LLM Used: openai
+
+--- KEY QUOTATIONS ---
+1. If, in order to account for something of which you have knowledge, you posit the existence of something of which you don’t have knowledge; you have made an inference to the best explanation.
+2. All theories are cases of inference to the best explanation.
+3. Inference to the best explanation is a very powerful form of inference.
+4. Induction by enumeration isn’t nearly as powerful a form of inference as inference to the best explanation.
+5. In general, induction by enumeration is parasitic on inference to the best explanation.
+6. The right definition of “confirms” is as follows. P confirms Q iff Q is more likely to be true if P is true than it is if, other things being equal, P is false.
+7. Thus, for (i*) x drives a Rolls Royce to confirm (ii*) x is wealthy is for (ii*) to be more likely to be correct if (i*) is correct than it is if, holding everything else constant, (i*) is false.
+8. Statements of the form “if P, then Q” are known as “conditionals.”
+9. “P→Q” means that P entails Q, i.e., that it is impossible for P to be true if Q is false.
+10. Statements of the form “if P then Q, and if Q then P” are known as “biconditionals.”
+11. Material implication isn’t a form of implication at all.
+12. Possibility and necessity are properties of statements, not objects.
+13. Causal necessity isn’t logical necessity, of course.
+14. A necessary condition for identity is sameness of properties.
+15. A sufficient condition for identity is sameness of properties.
+16. in any sense of the expression “same form” that isn’t circularly constructed to validate preexisting theories, S5 and S6 have the same form.
+17. formal truth is parasitic on informal truth, the reason being that instances of formal truths are instances of informal ones
+18. entailment cannot ultimately, or even proximately, be understood in formal terms
+19. entailment is a logical notion. Confirmation is an explanatory notion.
+20. The concept of “formal” (or “mechanical”) thought is therefore an incoherent one.
+
+--- DATABASE ---
+```json
+{
+  "quotes": [
+    "Inferential knowledge is indirect knowledge.",
+    "There is some reason to believe that all knowledge is inferential.",
+    "An inference is deductive if the premises are intended to make the conclusion 100% likely to be correct.",
+    "An inference is inductive if the premises are intended to support the conclusion.",
+    "A valid argument is a deductive argument whose premises, if true, in fact give a probability of 100% to the conclusion."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "it is not the case that if John likes to listen to Mozart, then Larry likes to listen to Brahms or the sky is blue.",
+    "Such Herculean measures shouldn’t have been necessary, given that the objective was only to perform a purely grammatical operation.",
+    "An “operator” is an expression that, given one or more sentences, yields a new sentence.",
+    "When an operator occurs in some sentence S, the scope of that operator is identical with the set of sentences out of which it is creating a new sentence.",
+    "The non-exclusive meaning of “or”: We’ll use “or” in the non-exclusive sense."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "In contemporary logic, both formal and informal, “or” is always used in the non-exclusive sense.",
+    "Deduction is truth-preserving: A true statement cannot entail a false one.",
+    "Induction isn’t truth-preserving: A true statement may confirm a false one.",
+    "Statements are equivalent with their contrapositives.",
+    "Formal implication is a kind of strict implication."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "What we’re seeing here is that the so-called truths of symbolic logic—the “laws of logic”—aren’t true at all.",
+    "They’re statement-forms, not statements, and therefore aren’t true or false.",
+    "This suggests that modern symbolic logic (a.k.a. mathematical logic, a.k.a. formal logic) isn’t logic at all.",
+    "It’s actually a small and rather unimportant branch of a discipline known as “model theory.”",
+    "Deduction is truth-preserving. No true statement entails a false one."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "A false statement may entail a true one.",
+    "Propositions aren’t always consequences of their own consequences.",
+    "Conversion isn’t truth-preserving.",
+    "Any given proposition entails itself.",
+    "Anything that entails a falsity is itself false.",
+    "Anything that entails a statement and its negation is false.",
+    "A statement is false if it entails its own negation.",
+    "There is nothing that isn’t entailed by a contradiction.",
+    "Whatever is actual is possible.",
+    "Whatever is necessary is actual.",
+    "Whatever is necessary is possible.",
+    "P entails Q iff P can’t be true if Q is false.",
+    "A conjunction is necessarily true iff each conjunct is necessarily true.",
+    "A disjunction is necessarily false iff each disjunct is necessarily false.",
+    "Nothing that can be false is a consequence of anything that cannot be false.",
+    "Conjoining two possible statements may yield a necessarily false statement.",
+    "Nothing that can be true entails anything that cannot be true.",
+    "Given any necessarily true statement, there is no statement that doesn’t entail it.",
+    "Given any statement at all, be it true or false, there is no necessarily false statement that doesn’t entail it.",
+    "A statement is necessary if it’s entailed by a necessary conditional with a necessary antecedent.",
+    "Whatever is necessary is necessarily necessary.",
+    "What is possible is possibly possible."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "Q just in case there is no coherently conceivable scenario where P is true and Q is false.",
+    "Model-theoretic entailment is an over-valued notion that doesn’t correspond at all well to the conception of entailment embodied in our inferential practices.",
+    "MT defines entailment in terms of 'possible.' This makes it viciously circular.",
+    "MT* is simply wrong.",
+    "So model-theoretic entailment isn’t entailment at all. It’s what a wrong theory of entailment says that it is."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "The entailment relation that holds between P1 and Q1 is not just an instance of model-theoretic entailment; it is also an instance of another, more significant kind of entailment.",
+    "Q1 is, in some important sense, 'implicit in' or 'contained in' P1.",
+    "When we make inferences, they are not of the strictly model-theoretic kind.",
+    "The inference from: P1: John knows that 1 + 1 = 2 to Q1: John believes that 1 + 1 = 2 is an instance of the conception of entailment that is embodied in our actual inferential practices.",
+    "Model-theoretical entailment is inferentially useless.",
+    "Knowledge of model-theoretic entailments are parasitic on some other, much more fundamental sort of entailment.",
+    "Formal entailment is a relation that holds between expressions (more specifically, sentences or sentence-tokens).",
+    "Formal truths, and thus formally true entailments, are instances of universal generalizations that, although analytically true, are not themselves formal truths."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "An assignment of constants to a set of open-sentences is an interpretation of that set.",
+    "An interpretation of such a set validates it iff, under that interpretation, every sentence in that set comes out true.",
+    "False interpretations must be distinguished from partial interpretations.",
+    "A partial interpretation is one that is incomplete but is correct as far as it goes.",
+    "Some sets of open-sentences are true under all interpretations of them."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "Technically speaking, nothing inferred is known.",
+    "Since I can’t personally feel your anger, I must infer that you are angry.",
+    "And that’s why I don’t really know that you are angry, even though it can be assumed with reasonable certainty.",
+    "if I angered you, then I caused you to undergo some sort of change in your mental state."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+
+--- TEXT ANALYZER ---
+```json
+{
+  "quotes": [
+    "Inferential knowledge is indirect knowledge.",
+    "There is some reason to believe that all knowledge is inferential.",
+    "An inference is deductive if the premises are intended to make the conclusion 100% likely to be correct.",
+    "An inference is inductive if the premises are intended to support the conclusion.",
+    "A valid argument is a deductive argument whose premises, if true, in fact give a probability of 100% to the conclusion."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "it is not the case that if John likes to listen to Mozart, then Larry likes to listen to Brahms or the sky is blue.",
+    "Such Herculean measures shouldn’t have been necessary, given that the objective was only to perform a purely grammatical operation.",
+    "An “operator” is an expression that, given one or more sentences, yields a new sentence.",
+    "When an operator occurs in some sentence S, the scope of that operator is identical with the set of sentences out of which it is creating a new sentence.",
+    "The non-exclusive meaning of “or”: We’ll use “or” in the non-exclusive sense."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "In contemporary logic, both formal and informal, “or” is always used in the non-exclusive sense.",
+    "Deduction is truth-preserving: A true statement cannot entail a false one.",
+    "Induction isn’t truth-preserving: A true statement may confirm a false one.",
+    "Statements are equivalent with their contrapositives.",
+    "Formal implication is a kind of strict implication."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "What we’re seeing here is that the so-called truths of symbolic logic—the “laws of logic”—aren’t true at all.",
+    "They’re statement-forms, not statements, and therefore aren’t true or false.",
+    "This suggests that modern symbolic logic (a.k.a. mathematical logic, a.k.a. formal logic) isn’t logic at all.",
+    "It’s actually a small and rather unimportant branch of a discipline known as “model theory.”",
+    "Deduction is truth-preserving. No true statement entails a false one."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "A false statement may entail a true one.",
+    "Propositions aren’t always consequences of their own consequences.",
+    "Conversion isn’t truth-preserving.",
+    "Any given proposition entails itself.",
+    "Anything that entails a falsity is itself false.",
+    "Anything that entails a statement and its negation is false.",
+    "A statement is false if it entails its own negation.",
+    "There is nothing that isn’t entailed by a contradiction.",
+    "Whatever is actual is possible.",
+    "Whatever is necessary is actual.",
+    "Whatever is necessary is possible.",
+    "P entails Q iff P can’t be true if Q is false.",
+    "A conjunction is necessarily true iff each conjunct is necessarily true.",
+    "A disjunction is necessarily false iff each disjunct is necessarily false.",
+    "Nothing that can be false is a consequence of anything that cannot be false.",
+    "Conjoining two possible statements may yield a necessarily false statement.",
+    "Nothing that can be true entails anything that cannot be true.",
+    "Given any necessarily true statement, there is no statement that doesn’t entail it.",
+    "Given any statement at all, be it true or false, there is no necessarily false statement that doesn’t entail it.",
+    "A statement is necessary if it’s entailed by a necessary conditional with a necessary antecedent.",
+    "Whatever is necessary is necessarily necessary.",
+    "What is possible is possibly possible."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "Q just in case there is no coherently conceivable scenario where P is true and Q is false.",
+    "Model-theoretic entailment is an over-valued notion that doesn’t correspond at all well to the conception of entailment embodied in our inferential practices.",
+    "MT defines entailment in terms of 'possible.' This makes it viciously circular.",
+    "MT* is simply wrong.",
+    "So model-theoretic entailment isn’t entailment at all. It’s what a wrong theory of entailment says that it is."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "The entailment relation that holds between P1 and Q1 is not just an instance of model-theoretic entailment; it is also an instance of another, more significant kind of entailment.",
+    "Q1 is, in some important sense, 'implicit in' or 'contained in' P1.",
+    "When we make inferences, they are not of the strictly model-theoretic kind.",
+    "The inference from: P1: John knows that 1 + 1 = 2 to Q1: John believes that 1 + 1 = 2 is an instance of the conception of entailment that is embodied in our actual inferential practices.",
+    "Model-theoretical entailment is inferentially useless.",
+    "Knowledge of model-theoretic entailments are parasitic on some other, much more fundamental sort of entailment.",
+    "Formal entailment is a relation that holds between expressions (more specifically, sentences or sentence-tokens).",
+    "Formal truths, and thus formally true entailments, are instances of universal generalizations that, although analytically true, are not themselves formal truths."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "An assignment of constants to a set of open-sentences is an interpretation of that set.",
+    "An interpretation of such a set validates it iff, under that interpretation, every sentence in that set comes out true.",
+    "False interpretations must be distinguished from partial interpretations.",
+    "A partial interpretation is one that is incomplete but is correct as far as it goes.",
+    "Some sets of open-sentences are true under all interpretations of them."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+```json
+{
+  "quotes": [
+    "Technically speaking, nothing inferred is known.",
+    "Since I can’t personally feel your anger, I must infer that you are angry.",
+    "And that’s why I don’t really know that you are angry, even though it can be assumed with reasonable certainty.",
+    "if I angered you, then I caused you to undergo some sort of change in your mental state."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```

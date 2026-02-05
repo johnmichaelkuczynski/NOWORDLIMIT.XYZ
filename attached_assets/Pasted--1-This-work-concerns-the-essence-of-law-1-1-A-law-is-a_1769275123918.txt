@@ -1,0 +1,426 @@
+• 1. This work concerns the essence of law.
+• 1.1. A law is a governmental assurance of the protection of a right.
+• 1.11. To speak of law is therefore to speak in moral terms.
+• 1.12. Legal obligation is a moral concept.
+• 1.2. That there are immoral laws is a fact.
+• 1.21. This fact does not refute the moral nature of law.
+• 1.211. Moral principles possess a dimension of weight.
+• 1.212. Principled relations are not statistical concomitances.
+• 1.22. The iniquitous law is a defective instance, not a counter-example.
+• 2. The debate on interpretation must be navigated.
+• 2.1. One extreme holds interpretation to be mere legislation.
+• 2.11. This is the cynical view of Legal Realism.
+• 2.12. It claims no interpretation is more correct than another.
+• 2.2. The other extreme holds interpretation to be mere discovery.
+• 2.21. This is Blackstone's fiction, as Austin saw.
+• 2.22. It claims judges do not create law.
+• 2.3. A correct analysis avoids both extremes.
+• 2.31. Legal interpretation is a principled endeavor.
+• 2.32. Some interpretations are truer to the law than others.
+• 2.33. This truth is not that of physics or medicine.
+• 3. The analysis yields answers to three questions.
+• 3.1. Are there international laws? No.
+• 3.2. Could such laws exist? Yes.
+• 3.3. Would their existence be necessarily desirable? No.
+• 4. On obligation.
+• 4.1. A legal obligation is distinct from a moral obligation.
+• 4.2. Yet a legal obligation is a species of moral obligation.
+• 4.21. It is the moral obligation to comply with a system.
+• 4.211. This system protects basic rights.
+• 4.212. It builds, prevents, and holds accountable.
+• 5. On government.
+• 5.1. A government's success is measured by its service to the governed.
+• 5.11. Laws are instruments of government.
+• 5.12. Therefore, the concept of law is moral, despite immoral instances.
+
+• 2.1 A legal obligation to perform an immoral act is not morally hollow.
+• 2.11 The legal obligation is identical to the moral obligation to comply with a system that assures protections of rights.
+• 2.12 To discharge this obligation may involve an immoral act, but the obligation itself is not immoral.
+• 2.2 The conclusion that law is non-moral, drawn from governmental evil, is flawed.
+• 2.21 This conclusion fails to distinguish: (i) individual from institutional evaluation; (ii) functional from purely factual evaluation; (iii) suspension of rights-protections from positive rights-violations.
+• 2.3 The success of a head of government is measured by service to constituents' interests.
+• 2.31 Personal success of a ruler is not identical to success as a head of government.
+• 2.32 Stalin failed as a head of government.
+• 2.4 The objective of any government is to protect the interests of the governed.
+• 2.5 An obligation to do X is not identical to an obligation whose fulfillment involves doing X.
+• 2.51 A surgeon's obligation to heal involves causing suffering, but is not an obligation to cause suffering.
+• 2.52 A legal obligation to commit an immoral act may thus be morally wholesome.
+• 2.6 The existence of legal obligations to commit immoral acts does not prove legal obligations are non-moral.
+• 2.61 This removes an obvious obstacle to the moralistic analysis.
+• 2.7 One fails as a law-maker by issuing laws that harm those subject to them.
+• 2.71 The purpose of a legal system per se is to serve its subjects' interests.
+• 2.72 This purpose holds even if the individuals creating the system have contrary objectives.
+• 2.8 A thing is to be understood by its function, not solely by its factual states.
+• 2.81 A liver that fails to remove toxins is still understood as a remover of toxins.
+• 2.82 So too, a corrupt government is still understood, in a significant sense, as a protector of rights.
+• 2.83 Its laws are still to be understood as attempts to provide protections of rights.
+• 2.9 Laws necessarily have a moral basis.
+• 2.91 Past failures to establish this necessary connection do not disprove it.
+• 2.92 If a legal system does not prohibit violations of Smith's rights, Smith falls outside its jurisdiction.
+• 2.921 Legal obligation exists only where there is jurisdiction.
+
+• 3. The moral core of legal obligation is found in the fact of moral protection.
+• 3.01 Legal obligation presupposes moral protection.
+• 3.02 That one has obligations under a government that harms one does not negate this presupposition.
+• 3.021 The government that harms continues to protect other rights; a violation is superimposed upon a standing protection.
+• 3.1 Consider a judge ruling on property.
+• 3.11 If the judge rules the money is Smith’s, the bank-manager acts illegally in withholding the key.
+• 3.12 If the judge rules it is not Smith’s, the bank-manager acts illegally in giving the key.
+• 3.13 The judge’s decision may or may not rest on a moral principle.
+• 3.14 In either case, the law is what the judge says it is.
+• 3.141 This appears as the antithesis of a necessary relation between law and morality.
+• 3.15 But this fact is compatible with judicial interpretation not being mere legislation.
+• 3.151 Judicial interpretation is answerable to objective standards.
+• 3.16 Dworkin’s argument—that judicial decisions on moral grounds show law’s moral nature—is less than probative.
+• 3.2 A judicial ruling is a principled extension of existing law.
+• 3.21 It is a delineation, not creation ex nihilo.
+• 3.22 Consider the physicist’s delineation of temperature: molecular motion replaces the lay concept, extending its application while remaining consistent within the original sphere.
+• 3.221 This is a precisification.
+• 3.23 Judicial rulings are delineations of the law, analogous to the physicist’s precisification of temperature.
+• 3.24 Therefore, we must disagree with the Legal Realist’s nihilism: interpretation is not mere legislation.
+• 3.25 As some delineations of temperature are truer to pre-theoretic data than others, so some interpretations of law are truer to existing law.
+• 3.3 Blackstone held that judges merely discover law.
+• 3.31 Austin called this a childish fiction.
+• 3.32 Given the argument for delineation, we must agree with Austin.
+• 3.4 On the possibility of morally empty laws.
+• 3.41 Think of morality in terms of weight.
+• 3.42 Then laws are seen as having some basis in morality.
+• 3.421 But they must sometimes be disobeyed to uphold a weightier moral imperative.
+• 3.43 To say that such disobedience is absolutely good, rather than the lesser evil, renders the law morally hollow.
+
+• 4. The binary conception of morality yields a false picture of law.
+• 4.1 To think in absolute terms of right and wrong is to misunderstand the nature of moral judgment.
+• 4.11 If obedience to a law were morally de rigueur in all cases, then saving a child’s life would be less important than avoiding a misdemeanor.
+• 4.12 This is an absurd and evil conclusion.
+• 4.2 Therefore, a binary morality leads to one of two errors concerning law.
+• 4.21 First error: Laws become morally hollow or arbitrary.
+• 4.22 Second error: Laws are falsely elevated to the status of unsurpassable moral verities.
+• 4.3 Good and bad are not binary concepts.
+• 4.31 They possess what Dworkin called a ‘dimension of weight’.
+• 4.32 To steal medicine to save a child’s life is, in that circumstance, the right thing to do.
+• 4.33 It is less bad than the alternative, though not good in an absolute sense.
+• 4.4 The belief that laws can be morally empty stems from this binary view.
+• 4.5 To have moral value is not the same as to deserve moral commendation.
+• 4.51 A rabbit’s life has moral value; it is wrong to torture it.
+• 4.52 Yet a rabbit deserves no moral credit, for it is an amoral creature.
+• 4.6 That which has moral value may, in its particular manifestation, even deserve condemnation.
+• 4.61 Consider Smith, the pianist.
+• 4.611 His practice at night causes his roommates permanent harm.
+• 4.612 In practicing, he flourishes and fulfills his nature.
+• 4.613 Human flourishing is a good thing.
+• 4.614 Yet his specific action, which realizes this good, may deserve condemnation for the harm it causes.
+• 4.62 Thus, an action can instantiate a moral good while violating other moral considerations.
+• 4.7 The concept of law, like that of a plane, has a teleological component.
+• 4.71 Many planes are defective and do not fly.
+• 4.72 But a thing is a plane in virtue of what it is *supposed* to do, not merely what it actually does.
+• 4.73 So too, something is a law in virtue of, at least in part, what it is supposed to do.
+• 4.74 I will argue that a legal system as a whole is supposed, as a matter of conceptual necessity, to protect moral goods.
+
+• 5. A government must not merely intend to do good, but must succeed in doing so.
+• 5.01 The success of a government is measured by the extent it serves the interests of those it governs.
+• 5.1 There exist legal systems that appear to do nothing but harm.
+• 5.11 The legal system of Stalin is an example of such a system.
+• 5.2 This appearance arises from a mistaken comparison.
+• 5.21 We compare the harmful system not to the absence of law, but to a better legal system.
+• 5.22 The Swedish government of the present day is an example of a better system used for this mistaken comparison.
+• 5.3 To judge whether legal systems are categorically good, the correct benchmark is the absence of a legal system.
+• 5.31 The benchmark must not be the presence of a superb legal system.
+• 5.4 From this, it follows as a matter of analytic necessity: even the worst legal systems do a fair amount of good in absolute terms.
+• 5.5 Principled relations are not expressed by strict and invariable concomitances.
+• 5.51 That there are F’s which are not G’s does not negate a principled relation between F and G.
+• 5.511 It could be that only one F is a G, and a billion F’s are not.
+• 5.52 Principled relations are often given by ceteris paribus propositions.
+• 5.521 A proposition of the form: all other things being equal, F’s are G’s.
+• 5.53 If, ceteris paribus, F’s are G’s, then there is a principled relationship between being F and being G.
+• 5.54 In circumstances where all other things are not equal, an F may not be a G.
+• 5.6 Therefore: the existence of morally empty laws does not prove the absence of a principled relationship between law and the protection of a moral good.
+• 5.61 From this, the moral basis of law can be shown.
+• 5.62 There are laws that fail to do good.
+• 5.621 There are laws created with no intention of doing good.
+• 5.63 Conclusion: There is a moral basis to law, despite laws that fail to do good and laws created without good intention.
+• 5.7 Some laws fail to encourage or protect commendable action, without licensing evil.
+• 5.71 From this, some infer that laws can protect things of no moral value.
+• 5.711 From this, they infer that law can have no connection to morality.
+• 5.72 Such an inference embodies two muddles.
+• 5.8 Consider an assassin who kills only the wicked.
+• 5.81 He is not, thereby, a better assassin than one who kills the good.
+• 5.82 But a law that does good is, thereby, a better law than one that fails to do so.
+• 5.83 Thus, it is the purpose of law to do good.
+• 5.831 This purpose often differs from the objective of the lawmaker.
+• 5.84 A law may protect a moral good while also guaranteeing condemnable behavior.
+• 5.841 Example: A law permitting Smith to practice his music, which is his flourishing, while it ruins his roommates' lives.
+• 5.85 The first muddle: confusing the concept of having moral value with the concept of being deserving of moral credit.
+• 5.86 The second muddle: assuming that anything having moral value cannot be condemnable.
+• 5.87 This failure is another expression of binary moral thinking.
+• 5.88 Binary thinking renders Smith’s practicing either totally lacking in moral value or an unimpeachable excellence.
+• 5.881 It renders a law permitting it either completely divorced from morality or a moral verity unto itself.
+• 5.9 An analogy: the doctor.
+• 5.91 Even a bad doctor can do much good.
+• 5.911 He can set a broken leg; he can perform CPR.
+• 5.92 He is seen as doing harm only when compared to a good doctor.
+• 5.93 A doctor 'does harm' mostly by failing to do the good a better doctor would have done.
+• 5.94 To assess if doctors are good categorically, compare the presence of doctors to their absence.
+• 5.941 Do not compare bad doctors to good doctors.
+• 5.95 Similarly, to assess if legal systems are categorically good, compare the presence of law to its absence.
+• 5.951 Do not compare bad legal systems to superlative ones.
+
+• 4.5 A law may be seen clearly only when considered in terms of weight.
+• 4.51 A law permitting Smith to practice protects a moral good: Smith’s flourishing.
+• 4.52 The same law is probably wrong and should be abolished for the condemnable behavior it permits.
+• 4.53 Therefore: Such a law is both wrong and protective of a good.
+
+• 4.6 Ronald Dworkin is a great exponent of the non-trivial relationship between law and morality.
+• 4.61 His defense of this position is unsatisfactory.
+• 4.62 Nevertheless, the position he defends is reasonable.
+
+• 4.7 It is an empirical fact: there exist immoral laws and legal systems.
+• 4.71 A society permitting unrestricted murder, theft, and arson would know sheer anarchy—a de facto absence of law.
+• 4.72 Therefore: Any legal system worthy of the name must forbid such iniquities.
+• 4.73 To that extent, any such system must coincide with the dictates of morality.
+
+• 4.8 Any actual law protects some moral good.
+• 4.81 In many cases, that good is dwarfed by some incompatible evil.
+• 4.82 This holds for laws not arising from patent deviations of normal law-making mechanisms.
+
+• 4.9 Dworkin’s discussion of rules and principles gives the key to seeing the moral structure of legal obligation.
+• 4.91 Though his arguments are not always decisive, some points within them are indispensable.
+• 4.92 These points are necessary for understanding the deep, delicate relationship between law and morality.
+
+• 5 Dworkin argues against ‘positivism’.
+• 5.1 Positivism consists of three theses:
+• 5.11 (i) Laws are applied or not; they are not interpreted. Judicial ‘interpretation’ is legislation; ‘discretion’ is either application or creation.
+• 5.12 (ii) The law is nothing other than a set of rules. Statutes are the law. Uncodified principles are no part of it.
+• 5.13 (iii) For something to be a law, it must have a ‘pedigree’—it must issue from a certain authority. A moral principle is law only if authority wills it.
+• 5.2 Dworkin argues that each thesis (i)-(iii) is false.
+• 5.21 The implied conclusion: Given (i)-(iii) are wrong, law necessarily embodies some kind of morality.
+• 5.22 A counter-argument will be made: Dworkin’s criticisms are not cogent; (i)-(iii) are in fact correct.
+
+• 5.3 Even though many laws are unjust, there is a sense in which they are always *supposed* to be just.
+• 5.31 A legal system promoting the ends of justice is, on that account, more successful *as a legal system*.
+• 5.32 Contrast: A military campaign killing only the wicked is not, on that account, more successful *as a military campaign*.
+• 5.33 Therefore: Any legal system necessarily aspires to be just, though many fall short.
+
+• 5.4 The question of an internal relation between morality and law is independent of the truth of theses (i)-(iii).
+• 5.41 Even if (i)-(iii) were completely wrong, it would not follow that there is a significant necessary connection.
+
+• 5. To disprove that law and morality are merely contingently related is to establish their necessary connection.
+• 5.1 The existence of good laws and legal systems is a fact.
+• 5.11 This fact may have deep roots in human nature.
+• 5.111 One root is a general desire, however faint, for virtue.
+• 5.112 Another root is human frailty: vulnerability makes a fair legal system ceteris paribus in one's interest.
+• 5.2 Some hold that relations between law and morality are entirely contingent.
+• 5.21 For this view, the concept of an entirely wicked or amoral legal system contains no contradiction.
+• 5.22 For this view, to see law in moral terms is to commit a blunder.
+• 5.3 This view will be opposed implicitly through what follows.
+• 6. There is a deep, internal connection between the concepts of law and morality.
+• 6.1 Despite wicked legal systems, it is conceptually impossible for any legal system to altogether fail to incorporate some morality.
+• 6.11 The existence of wicked systems is no counterargument to 6.1.
+• 6.2 This connection provides an objective basis for the pre-theoretic intuition: one is always, in some sense, supposed to obey the law.
+• 6.3 Given a plausible conception of government, laws must be seen as attempts to protect moral goods.
+• 6.31 As a matter of conceptual necessity, a legal system cannot completely fail to do a non-trivial amount of good.
+• 6.32 The existence of morally unsatisfactory laws is no counterargument to 6.3.
+• 6.4 Legal obligation is a kind of moral obligation.
+• 6.41 All laws have a moral component.
+• 6.42 The relationship between 6.4 and 6.41, though deep and necessary, is not straightforward.
+• 6.5 In Hart's defense of positivism, two apparently compelling arguments are invalid.
+• 6.51 These arguments incorporate an untenable, binary conception of morality.
+• 6.52 These arguments incorporate a misunderstanding of the nature of government.
+• 6.6 A brutal dictator may be psychologically akin to a gunman.
+• 6.61 Only in singular circumstances are the dictator's laws in the same moral category as a gunman's threats.
+• 6.7 Some prima facie reasonable attempts to find a moral basis for legal obligation must be rejected wholesale.
+• 6.71 The relationship between legal and moral obligation, though deep and necessary, is not straightforward.
+
+• 8.1 The separation of law and morality is a reasonable attempt to understand legal obligation.
+• 8.11 Hart’s position is such an attempt.
+• 8.2 The concept of government provides a basis for a moralistic conception of law.
+• 8.21 (Argument 63) That a law must issue from earthly authority does not preclude it from satisfying moral conditions.
+• 8.211 A law could be defined as that which (a) meets moral standards and (b) issues from earthly authority.
+• 8.212 Therefore, the condition of earthly origin is compatible with the necessity of morality.
+• 8.22 (Argument 64) The laws of morality have their basis in Pure Reason or the Form of the Good.
+• 8.221 Legal laws, by contrast, must issue from some earthly authority.
+• 8.222 This suggests morality is one thing, law another.
+• 8.23 (Argument 65) If law is what rules and rulings say it is, and these may be amoral, then law need not embody morality.
+• 8.231 A counterargument will later show this does not necessarily follow.
+• 8.24 (Argument 66) Many regulations (military, bureaucratic) are arbitrary and lack moral content.
+• 8.241 If ‘the law’ consists only of such regulations, it is consistent with immoral or amoral laws.
+• 8.25 (Argument 67) The view that a judge who goes beyond man-made rules goes beyond the law implies that rules exhaust the law.
+• 8.26 (Argument 68) Each separation thesis is a way of saying laws are human creations.
+• 8.261 As human creations, they need embody morality no more than regulations about boot-polish.
+• 8.27 (Argument 69) A judge deciding a case where rules are silent must base a decision on an ethical principle.
+• 8.271 On the separation view, this principle was not part of the law until incorporated by the ruling.
+• 8.28 (Argument 70) The falsity of the separation theses does not entail a necessary connection between law and morality.
+• 8.3 There is a triviality problem for laws conceived as narrow-scope assurances.
+• 8.31 (Argument 71) Even if all separation theses (i)-(iii) are false, it does not follow that law embodies morality.
+• 8.311 Dworkin’s criticisms of the separation theses do not, by themselves, establish a moral element in law.
+• 8.32 (Argument 72) That laws need not have a certain pedigree does not entail they must be moral.
+• 8.321 This would follow only if the lack of earthly authority necessitated an origin in the Form of the Good.
+• 8.322 There is a third option.
+
+• 9.1 The law is not exhausted by statutes.
+• 9.11 The rule books are silent on many principles that nonetheless govern.
+• 9.12 To see this, consider the case of Riggs v. Palmer.
+• 9.121 A grandson murdered his grandfather to inherit.
+• 9.122 The statute on murder was clear; the statute on inheritance was silent.
+• 9.123 The court denied the inheritance.
+• 9.124 The operative principle: one cannot profit from one's own wrong.
+• 9.125 This principle was not written, yet it was law.
+
+• 9.2 Consider also Henningsen v. Bloomfield Motors.
+• 9.21 A contract absolved a manufacturer of all liability.
+• 9.22 A defect caused injury; the injured party sued.
+• 9.23 The court voided the contract.
+• 9.231 The operative principle: contracts must meet minimum standards of fairness.
+• 9.232 This principle of decency was not a statute, yet it was law.
+
+• 9.3 From 9.1-9.232, it follows that moral principles are part of the law.
+• 9.31 The law includes what is not in the rule books.
+
+• 9.4 The falsity of one proposition does not guarantee the truth of its apparent contrary.
+• 9.41 Suppose it is false that judges always make new law when they interpret.
+• 9.42 It does not follow that their interpretation must connect law to morality.
+• 9.421 A judge could interpret by a principle of serving a secret corporation.
+• 9.422 This principle (*) would govern, but it is not moral.
+• 9.43 Thus, the falsity of judicial legislation does not entail a moral intersection.
+
+• 9.5 Suppose the law includes more than statutes.
+• 9.51 This 'more' could be principle (*).
+• 9.52 The inclusion of non-statutory content does not, by itself, moralize the law.
+• 9.53 The additional content may be purely pragmatic.
+
+• 9.6 One must distinguish 'laws' from 'the law'.
+• 9.61 'Laws' are specific statutes: penal code 76.5 subsection B.
+• 9.62 'The law' is the total system.
+• 9.63 Unless 'laws' exhaust 'the law', the latter is not merely a set of rules.
+• 9.64 From 9.1-9.232, 'laws' do not exhaust 'the law'.
+
+• 9.7 Principles differ from rules in their mode of application.
+• 9.71 A rule is binary: it applies or it does not.
+• 9.711 Example: a rule requiring three witnesses to a will.
+• 9.72 A principle has a dimension of weight.
+• 9.721 It can apply to varying degrees.
+• 9.73 A legal system can contain opposed principles without contradiction.
+• 9.731 Example: the principle of free enterprise and the principle of fair dealing.
+• 9.74 The tension between such principles is managed, not resolved by flat.
+
+• 6. Principles are not rules.
+• 6.1 The principle that one cannot profit from one's wrong-doing is not a rule.
+• 6.11 If it were a rule, all sly deal-making would be illegal.
+• 6.12 This would halt commercial activity and the economy.
+• 6.13 Yet connivance is not given free reign.
+• 6.14 Judges give weight to the principle of decent conduct in business.
+• 6.2 Therefore, the principle has a dimension of weight; it is not a binary rule.
+• 6.3 Since principles have a dimension of weight, they are not rules.
+• 6.31 Therefore, the ethical principles in Riggs and Henningsen are not rules.
+• 6.4 Moral principles are not created by earthly authority.
+• 6.41 They are part of the law.
+• 6.42 Therefore, the law is not exhausted by posited rules.
+• 6.5 A positivist may respond: judges in those cases went beyond the law.
+• 6.51 They did the right thing, not the legal thing.
+• 6.52 There is much to be said for this position.
+• 6.53 The positivist need not concede defeat.
+• 6.6 A coherent legal system cannot have two directly conflicting rules.
+• 6.61 One rule requiring three witnesses for a valid will cannot coexist with another requiring only two.
+• 6.62 One rule would have to be eliminated.
+• 6.7 Rules are not interpreted.
+• 6.71 One does not interpret a mathematical function; one applies it or does not.
+• 6.72 For the same reason, one does not interpret a legal rule.
+• 6.73 The concept of interpretation does not apply to rules.
+• 6.8 The positivist could say the guiding ethical principles were de facto rules.
+• 6.81 There is a rule against absurdly immoral contracts.
+• 6.82 There is a rule against letting a murderer benefit from his crime.
+• 6.83 This view is challenged by the distinction between rules and principles.
+• 6.9 Rules may be vague or indeterminate.
+• 6.91 What of cyborgs as witnesses? Or the intoxicated?
+• 6.92 Vagueness is not a dimension of weight.
+• 6.93 If a cyborg is a person, it is a viable witness. If not, not.
+• 7. The exercise of judicial discretion does not imply the absence of law.
+• 7.1 'Discretion' may mean only non-mechanical judgment sensitive to principles.
+• 7.2 That a problem is not mechanical does not mean it has no right answer.
+• 7.21 To say otherwise is to deny truths outside of sentential logic.
+• 7.3 Discretion means understanding is involved.
+• 7.31 It does not imply the law is absent, requiring the judge to create new law.
+• 7.4 The positivist's point is that no ethical principle has a place in law unless incorporated by statute.
+• 7.41 Therefore, the positivist cannot argue that because the judge...
+
+• 6. To say a judge who goes beyond statutes creates law is to beg the question.
+• 6.1 The positivist wishes to establish this very point.
+• 6.11 Therefore, the positivist argument is circular.
+
+• 6.2 Legal interpretation occurs where the law is indeterminate.
+• 6.21 This is said to consist in creating law where none existed.
+• 6.22 Judicial discretion is the exercise of this creation.
+
+• 6.3 'Indeterminate' has two meanings: ontological and epistemological.
+• 6.31 To say Smith’s whereabouts are indeterminate is epistemological.
+• 6.311 It means we do not know; not that no fact exists.
+• 6.32 To say whether a man of 5'10" is tall is ontological.
+• 6.321 The concept itself leaves the matter open.
+• 6.33 Indeterminacy in law does not entail a gap.
+• 6.331 It entails a gap only if the indeterminacy is ontological.
+• 6.332 It may mean only that the law’s demand is not yet known.
+
+• 6.4 That a decision is at one’s discretion means it cannot be overturned.
+• 6.41 An umpire’s call on a strike is of this kind.
+• 6.411 There is a fact of the matter; the umpire decides what it is.
+• 6.42 So too with a judge’s discretion.
+• 6.421 It does not follow that no legal fact exists.
+• 6.422 It follows that the judge decides what that fact is.
+
+• 6.5 Consider a case where statutes do not determine the decision.
+• 6.51 Where statutes nearly rule out a decision, but a judge decides on principle.
+• 6.511 The judge overrides the statutes; this is his discretion.
+• 6.512 To call this 'interpretation' appears to distort the facts.
+• 6.513 It seems the judge usurps the law and replaces it.
+• 6.514 This is the appearance that fuels the thesis of legal creation.
+
+• 6.6 Contrast: a law prescribing a sentence range of five to twenty years.
+• 6.61 Here, the judge’s discretion is within the law.
+• 6.62 To impose twelve years is to follow the law, not to create it.
+• 6.63 This sort of discretion provides no support for the creation thesis.
+
+• 6.7 Our analysis is colored by background knowledge.
+• 6.71 In American culture, the renegade who breaks rules for justice is idolized.
+• 6.72 The rule-bound authority is spurned.
+• 6.73 This cultural bias may influence the analysis of judicial discretion.
+
+• 5. The judge's decision determines what is legal.
+• 5.1 The legal obligations of bailiffs and law enforcement follow the judge's decision.
+• 5.11 Therefore, the legal obligations of the public follow the judge's decision.
+• 5.12 Legality moulds itself around the judge's decision.
+• 5.2 From this it follows: the judge's decision creates the law; it does not merely identify it.
+• 5.21 The positivist is victorious on this ground.
+• 5.3 The traditional picture is false.
+• 5.31 The picture: where rules are silent, the judge interprets. The judge does not make new law.
+• 5.32 This is the picture Dworkin defends.
+• 5.33 I argue against it.
+• 5.4 Consider a bailiff who defies a judge's ruling, claiming the judge misinterpreted the law.
+• 5.41 Such a display is ludicrous.
+• 5.42 If judges only interpreted, such behavior would often be required.
+• 5.421 For an erroneous interpretation misidentifies pre-existing legal obligations.
+• 5.422 Then, unless judges are superhumanly infallible, it would often be illegal for a bailiff *not* to defy the ruling.
+• 5.43 This is absurd. Therefore: the judge's decision aligns legal obligations.
+• 5.5 Intuitions about judges 'just applying the law' are not hewed to legal reality.
+• 5.51 They are hewed to extra-legal cultural realities.
+• 5.52 Dworkin's argument relies on the validity of these intuitions.
+• 5.6 A truism: what is legal is permitted by law; what is illegal is forbidden by law.
+• 5.61 In a case, if the judge decides for the claimant, carrying out that decision is legal.
+• 5.62 If the judge decides against the claimant, carrying out that decision is legal.
+• 5.63 Therefore: anyone carrying out the judge's decision acts legally; anyone defying it acts illegally.
+• 5.64 It does not matter what the judge decides; legality follows the decision.
+• 5.7 What can legally be done by enforcement and the public is determined by the judge's ruling.
+• 5.71 Consider a judge asked to adjudicate in a foreign system, told to apply its law strictly.
+• 5.72 The judge knows nothing of the country's customs, whether liberal or traditional.
+• 5.73 The judge will be punished if seen to replace their law with his own conception of justice.
+• 5.74 The case is an exact analogue...
+
+• 6.5 The judicial calculation of caution proceeds from ignorance of a culture's response to principled violation.
+• 6.51 To say 'I have no idea how this culture would react' is to confess the absence of a determining fact.
+• 6.511 This absence yields a practical imperative: 'I’d better not break it.'
+• 6.512 The imperative manifests as a commitment to the letter: 'I’d better be a stickler for it.'
+• 6.513 Thus, to 'go by the book' is the logical terminus of this calculation.
+• 6.52 The conclusion of caution is to rule against the plaintiff.
+• 6.521 To uphold the contract is to affirm the written assurance.
+• 6.522 To dismiss the suit is to deny the claim that transcends the written assurance.
+• 6.53 This judicial posture appears as the path of caution, not the path of principle.
+• 6.531 What appears as caution is, in another light, a refusal to weigh the moral dimension of the assurance.
+• 6.532 The source speaks of International Law and Legal Interpretation.

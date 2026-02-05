@@ -1,0 +1,27 @@
+Add holistic stylometric analysis to the Stylometrics function in Text Intelligence Studio, using the new outlineService.ts for full text comprehension (single-text and two-text modes).
+
+Specific changes:
+
+1. Update the Stylometrics function (likely in analyzer.ts or stylometrics.ts):
+   - For single-text: Call generateOutline on the full text.
+   - Compute global features (word count, sentence length, etc.) on full text.
+   - For each section from outline: LLM call "From this section [text slice] and full outline [JSON]: Compute stylometric features: ego-pronoun rate, avg/max sentence length, subordination depth, semicolon/colon/dash frequency, rhetorical questions, metaphor density, anecdote frequency, impersonal constructions, signature phrases, negative markers."
+   - Aggregate to global scores, classify abstraction/verticality, profile.
+   - Signal/noise: Signal = length of high-abstraction content; Ratio = signal / total length; Score = ratio * 100 (1=0 ratio, 100=1 ratio).
+
+2. For two-text mode: Run single-text analysis on both, then compare (differences, verdicts, profiles).
+
+3. LLM prompt for section analysis:
+   - System: "You are a stylometric analyzer. Use full context from outline. Compute features exactly: [list all: ego-pronoun rate per 1000 words, avg sentence length, etc.]. Identify signature phrases, negative markers, closest authors. Psychological profile traits: cognitive empathy, affective empathy, need for closure, etc. No additions - output JSON only."
+
+4. UI update:
+   - Toggle "Use Outline Mode (for large texts)" — default ON.
+   - For two-text: Separate sections for Text A/B + Comparison.
+   - Show progress: "Outlining text...", "Analyzing section 2/10...", "Calculating score..."
+   - Display: Verticality bar, abstraction, features table, signature phrases, profiles, verdict.
+
+5. Keep old chunk method as fallback for OFF.
+
+This uses outline for holistic view — no blind chunking for large texts, accurate signal/noise.
+
+Do this now.

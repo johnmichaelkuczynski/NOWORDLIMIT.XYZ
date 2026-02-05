@@ -1,0 +1,53 @@
+TEXT INTELLIGENCE REPORT
+Generated: 12/17/2025, 5:50:19 PM
+Source Length: 1850 words
+LLM Used: openai
+
+--- KEY QUOTATIONS ---
+1. A 'law of logic' is any statement that belongs to a system of logic or describes a condition that must be satisfied by any such system.
+2. A logic is a recursively defined statement-set.
+3. In order for a logic to have any value, it must be consistent.
+4. If phi is the recursion that generates a given logic, phi is truth-preservative.
+5. If p is true, and q follows from p, then q is true.
+6. Modus ponens can be taken to say that, if chi is any chosen specification of the consequence relation, then chi of p is true whenever p is true.
+7. According to the principle of transitivity, if p entails q and q entails r, then p entails r.
+
+--- DATABASE ---
+```json
+{
+  "quotes": [
+    "A logic consists of a set of statements that are assumed to be true, along with the consequences of those statements.",
+    "If a statement s belongs to a logic, that is either because (a) s is an axiom, and therefore true by hypothesis, or (b) some statements t belongs to that logic and phi of t = s, where phi is the recursion that generates that logic.",
+    "There is no way that not-s can fail to be false.",
+    "Given any system of logic L, a statement s is true, by L’s lights, if s belongs to L; and a statement s is false, by L’s lights, if s is the negation of a statement belongs to L.",
+    "No system of logic contains the negation of any given statement that it contains.",
+    "A logic is simply a way of organizing statements in such a way that their deductive interrelations are made clear.",
+    "No logic contains every true statement, nonetheless, any given true statement belongs to many a logic.",
+    "A statement that is neither true nor false is one whose consequences are neither true nor false, whose negation is neither true nor false, and the consequences of whose negation are neither true nor false. Such a statement is a perfect nullity."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```
+
+--- TEXT ANALYZER ---
+```json
+{
+  "quotes": [
+    "A logic consists of a set of statements that are assumed to be true, along with the consequences of those statements.",
+    "If a statement s belongs to a logic, that is either because (a) s is an axiom, and therefore true by hypothesis, or (b) some statements t belongs to that logic and phi of t = s, where phi is the recursion that generates that logic.",
+    "There is no way that not-s can fail to be false.",
+    "Given any system of logic L, a statement s is true, by L’s lights, if s belongs to L; and a statement s is false, by L’s lights, if s is the negation of a statement belongs to L.",
+    "No system of logic contains the negation of any given statement that it contains.",
+    "A logic is simply a way of organizing statements in such a way that their deductive interrelations are made clear.",
+    "No logic contains every true statement, nonetheless, any given true statement belongs to many a logic.",
+    "A statement that is neither true nor false is one whose consequences are neither true nor false, whose negation is neither true nor false, and the consequences of whose negation are neither true nor false. Such a statement is a perfect nullity."
+  ],
+  "annotatedQuotes": [],
+  "summary": "",
+  "database": "",
+  "analyzer": ""
+}
+```

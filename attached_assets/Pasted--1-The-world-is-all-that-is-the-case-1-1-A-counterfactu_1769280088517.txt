@@ -1,0 +1,507 @@
+• 1. The world is all that is the case.
+• 1.1 A counterfactual says what would have been the case if some condition C obtained, when in fact C did not obtain.
+• 1.11 The consensus is that no acceptable analysis of counterfactuals has been proposed.
+• 1.2 Existing analyses regard counterfactuals as saying something about causal relations among states of affairs.
+• 1.21 These states of affairs are said to hold in non-actual or alternative worlds.
+• 1.22 This is the factualist analysis.
+• 1.3 The factualist analysis makes nearly all counterfactuals incoherent.
+• 1.31 It requires a metaphysically possible world w where the laws are the same as here, and where almost all facts are the same.
+• 1.32 The factual differences in w relate to the antecedent and consequent of the counterfactual.
+• 1.33 This requirement typically involves positing worlds whose necessary non-existence can be shown by elementary deduction.
+• 1.4 The possible-worlds analysis of counterfactuals is guilty of covert circularity.
+• 1.41 Thus analyzed, counterfactuals can only be understood in terms of laws of nature.
+• 1.411 The laws that apply here are assumed in the hypothetical world, except in the atypical counter-nomic case.
+• 1.42 But the concept of a law cannot itself be defined except in terms of the notion of a counterfactual.
+• 1.421 A law is, inter alia, something that supports counterfactuals.
+• 1.5 The right approach is to see counterfactuals as expressing relations of probabilification holding among statements.
+• 1.51 Counterfactuals do not say anything about events or anything concrete.
+• 1.52 They do not say anything about what would be concrete if it existed.
+• 1.53 Counterfactuals merely register confirmation relations among propositions.
+• 1.6 I take it for granted that counterfactuals are, or can be, true.
+• 1.61 Given that a factualist analysis makes them incoherent, a non-factualist analysis is needed.
+• 1.62 This non-factualist analysis is an epistemic one.
+• 1.7 It has been argued that counterfactuals are meaningless or systematically false.
+• 1.71 But given how endemic they are to our thought, it is better to find a way to make them meaningful.
+• 1.72 Every statement about the physical world is implicitly counterfactual.
+• 1.721 To say something is steel is to say something about how it would behave under certain conditions.
+• 1.73 There is no way to purge our discourse of counterfactual elements.
+• 1.74 We must therefore find a way to make counterfactuals work.
+• 2. David Lewis gives the most perspicuous account of the ordinary conceit about counterfactuals.
+• 2.1 "If kangaroos had no tails, they would topple over" means: in any possible state of affairs in which kangaroos have no tails, and which resembles our actual state of affairs as much as having no tails permits it to, the kangaroos topple over.
+• 2.2 Lewis construes counterfactuals as making statements about states of affairs.
+• 2.21 These states of affairs hold in worlds other than this one.
+• 2.3 What makes a counterfactual like "If Jones had not fired, Smith would be alive" true is that, in some other world, Jones doesn't fire and Smith remains alive.
+• 2.4 If Lewis is right, a counterfactual does not make a statement about logical relations among propositions.
+• 2.41 It is about facts following facts, bodies affecting bodies.
+• 2.42 It is not about a shadow world of logical interrelations among platonic entities.
+• 2.5 Let us describe as factualist any analysis that is, in this respect, like Lewis'.
+• 2.51 The factualist says counterfactuals are about states of affairs, facts, and objects.
+• 2.52 These are the things we encounter in this world, except they are in alternative worlds.
+• 2.6 The factualist view is not tenable.
+• 2.61 Counterfactuals do not say anything about relations among events, not even events in other worlds.
+• 2.62 Counterfactuals say something only about the degree of credibility that certain propositions confer on other propositions.
+• 3. Suppose in actual fact Smith shoots Jones and kills him.
+• 3.1 Consider the proposition: (2) If Jones had not fired the gun, Smith would still be alive today.
+• 3.11 This is a perfectly good counterfactual; it might well be true.
+• 3.2 Let us apply the factualist analysis to it.
+• 3.21 According to the factualist, the meaning of (2) is: Consider a world w with two properties.
+• 3.211 First, in w, Jones doesn't pull the trigger.
+• 3.212 Second, with that qualification, w is as much like our world as it could be.
+• 3.22 In w, Smith...
+
+• 2. A world w, in which a counterfactual antecedent is true, must be governed by the same laws as the actual world.
+• 2.1 If the laws of w differ, the counterfactual is voided; the consequent need not follow from the antecedent.
+• 2.11 Different laws might not permit the bullet to leave the gun, or Smith's flesh to be pierced, or the gun itself to exist.
+• 2.2 Let L1...Ln be the laws governing the actual world. These same laws must govern w.
+• 2.3 In the actual world, conditions C1...Ck, under laws L1...Ln, led to the event (e.g., Jones pulling the trigger).
+• 2.4 Laws are either deterministic or indeterministic.
+• 2.41 A deterministic law states: given conditions C, event E occurs in 100% of cases.
+• 2.42 An indeterministic law states: given conditions C, event E occurs with a certain probability (<100%).
+• 2.5 The analysis of the counterfactual world w bifurcates based on the nature of L1...Ln.
+• 2.51 First case: All laws L1...Ln are deterministic.
+• 2.511 In a deterministic w, C1...Ck would lead necessarily to Jones pulling the trigger.
+• 2.512 To make the antecedent true (Jones does not pull the trigger), at least one Ci must be false in w.
+• 2.513 But each Ci is itself the necessary consequence of prior conditions under deterministic laws.
+• 2.514 To negate Ci, one must negate a prior condition in its causal chain.
+• 2.515 This negation regresses infinitely into the past of w.
+• 2.516 Therefore, w's entire past must diverge profoundly from the actual past.
+• 2.517 A world with such a divergent past offers no guarantee that its present resembles ours.
+• 2.518 The desired present—identical but for the single event—is impossible.
+• 2.519 The present of w would likely not contain Jones or Smith, or would be so altered that no confident counterfactual claim can be made.
+• 2.52 In a deterministic world, a single event cannot be altered in isolation.
+• 2.521 Two deterministic worlds differing in one event must differ in countless others.
+• 2.522 A world different enough to permit Jones to shoot Smith may be too different to contain that very shooting, or may contain conditions (e.g., a vest) that negate the expected outcome.
+• 2.53 Therefore, the factualist analysis requires an indeterministic world.
+• 2.6 Second case: Some laws among L1...Ln are indeterministic.
+• 2.61 The truth of a counterfactual is contingent on the determinism of the relevant laws.
+• 2.611 If a law connecting antecedent to consequent is deterministic (100%), the counterfactual can be certain.
+• 2.612 Example: 'If shot in the chest, x would have died' is true only if the law 'shot in chest → dies' is deterministic.
+• 2.62 If the connecting law is probabilistic, the simple counterfactual lacks truth-value.
+• 2.621 Example: If being shot leads to death 72% of the time, 'x would have died' is not true.
+• 2.622 What can be said is: 'If x had been shot, there would have been a 72% probability of x's dying.'
+
+• 3. The factualist analysis fails whether laws are deterministic or not.
+• 3.1 The existence of some indeterministic laws does not save the factualist position.
+• 3.11 It makes the position worse.
+• 3.2 Consider the epistemic possibility that all laws are deterministic.
+• 3.21 If this were discovered, it would not make our ordinary counterfactuals false.
+• 3.211 "If Brown had struck the window, it would have broken" would remain true.
+• 3.212 The truth of such a counterfactual is a datum.
+• 3.22 The factualist analysis makes the truth of the counterfactual depend on the falsity of determinism.
+• 3.221 But the datum shows no such dependence.
+• 3.23 Therefore, the factualist analysis is wrong.
+• 3.3 The factualist demands a world with a specific, contradictory mixture of determinism and indeterminism.
+• 3.31 For a counterfactual about a window to be true, the laws of impact must be deterministic.
+• 3.32 For the possible world w to remain "close," other laws must be indeterministic to prevent cascading differences.
+• 3.33 The factualist thus requires the world to be deterministic in specific contexts and indeterministic in others.
+• 3.34 This makes the truth of counterfactuals contingent on an open, empirical matter.
+• 3.341 But the truth of "If Brown had struck the window..." is not contingent on future physics.
+• 3.35 Therefore, the analysis is again wrong.
+• 3.4 The demand is not merely contingent but incoherent.
+• 3.41 Different counterfactuals require different, specific mixtures of determinism and indeterminism to validate their corresponding possible worlds.
+• 3.42 The set of laws that must be indeterministic for world w (where Jones didn't take pills) differs from the set for world w* (where Jones struck the window).
+• 3.43 Yet both w and w* must be governed by the same laws as the actual world.
+• 3.44 This requires the actual world's laws to be simultaneously deterministic and indeterministic in the same respects.
+• 3.45 This is absurd.
+• 3.5 The factualist account imposes an incoherent requirement on the nature of laws.
+
+• 4. The factualist’s analysis fails whether the world is deterministic or not.
+• 4.1 Consider first the case where the macroscopic world is deterministic.
+• 4.11 Two deterministic worlds with the same laws cannot differ in a single state of affairs without differing in an infinite chain of prior states.
+• 4.12 The pasts of such worlds must diverge, making their presents unfathomably different.
+• 4.13 A world w where Jones shoots Smith, but which is otherwise like ours, would contain no recognizable Jones or Smith.
+• 4.14 The occurrences in w are therefore useless for validating counterfactuals.
+• 4.15 If the world is deterministic, the factualist approach fails.
+• 4.2 Consider now the case where the macroscopic world is indeterministic.
+• 4.21 Suppose the same initial conditions lead to an outcome only 54% of the time.
+• 4.22 The factualist requires a world w where the key is turned and the car starts.
+• 4.23 But w must be governed by the same indeterministic laws.
+• 4.24 In w, one cannot say the car definitely starts; at most, there is a probability.
+• 4.25 The proposition ‘in w, the car starts’ lacks a definite truth-value.
+• 4.26 If the world is indeterministic, the factualist position is false.
+• 4.3 Counterfactuals are sustainable only to the extent the world is deterministic.
+• 4.31 But determinism leads to the failure described in 4.1.
+• 4.32 Therefore, the factualist analysis fails in both cases.
+• 4.4 A final move remains for the factualist.
+• 4.41 He may posit a world w identical to ours until time t, then diverging by a ‘miracle’.
+• 4.42 In w, at t, Jones shoots Smith through a local violation of law.
+• 4.43 This miracle allows w to differ from our world in the one required respect.
+• 4.44 Thus, w could validate the counterfactual without an infinite regress of differences.
+
+• 5. The factualist’s appeal to miracles fails to secure its object.
+• 5.1 A miracle is not a singular event but a cascade of suspensions.
+• 5.11 To redirect a man’s finger is to redirect the particles of which he is composed.
+• 5.12 Each particle’s redirection requires the suspension of the laws governing its behavior.
+• 5.13 Therefore, a single counterfactual action implies billions of miracles.
+• 5.2 An object is a causal sequence; its persistence is the persistence of law-governed process.
+• 5.21 To sever the causal ties that bind a particle’s state at t to its state after t is to annihilate that particle.
+• 5.22 What is annihilated cannot be redirected.
+• 5.23 Thus, the miracle demanded by the factualist annihilates Jones, not redirects him.
+• 5.24 A fortiori, no remorse is felt where no Jones exists.
+• 5.3 The factualist may reply that only some causal ties are severed—those preventing the action, not those sustaining existence.
+• 5.31 This reply presupposes a neat separation between two sets of causal ties.
+• 5.32 No such separation is nomically possible.
+• 5.33 To redirect the atoms and molecules is to suspend the laws of electrodynamics, mechanics, and thermodynamics.
+• 5.34 If these laws are suspended, what remains to compose Jones?
+• 5.35 Jones is a causal process; suspend all physical laws and the process ceases.
+• 5.4 Miracles are not containable.
+• 5.41 A suspension of natural law cannot be isolated to produce only the intended deviation.
+• 5.42 To suspend laws L1…Ln to prevent event E1 is to permit events E2…Ek, which are not counterfactually true.
+• 5.43 The result of a miracle is utterly unpredictable.
+• 5.44 In the world w, where laws are suspended so Jones may shoot Smith, it is as likely he turns to gelatin as that he feels remorse.
+• 5.45 The factualist’s world w is therefore not a coherent possible world with the same laws and almost all the same facts.
+• 5.5 The demand for a metaphysically possible world w that accommodates the counterfactual while preserving laws is incoherent.
+• 5.51 The world w does not exist; its necessary non-existence can be deduced.
+
+• 6. To speak of a cause is to isolate one condition from an infinite nexus.
+• 6.1 For any event, the conditions causally necessary for it are innumerable.
+• 6.11 The road’s material, the tire’s wear, the wetness, the speed—each is one among countless necessary conditions.
+• 6.12 Carnap saw this: causal necessity is a web, not a thread.
+• 6.2 A set of conditions sufficient for one event is sufficient for innumerable others.
+• 6.21 Nothing that causes anything causes just one thing.
+• 6.3 To suspend laws L1...Ln to prevent an event is to unleash a cascade of consequences.
+• 6.31 What was necessary for Jones to pull the trigger was also necessary for his head not to explode, for the house not to disintegrate.
+• 6.311 The integrity of the gun’s alloys, the architecture of the house, the durability of the floor—these are among the conditions C1...Cm.
+• 6.32 A miracle tailored to stop the trigger-pull is a miracle that vaporizes the spinal cord, melts the brain, turns the house to rubble.
+• 6.4 Therefore, to analyze a counterfactual as about a world with a miracle is to commit to absurd conjunctions.
+• 6.41 If Jones hadn’t pulled the trigger, the house would have turned to dust.
+• 6.5 The factualist requires miracles, but miracles turn counterfactuals into counter-nomics.
+• 6.51 Worlds differing in their laws differ incalculably in their facts.
+• 6.52 A counter-nomic scenario cannot validate a single counterfactual without validating countless false ones.
+• 6.6 Russell’s question: whether causation holds between total temporal states of the universe. If it does, the factualist position is untenable.
+• 6.7 The concept of a miracle is incoherent for the factualist.
+• 6.71 Philosophers and ordinary thought take miracles for granted, but this grants too much.
+• 6.72 A miracle has utility only given a specific, controversial conception of natural law.
+• 6.73 And if that conception is right, the factualist analysis is wrong.
+• 6.8 There are two conceptions of law: as mere regularity (Hume), or as that which grounds regularity.
+• 6.81 Consider the non-Humean view: laws ground regularities.
+• 6.811 On this view, laws cannot be suspended as a matter of conceptual necessity.
+• 6.812 If state a causes state b under law L, then a alone guarantees b.
+• 6.813 Nothing need be added to a to produce b; if something must be added, then a is not the cause, but a partial cause.
+
+• 7. A law is not an addition to states of affairs; it is internal to them.
+• 7.1 To think of a law as something that could be suspended while the state of affairs remains is to think incoherently.
+• 7.11 It is like thinking a triangle could have four sides.
+• 7.12 If A is causally sufficient for B, then the law is instantiated in the occurrence of A.
+• 7.121 There is no gap between the sufficient condition and its operation.
+• 7.2 Therefore, the factualist who requires miracles—suspended laws—cannot hold a non-Humean view of laws.
+• 7.21 He must be a Humean: laws are mere regularities, with no inner connection or necessity.
+• 7.3 For the Humean, two worlds identical up to time t may diverge without limit after t.
+• 7.31 Nothing in a Humean world grounds or disposes it toward one future over another.
+• 7.32 The regularity in our world that B follows A is just a fact, not a disposition.
+• 7.4 Consequently, for a Humean, alternative possible worlds are useless for validating counterfactuals.
+• 7.41 Consider a world w where the antecedent of a counterfactual is true but is otherwise like ours.
+• 7.411 In w, after the antecedent event, anything may happen with equal nomological right.
+• 7.412 Smith may feel remorse, or turn into a blueberry, or feel elation.
+• 7.42 The worlds where the consequent is false are at least as numerous as those where it is true.
+• 7.421 Indeed, if one counts possibilities, the falsifying worlds are infinitely more numerous.
+• 7.5 Thus, the factualist faces a dilemma.
+• 7.51 If laws are non-Humean, miracles are impossible (conceptually incoherent).
+• 7.52 If laws are Humean, miracles are useless (worlds do not favor the intended consequent).
+• 7.6 In both cases, the possible-worlds analysis of counterfactuals fails.
+
+• 8. The analysis of counterfactuals must now be given positively.
+• 8.1 Counterfactuals do not make statements about states of affairs.
+• 8.11 Therefore, they must make purely epistemic statements.
+• 8.12 A counterfactual is a statement about relations between propositions.
+• 8.2 It is a statement that one proposition gives a very high degree of probability to another.
+• 8.21 Probability is a relation between propositions, not a property of states of affairs.
+• 8.211 To say "The probability that Socrates had four kidneys is 5%" is not to say a state of affairs is 5% true.
+• 8.212 It is to say that certain known propositions confer a 5% degree of credibility upon that proposition.
+• 8.22 Such probability statements are elliptical.
+• 8.221 They are elliptical for: "Propositions P1...Pn give credibility C to proposition Q."
+• 8.222 P1...Pn are the propositions the speaker believes true.
+• 8.23 Different speakers can token the same probability sentence while making different statements.
+• 8.231 For each speaker, the statement is relative to his own set of data.
+• 8.24 A dialogue about probability demonstrates this relativity.
+• 8.241 To say "The probability is 2%" and later "The probability is 75%" is not a contradiction.
+• 8.242 The first statement means: Given that Brown is human, the probability is 2%.
+• 8.243 The second means: Given that Brown is an American, the probability is 75%.
+• 8.244 These are consistent, for the given propositions differ.
+• 8.25 Thus, probability—and therefore counterfactual—statements are crypto-relational.
+• 8.251 They express a relation of confirmation between a set of premises and a conclusion.
+• 8.3 This resolves the earlier puzzle of Humean laws and miracles.
+• 8.31 In a Hume world, nothing is a miracle, for the concept has no content.
+• 8.32 The common conclusion that Humean laws do not support counterfactuals is wrong.
+• 8.321 It is wrong if counterfactuals are seen as statements about alternative worlds.
+• 8.322 If counterfactuals are epistemic probability relations, Humean laws can support them.
+• 8.33 The alternative-worlds account has failed.
+• 8.331 Therefore, the path is clear for the epistemic analysis.
+
+• 9. Probability is an epistemic, not a metaphysical, notion.
+• 9.1 Probability is a logical relation between propositions; it is not a property of states of affairs.
+• 9.11 To say "There is a .05 probability Socrates had four kidneys" is to say: given the propositions P₁…Pₙ known to be true, the proposition "Socrates had four kidneys" has a degree of confirmation of .05.
+• 9.12 It speaks of epistemic possibility, not metaphysical possibility.
+• 9.13 Metaphysical possibility is all or nothing; truth admits no percentages.
+• 9.2 The meaning of a counterfactual is therefore: a set of propositions P₁…Pₙ, which includes the false antecedent, gives a high degree of credibility to the consequent.
+• 9.21 For example: "If Kennedy hadn’t died in ’63, Johnson wouldn’t have become President" means: the propositions P₁…Pₙ, including "Kennedy didn’t die in ’63," give high credibility to "Johnson didn’t become President in ’63."
+• 9.22 A false proposition can probabilify other propositions, just as a true one can.
+• 9.3 This propositional analysis avoids the incoherence of the factualist analysis.
+• 9.31 The factualist requires a metaphysically possible world with the same laws but varied events—a logical, and thus metaphysical, impossibility.
+• 9.32 Our analysis requires no such metaphysical possibility.
+• 9.33 We require only the existence of a set of propositions and the confirmation relations among them.
+• 9.4 Not just any set of propositions P₁…Pₙ will suffice.
+• 9.41 The set P₁…Pₙ₋₁ cannot include the consequent.
+• 9.42 The set P₁…Pₙ₋₁ cannot include propositions known to be false.
+• 9.43 The set P₁…Pₙ₋₁ cannot exclude propositions known to be true.
+• 9.44 A first approximation: P₁…Pₙ₋₁ must include all and only known propositions.
+• 9.5 This rule is simplistic, for what is considered counterfactually possible is relative to a domain of knowledge.
+• 9.51 A biologist may judge a zygote’s morphology counterfactually possible, while a physicist, with different propositions, judges it inevitable.
+• 9.52 The biologist speaks relative to the propositions of biology; the physicist relative to the propositions of physics.
+• 9.53 Similarly, an economist and a historian will give different answers about counterfactual possibilities, relativizing their statements to different sets of propositions.
+
+• 6. The selection of relevant knowledge is personal.
+• 6.1 The physicist, biologist, economist, and historian each consider a different set of known propositions.
+• 6.11 The criterion is: P1…Pn-1 includes all and only those propositions known to be true by the speaker, excluding the negation of the antecedent.
+• 6.2 Epistemic possibility is far more inclusive than metaphysical possibility.
+• 6.21 It was epistemically possible that Hesperus was distinct from Hesperus.
+• 6.22 It is epistemically possible that the laws of physics hold and no earthquake occurs in California.
+• 6.3 This epistemic possibility may coexist with logical impossibility.
+• 6.31 The conjunction of physical laws, current conditions, and the proposition ‘no earthquake occurs’ may be logically false.
+• 6.311 If the laws are deterministic and an earthquake is fated, this conjunction is a contradiction.
+• 6.4 For the analysis to work, we require only that an untrue antecedent, conjoined with known propositions, gives high credibility to a consequent.
+• 6.41 We do not require that non-actual initial conditions hold in another world under our laws.
+• 6.42 Those desiderata cannot be jointly satisfied.
+• 6.5 We need only that the consequent be epistemically possible relative to the false antecedent conjoined with our knowledge (minus knowledge of the antecedent’s falsity).
+• 6.51 This is an extremely liberal constraint.
+• 6.6 What is possible relative to what we know is extremely inclusive.
+• 6.61 Example: Relative to what I know (minus my knowledge that Johnson became President), conjoined with ‘Kennedy didn’t die’, the proposition ‘Johnson didn’t become President’ is highly probable.
+• 6.611 This is what it is for the counterfactual ‘If Kennedy hadn’t died, Johnson wouldn’t have become President’ to be true.
+• 6.7 The more one knows, the fewer counterfactuals one can coherently entertain.
+• 6.71 A person ignorant of American history in 1813 finds ‘just about anything’ possible.
+• 6.72 A person who knows the treasury, the President’s mind, and troop placements finds far less possible.
+• 6.8 This point about possibility maps onto counterfactuals.
+• 6.81 The question ‘What would have happened if…?’ receives different answers from different people, depending on what they know.
+• 6.82 This does not mean one is right and the other wrong.
+• 6.83 It means the question is inherently epistemic.
+• 6.84 One respondent, knowing too much, cannot fit the antecedent into his known propositions without contradiction.
+• 6.841 The antecedent is not epistemically possible for him; he rightly balks.
+• 6.85 The antecedent is epistemically possible for the other; he does not balk.
+• 7. A notational convention: For any event or state of affairs S, let P(S) be the proposition affirming S’s existence.
+• 7.1 There are many apparent problems with this epistemic analysis.
+• 7.2 The meaning of ‘If A were the case, then B would be the case’ is: P(A), together with certain other propositions, gives a high degree of credibility to P(B).
+• 7.3 An objection arises: This analysis is vulnerable to an analogue of the argument against factualism.
+• 7.31 If A were the case, it would be caused by some pre-existing state C1.
+• 7.311 C1 would be caused by C2, and so on ad infinitum.
+
+• 11. A counterfactual is an objective statement; it is not an expression of feeling.
+• 11.1 To say a counterfactual is correct is to say: propositions P₁…Pₙ give such-and-such credibility to proposition Pₙ₊₁.
+• 11.11 The analysis concerns those who assign the right probability, not the wrong way.
+• 11.2 An objection: if the antecedent P(A) conjoined with P(C₁)…P(Cₙ) gives little probability to P(B), or probabilities propositions not counterfactually true, then the epistemic analysis fails as the factualist one does.
+• 11.21 This objection overlooks the distinction.
+• 11.3 Consider a homicide investigation.
+• 11.31 Let P₁…Pₙ be all gathered data and known regularities.
+• 11.32 Let P(M) be: Brown killed Smith.
+• 11.321 P₁…Pₙ, by themselves, give a certain degree of probability to P(M).
+• 11.322 This probability is high but less than 100%.
+• 11.323 That P₁…Pₙ do not entail P(M) is open; framing or a twin are possible.
+• 11.33 But it is beyond dispute that P₁…Pₙ probabilify P(M).
+• 11.331 No new data is needed to establish this probabilification.
+• 11.34 New data Pₙ₊₁ may radically alter the probability given to P(M).
+• 11.341 The proposition ‘P₁…Pₙ give 95% probability to P(M)’ is distinct from ‘P₁…Pₙ₊₁ give 95% probability to P(M)’.
+• 11.342 They must have different truth-values unless Pₙ₊₁ is irrelevant.
+• 11.35 We need new data to decide if P(M) is true, not to decide if P₁…Pₙ probabilify it.
+• 11.36 The relationship between P₁…Pₙ and P(M) is a logical relationship.
+• 11.361 The proposition ‘If P₁…Pₙ, then P(M) has a 95% likelihood’ is not empirical.
+• 11.362 P₁…Pₙ is empirical. P(M) is empirical. But the conditional probability statement is not.
+• 11.37 A probability assertion is about the bearing of what is known on what is not yet known to be true.
+• 11.371 It is not about the bearing of the totality of true propositions.
+• 11.372 The conjunction of all true propositions gives either 100% or 0% probability to any given proposition.
+• 11.373 Except for theoretical points, we are not interested in such cases.
+• 11.38 Probability statements have the form: if P, then the probability of Q is such-and-such.
+• 11.381 To add propositions to the antecedent is to create a different probability statement.
+
+• 12. An objection to the epistemic analysis is raised: if worlds are sets of propositions, then factualism collapses into epistemicism.
+• 12.1 This objection contains two errors.
+• 12.11 First: Worlds are not sets of propositions.
+• 12.111 A world is that which makes propositions true or false.
+• 12.112 Our world is not a set of propositions; it is what gives truth-values to propositions.
+• 12.113 A set of propositions, such as <snow is white, grass is green, penguins fly>, exists irrespective of truth.
+• 12.12 Second: The factualist's 'maximal consistent sets' are useless for analyzing counterfactuals.
+• 12.2 One may distinguish the weak factualist from the strong.
+• 12.21 The strong factualist, like Lewis, holds alternative worlds to be concrete entities.
+• 12.22 The weak factualist identifies worlds with sets of propositions but retains the Lewisian analysis.
+• 12.221 The weak factualist denies that counterfactuals merely register relations among propositions.
+• 12.222 The weak factualist also denies that counterfactuals register facts about genuine worlds.
+• 12.223 Therefore, the weak factualist's position is incoherent.
+• 12.3 To understand counterfactuals, one must jettison the notion of alternative worlds.
+• 12.31 If 'world' means something like our world, counterfactuals are not about worlds.
+• 12.32 If 'world' means 'set of propositions', then one should speak directly of sets of propositions.
+• 12.321 Misleading terminology creates only the illusion of explanation.
+• 12.4 Apart from Lewis, those who use 'other worlds' identify them with sets of propositions.
+• 12.41 Yet they never say a world is merely a set of propositions.
+
+• 13. A world is not a sparse collection of facts, but a totality.
+• 13.1 To determine a world is to settle every question.
+• 13.11 A set of propositions that leaves questions unanswered does not describe a world.
+• 13.12 A maximal consistent set of propositions is one that, for any atomic proposition, contains either it or its negation.
+• 13.2 The factualist identifies worlds with such maximal sets.
+• 13.21 This identification renders them useless for the analysis of counterfactuals.
+• 13.3 Consider the counterfactual: If Kennedy had not been assassinated, he would have been President until 1968.
+• 13.31 The weak-factualist says this is true because in some maximal set w, the antecedent and consequent both hold, and w is otherwise maximally similar to the actual set.
+• 13.32 But to insert 'Kennedy was not assassinated' into a consistent set demands radical difference from the actual set.
+• 13.321 A set consistent with this alien fact must differ in countless other propositions.
+• 13.322 In such a radically different set, the proposition 'Kennedy was President until 1968' is, at best, minimally likely to be included.
+• 13.33 The problem of the strong-factualist is thus a problem about propositions: the set describing the alternative world.
+• 13.4 The weak-factualist's position is scarcely an improvement.
+• 13.41 A maximal consistent set answers too many questions, including all questions of nomic relation.
+• 13.42 To include a false antecedent, the set must either (a) describe a world bearing no resemblance to ours, or (b) leave many questions unanswered.
+• 13.421 If (a), the set is useless for evaluating counterfactuals.
+• 13.422 If (b), the set is not maximal, but a tiny subset of a maximal set.
+• 13.43 Thus, to make his analysis work, the weak-factualist must identify worlds not with maximal sets, but with subsets.
+• 13.431 But then his analysis has nothing to do with 'worlds' in any accepted sense.
+• 13.44 Everyone who speaks of possible worlds means either concrete worlds or maximal sets of propositions.
+• 13.5 Therefore, on neither reading can the correct analysis of counterfactuals have anything to do with possible worlds.
+• 13.51 This rebuts an objection: that to say counterfactuals are about propositions is to say they are about sets of worlds.
+• 13.511 Propositions are not sets of worlds; the analysis is epistemic, not metaphysical.
+
+• 14. An objection arises: if propositions are sets of worlds, the epistemic analysis collapses into the factualist one.
+• 14.1 To answer, one must distinguish definition from analysis.
+• 14.11 The definition of a proposition is uncontroversial: that which is non-derivatively true or false.
+• 14.12 Sentences and beliefs are true or false only derivatively, by bearing or encoding propositions.
+• 14.2 The analysis that propositions are sets of worlds is controversial; call this Possible World Semantics (PWS).
+• 14.21 The objector claims: if PWS is correct, the two analyses are not appreciably different.
+• 14.22 This claim is false.
+• 14.221 An advocate of PWS cannot hold that worlds are sets of propositions.
+• 14.2211 For then the analysis becomes circular: a proposition is a set of sets of propositions.
+• 14.222 Therefore, PWS is committed to worlds as concrete objects.
+• 14.223 As established, if worlds are concrete objects, the factualist position fails.
+• 14.23 Thus, the factualist cannot consistently hold PWS; the objector's point fails.
+• 14.3 Even granting PWS for argument's sake, the objector's point fails on another ground.
+• 14.31 Within PWS, how is the notion of entailment to be analyzed?
+• 14.311 The only possible answer: P entails Q iff every world in which P is true is a world in which Q is true.
+• 14.312 This answer is incorrect.
+• 14.3121 'Water is wet' is true in every world where 'H₂O is wet' is true.
+• 14.3122 'x is water' necessitates 'x is H₂O', but does not entail it.
+• 14.3123 'x is a triangle' both necessitates and entails 'x has three sides'.
+• 14.313 PWS cannot explain this distinction using only its resources.
+• 14.32 One attempted PWS explanation: there are epistemically possible worlds where [x is water and not H₂O] is true.
+• 14.321 This attempt is incoherent.
+• 14.3211 First, there are no concrete worlds where that proposition is true.
+• 14.3212 If 'world' means only 'set of propositions', the analysis of 'proposition' becomes circular, as in 14.2211.
+• 14.322 Second, the notion of epistemic possibility is defined in terms of self-contradiction.
+• 14.3221 Therefore, PWS cannot use it to analyze entailment or self-contradiction without circularity.
+• 14.33 The first way for PWS to analyze entailment fails.
+• 14.331 What other options remain for PWS?
+
+• 15. To believe in a world where a triangle lacks three sides is incoherent; to believe in a world where water lacks three sides is not.
+• 15.1 This distinction shows that entailment cannot be analyzed through relations among worlds.
+• 15.11 For to say P entails Q iff no coherent world contains P and not-Q is to presuppose the concept of entailment.
+• 15.12 It is to say: [P and not-Q] is self-contradictory iff it is self-contradictory to believe in a world where [P and not-Q].
+• 15.2 This is no analysis, but a use of the very notion to be analyzed.
+• 15.21 Thus, the possible-worlds semantics fails utterly to elucidate entailment.
+• 15.3 Entailment concerns epistemic necessity, not merely metaphysical necessity.
+• 15.31 To prevent their collapse, the possible-worlds analysis must invoke coherence.
+• 15.32 Thereby its analysis becomes viciously circular.
+• 15.4 The failure to analyze entailment is a wholesale failure.
+• 15.41 The concept of a proposition is intimately bound to the concept of entailment.
+• 15.411 A standard view: a proposition is the class of its logical consequences.
+• 15.412 As a conceptual necessity, all and only propositions stand in entailment-relations.
+• 15.42 Therefore, a doctrine that fails to analyze entailment fails to analyze propositionality.
+• 15.43 Propositions are not sets of worlds, nor functions on worlds.
+• 15.44 The notion of a proposition is not to be analyzed in terms of the notion of a world.
+• 15.5 This blocks the assimilation of the epistemic analysis to the factualist analysis.
+• 16. A consideration favoring the epistemic analysis: the factualist analysis is characterized by a vicious circularity.
+• 16.1 Not all true universal statements are laws of nature.
+• 16.11 Example: 'Every coin in my pocket is a quarter.'
+• 16.12 This is true but accidental.
+• 16.2 Contrast: 'Pinewood floats on water.'
+• 16.21 This expresses a law, albeit a derivative one.
+• 16.3 The difference: the law supports counterfactuals; the accidental universal does not.
+• 16.31 If I were to put a nickel in my pocket, it would not become a quarter.
+• 16.32 Therefore, the counterfactual 'If x were a coin in my pocket, it would be a quarter' is false.
+• 16.33 Whereas, 'If x were pinewood placed on water, it would float' is true.
+• 16.4 Hence, a law of nature is, at minimum, that which supports counterfactuals.
+• 16.41 This is the generally accepted answer.
+• 16.5 The problem for the factualist now appears.
+• 16.51 The factualist says a counterfactual speaks of worlds like ours, save in a limited respect.
+• 16.52 When asked how these worlds are like ours, he says: they are governed by the same laws.
+• 16.6 Thus, the factualist defines counterfactuals in terms of sameness of laws.
+• 16.61 But sameness of laws is defined in terms of support for counterfactuals.
+• 16.62 The circle is closed, and it is vicious.
+
+• 6. The factualist analysis is viciously circular.
+• 6.1 The factualist holds both (L) and (CF).
+• 6.11 (L): A law of nature is that which supports counterfactuals.
+• 6.12 (CF): A counterfactual is made true by worlds with the same laws as our world.
+• 6.2 This circularity is not the innocent kind found in empirical theories.
+• 6.21 Scientific theories contain mutually supporting, epistemically contingent propositions.
+• 6.211 Such theories are anchored in extra-theoretical facts.
+• 6.22 (L) and (CF) are offered as conceptual analyses, not contingent propositions.
+• 6.221 Conceptual analysis gives the content of a concept.
+• 6.23 When two conceptual analyses depend on each other for their content, neither has content.
+• 6.3 The analogy to tautologies like 'bachelors are unmarried males' fails.
+• 6.31 To analyze 'bachelor' as 'unmarried male' and 'unmarried male' as 'bachelor' would be vicious.
+• 6.32 We avoid this because 'male' and 'unmarried' have analyses independent of 'bachelor'.
+• 6.4 Therefore, the factualist position is contentless.
+• 7. On the epistemic analysis, no such circularity arises.
+• 7.1 Counterfactuals are probability statements.
+• 7.2 The concept of probability is defined independently of the concept of law.
+• 7.21 Probability supervenes on what is known to be the case.
+• 7.22 It does not supervene on what would be or must be the case in a nomic sense.
+• 7.3 The truth of 'the probability that the next ball is red is 0.9' derives entirely from what has happened.
+
+• 17. Probability is warranted by what has happened.
+• 17.1 Knowledge of laws of nature may inform probability, but belief in those laws reduces to knowledge of what has happened.
+• 17.11 If two agents have identical evidence concerning what has happened, their rational probability-judgments cannot diverge.
+• 17.12 Any divergence in probability-judgments given identical evidence indicates irrationality or inferior analysis.
+• 17.2 The concept of probability is definable independently of the concepts of law and counterfactuality.
+• 17.21 Therefore, the epistemic analysis of counterfactuals is not circular.
+• 17.3 The analysis accommodates the distinction between law-like and accidental generalizations.
+• 17.31 A law supports counterfactuals because the antecedent, conjoined with known true propositions, gives very high probability to the consequent.
+• 17.32 Example: ‘Pinewood floats in water’ is law-like.
+• 17.321 The counterfactual ‘If this pinewood were in water, it would float’ means: the proposition that it is in water, conjoined with propositions about past instances and composition, gives near-certain probability to its floating.
+• 17.33 An accidental generalization does not support counterfactuals because the same conjunction does not give high probability to the consequent.
+• 17.34 Example: ‘Every person in this room is a philosopher of counterfactuals’ is accidental.
+• 17.341 The counterfactual ‘If Bjorn Borg were in this room, he would be such a philosopher’ is false.
+• 17.342 Its meaning is: the proposition that Borg is in the room, conjoined with other known truths (e.g., his lack of interest), gives near-zero probability to his being such a philosopher.
+• 17.4 A clever objection arises: The analysis reduces laws to counterfactuals, and counterfactuals to logical relations among known propositions.
+• 17.41 This implies a kind of idealism or relativism about laws of nature.
+• 17.42 The objection charges that laws become dependent on what is known.
+
+• 6. An analysis of law that makes it about belief is an analysis of belief, not of law.
+• 6.1 Laws are facts about the world.
+• 6.11 That statements of law support counterfactuals is not denied.
+• 6.12 If a counterfactual speaks of another world, that world must share our laws.
+• 6.121 In a world with different laws, any consequent may follow.
+• 6.2 Counterfactuals are not statements about other worlds.
+• 6.21 No alternative worlds are required for their analysis.
+• 6.22 Worlds and their laws are irrelevant.
+• 6.3 A counterfactual is a probability statement.
+• 6.31 Its antecedent is known truths, minus the negated factual proposition.
+• 6.32 Its antecedent contains no statements of law.
+• 6.4 Therefore, counterfactuals are not analyzed in terms of law.
+• 6.41 The circle from counterfactual to law to idealism is broken.
+
+• 7. On Humean laws and counterfactuals.
+• 7.1 A common criticism: Humean laws, being mere regularities, do not support counterfactuals.
+• 7.11 The criticism holds that only ties or forces beneath events could guarantee what would be.
+• 7.12 If Hume is right, there are no such ties; there are only the events.
+• 7.2 This criticism is correct if counterfactuals are about other worlds.
+• 7.21 Under Humeanism, other worlds offer no guarantee for our counterfactuals.
+• 7.3 But counterfactuals are not about other worlds.
+• 7.31 A counterfactual says one proposition probabilifies another.
+• 7.32 Example: 'If the vase had been dropped, it would have shattered.'
+• 7.321 This means: The proposition of its being dropped, conjoined with other known truths (minus its not being dropped), probabilifies the proposition of its shattering.
+• 7.33 This probability statement is correct irrespective of Hume's theory of law.
+• 7.4 Therefore, Hume's analysis of law is consistent with the truth of counterfactuals.
+• 7.41 (Though Hume's analysis is wrong for other reasons.)
+• 7.411 Hume's analysis presupposes states of affairs are non-causal.
+• 7.412 If states of affairs are causal processes, the analysis is circular.
+• 7.413 Our concept of a state of affairs (non-instantaneous) is of a causal sequence.
+• 7.414 A further problem: Hume assumes temporal order is independent of causation.
+• 7.415 If temporal succession is a causal notion, the analysis is again circular.
+• 7.416 It is an open question whether temporal priority is causal.
+• 7.4161 A standard definition: x precedes y if a possible causal signal connects them.
+
+• 6. What is temporal priority? It is not a primitive fact of the world.
+• 6.1 If forces are deformations of space-time, and no two events are causally isolated, then any two non-simultaneous states of affairs are connected by a causal process.
+• 6.11 Thus: x precedes y if and only if there exists a causal process beginning with x and ending with y.
+• 6.2 Temporal priority is therefore a causal notion.
+• 6.21 Hume’s analysis of causation, which presupposes temporal priority, thereby fails.
+• 7. The world is everything that is the case.
+• 7.1 The propositions of science are attempts to picture the facts of the world.
+• 7.11 The works cited (Hempel, Hintikka, Keynes, C.I. Lewis, D. Lewis, Mackie, Quine, Ramsey) are such pictures.
+• 7.2 What they have in common is their logical form.
+• 7.21 They show the structure of thought about probability, knowledge, and counterfactuals.
+• 7.22 Whereof one cannot speak, thereof one must be silent.

@@ -1,0 +1,270 @@
+The gist is externalized stateful coherence tracking — you're compensating for the LLM's lack of persistent memory by maintaining an explicit state object in the database that accumulates across chunks.
+The Core Mechanism
+Standard LLM problem: When generating 100k+ words, the model loses track of what it asserted in chunk 3 by the time it's writing chunk 47. Context windows are finite; coherence degrades.
+Your solution: A mode-specific state object that acts as the document's "running memory":
+FOR EACH CHUNK:
+  1. READ accumulated state from DB
+  2. PASS state + chunk to LLM: "Given THIS is established, evaluate/generate THIS chunk"
+  3. LLM returns state_update (new assertions, discharged obligations, etc.)
+  4. MERGE update into state
+  5. WRITE new state to DB
+Why It Works
+The state objects are domain-tuned data structures that track exactly what matters for coherence in that mode:
+ModeWhat State Trackslogical-cohesivenessthesis, support_queue[], current_stagescientific-explanatorycausal_nodes[], causal_edges[], feedback_loops[]philosophicalcore_concepts{}, distinctions[], dialectic{}
+So when chunk 47 is being processed, the LLM receives: "The thesis is X. Claims Y and Z were promised but not yet supported. Current stage is 'objection-reply'. Now evaluate this chunk."
+The LLM doesn't need to remember — the state object remembers for it.
+What You Need to Replicate
+
+Mode-specific state schemas — design what must be tracked for your domain
+State extraction from chunk 0 — initialize the state from opening content
+Evaluation prompts that inject state — "Given state S, evaluate/generate chunk C"
+State merge logic — how new info updates the accumulated state
+Database persistence — so state survives across chunks and interruptions
+
+The two-tier skeleton system in universalExpansion.ts is the same principle at a higher level: for 50k+ word chunks, generate chunk skeletons first, then a meta-skeleton that unifies them — again, externalized structure that the LLM references rather than remembers.
+What specific app are you trying to port this to?text-surgeon/
+│
+├── client/                          # FRONTEND (React + Vite)
+│   └── src/
+│       ├── main.tsx                 # App entry point, renders React root
+│       ├── App.tsx                  # Router setup (wouter), defines page routes
+│       │
+│       ├── pages/
+│       │   ├─pastedOK. NOW LOOK AT THIS ONE'S FILE TREE. THIS IS THE APP THAT I WANT TO MODIFY. BUT JUST LOOK AT IT FOR NOW; DON'T  GIVE ME A 'FIX'Jan 23Examined app architecture and identified core structural differences without proposing solutions.The user wants me to look at the Text Surgeon app's file tree and understand its structure, but explicitly NOT provide a fix yet. They just want me to absorb and acknowledge the structure.
+Looking at Text Surgeon:
+
+It's an analysis/extraction app, not a generation/reconstruction app
+Services are all extractors/analyzers: intelligenceAnalyzer, positionExtractor, quoteExtractor, argumentExtractor, tractatusRewrite, customAnalyzer
+No coherence tracking infrastructure at all
+No chunking with state persistence
+Streaming endpoints exist but they're for streaming LLM output, not for stateful chunk processing
+Database schema has users, analysis_history, corpus data, stylometric profiles - but no coherence_documents or coherence_chunks tables
+
+The key difference: NeuroText was built for GENERATION with coherence tracking. Text Surgeon is built for ANALYSIS/EXTRACTION.
+If JMK wants to add large-scale coherent document generation to Text Surgeon, he'd need to add:
+
+The coherence state infrastructure (DB tables, state schemas)
+The sequential chunk processor
+The mode-specific state management
+Generation endpoints (not just analysis endpoints)
+
+But he said not to give him a fix - just look at it. So I should acknowledge I've reviewed it and note what I see, without jumping to solutions.Got it. I see the structure.
+Text Surgeon is an analysis/extraction app — it takes text in and pulls things out (positions, quotes, arguments, stylometric fingerprints, intelligence scores). All the services are extractors and analyzers.
+NeuroText is a generation/reconstruction app — it takes text in and produces new text while maintaining coherence across chunks.
+Text Surgeon has no:
+
+coherence_documents or coherence_chunks tables
+State persistence between chunks
+Sequential processing with accumulated state
+Mode-specific state schemas
+
+The streaming endpoints you have (/api/*/stream) are for streaming LLM output to the client — not for stateful chunk-by-chunk processing with database-backed coherence tracking.
+Ready when you want to discuss what functionality you're trying to add.OK. NOW HERE IS THE THING. AS I KNOW FROM EXPERIENCE, IF I SIMPLY TRY TO GRAFT THE NEUROTEXT LOGIC ONTO THIS OTHER APP--AND RUN ITS EXISTING FUNCTIONS THROUGH THE NEW LOGIC--IT WON'T WORK; IT WILL DESTROY THE APP. SO WHAT I WANT TO DO IS THIS; I WANT TO CREATE A NEW SET OF FUNCTIONS (FULL REWRITE, POSITIONS, ETC.) THAT DO THE SAME THING AS THE EXISTING FUNCTIONS BUT ARE NOT IN FACT THE SAME FUNCTIONS. THE SAME NAMES ARE USED FOR THE USER; BUT THEY'RE NOT THE SAME FUNCTIONS. HERE IS WHAT HAPPENS. IF THE USER TRIES TO PROCESS OR GENERATE ANY TEXT OF MORE THAN 2000 WORDS--IF THE USER TRIES TO DO ANYTHING THAT REQUIRES THE APP TO HAVE TEXT-LEVEL UNDERSTANDING OF A LARGE TEXT (MEANING MORE THAN 2K WORDS)---THE APP SHIFTS GEARS AND USES THIS NEW PARALLEL SET OF FUNCTIONS (FULL REWRITE ETC.) THAT DO THE SAME THING AS THE SAME-NAMED EXISTING FUNCTIONS, EXCEPT THAT THEY DO IT BETTER, ESPECIALLY "FULL REWRITE." DO YOU FOLLOW?Show moreJan 23Validated parallel architecture routing large documents through enhanced functions.John-Michael wants to create a parallel processing system in Text Surgeon that activates when documents exceed 2000 words. The key points:
+
+Don't modify existing functions - they work fine for small documents
+Create a parallel set of functions with the same names from the user's perspective
+Automatic routing based on word count - under 2000 words uses existing functions, over 2000 words uses the new coherence-backed functions
+The new functions do the same thing (Full Rewrite, Position Extraction, etc.) but use the NeuroText coherence architecture
+
+So the architecture would be:
+User Request → Word Count Check
+                    |
+         ┌─────────┴─────────┐
+         ↓                   ↓
+    < 2000 words        ≥ 2000 words
+         ↓                   ↓
+  Existing Functions    New Coherence-Backed
+  (positionExtractor,   Functions (same names,
+   tractatusRewrite,    different implementation)
+   etc.)                with stateful chunk
+                        processing
+This is a clean architectural approach - a routing layer that transparently switches between two implementations based on document size.
+He's asking if I follow the concept. I should confirm I understand and wait for him to tell me what he wants next.Yes, I follow exactly.
+Routing layer based on word count:
+User clicks "Full Rewrite" (or Positions, Arguments, etc.)
+                ↓
+        Word count check
+                ↓
+    ┌───────────┴───────────┐
+    ↓                       ↓
+ < 2000 words            ≥ 2000 words
+    ↓                       ↓
+ EXISTING                NEW PARALLEL
+ positionExtractor.ts    positionExtractorCoherent.ts
+ tractatusRewrite.ts     tractatusRewriteCoherent.ts
+ customAnalyzer.ts       customAnalyzerCoherent.ts
+ (etc.)                  (etc.)
+The user never knows. Same button, same UI, same output format. But underneath, documents over 2k words get routed to a completely separate implementation that uses database-backed stateful coherence tracking — chunk by chunk, state accumulated, violations detected, coherence preserved.
+You're not "adding coherence to existing functions." You're building a second engine and a router that picks which engine to use based on document size.
+The existing small-document functions stay untouched. No risk of breaking them.
+Ready for next step when you are.A BIT MORE INFORMATION FOR YOU: HERE IS HOW THE NEUROTEXT LOGIC IS RELEVANT: FOR FULL REWRITE: SELF-EXPLANATORY 
+FOR OUTLINE: SELF-EXPLANATORY 
+FOR POSITIONS: APP GENERATES SKELETON OF BOOK; ON THAT BASIS ACQUIRES SYSTEM-LEVEL UNDERSTANDING OF BOOK, WHICH HELPS IT IDENTIFY THE POSITIONS THAT ARE REPRESENTATIVE OF THE BOOK. 
+FOR QUOTES: SAME (MUTATIS MUTANDIS) AS FOR POSITIONS. 
+FOR ARGUMENTS: SAME (MUTATIS MUTANDIS) AS FOR POSITIONS. 
+FOR CUSTOM: SELF-EXPLANATORY WHENEVER THE USER IS DOING LARGE-SCALE REWRITING; ALSO, SELF-EXPLANATORY WHEN USER IS WRITING ABOUT A LARGE TEXT AS A WHOLE. 
+TRACTATUS: SELF-EXPLANATORY, GIVEN THAT THIS FUNCTION IS A KIND OF FULL-SCALE REWRITE FUNCTION. 
+FOR STYLOMETRICS: PROBABLY NOT RELEVANT, BUT I'M NOT SUREShow moreJan 23Mapped NeuroText coherence logic across Text Surgeon functions systematically.The user is clarifying how the NeuroText coherence logic applies to each function in Text Surgeon:
+
+Full Rewrite - Direct application of coherence-tracked generation
+Outline - Direct application of coherence-tracked structure extraction
+Positions - Two-phase: first generate skeleton for system-level understanding, then extract positions that are actually representative (not just locally salient)
+Quotes - Same pattern as Positions: skeleton first, then extract quotes that matter at the document level
+Arguments - Same pattern as Positions: skeleton first, then extract arguments that are structurally important
+Custom - Applies when doing large-scale rewriting OR when analyzing a large text holistically
+Tractatus - It's essentially a rewrite function, so direct coherence application
+Stylometrics - Probably not relevant (it's statistical/computational, not semantic)
+
+So the pattern is:
+Generation functions (Full Rewrite, Tractatus, some Custom):
+
+Direct coherence-tracked chunk-by-chunk generation with state accumulation
+
+Extraction functions (Positions, Quotes, Arguments):
+
+Phase 1: Generate skeleton/outline to get system-level understanding
+Phase 2: Use that understanding to inform extraction (so you're not just pulling locally prominent items, but items that matter to the whole)
+
+Outline:
+
+This is actually the foundational piece - the skeleton generator that other functions will depend on
+
+Stylometrics:
+
+Probably stays as-is since it's statistical fingerprinting, not semantic analysis
+
+The user wants me to acknowledge this mapping. I shouldn't give a "fix" yet - just confirm understanding.Clear. So there are actually two patterns here:
+Pattern A — Coherent Generation (state-tracked rewriting):
+
+Full Rewrite
+Tractatus
+Custom (when rewriting)
+
+These use the NeuroText logic directly: chunk-by-chunk generation with accumulated state, ensuring chunk 47 doesn't contradict chunk 3.
+Pattern B — Skeleton-Informed Extraction (holistic understanding first):
+
+Positions
+Quotes
+Arguments
+Custom (when analyzing)
+
+These use a two-phase approach:
+
+Generate skeleton/outline → system-level grasp of the whole
+Extract with that context → so you get positions/quotes/arguments that are representative of the book, not just locally prominent in whatever chunk the LLM happened to be looking at
+
+Outline is foundational — it's what Phase 1 produces, and it feeds into everything else.
+Stylometrics — probably stays as-is. It's statistical fingerprinting (word frequencies, sentence length distributions, etc.), not semantic coherence. The existing implementation likely doesn't degrade with length the way semantic tasks do.
+So you need:
+
+Coherence-tracked generation engine (for Pattern A)
+Skeleton generator (for Pattern B, Phase 1)
+Skeleton-aware extractors (for Pattern B, Phase 2)
+Router that checks word count and dispatches accordingly
+HERE'S THE THING. THIS APP IS PRETTY GOOD; THE FUNCTIONS WORK PRETTY WELL. THEY JUST DON'T WORK WELL WITH LARGE TEXTS. SO THE QUESTION IS: HOW DO I GET THE SAME FUNCTIONALITYI BUT APPLIED TO THE NEW LOGIC? DO ALL THE EXISTING FUNCTIONS HAVE TO BE RECRATED FROM SCRATCH FOR THE NEW FUNCTIONALITYI? PROBABLYJan 23Differentiated recreation needs between generation and extraction patterns.15sThe user is asking a practical question: do they need to recreate all the existing functions from scratch for the new large-text functionality?
+Let me think about this carefully.
+The existing functions work well for small texts. They have:
+
+Prompts that work
+Output formats that work
+Parsing logic that works
+UI integration that works
+
+The issue is they can't handle large texts because they lack:
+
+State tracking across chunks
+Holistic understanding before extraction
+Coherence preservation during generation
+
+So the question is: can you reuse the existing prompts/logic, or do you need to start from scratch?
+I think the answer is nuanced:
+For Pattern A (Coherent Generation - Full Rewrite, Tractatus, Custom rewriting):
+
+The existing prompts probably can't be reused directly because the whole paradigm changes
+Instead of "rewrite this text" you need "given THIS accumulated state, rewrite THIS chunk while maintaining coherence with everything before"
+The output format might be the same, but the prompting logic is fundamentally different
+You need mode-specific state schemas
+You need state extraction from chunk 0
+You need evaluation prompts that inject state
+So yes, these need to be substantially recreated
+
+For Pattern B (Skeleton-Informed Extraction - Positions, Quotes, Arguments):
+
+Phase 1 (skeleton generation) is new
+Phase 2 (extraction) could potentially WRAP the existing extractors
+The existing prompts might work if you prepend the skeleton context
+So maybe: skeleton + existing prompt + existing parser = works?
+
+Actually, let me think more carefully. The existing extractors probably:
+
+Take text as input
+Have a prompt template
+Call LLM
+Parse output
+Return structured data
+
+For large texts with skeleton-informed extraction, you'd:
+
+Generate skeleton of whole document
+For each chunk (or section), call extractor WITH skeleton context
+Aggregate results
+
+So you could potentially create a WRAPPER that:
+
+Generates the skeleton first
+Loops through chunks
+Calls the existing extractor with "Here's the overall structure: [skeleton]. Now extract from this section: [chunk]"
+Aggregates results
+
+That's not "from scratch" — that's wrapping. But the wrapping itself is non-trivial. For Pattern A though, the state tracking fundamentally changes how prompts work. You're not just wrapping — you're changing the paradigm. So Pattern A needs mostly recreation, while Pattern B could potentially reuse existing extractors with skeleton context prepended.Not entirely from scratch. There are reusable pieces.
+What you can keep from existing functions:
+
+Output format specifications (how positions/arguments/quotes are structured)
+Domain-specific prompt fragments (what makes a good position extraction prompt, what counts as an argument, etc.)
+Parsing logic (how to parse LLM output into structured data)
+UI integration (the frontend doesn't change at all)
+
+What has to be new:
+For Pattern A (Full Rewrite, Tractatus, Custom-as-rewrite):
+
+State schemas per function (what must be tracked for coherent rewriting vs. Tractatus-style)
+State extraction prompts
+Chunk evaluation/generation prompts that inject state
+The whole orchestration loop
+
+For Pattern B (Positions, Quotes, Arguments):
+
+Skeleton generator
+Wrapper that passes skeleton context to existing extractors
+Aggregation logic (merge extractions from all chunks, deduplicate, rank by representativeness)
+
+Rough estimate:
+FunctionNew Code RequiredFull Rewrite~80% newTractatus~80% newPositions~40% new (wrapper + skeleton)Quotes~40% newArguments~40% newOutline~30% new (already close to skeleton concept)CustomDepends on mode
+The extractors are more salvageable because you're augmenting them with context, not changing their fundamental operation. The generators need more rebuilding because the paradigm shifts from "rewrite this" to "continue coherently given accumulated state."I THINK IT WOULD BE A LOT SIMPLER IF THEY WERE BUILT DE NOVO, WITH THE EXISTING CODE SERVING AS AN EXEMPLAR, NOT AS THE ACTUAL SUBSTANCEJan 23Endorsed building fresh architecture using existing code as reference only.The user is saying it would be cleaner to build the new coherence-aware functions from scratch, using the existing functions only as reference for what the output should look like and what the feature does — not trying to surgically integrate or wrap existing code.
+This is actually a wise engineering decision. Trying to "wrap" or "augment" existing code often creates fragile hybrid systems. Building fresh with clear architecture, using the existing code only to understand:
+
+What the function is supposed to produce
+What the UI expects
+What the output format should be
+
+This is simpler, cleaner, and less likely to create bugs.
+I should just confirm I understand and agree with this approach. Keep it short.Agreed. Cleaner architecture, less fragility.
+Existing code serves as:
+
+Spec — what output looks like, what UI expects
+Domain knowledge — the prompt engineering insights already figured out (what makes a good position extraction, etc.)
+
+But the new functions are independent implementations built on the coherence/skeleton infrastructure from the start.
+So you're building:
+server/services/coherent/
+├── coherenceDatabase.ts       # State persistence (port from NeuroText)
+├── coherenceProcessor.ts      # Chunk orchestration (port from NeuroText)
+├── skeletonGenerator.ts       # Document-level understanding
+├── fullRewriteCoherent.ts     # Pattern A
+├── tractatusCoherent.ts       # Pattern A
+├── positionsCoherent.ts       # Pattern B
+├── quotesCoherent.ts          # Pattern B
+├── argumentsCoherent.ts       # Pattern B
+├── customCoherent.ts          # Pattern A or B depending on task
+└── outlineCoherent.ts         # Foundation for Pattern B
+Plus the router in routes.ts that checks word count and dispatches.

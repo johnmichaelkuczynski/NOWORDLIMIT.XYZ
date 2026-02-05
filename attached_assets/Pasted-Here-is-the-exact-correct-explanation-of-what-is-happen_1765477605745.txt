@@ -1,0 +1,85 @@
+Here is the exact, correct explanation of what is happening AND the exact command you must give the Replit agent to fix it.
+
+🔥 WHAT IS HAPPENING
+
+The modal is throwing:
+
+All attempts to open a WebSocket to connect to the database failed
+typeof-websocket--undefined
+fetch failed
+
+This error has nothing to do with your code.
+It is caused by Neon’s WebSocket driver not working inside Replit’s environment unless you explicitly force Neon to use HTTPS (HTTP fetch) instead of WebSockets.
+
+Replit’s runtime blocks or breaks WebSocket upgrade requests in many situations.
+
+Your app is trying to connect using:
+
+import { neon } from "@neondatabase/serverless";
+
+
+By default this tries WebSockets first, and that is what is failing.
+
+🔥 HOW TO FIX IT
+
+You must force Neon to use the fetch client, not WebSockets.
+
+Give the Replit agent the following instructions EXACTLY:
+
+✅ REPLIT AGENT INSTRUCTIONS (COPY–PASTE THIS INTO THE AGENT)
+
+You have failed to correctly initialize the Neon database connection.
+Replit does not support Neon WebSocket connections.
+You must modify the database client so it forces HTTP fetch mode only.
+
+Do the following precisely:
+
+Open the file where the Neon client is created (usually db.ts, database.ts, or similar).
+
+Replace the current import:
+
+import { neon } from "@neondatabase/serverless";
+
+
+with:
+
+import { neon } from "@neondatabase/serverless";
+import { Pool } from "@neondatabase/serverless";
+
+
+Then FORCE fetch-only mode by adding:
+
+const sql = neon(process.env.DATABASE_URL!, {
+  fetchEndpoint: (url) => fetch(url),
+  pipelineConnect: "password",   // disables websocket pipeline
+});
+
+
+OR, if the app uses a connection pool, change it to:
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL!,
+  pipelineConnect: "password", // disables websocket protocols
+});
+
+
+Remove ANY usage of:
+
+neonConfig.wsProxy
+neonConfig.webSocketConstructor
+
+
+Rebuild the app.
+
+This will eliminate WebSockets entirely and the database will connect normally in Replit.
+
+⚠️ WHY THIS IS HAPPENING
+
+Replit's network sandbox does not allow the upgrade handshake Neon uses for WebSocket-based query pipelines.
+
+So Neon must be forced into:
+
+fetch mode only
+
+pipelineConnect: "password"
+(forces traditional connection)

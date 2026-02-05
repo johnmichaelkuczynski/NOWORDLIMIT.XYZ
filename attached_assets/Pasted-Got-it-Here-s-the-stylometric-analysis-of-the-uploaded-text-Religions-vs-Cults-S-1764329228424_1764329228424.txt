@@ -1,0 +1,145 @@
+Got it. Here's the stylometric analysis of the uploaded text ("Religions vs. Cults"):
+
+---
+
+## STYLOMETRIC ANALYSIS
+
+**Author:** [To be entered by user]
+
+**Word Count:** ~1,350 words
+
+---
+
+### VERTICALITY SCORE: 0.88
+
+```
+[███████████████████████████████████░░░░░]
+Horizontal ◄────────────────────────────────► Vertical
+```
+
+**Classification:** High Vertical
+
+---
+
+### RAW FEATURE VALUES
+
+| Feature | Value | Notes |
+|---------|-------|-------|
+| **Ego-pronoun rate** | 5.2 per 1000 words | Very low; "I" appears only in hypotheticals, never as authorial voice |
+| **Average sentence length** | 34 words | Moderately long, hypotactic |
+| **Max sentence length** | 89 words | Extended logical chains |
+| **Subordination depth** | 5.2 | High; heavy nesting ("if x, then y, since z, which means...") |
+| **Semicolon frequency** | 8.1 per 1000 words | High; used for logical pivots |
+| **Colon frequency** | 5.9 per 1000 words | High; used for definitions and elaborations |
+| **Dash frequency** | 3.7 per 1000 words | Moderate; used for parenthetical precision |
+| **Rhetorical question rate** | 2.2 per 1000 words | Low; questions are genuine (definitional), not rhetorical |
+| **Metaphor density** | Low | Almost none; "garden-variety" is the only figurative language |
+| **Anecdote frequency** | None | Zero personal stories; all examples are hypotheticals |
+| **Impersonal construction rate** | 14.8 per 1000 words | Very high; saturated with "it is," "this does not mean," "what this indicates is" |
+
+---
+
+### SIGNATURE PHRASES AND CONSTRUCTIONS
+
+- "if, and only if"
+- "to be sure"
+- "this does not mean that"
+- "what this indicates is"
+- "the relevant difference lies not in X but in Y"
+- "setting aside [qualification]"
+- "for lack of a better word/term"
+- "ipso facto"
+- "to the extent that"
+- "same qualification"
+- Heavy use of lettered variables: "x is a cult if x is..."
+- Definitional structure: "To worship x = To regard x as..."
+- Nested conditionals: "if I believe that... then I ipso facto believe that..."
+- Parenthetical hedges: "(or at least approximately so: see below)"
+
+---
+
+### NEGATIVE MARKERS (What This Author Never Does)
+
+- Never uses "I" as authorial voice (only in hypothetical scenarios)
+- Never tells personal anecdotes
+- Never uses metaphors or figurative language (except one instance of "garden-variety")
+- Never addresses the reader directly as "you"
+- Never uses exclamation marks
+- Never uses rhetorical questions for emphasis (all questions are definitional)
+- Never leaves a term undefined
+- Never appeals to emotion or shared experience
+- Never writes a paragraph without logical scaffolding
+
+---
+
+### SAMPLE SENTENCES
+
+1. "But there does exist a cult if 100 individuals worship Charles Manson and they police each other to perpetuate the cycle of Manson-worship."
+   — Definitional precision; "if" as logical operator; no hedging
+
+2. "To be clear: If the data warrants my believing that some person (let's call him 'Max') can exceed the speed of light, and for that reason and that reason alone I believe Max to be able to exceed the speed of light, then I don't believe that Max is supernaturally fast."
+   — 63 words; extreme subordination; parenthetical naming convention; conditional chain
+
+3. "Jones' views concerning Manson's intelligence are likely to have initially had a basis in the data; but Jones' views as to the scope and extent of Manson's intelligence are grossly out of proportion to what the data warrants, and Jones' belief in Manson's intelligence will be disproportionately slow to respond to new data shows that belief to be false."
+   — 67 words; semicolon pivot; three-part logical structure; zero first-person
+
+4. "We can have such debates since certain ways of resolving these debates will cohere better with our suppositions about him."
+   — Impersonal "we" (not ego-pronoun); logical justification; no appeals to intuition
+
+5. "But we cannot question our foundational suppositions concerning him, since those suppositions must be granted if there is to be a Spock for there to be questions about."
+   — Philosophical precision; self-referential logical structure; conditional necessity
+
+---
+
+### CLOSEST AUTHOR MATCH
+
+**Primary Match:** John-Michael Kuczynski / Ernest Nagel
+
+**Why:** 
+- Near-zero ego-pronoun rate
+- Heavy impersonal constructions ("what this indicates is," "this does not mean")
+- Logical scaffolding phrases ("if, and only if," "to the extent that," "ipso facto")
+- Definitional structure using equivalences ("To worship x = To regard x as...")
+- Hypotheticals used instead of anecdotes
+- Semicolon-heavy punctuation for logical pivots
+- Zero metaphor, zero narrative, zero emotional appeal
+
+**Secondary Match:** Arthur Schopenhauer (late essays)
+
+**Why:**
+- Same contempt for imprecision
+- Same definitional obsessiveness
+- Same use of hypothetical interlocutors ("it might be objected")
+
+**Far From:** William James, Voltaire, Joan Didion, David Foster Wallace
+
+---
+
+### PSYCHOLOGICAL PROFILE
+
+| Trait | Assessment |
+|-------|------------|
+| **Cognitive empathy** | Extreme — anticipates every possible objection and misreading |
+| **Affective empathy** | None to low — no interest in how reader feels, only in whether reader understands |
+| **Need for closure** | Extreme — cannot leave a term undefined or a distinction unmade |
+| **Schizoid features** | Marked — complete absence of personal presence; prose as pure logical architecture |
+| **Social orientation** | Solitary — writes as if no human will ever read it aloud |
+| **Body/sensation** | Disembodied — zero sensory language, zero physical grounding |
+| **Consensus attitude** | Contemptuous — treats common usage as obstacle to precision |
+| **Humor style** | Dry-rare — "garden-variety institutions, such as the Department of Motor Vehicles" |
+
+**Narrative Summary:**
+
+This author writes like a legal statute that developed philosophical interests. The complete absence of first-person voice, the saturation of impersonal constructions, the obsessive definitional precision, and the use of logical variables ("x is a cult if x is...") all point to someone with extreme cognitive empathy (they know exactly how you'll misread them) and near-zero affective empathy (they don't care how that makes you feel). They have an almost pathological need for closure — no term can remain undefined, no distinction unmade. Social warmth is not just absent but apparently unwanted. This is someone who experiences imprecision as physically painful and consensus as monkey noise.
+
+---
+
+### CLUSTERING
+
+- **Very close to:** Ernest Nagel, Gottlob Frege, Kuczynski
+- **Moderately close to:** Carl Hempel, Donald Davidson, early Wittgenstein (Tractatus)
+- **Far from:** William James, Voltaire, Joan Didion, James Joyce, Jack Kerouac
+
+---
+
+That's the full stylometric report. Use this as the template for what the STYLOMETRICS function should output.

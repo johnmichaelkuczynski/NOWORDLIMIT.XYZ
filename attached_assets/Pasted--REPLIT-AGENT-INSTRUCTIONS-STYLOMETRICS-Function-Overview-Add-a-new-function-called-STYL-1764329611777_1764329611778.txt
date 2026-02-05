@@ -1,0 +1,768 @@
+# REPLIT AGENT INSTRUCTIONS: STYLOMETRICS Function
+
+## Overview
+
+Add a new function called "STYLOMETRICS" to the Text Intelligence Studio app. This function allows users to:
+
+1. **Single-text mode:** Upload a text + author name → receive a full stylometric analysis → optionally save to persistent database
+2. **Two-text mode:** Upload two texts → receive a comparative stylometric analysis
+
+The output must be **narrative prose with structured sections** — not raw JSON. The user should feel like they're receiving a professional psychological-linguistic assessment.
+
+---
+
+## UI Changes Required
+
+### Button Layout
+
+Current layout:
+```
+[QUOTES]        [CONTEXT]
+[REWRITE]       [DATABASE]
+[    TEXT ANALYZER    ]
+```
+
+New layout:
+```
+[QUOTES]        [CONTEXT]
+[REWRITE]       [DATABASE]
+[TEXT ANALYZER] [STYLOMETRICS]
+```
+
+- Split the TEXT ANALYZER button in half horizontally
+- Left half: TEXT ANALYZER (same functionality, smaller)
+- Right half: New STYLOMETRICS button (purple/magenta gradient to match app aesthetic)
+
+### Authentication
+
+Add simple username-based login:
+
+1. On first visit, prompt: "Enter username to save your work"
+2. Username stored in localStorage and sent with API requests
+3. No password required
+4. Each user's stylometric database entries are associated with their username
+5. Add "Log out" / "Change user" option in header
+
+### Database Connection
+
+Connect to NeonDB (PostgreSQL) for persistent storage:
+
+- Store user accounts (username, date_created)
+- Store stylometric author entries (see schema below)
+- Store analysis history (optional, for user reference)
+
+---
+
+## STYLOMETRICS Function Flow
+
+### Step 1: User Clicks STYLOMETRICS Button
+
+Display modal with two tabs:
+
+**Tab 1: "Analyze Single Text"**
+```
+┌─────────────────────────────────────────────────────────────┐
+│  STYLOMETRIC ANALYSIS                                       │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Author Name: [________________________] (required)         │
+│                                                             │
+│  Source/Title: [________________________] (optional)        │
+│                                                             │
+│  ☑ Use text from Input Document panel                       │
+│  ○ Paste new text below                                     │
+│                                                             │
+│  [Text area if "paste new text" selected]                   │
+│                                                             │
+│  [ ANALYZE ]                                                │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Tab 2: "Compare Two Texts"**
+```
+┌─────────────────────────────────────────────────────────────┐
+│  COMPARATIVE STYLOMETRIC ANALYSIS                           │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  TEXT A                                                     │
+│  Author/Label: [________________________]                   │
+│  ☑ Use text from Input Document panel                       │
+│  ○ Paste text below                                         │
+│  [Text area if selected]                                    │
+│                                                             │
+│  TEXT B                                                     │
+│  Author/Label: [________________________]                   │
+│  ○ Paste text below (required for Text B)                   │
+│  [Text area]                                                │
+│                                                             │
+│  [ COMPARE ]                                                │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Step 2: App Computes Features
+
+On submit, the app:
+
+1. Validates input (minimum 400 words per text; 1000+ recommended)
+2. Computes all auto-calculable features (see "Auto-Computed Features" below)
+3. Sends text to LLM (Claude or Grok, based on user's LLM selector) for:
+   - Metaphor density classification
+   - Anecdote frequency classification
+   - Signature phrase extraction
+   - Sample sentence selection
+   - Closest author matching
+   - Psychological profile generation
+   - Full narrative output
+
+### Step 3: Display Results
+
+Results appear in the ANALYSIS RESULTS panel on the right side of the screen.
+
+For single-text analysis: Display full stylometric report (see "Single-Text Output Format" below)
+
+For two-text comparison: Display comparative report (see "Comparative Output Format" below)
+
+### Step 4: Save to Database (Optional)
+
+After single-text analysis, show button: "Save to My Stylometric Database"
+
+On click:
+1. Save all computed features + LLM-generated content to NeonDB
+2. Associate with user's username
+3. Display confirmation: "Author profile saved to your database"
+
+If author already exists in user's database, prompt:
+- "Author [Name] already exists. Replace existing entry? [Replace] [Cancel]"
+
+---
+
+## Auto-Computed Features
+
+The following MUST be computed by code, not estimated by the LLM:
+
+### 1. Word Count
+```python
+word_count = len(text.split())
+```
+
+### 2. Ego-Pronoun Rate
+```python
+ego_pronouns = ['i', 'me', 'my', 'mine', 'myself', 'we', 'us', 'our', 'ours', 'ourselves']
+count = sum(1 for word in text.lower().split() if word.strip('.,;:!?"\'') in ego_pronouns)
+rate = (count / word_count) * 1000
+```
+
+### 3. Sentence Metrics
+```python
+# Split on sentence boundaries
+sentences = re.split(r'[.!?]+\s+', text)
+sentences = [s for s in sentences if len(s.split()) > 2]  # filter fragments
+
+word_counts = [len(s.split()) for s in sentences]
+average_sentence_length = sum(word_counts) / len(word_counts)
+max_sentence_length = max(word_counts)
+```
+
+### 4. Subordination Depth (Estimate)
+```python
+subordinators = ['that', 'which', 'who', 'whom', 'whose', 'where', 'when', 'while', 
+                 'although', 'because', 'since', 'if', 'unless', 'until', 'before', 
+                 'after', 'as', 'whereas', 'whenever', 'wherever', 'whether']
+count = sum(1 for word in text.lower().split() if word.strip('.,;:') in subordinators)
+# Normalize to 1-7 scale based on rate per sentence
+subordination_depth = min(7, max(1, (count / len(sentences)) * 1.5))
+```
+
+### 5. Punctuation Frequencies
+```python
+semicolon_count = text.count(';')
+colon_count = text.count(':') - len(re.findall(r'\d:\d', text))  # exclude times
+dash_count = text.count('—') + text.count('--')
+question_count = text.count('?')
+
+semicolon_freq = (semicolon_count / word_count) * 1000
+colon_freq = (colon_count / word_count) * 1000
+dash_freq = (dash_count / word_count) * 1000
+question_freq = (question_count / word_count) * 1000
+```
+
+### 6. Impersonal Construction Rate
+```python
+impersonal_patterns = [
+    r'\bit is\b', r'\bit was\b', r'\bit has been\b', r'\bit would be\b',
+    r'\bthere is\b', r'\bthere are\b', r'\bthere was\b', r'\bthere were\b',
+    r'\bthere exists?\b', r'\bone may\b', r'\bone can\b', r'\bone cannot\b',
+    r'\bone must\b', r'\bone might\b', r'\bthis does not mean\b',
+    r'\bwhat this indicates\b', r'\bit is to be noted\b', r'\bto the extent that\b',
+    r'\binsofar as\b', r'\binasmuch as\b'
+]
+count = sum(len(re.findall(p, text.lower())) for p in impersonal_patterns)
+impersonal_rate = (count / word_count) * 1000
+```
+
+### 7. Verticality Score
+```python
+def normalize(value, min_val, max_val):
+    return max(0, min(1, (value - min_val) / (max_val - min_val)))
+
+# Metaphor and anecdote scores come from LLM classification
+metaphor_scores = {'none': 1.0, 'low': 0.75, 'moderate': 0.5, 'high': 0.0}
+anecdote_scores = {'none': 1.0, 'rare': 0.75, 'occasional': 0.5, 'frequent': 0.0}
+
+verticality = (
+    0.25 * (1 - normalize(ego_pronoun_rate, 0, 80)) +
+    0.15 * normalize(impersonal_rate, 0, 20) +
+    0.15 * normalize(subordination_depth, 1, 7) +
+    0.10 * normalize(semicolon_freq, 0, 15) +
+    0.10 * (1 - normalize(dash_freq, 0, 20)) +
+    0.10 * (1 - normalize(question_freq, 0, 10)) +
+    0.075 * metaphor_scores.get(metaphor_density, 0.5) +
+    0.075 * anecdote_scores.get(anecdote_frequency, 0.5)
+)
+```
+
+---
+
+## LLM Prompt for Single-Text Analysis
+
+Send the following prompt to the selected LLM (Claude or Grok):
+
+```
+You are a stylometric analyst. Analyze the following text and produce a detailed stylometric report.
+
+AUTHOR NAME: {author_name}
+SOURCE/TITLE: {source_title}
+WORD COUNT: {word_count}
+
+TEXT:
+"""
+{text}
+"""
+
+PRE-COMPUTED FEATURES (use these exact values):
+- Ego-pronoun rate: {ego_pronoun_rate} per 1000 words
+- Average sentence length: {avg_sentence_length} words
+- Max sentence length: {max_sentence_length} words
+- Subordination depth: {subordination_depth} (1-7 scale)
+- Semicolon frequency: {semicolon_freq} per 1000 words
+- Colon frequency: {colon_freq} per 1000 words
+- Dash frequency: {dash_freq} per 1000 words
+- Rhetorical question rate: {question_freq} per 1000 words
+- Impersonal construction rate: {impersonal_rate} per 1000 words
+
+YOUR TASK:
+
+1. CLASSIFY metaphor density as: none / low / moderate / high
+   - none = zero metaphors or figurative language
+   - low = 1-2 instances per 1000 words
+   - moderate = 3-5 instances per 1000 words
+   - high = 6+ instances per 1000 words
+
+2. CLASSIFY anecdote frequency as: none / rare / occasional / frequent
+   - none = zero personal stories or concrete narrative examples
+   - rare = 1 brief anecdote
+   - occasional = 2-3 anecdotes
+   - frequent = anecdotes throughout, narrative-driven
+
+3. COMPUTE verticality score using this formula:
+   verticality = (
+     0.25 × (1 - ego_pronoun_rate/80) +
+     0.15 × (impersonal_rate/20) +
+     0.15 × (subordination_depth/7) +
+     0.10 × (semicolon_freq/15) +
+     0.10 × (1 - dash_freq/20) +
+     0.10 × (1 - question_freq/10) +
+     0.075 × metaphor_score +
+     0.075 × anecdote_score
+   )
+   where metaphor_score: none=1.0, low=0.75, moderate=0.5, high=0.0
+   and anecdote_score: none=1.0, rare=0.75, occasional=0.5, frequent=0.0
+   Clamp result to [0.00, 1.00]
+
+4. IDENTIFY 8-15 signature phrases and constructions (verbal tics, scaffolding phrases, characteristic patterns)
+
+5. IDENTIFY 5-10 negative markers (things this author NEVER or almost never does)
+
+6. SELECT 3-5 sample sentences that best exemplify the author's style
+
+7. IDENTIFY closest author match from this reference list:
+   EXTREME VERTICAL (0.85-1.00): Gottlob Frege, Ernest Nagel, John-Michael Kuczynski, Arthur Schopenhauer, Carl Hempel, Timothy Williamson, Wittgenstein (Tractatus)
+   HIGH VERTICAL (0.70-0.84): Bertrand Russell (technical), W.V.O. Quine, Saul Kripke, Donald Davidson, Kit Fine
+   MID-RANGE (0.40-0.69): David Hume, Adam Smith, John Stuart Mill, Sigmund Freud, Gilbert Ryle, J.L. Austin, Joan Didion, Annie Dillard, George Orwell
+   LOW VERTICAL (0.20-0.39): William James, Voltaire, Wittgenstein (Investigations), David Foster Wallace, Henry James, Virginia Woolf
+   EXTREME HORIZONTAL (0.00-0.19): James Joyce (Finnegans Wake), Jack Kerouac, William S. Burroughs
+   
+   Explain WHY this author is the closest match (specific shared features).
+
+8. GENERATE psychological profile:
+   - Cognitive empathy: none / low / moderate / high / extreme
+   - Affective empathy: none / low / moderate / high / extreme
+   - Need for closure: low / moderate / high / extreme
+   - Schizoid features: absent / mild / moderate / marked / extreme
+   - Social orientation: solitary / reserved / moderate / social / highly_social
+   - Body/sensation: disembodied / low / moderate / embodied / hyper_embodied
+   - Consensus attitude: respectful / neutral / skeptical / dismissive / contemptuous
+   - Humor style: none / dry_rare / ironic / warm / frequent_performative
+
+9. WRITE a 3-5 sentence narrative psychological summary. Be BLUNT and SPECIFIC. Do not hedge. Describe what kind of person writes like this.
+
+10. IDENTIFY clustering:
+    - Very close to: (1-3 authors from reference list)
+    - Moderately close to: (2-4 authors)
+    - Far from: (2-4 authors)
+
+OUTPUT FORMAT:
+
+Your response must follow this EXACT structure (copy the headers exactly):
+
+## STYLOMETRIC ANALYSIS
+
+**Author:** {author_name}
+
+**Word Count:** {word_count}
+
+---
+
+### VERTICALITY SCORE: {score}
+
+[Include ASCII progress bar]
+
+**Classification:** [Extreme Vertical / High Vertical / Mid-Range / Low Vertical / Moderate Horizontal / Extreme Horizontal]
+
+---
+
+### RAW FEATURE VALUES
+
+[Table with all features and values]
+
+---
+
+### SIGNATURE PHRASES AND CONSTRUCTIONS
+
+[Bulleted list]
+
+---
+
+### NEGATIVE MARKERS (What This Author Never Does)
+
+[Bulleted list]
+
+---
+
+### SAMPLE SENTENCES
+
+[Numbered list with source attribution]
+
+---
+
+### CLOSEST AUTHOR MATCH
+
+**Primary Match:** [Author name]
+
+**Why:** [Explanation with specific shared features]
+
+**Secondary Match:** [Author name] (if applicable)
+
+**Far From:** [List of distant authors]
+
+---
+
+### PSYCHOLOGICAL PROFILE
+
+[Table with all traits]
+
+**Narrative Summary:**
+
+[3-5 sentence blunt psychological portrait]
+
+---
+
+### CLUSTERING
+
+- **Very close to:** [authors]
+- **Moderately close to:** [authors]
+- **Far from:** [authors]
+
+---
+```
+
+---
+
+## LLM Prompt for Two-Text Comparison
+
+Send the following prompt to the selected LLM:
+
+```
+You are a stylometric analyst. Compare the following two texts and produce a detailed comparative stylometric report.
+
+TEXT A:
+Author/Label: {author_a}
+Word Count: {word_count_a}
+"""
+{text_a}
+"""
+
+TEXT A PRE-COMPUTED FEATURES:
+- Ego-pronoun rate: {ego_pronoun_rate_a} per 1000 words
+- Average sentence length: {avg_sentence_length_a} words
+- Max sentence length: {max_sentence_length_a} words
+- Subordination depth: {subordination_depth_a}
+- Semicolon frequency: {semicolon_freq_a} per 1000 words
+- Colon frequency: {colon_freq_a} per 1000 words
+- Dash frequency: {dash_freq_a} per 1000 words
+- Rhetorical question rate: {question_freq_a} per 1000 words
+- Impersonal construction rate: {impersonal_rate_a} per 1000 words
+
+TEXT B:
+Author/Label: {author_b}
+Word Count: {word_count_b}
+"""
+{text_b}
+"""
+
+TEXT B PRE-COMPUTED FEATURES:
+- Ego-pronoun rate: {ego_pronoun_rate_b} per 1000 words
+- Average sentence length: {avg_sentence_length_b} words
+- Max sentence length: {max_sentence_length_b} words
+- Subordination depth: {subordination_depth_b}
+- Semicolon frequency: {semicolon_freq_b} per 1000 words
+- Colon frequency: {colon_freq_b} per 1000 words
+- Dash frequency: {dash_freq_b} per 1000 words
+- Rhetorical question rate: {question_freq_b} per 1000 words
+- Impersonal construction rate: {impersonal_rate_b} per 1000 words
+
+YOUR TASK:
+
+1. For EACH text, classify metaphor density and anecdote frequency
+2. Compute verticality score for EACH text using the formula provided
+3. Identify signature phrases for EACH text
+4. Identify negative markers for EACH text
+5. Select representative quote for EACH text
+6. Identify closest author match for EACH text
+7. Generate psychological profile for EACH text
+8. Write comparative analysis:
+   - Raw feature comparison table
+   - Key stylistic differences (3-5 major divergences with specific evidence)
+   - "If these authors were in the same room" scenario (vivid, specific, entertaining)
+   - Collaborative potential assessment
+9. Identify clustering for each text
+
+OUTPUT FORMAT:
+
+Your response must follow this EXACT structure:
+
+## COMPARATIVE STYLOMETRIC ANALYSIS
+
+---
+
+### TEXTS COMPARED
+
+[Table with Author, Word Count, Verticality Score, Classification for each]
+
+---
+
+### VERTICALITY COMPARISON
+
+[ASCII visualization showing both texts on spectrum]
+
+**Verdict:** [Which is more vertical and by how much]
+
+**Quotient Difference:** [number]
+
+---
+
+### RAW FEATURE COMPARISON
+
+[Table comparing all features, with "Winner (More Vertical)" column]
+
+**Key Divergences:**
+
+[Numbered list of 3-5 major differences with specific evidence]
+
+---
+
+### SIGNATURE PHRASE COMPARISON
+
+[Two-column table comparing signature phrases]
+
+---
+
+### WHAT EACH AUTHOR NEVER DOES
+
+[Two-column table comparing negative markers]
+
+---
+
+### REPRESENTATIVE QUOTE COMPARISON
+
+**Text A:**
+> [Quote]
+
+[Analysis of what this quote shows]
+
+**Text B:**
+> [Quote]
+
+[Analysis of what this quote shows]
+
+---
+
+### PSYCHOLOGICAL PROFILE COMPARISON
+
+[Table comparing all traits for both texts]
+
+---
+
+### NARRATIVE COMPARISON
+
+**Text A:**
+[3-4 sentence portrait]
+
+**Text B:**
+[3-4 sentence portrait]
+
+---
+
+### IF THESE TWO AUTHORS WERE IN THE SAME ROOM
+
+[Vivid, specific, entertaining scenario - at least one paragraph]
+
+---
+
+### COLLABORATIVE POTENTIAL
+
+[Assessment of what would happen if they worked together - specific, not generic]
+
+---
+
+### CLUSTERING SUMMARY
+
+[Table showing Very close to / Moderately close to / Far from for each text]
+
+---
+
+### FINAL VERDICT
+
+**Verticality Difference:** [number]
+
+[2-3 sentence summary of the fundamental difference between these two writers' ways of being in the world]
+
+---
+```
+
+---
+
+## Database Schema (NeonDB)
+
+```sql
+-- Users table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Stylometric author entries
+CREATE TABLE stylometric_authors (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    author_name VARCHAR(255) NOT NULL,
+    source_title VARCHAR(500),
+    word_count INTEGER,
+    verticality_score DECIMAL(4,3),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    -- Raw features (JSON blob for flexibility)
+    raw_features JSONB,
+    
+    -- LLM-generated content
+    signature_phrases JSONB,  -- array of strings
+    negative_markers JSONB,   -- array of strings
+    sample_sentences JSONB,   -- array of {text, source}
+    closest_author_match VARCHAR(255),
+    match_explanation TEXT,
+    psychological_profile JSONB,
+    narrative_summary TEXT,
+    clustering JSONB,  -- {very_close_to: [], moderately_close_to: [], far_from: []}
+    
+    -- Full report for display
+    full_report TEXT,
+    
+    UNIQUE(user_id, author_name)
+);
+
+-- Analysis history (optional)
+CREATE TABLE analysis_history (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    analysis_type VARCHAR(50),  -- 'single' or 'comparison'
+    author_name_a VARCHAR(255),
+    author_name_b VARCHAR(255),  -- null for single analysis
+    verticality_score_a DECIMAL(4,3),
+    verticality_score_b DECIMAL(4,3),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    full_report TEXT
+);
+```
+
+---
+
+## API Endpoints
+
+### POST /api/stylometrics/analyze
+Single-text analysis.
+
+**Request:**
+```json
+{
+    "username": "string",
+    "author_name": "string",
+    "source_title": "string (optional)",
+    "text": "string (min 400 words)"
+}
+```
+
+**Response:**
+```json
+{
+    "success": true,
+    "report": "string (full formatted report)",
+    "data": {
+        "verticality_score": 0.88,
+        "raw_features": {...},
+        "signature_phrases": [...],
+        "negative_markers": [...],
+        "sample_sentences": [...],
+        "closest_author_match": "Ernest Nagel",
+        "psychological_profile": {...},
+        "clustering": {...}
+    }
+}
+```
+
+### POST /api/stylometrics/compare
+Two-text comparison.
+
+**Request:**
+```json
+{
+    "username": "string",
+    "text_a": {
+        "author_name": "string",
+        "text": "string"
+    },
+    "text_b": {
+        "author_name": "string", 
+        "text": "string"
+    }
+}
+```
+
+**Response:**
+```json
+{
+    "success": true,
+    "report": "string (full formatted comparison report)",
+    "data": {
+        "text_a": {...},
+        "text_b": {...},
+        "verticality_difference": 0.56
+    }
+}
+```
+
+### POST /api/stylometrics/save
+Save author to user's database.
+
+**Request:**
+```json
+{
+    "username": "string",
+    "author_name": "string",
+    "source_title": "string",
+    "verticality_score": 0.88,
+    "raw_features": {...},
+    "signature_phrases": [...],
+    "negative_markers": [...],
+    "sample_sentences": [...],
+    "closest_author_match": "string",
+    "match_explanation": "string",
+    "psychological_profile": {...},
+    "narrative_summary": "string",
+    "clustering": {...},
+    "full_report": "string"
+}
+```
+
+### GET /api/stylometrics/authors?username={username}
+Get all authors in user's database.
+
+### GET /api/stylometrics/author/{id}
+Get single author entry.
+
+### DELETE /api/stylometrics/author/{id}
+Delete author entry.
+
+### GET /api/stylometrics/export?username={username}
+Export user's full database as JSON (for backup or system prompt injection).
+
+---
+
+## Error Handling
+
+- **Text too short (<400 words):** Display error, block submission
+- **Text short (400-999 words):** Display warning, allow submission with "low confidence" flag
+- **Empty author name:** Block submission
+- **LLM API failure:** Display error, show only code-computed features
+- **Database write failure:** Display error, retain data in UI for retry
+- **Duplicate author:** Prompt for replace/cancel
+
+---
+
+## Example Output Reference
+
+The three example reports I have been given demonstrate the exact output format and level of detail expected:
+
+1. **Single-text high-vertical example:** "Religions vs. Cults" analysis (verticality 0.88)
+2. **Single-text moderate-horizontal example:** Voltaire's *History of Charles XII* analysis (verticality 0.32)
+3. **Comparative example:** Side-by-side analysis of both texts (difference 0.56)
+
+The LLM output must match the structure, depth, and tone of these examples exactly. The psychological profiles must be BLUNT and SPECIFIC, not hedged or generic. The "same room" scenarios must be VIVID and ENTERTAINING, not boilerplate.
+
+---
+
+## Testing Checklist
+
+After implementation, verify:
+
+- [ ] STYLOMETRICS button appears correctly in UI
+- [ ] Single-text modal works (both "use input document" and "paste new text")
+- [ ] Two-text comparison modal works
+- [ ] Word count validation works (rejects <400, warns 400-999)
+- [ ] Auto-computed features calculate correctly
+- [ ] LLM generates full report matching example format
+- [ ] Verticality score displays with ASCII bar
+- [ ] "Save to Database" button appears after analysis
+- [ ] Duplicate author prompt works
+- [ ] Saved authors appear in user's database
+- [ ] Export function generates valid JSON
+- [ ] Username login persists across sessions
+- [ ] Different users see different databases
+
+---
+
+## Summary
+
+This function transforms the Text Intelligence Studio into a stylometric analysis and database-building tool. Users can:
+
+1. Analyze any text for verticality and psychological profile
+2. Compare two texts side-by-side
+3. Build their own reference corpus over time
+4. Export their database for use in other applications
+
+The output is professional, detailed, and psychologically incisive — not generic academic boilerplate.
+
+Build this.

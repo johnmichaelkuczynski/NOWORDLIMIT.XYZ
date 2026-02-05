@@ -1,0 +1,1209 @@
+# TEXT SURGEON COHERENT PROCESSING REBUILD
+## Complete Instructions for Replit Agent
+
+---
+
+## EXECUTIVE SUMMARY
+
+Text Surgeon is an existing text analysis app that works well for small documents but fails on large texts (2000+ words). The solution is to build a **parallel set of functions** that handle large documents using **database-backed stateful coherence tracking**. When a user processes a document over 2000 words, the app silently routes to these new functions. The user sees the same interface and output format—they never know a different engine is running underneath.
+
+**Critical principle**: Do NOT modify existing functions. Build new, independent implementations. Existing code serves as **exemplar** (what output looks like, what prompts work) but NOT as substance to be grafted onto.
+
+---
+
+## PART 1: THE CORE PROBLEM AND SOLUTION
+
+### The Problem
+
+LLMs lose coherence when processing large documents because:
+- Context windows are finite
+- By chunk 47, the model has no memory of what it said in chunk 3
+- For generation tasks: contradictions, repetition, drift from thesis
+- For extraction tasks: locally-prominent content gets extracted instead of globally-representative content
+
+### The Solution: Externalized Stateful Coherence Tracking
+
+Compensate for LLM's lack of persistent memory by maintaining an **explicit state object in the database** that accumulates across chunks.
+
+```
+FOR EACH CHUNK:
+  1. READ accumulated state from database
+  2. PASS state + chunk to LLM: "Given THIS is established, process THIS chunk"
+  3. LLM returns state_update (new assertions, discharged obligations, etc.)
+  4. MERGE update into state
+  5. WRITE new state to database
+  6. WRITE chunk result to database
+```
+
+The LLM doesn't need to remember—the state object remembers for it.
+
+---
+
+## PART 2: TWO PROCESSING PATTERNS
+
+### Pattern A — Coherent Generation (State-Tracked Rewriting)
+
+**Used by**: Full Rewrite, Tractatus, Custom (when rewriting large text)
+
+**How it works**:
+1. Generate document ID (UUID)
+2. Split text into ~1000-word chunks
+3. Detect appropriate coherence mode from first chunk
+4. Extract initial state from chunk 0 (thesis, tone, key concepts, etc.)
+5. Store initial state in database
+6. For each subsequent chunk:
+   - READ current accumulated state from DB
+   - Build prompt: "Given state S, rewrite chunk C while maintaining coherence"
+   - LLM generates rewritten chunk + returns state_update
+   - Check for violations (contradictions, drift, etc.)
+   - MERGE state_update into accumulated state
+   - WRITE new state to DB
+   - WRITE chunk output to DB
+7. Concatenate all chunk outputs
+8. Return final rewritten document
+
+**State object tracks** (example for logical-cohesiveness mode):
+```typescript
+interface LogicalCohesivenessState {
+  mode: "logical-cohesiveness";
+  thesis: string;                    // What the document establishes
+  support_queue: string[];           // Claims promised but not yet supported
+  current_stage: "setup" | "support" | "objection" | "reply" | "synthesis" | "conclusion";
+  bridge_required: string;           // What must connect prior to next chunk
+  key_terms: Record<string, string>; // Definitions established
+  assertions_made: string[];         // Claims already stated
+}
+```
+
+### Pattern B — Skeleton-Informed Extraction
+
+**Used by**: Positions, Quotes, Arguments, Outline, Custom (when analyzing large text)
+
+**How it works**:
+1. **Phase 1 — Generate Skeleton**:
+   - Process document to extract high-level structure
+   - Identify: main thesis, chapter/section themes, key arguments, narrative arc
+   - For very large documents (50k+ words): use two-tier skeleton
+     - Tier 1: Generate skeleton for each 50k-word chunk
+     - Tier 2: Generate meta-skeleton unifying all chunk skeletons
+   - Store skeleton in database
+
+2. **Phase 2 — Skeleton-Aware Extraction**:
+   - For each chunk, pass BOTH the chunk AND the skeleton context
+   - Prompt: "Given that this document's overall thesis is X and this chunk's role is Y, extract positions/quotes/arguments"
+   - This ensures extractions are **representative of the book**, not just locally prominent
+   - Aggregate extractions from all chunks
+   - Deduplicate and rank by representativeness
+   - Return final extraction set
+
+---
+
+## PART 3: DATABASE SCHEMA ADDITIONS
+
+Add these tables to `shared/schema.ts`:
+
+```typescript
+// ============================================
+// COHERENCE TRACKING TABLES
+// ============================================
+
+export const coherenceDocuments = pgTable("coherence_documents", {
+  id: serial("id").primaryKey(),
+  documentId: text("document_id").notNull(),        // UUID for tracking
+  coherenceMode: text("coherence_mode").notNull(),  // Mode type
+  globalState: jsonb("global_state").notNull(),     // Current accumulated state
+  originalWordCount: integer("original_word_count"),
+  totalChunks: integer("total_chunks"),
+  processedChunks: integer("processed_chunks").default(0),
+  status: text("status").default("in_progress"),    // in_progress, completed, failed
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+  userId: integer("user_id").references(() => users.id),
+});
+
+export const coherenceChunks = pgTable("coherence_chunks", {
+  id: serial("id").primaryKey(),
+  documentId: text("document_id").notNull(),        // FK to coherence_documents
+  coherenceMode: text("coherence_mode").notNull(),
+  chunkIndex: integer("chunk_index").notNull(),     // 0-based position
+  chunkText: text("chunk_text").notNull(),          // Original chunk content
+  processedOutput: text("processed_output"),         // Generated/rewritten output
+  evaluationResult: jsonb("evaluation_result"),     // { status, violations, repairs, state_update }
+  stateAfter: jsonb("state_after"),                 // State snapshot after this chunk
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+// Unique constraints
+// UNIQUE(document_id, coherence_mode) on coherence_documents
+// UNIQUE(document_id, coherence_mode, chunk_index) on coherence_chunks
+
+// ============================================
+// SKELETON STORAGE TABLE
+// ============================================
+
+export const documentSkeletons = pgTable("document_skeletons", {
+  id: serial("id").primaryKey(),
+  documentId: text("document_id").notNull(),
+  skeletonType: text("skeleton_type").notNull(),    // "single" | "meta" | "chunk"
+  parentSkeletonId: integer("parent_skeleton_id"),  // For chunk skeletons under meta
+  skeleton: jsonb("skeleton").notNull(),            // The skeleton object
+  wordCount: integer("word_count"),
+  chunkRange: jsonb("chunk_range"),                 // { start: 0, end: 10 } for chunk skeletons
+  createdAt: timestamp("created_at").defaultNow(),
+  userId: integer("user_id").references(() => users.id),
+});
+```
+
+Run database migration after adding these.
+
+---
+
+## PART 4: FILE STRUCTURE FOR NEW SERVICES
+
+Create this folder structure:
+
+```
+server/services/coherent/
+│
+├── index.ts                      # Exports all coherent services
+│
+├── router.ts                     # ROUTING LOGIC
+│                                 # Checks word count, dispatches to coherent or legacy
+│
+├── coherenceDatabase.ts          # DATABASE LAYER
+│                                 # - createInitialState(mode)
+│                                 # - generateDocumentId()
+│                                 # - initializeCoherenceRun(docId, mode, state)
+│                                 # - readCoherenceState(docId, mode)
+│                                 # - updateCoherenceState(docId, mode, newState)
+│                                 # - writeChunkEvaluation(docId, mode, index, text, result, state)
+│                                 # - readAllChunkEvaluations(docId, mode)
+│                                 # - applyStateUpdate(currentState, update)
+│                                 # - checkViolations(state, update)
+│
+├── coherenceProcessor.ts         # PROCESSING ORCHESTRATION
+│                                 # - chunkText(text, maxWords)
+│                                 # - buildEvaluationPrompt(mode, state, chunk, index, total)
+│                                 # - getEvaluationCriteria(mode)
+│                                 # - autoDetectMode(firstChunk)
+│                                 # - evaluateChunk(mode, state, chunk, index, total, provider)
+│                                 # - extractInitialState(mode, firstChunk, provider)
+│                                 # - processDocumentSequentially(text, mode, provider, onProgress)
+│
+├── skeletonGenerator.ts          # SKELETON GENERATION (Pattern B, Phase 1)
+│                                 # - generateSkeleton(text, provider)
+│                                 # - generateChunkSkeleton(chunk, index, total)
+│                                 # - generateMetaSkeleton(chunkSkeletons)
+│                                 # - storeSkeleton(docId, skeleton)
+│                                 # - retrieveSkeleton(docId)
+│
+├── stateSchemas.ts               # STATE TYPE DEFINITIONS
+│                                 # All 8 coherence mode state interfaces
+│                                 # Mode-specific initial state templates
+│
+├── fullRewriteCoherent.ts        # PATTERN A: Coherent Full Rewrite
+│                                 # Uses coherenceProcessor for state-tracked generation
+│
+├── tractatusCoherent.ts          # PATTERN A: Coherent Tractatus Rewrite
+│                                 # Numbered propositions with cross-reference tracking
+│
+├── positionsCoherent.ts          # PATTERN B: Skeleton-Informed Position Extraction
+│                                 # Phase 1: skeleton, Phase 2: extract with context
+│
+├── quotesCoherent.ts             # PATTERN B: Skeleton-Informed Quote Extraction
+│
+├── argumentsCoherent.ts          # PATTERN B: Skeleton-Informed Argument Extraction
+│
+├── outlineCoherent.ts            # Generates structural outline (feeds into skeleton)
+│
+└── customCoherent.ts             # Hybrid: Detects if rewrite or analysis, routes accordingly
+```
+
+---
+
+## PART 5: DETAILED IMPLEMENTATION SPECIFICATIONS
+
+### 5.1 router.ts — The Routing Layer
+
+```typescript
+const WORD_COUNT_THRESHOLD = 2000;
+
+export function shouldUseCoherentProcessing(text: string): boolean {
+  const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
+  return wordCount >= WORD_COUNT_THRESHOLD;
+}
+
+export async function routeFullRewrite(text: string, instructions: string, provider: string) {
+  if (shouldUseCoherentProcessing(text)) {
+    return fullRewriteCoherent(text, instructions, provider);
+  } else {
+    // Call existing legacy function
+    return legacyFullRewrite(text, instructions, provider);
+  }
+}
+
+export async function routePositions(text: string, options: any, provider: string) {
+  if (shouldUseCoherentProcessing(text)) {
+    return positionsCoherent(text, options, provider);
+  } else {
+    return legacyPositionExtractor(text, options, provider);
+  }
+}
+
+// ... same pattern for all functions
+```
+
+### 5.2 coherenceDatabase.ts — Database Operations
+
+This file handles all database reads and writes for coherence state.
+
+**Key functions**:
+
+```typescript
+// Generate unique document ID
+export function generateDocumentId(): string {
+  return crypto.randomUUID();
+}
+
+// Create empty state template for a mode
+export function createInitialState(mode: CoherenceModeType): CoherenceState {
+  switch (mode) {
+    case "logical-cohesiveness":
+      return {
+        mode: "logical-cohesiveness",
+        thesis: "",
+        support_queue: [],
+        current_stage: "setup",
+        bridge_required: "",
+        assertions_made: [],
+        key_terms: {}
+      };
+    case "logical-consistency":
+      return {
+        mode: "logical-consistency",
+        assertions: [],
+        negations: [],
+        disjoint_pairs: []
+      };
+    // ... other modes
+  }
+}
+
+// Initialize a new coherence run in database
+export async function initializeCoherenceRun(
+  docId: string, 
+  mode: CoherenceModeType, 
+  state: CoherenceState,
+  wordCount: number,
+  totalChunks: number,
+  userId?: number
+): Promise<void> {
+  await db.insert(coherenceDocuments).values({
+    documentId: docId,
+    coherenceMode: mode,
+    globalState: state,
+    originalWordCount: wordCount,
+    totalChunks: totalChunks,
+    processedChunks: 0,
+    status: "in_progress",
+    userId: userId
+  });
+}
+
+// Read current state from database
+export async function readCoherenceState(docId: string, mode: string): Promise<CoherenceState | null> {
+  const result = await db
+    .select()
+    .from(coherenceDocuments)
+    .where(and(
+      eq(coherenceDocuments.documentId, docId),
+      eq(coherenceDocuments.coherenceMode, mode)
+    ))
+    .limit(1);
+  
+  return result[0]?.globalState ?? null;
+}
+
+// Update state in database
+export async function updateCoherenceState(
+  docId: string, 
+  mode: string, 
+  newState: CoherenceState
+): Promise<void> {
+  await db
+    .update(coherenceDocuments)
+    .set({ 
+      globalState: newState, 
+      updatedAt: new Date(),
+      processedChunks: sql`processed_chunks + 1`
+    })
+    .where(and(
+      eq(coherenceDocuments.documentId, docId),
+      eq(coherenceDocuments.coherenceMode, mode)
+    ));
+}
+
+// Write chunk evaluation result
+export async function writeChunkEvaluation(
+  docId: string,
+  mode: string,
+  chunkIndex: number,
+  chunkText: string,
+  output: string,
+  evaluationResult: ChunkEvaluationResult,
+  stateAfter: CoherenceState
+): Promise<void> {
+  await db.insert(coherenceChunks).values({
+    documentId: docId,
+    coherenceMode: mode,
+    chunkIndex: chunkIndex,
+    chunkText: chunkText,
+    processedOutput: output,
+    evaluationResult: evaluationResult,
+    stateAfter: stateAfter
+  });
+}
+
+// Merge state update into current state
+export function applyStateUpdate(
+  currentState: CoherenceState, 
+  update: Partial<CoherenceState>
+): CoherenceState {
+  // Deep merge logic - mode-specific
+  const newState = { ...currentState };
+  
+  // For array fields, concatenate rather than replace
+  for (const key of Object.keys(update)) {
+    if (Array.isArray(currentState[key]) && Array.isArray(update[key])) {
+      newState[key] = [...currentState[key], ...update[key]];
+    } else if (typeof update[key] === 'object' && update[key] !== null) {
+      newState[key] = { ...currentState[key], ...update[key] };
+    } else if (update[key] !== undefined) {
+      newState[key] = update[key];
+    }
+  }
+  
+  return newState;
+}
+
+// Check for coherence violations
+export function checkViolations(
+  state: CoherenceState, 
+  update: Partial<CoherenceState>
+): Violation[] {
+  const violations: Violation[] = [];
+  
+  // Mode-specific violation checks
+  if (state.mode === "logical-consistency") {
+    // Check if new assertions contradict existing assertions or negations
+    for (const newAssertion of (update.assertions || [])) {
+      if (state.negations?.includes(newAssertion)) {
+        violations.push({
+          type: "contradiction",
+          description: `New assertion "${newAssertion}" contradicts prior negation`
+        });
+      }
+    }
+  }
+  
+  // ... other mode-specific checks
+  
+  return violations;
+}
+```
+
+### 5.3 coherenceProcessor.ts — Processing Orchestration
+
+```typescript
+// Split text into chunks of approximately maxWords
+export function chunkText(text: string, maxWords: number = 1000): string[] {
+  const words = text.split(/\s+/);
+  const chunks: string[] = [];
+  
+  for (let i = 0; i < words.length; i += maxWords) {
+    // Try to break at paragraph boundaries
+    let endIndex = Math.min(i + maxWords, words.length);
+    const chunkWords = words.slice(i, endIndex);
+    chunks.push(chunkWords.join(' '));
+  }
+  
+  return chunks;
+}
+
+// Auto-detect coherence mode from content
+export async function autoDetectMode(firstChunk: string, provider: string): Promise<CoherenceModeType> {
+  const prompt = `Analyze this text and determine its primary coherence mode.
+
+TEXT:
+${firstChunk.substring(0, 2000)}
+
+MODES:
+1. logical-consistency - Tracks factual assertions to prevent contradictions
+2. logical-cohesiveness - Tracks argument structure (thesis, support, objections)
+3. scientific-explanatory - Tracks causal relationships and mechanisms
+4. thematic-psychological - Tracks emotional tone, affect, narrative stance
+5. instructional - Tracks goals, steps, prerequisites
+6. motivational - Tracks direction, intensity, target of persuasion
+7. mathematical - Tracks givens, lemmas, proof methods
+8. philosophical - Tracks concepts, distinctions, dialectical moves
+
+Return ONLY the mode name (e.g., "logical-cohesiveness"), nothing else.`;
+
+  const response = await callLLM(provider, prompt);
+  return response.trim() as CoherenceModeType;
+}
+
+// Extract initial state from first chunk
+export async function extractInitialState(
+  mode: CoherenceModeType, 
+  firstChunk: string, 
+  provider: string
+): Promise<CoherenceState> {
+  const baseState = createInitialState(mode);
+  
+  const prompt = buildStateExtractionPrompt(mode, firstChunk);
+  const response = await callLLM(provider, prompt);
+  const extracted = JSON.parse(response);
+  
+  return applyStateUpdate(baseState, extracted);
+}
+
+// Build evaluation prompt for a chunk
+export function buildEvaluationPrompt(
+  mode: CoherenceModeType,
+  state: CoherenceState,
+  chunk: string,
+  chunkIndex: number,
+  totalChunks: number,
+  taskType: "rewrite" | "evaluate"
+): string {
+  const stateDescription = formatStateForPrompt(mode, state);
+  const criteria = getEvaluationCriteria(mode);
+  
+  if (taskType === "rewrite") {
+    return `You are rewriting a document chunk-by-chunk while maintaining coherence.
+
+COHERENCE MODE: ${mode}
+
+CURRENT ACCUMULATED STATE:
+${stateDescription}
+
+CHUNK ${chunkIndex + 1} OF ${totalChunks}:
+${chunk}
+
+TASK:
+1. Rewrite this chunk according to the instructions
+2. Maintain coherence with the accumulated state
+3. Do not contradict prior assertions
+4. Continue the established thesis and argument structure
+5. Return your response in this JSON format:
+
+{
+  "rewritten_text": "Your rewritten chunk here",
+  "state_update": {
+    // New assertions, resolved obligations, stage changes, etc.
+  },
+  "notes": "Any coherence concerns or decisions made"
+}`;
+  } else {
+    return `Evaluate this chunk against the accumulated coherence state.
+
+COHERENCE MODE: ${mode}
+
+CURRENT ACCUMULATED STATE:
+${stateDescription}
+
+CHUNK ${chunkIndex + 1} OF ${totalChunks}:
+${chunk}
+
+EVALUATION CRITERIA:
+${criteria}
+
+Return JSON:
+{
+  "status": "preserved" | "weakened" | "broken",
+  "violations": [{ "location": "...", "type": "...", "description": "..." }],
+  "repairs": [{ "location": "...", "suggestion": "..." }],
+  "state_update": { ... }
+}`;
+  }
+}
+
+// Main entry point for sequential document processing
+export async function processDocumentSequentially(
+  text: string,
+  mode: CoherenceModeType | "auto",
+  provider: string,
+  taskType: "rewrite" | "evaluate",
+  instructions?: string,
+  onProgress?: (progress: ProgressUpdate) => void
+): Promise<ProcessingResult> {
+  // 1. Generate document ID
+  const docId = generateDocumentId();
+  
+  // 2. Chunk the text
+  const chunks = chunkText(text, 1000);
+  const wordCount = text.split(/\s+/).length;
+  
+  // 3. Auto-detect mode if needed
+  const resolvedMode = mode === "auto" 
+    ? await autoDetectMode(chunks[0], provider)
+    : mode;
+  
+  // 4. Extract initial state from chunk 0
+  const initialState = await extractInitialState(resolvedMode, chunks[0], provider);
+  
+  // 5. Initialize coherence run in database
+  await initializeCoherenceRun(docId, resolvedMode, initialState, wordCount, chunks.length);
+  
+  // 6. Process chunk 0 (special handling - establishes baseline)
+  const chunk0Result = await processChunk(
+    resolvedMode, initialState, chunks[0], 0, chunks.length, provider, taskType, instructions
+  );
+  await writeChunkEvaluation(docId, resolvedMode, 0, chunks[0], chunk0Result.output, chunk0Result.evaluation, initialState);
+  
+  const outputs: string[] = [chunk0Result.output];
+  let currentState = initialState;
+  
+  // 7. Process remaining chunks sequentially
+  for (let i = 1; i < chunks.length; i++) {
+    // READ current state from DB (ensures consistency on resume)
+    currentState = await readCoherenceState(docId, resolvedMode);
+    
+    // Process chunk
+    const result = await processChunk(
+      resolvedMode, currentState, chunks[i], i, chunks.length, provider, taskType, instructions
+    );
+    
+    // Check for violations
+    const violations = checkViolations(currentState, result.evaluation.state_update);
+    if (violations.length > 0) {
+      result.evaluation.violations.push(...violations);
+      // Optionally: attempt repair or flag for review
+    }
+    
+    // Apply state update
+    const newState = applyStateUpdate(currentState, result.evaluation.state_update);
+    
+    // WRITE new state to DB
+    await updateCoherenceState(docId, resolvedMode, newState);
+    
+    // WRITE chunk evaluation to DB
+    await writeChunkEvaluation(docId, resolvedMode, i, chunks[i], result.output, result.evaluation, newState);
+    
+    outputs.push(result.output);
+    
+    // Progress callback
+    if (onProgress) {
+      onProgress({
+        documentId: docId,
+        currentChunk: i + 1,
+        totalChunks: chunks.length,
+        status: "processing"
+      });
+    }
+  }
+  
+  // 8. Mark document as completed
+  await db
+    .update(coherenceDocuments)
+    .set({ status: "completed" })
+    .where(eq(coherenceDocuments.documentId, docId));
+  
+  // 9. Return final result
+  return {
+    documentId: docId,
+    mode: resolvedMode,
+    finalOutput: outputs.join('\n\n'),
+    finalState: currentState,
+    chunkCount: chunks.length
+  };
+}
+```
+
+### 5.4 skeletonGenerator.ts — Document Skeleton Generation
+
+```typescript
+export interface DocumentSkeleton {
+  documentId: string;
+  mainThesis: string;
+  overarchingTheme: string;
+  sections: SectionSkeleton[];
+  keyArguments: string[];
+  centralConcepts: string[];
+  narrativeArc: string;
+  totalWordCount: number;
+}
+
+export interface SectionSkeleton {
+  index: number;
+  title: string;
+  role: string;           // "introduction" | "argument" | "evidence" | "objection" | "conclusion" | etc.
+  keyPoints: string[];
+  relationToThesis: string;
+  wordRange: [number, number];
+}
+
+const LARGE_DOCUMENT_THRESHOLD = 50000; // words
+
+export async function generateSkeleton(
+  text: string,
+  provider: string
+): Promise<DocumentSkeleton> {
+  const wordCount = text.split(/\s+/).length;
+  const docId = generateDocumentId();
+  
+  if (wordCount > LARGE_DOCUMENT_THRESHOLD) {
+    // Two-tier skeleton for very large documents
+    return generateTwoTierSkeleton(text, docId, provider);
+  } else {
+    // Single-pass skeleton
+    return generateSingleSkeleton(text, docId, provider);
+  }
+}
+
+async function generateSingleSkeleton(
+  text: string,
+  docId: string,
+  provider: string
+): Promise<DocumentSkeleton> {
+  const chunks = chunkText(text, 3000); // Larger chunks for skeleton extraction
+  
+  const prompt = `Analyze this document and extract its structural skeleton.
+
+DOCUMENT (${chunks.length} sections):
+${chunks.map((c, i) => `--- SECTION ${i + 1} ---\n${c.substring(0, 1500)}...`).join('\n\n')}
+
+Extract and return JSON:
+{
+  "mainThesis": "The central claim or purpose of the document",
+  "overarchingTheme": "The unifying theme across all sections",
+  "sections": [
+    {
+      "index": 0,
+      "title": "Section title or description",
+      "role": "introduction|argument|evidence|objection|reply|conclusion|transition",
+      "keyPoints": ["Main point 1", "Main point 2"],
+      "relationToThesis": "How this section supports/develops the thesis"
+    }
+  ],
+  "keyArguments": ["Argument 1", "Argument 2", ...],
+  "centralConcepts": ["Concept 1", "Concept 2", ...],
+  "narrativeArc": "Description of how the document develops"
+}`;
+
+  const response = await callLLM(provider, prompt);
+  const skeleton = JSON.parse(response);
+  
+  // Store skeleton in database
+  await db.insert(documentSkeletons).values({
+    documentId: docId,
+    skeletonType: "single",
+    skeleton: skeleton,
+    wordCount: text.split(/\s+/).length
+  });
+  
+  return { documentId: docId, ...skeleton, totalWordCount: text.split(/\s+/).length };
+}
+
+async function generateTwoTierSkeleton(
+  text: string,
+  docId: string,
+  provider: string
+): Promise<DocumentSkeleton> {
+  const words = text.split(/\s+/);
+  const chunkSize = 50000;
+  const megaChunks: string[] = [];
+  
+  // Split into 50k-word mega-chunks
+  for (let i = 0; i < words.length; i += chunkSize) {
+    megaChunks.push(words.slice(i, i + chunkSize).join(' '));
+  }
+  
+  // Tier 1: Generate skeleton for each mega-chunk
+  const chunkSkeletons: DocumentSkeleton[] = [];
+  for (let i = 0; i < megaChunks.length; i++) {
+    const chunkSkeleton = await generateSingleSkeleton(megaChunks[i], `${docId}-chunk-${i}`, provider);
+    chunkSkeletons.push(chunkSkeleton);
+    
+    // Store chunk skeleton
+    await db.insert(documentSkeletons).values({
+      documentId: `${docId}-chunk-${i}`,
+      skeletonType: "chunk",
+      skeleton: chunkSkeleton,
+      wordCount: megaChunks[i].split(/\s+/).length,
+      chunkRange: { start: i * chunkSize, end: Math.min((i + 1) * chunkSize, words.length) }
+    });
+  }
+  
+  // Tier 2: Generate meta-skeleton unifying all chunk skeletons
+  const metaPrompt = `You have skeletons from ${chunkSkeletons.length} sections of a very large document.
+Synthesize these into a unified meta-skeleton.
+
+CHUNK SKELETONS:
+${chunkSkeletons.map((s, i) => `--- CHUNK ${i + 1} ---\nThesis: ${s.mainThesis}\nKey Arguments: ${s.keyArguments.join(', ')}`).join('\n\n')}
+
+Return unified skeleton JSON with:
+- mainThesis: The overarching thesis across ALL chunks
+- overarchingTheme: The unifying theme
+- sections: High-level section breakdown
+- keyArguments: Most important arguments from entire document
+- centralConcepts: Core concepts
+- narrativeArc: How the full document develops`;
+
+  const metaResponse = await callLLM(provider, metaPrompt);
+  const metaSkeleton = JSON.parse(metaResponse);
+  
+  // Store meta-skeleton
+  await db.insert(documentSkeletons).values({
+    documentId: docId,
+    skeletonType: "meta",
+    skeleton: metaSkeleton,
+    wordCount: words.length
+  });
+  
+  return { documentId: docId, ...metaSkeleton, totalWordCount: words.length };
+}
+```
+
+### 5.5 fullRewriteCoherent.ts — Pattern A Implementation
+
+```typescript
+export async function fullRewriteCoherent(
+  text: string,
+  instructions: string,
+  provider: string,
+  onProgress?: (progress: ProgressUpdate) => void
+): Promise<FullRewriteResult> {
+  // Detect appropriate mode for rewriting
+  const mode = await autoDetectMode(text.substring(0, 3000), provider);
+  
+  // Use coherence processor for state-tracked generation
+  const result = await processDocumentSequentially(
+    text,
+    mode,
+    provider,
+    "rewrite",
+    instructions,
+    onProgress
+  );
+  
+  return {
+    documentId: result.documentId,
+    rewrittenText: result.finalOutput,
+    mode: result.mode,
+    chunkCount: result.chunkCount,
+    coherenceStatus: "preserved" // Or compute from chunk evaluations
+  };
+}
+```
+
+### 5.6 positionsCoherent.ts — Pattern B Implementation
+
+```typescript
+export async function positionsCoherent(
+  text: string,
+  options: PositionExtractionOptions,
+  provider: string,
+  onProgress?: (progress: ProgressUpdate) => void
+): Promise<PositionExtractionResult> {
+  // PHASE 1: Generate skeleton
+  if (onProgress) onProgress({ phase: "skeleton", status: "Generating document skeleton..." });
+  const skeleton = await generateSkeleton(text, provider);
+  
+  // PHASE 2: Extract positions with skeleton context
+  const chunks = chunkText(text, 1500);
+  const allPositions: ExtractedPosition[] = [];
+  
+  for (let i = 0; i < chunks.length; i++) {
+    const sectionContext = skeleton.sections.find(s => 
+      s.index === i || (s.wordRange && s.wordRange[0] <= i * 1500 && s.wordRange[1] >= i * 1500)
+    );
+    
+    const prompt = `Extract author positions from this text chunk.
+
+DOCUMENT CONTEXT:
+- Main Thesis: ${skeleton.mainThesis}
+- Overarching Theme: ${skeleton.overarchingTheme}
+- This Section's Role: ${sectionContext?.role || 'body'}
+- This Section's Relation to Thesis: ${sectionContext?.relationToThesis || 'supports main argument'}
+
+CHUNK ${i + 1} OF ${chunks.length}:
+${chunks[i]}
+
+TASK:
+Extract positions that are REPRESENTATIVE of the book's overall argument, not just locally prominent.
+Prioritize positions that connect to the main thesis: "${skeleton.mainThesis}"
+
+Return JSON array:
+[
+  {
+    "position": "The author's stated position",
+    "confidence": 0.0-1.0,
+    "importance": "central|supporting|peripheral",
+    "relationToThesis": "How this position relates to the main thesis"
+  }
+]`;
+
+    const response = await callLLM(provider, prompt);
+    const chunkPositions = JSON.parse(response);
+    allPositions.push(...chunkPositions.map(p => ({ ...p, sourceChunk: i })));
+    
+    if (onProgress) {
+      onProgress({ 
+        phase: "extraction", 
+        currentChunk: i + 1, 
+        totalChunks: chunks.length 
+      });
+    }
+  }
+  
+  // PHASE 3: Deduplicate and rank by representativeness
+  const rankedPositions = await rankAndDeduplicate(allPositions, skeleton, provider);
+  
+  return {
+    documentId: skeleton.documentId,
+    positions: rankedPositions,
+    skeleton: skeleton, // Include for reference
+    totalExtracted: allPositions.length,
+    afterDeduplication: rankedPositions.length
+  };
+}
+
+async function rankAndDeduplicate(
+  positions: ExtractedPosition[],
+  skeleton: DocumentSkeleton,
+  provider: string
+): Promise<ExtractedPosition[]> {
+  const prompt = `Given the document's main thesis: "${skeleton.mainThesis}"
+
+And these extracted positions:
+${positions.map((p, i) => `${i + 1}. ${p.position} [importance: ${p.importance}]`).join('\n')}
+
+TASK:
+1. Remove duplicates (positions saying essentially the same thing)
+2. Rank remaining positions by how central they are to the thesis
+3. Return the top positions (max 30) in ranked order
+
+Return JSON array of position indices to keep, in ranked order:
+[3, 7, 1, 15, ...]`;
+
+  const response = await callLLM(provider, prompt);
+  const rankedIndices = JSON.parse(response);
+  
+  return rankedIndices.map(i => positions[i]);
+}
+```
+
+### 5.7 State Schemas (stateSchemas.ts)
+
+```typescript
+export type CoherenceModeType = 
+  | "logical-consistency"
+  | "logical-cohesiveness"
+  | "scientific-explanatory"
+  | "thematic-psychological"
+  | "instructional"
+  | "motivational"
+  | "mathematical"
+  | "philosophical";
+
+export interface LogicalConsistencyState {
+  mode: "logical-consistency";
+  assertions: string[];           // Claims already asserted as true
+  negations: string[];            // Claims explicitly denied
+  disjoint_pairs: [string, string][]; // Mutually exclusive pairs
+}
+
+export interface LogicalCohesivenessState {
+  mode: "logical-cohesiveness";
+  thesis: string;                 // What the argument establishes
+  support_queue: string[];        // Claims promised but not yet supported
+  current_stage: "setup" | "support" | "objection" | "reply" | "synthesis" | "conclusion";
+  bridge_required: string;        // What must connect prior to next chunk
+  assertions_made: string[];
+  key_terms: Record<string, string>;
+}
+
+export interface ScientificExplanatoryState {
+  mode: "scientific-explanatory";
+  causal_nodes: string[];         // Variables in causal graph
+  causal_edges: { from: string; to: string; direction: "+" | "-"; mechanism: string }[];
+  level: "physical" | "socio-economic" | "institutional" | "mixed";
+  active_feedback_loops: { name: string; participants: string[]; status: "active" | "resolved" }[];
+  mechanism_requirements: Record<string, string>;
+}
+
+export interface ThematicPsychologicalState {
+  mode: "thematic-psychological";
+  dominant_affect: string;
+  tempo: "slow" | "moderate" | "rapid";
+  stance: string;
+  emotional_arc: string[];
+  recurring_motifs: string[];
+}
+
+export interface InstructionalState {
+  mode: "instructional";
+  goal: string;
+  steps_done: string[];
+  prerequisites: string[];
+  open_loops: string[];           // Things mentioned but not yet explained
+  current_topic: string;
+}
+
+export interface MotivationalState {
+  mode: "motivational";
+  direction: string;              // What reader is being moved toward
+  intensity: "low" | "moderate" | "high";
+  target: string;                 // Target audience
+  appeals_used: string[];         // ethos, pathos, logos, etc.
+}
+
+export interface MathematicalState {
+  mode: "mathematical";
+  givens: string[];               // Axioms, definitions, assumptions
+  proved: string[];               // Lemmas and theorems proved so far
+  goal: string;                   // What we're trying to prove
+  proof_method: string;           // direct, contradiction, induction, etc.
+  open_cases: string[];           // Cases not yet handled
+}
+
+export interface PhilosophicalState {
+  mode: "philosophical";
+  core_concepts: Record<string, string>;  // term -> definition
+  distinctions: [string, string][];       // pairs of distinguished concepts
+  dialectic: {
+    thesis: string;
+    antithesis: string;
+    synthesis: string;
+  };
+  objections_raised: string[];
+  objections_answered: string[];
+}
+
+export type CoherenceState = 
+  | LogicalConsistencyState
+  | LogicalCohesivenessState
+  | ScientificExplanatoryState
+  | ThematicPsychologicalState
+  | InstructionalState
+  | MotivationalState
+  | MathematicalState
+  | PhilosophicalState;
+```
+
+---
+
+## PART 6: ROUTE MODIFICATIONS
+
+Modify `server/routes.ts` to add routing logic:
+
+```typescript
+import { 
+  shouldUseCoherentProcessing,
+  routeFullRewrite,
+  routePositions,
+  routeQuotes,
+  routeArguments,
+  routeTractatus,
+  routeCustom,
+  routeOutline
+} from './services/coherent/router';
+
+// Example: Full Rewrite endpoint
+app.post('/api/rewrite/stream', async (req, res) => {
+  const { text, instructions, provider } = req.body;
+  
+  // Set up SSE
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  
+  const onProgress = (progress) => {
+    res.write(`data: ${JSON.stringify(progress)}\n\n`);
+  };
+  
+  try {
+    const result = await routeFullRewrite(text, instructions, provider, onProgress);
+    res.write(`data: ${JSON.stringify({ type: 'complete', result })}\n\n`);
+  } catch (error) {
+    res.write(`data: ${JSON.stringify({ type: 'error', error: error.message })}\n\n`);
+  }
+  
+  res.end();
+});
+
+// Same pattern for other endpoints...
+```
+
+---
+
+## PART 7: FRONTEND MODIFICATIONS
+
+The frontend requires minimal changes. The key modification is handling progress updates for long documents.
+
+In `client/src/pages/Home.tsx`, add progress display:
+
+```typescript
+// State for coherent processing progress
+const [coherentProgress, setCoherentProgress] = useState<{
+  phase: string;
+  currentChunk: number;
+  totalChunks: number;
+} | null>(null);
+
+// In your submission handler, check for SSE progress events
+const handleSubmit = async () => {
+  const wordCount = text.split(/\s+/).length;
+  
+  if (wordCount >= 2000) {
+    // Show progress UI for large documents
+    setCoherentProgress({ phase: 'starting', currentChunk: 0, totalChunks: 0 });
+    
+    const eventSource = new EventSource(`/api/rewrite/stream?...`);
+    eventSource.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      if (data.type === 'progress') {
+        setCoherentProgress(data);
+      } else if (data.type === 'complete') {
+        setResult(data.result);
+        setCoherentProgress(null);
+      }
+    };
+  } else {
+    // Use existing non-streaming approach for small documents
+    // ...
+  }
+};
+
+// Progress display component
+{coherentProgress && (
+  <div className="p-4 bg-blue-50 rounded-lg">
+    <div className="font-medium">Processing large document...</div>
+    <div className="text-sm text-gray-600">
+      Phase: {coherentProgress.phase}
+    </div>
+    {coherentProgress.totalChunks > 0 && (
+      <>
+        <div className="text-sm text-gray-600">
+          Chunk {coherentProgress.currentChunk} of {coherentProgress.totalChunks}
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+          <div 
+            className="bg-blue-600 h-2 rounded-full transition-all"
+            style={{ width: `${(coherentProgress.currentChunk / coherentProgress.totalChunks) * 100}%` }}
+          />
+        </div>
+      </>
+    )}
+  </div>
+)}
+```
+
+---
+
+## PART 8: IMPLEMENTATION ORDER
+
+Execute in this sequence:
+
+### Step 1: Database
+1. Add new tables to `shared/schema.ts`
+2. Run migration: `npx drizzle-kit push:pg`
+3. Verify tables created in Neon
+
+### Step 2: Core Infrastructure
+1. Create `server/services/coherent/` folder
+2. Implement `stateSchemas.ts` (type definitions)
+3. Implement `coherenceDatabase.ts` (database operations)
+4. Implement `coherenceProcessor.ts` (processing orchestration)
+5. Test with simple document
+
+### Step 3: Skeleton System
+1. Implement `skeletonGenerator.ts`
+2. Test skeleton generation on sample documents
+3. Verify two-tier skeleton for large documents
+
+### Step 4: Pattern A Functions (Generation)
+1. Implement `fullRewriteCoherent.ts`
+2. Test full rewrite on 3000-word document
+3. Implement `tractatusCoherent.ts`
+4. Test Tractatus rewrite
+
+### Step 5: Pattern B Functions (Extraction)
+1. Implement `positionsCoherent.ts`
+2. Test position extraction with skeleton context
+3. Implement `quotesCoherent.ts`
+4. Implement `argumentsCoherent.ts`
+5. Implement `outlineCoherent.ts`
+
+### Step 6: Custom Analyzer
+1. Implement `customCoherent.ts`
+2. Add logic to detect rewrite vs. analysis mode
+3. Route to appropriate pattern
+
+### Step 7: Router Integration
+1. Implement `router.ts`
+2. Modify `server/routes.ts` to use router
+3. Test word count threshold routing
+
+### Step 8: Frontend Updates
+1. Add progress display components
+2. Update submission handlers for SSE
+3. Test end-to-end
+
+### Step 9: Testing & Refinement
+1. Test with various document sizes (2k, 5k, 10k, 50k+ words)
+2. Test all function types
+3. Verify coherence is maintained across chunks
+4. Performance optimization
+
+---
+
+## PART 9: REFERENCE — EXISTING CODE AS EXEMPLAR
+
+Use these existing files as **reference for output format and domain knowledge only**:
+
+| New Function | Reference Existing File | What to Extract |
+|--------------|------------------------|-----------------|
+| fullRewriteCoherent | (varies by custom instructions) | Output formatting |
+| positionsCoherent | `positionExtractor.ts` | Position JSON structure, extraction prompts |
+| quotesCoherent | `quoteExtractor.ts` | Quote format, depth parameter handling |
+| argumentsCoherent | `argumentExtractor.ts` | Argument structure (premises, conclusion) |
+| tractatusCoherent | `tractatusRewrite.ts` | Numbered proposition format |
+| outlineCoherent | `outlineService.ts` | Outline structure |
+| customCoherent | `customAnalyzer.ts` | Flexible instruction handling |
+
+**DO NOT**: Copy-paste logic, call existing functions from new functions, or attempt to "wrap" existing implementations.
+
+**DO**: Look at what output format the UI expects, what parameters users can set, and what the prompts are asking for.
+
+---
+
+## PART 10: TESTING CHECKLIST
+
+Before considering implementation complete:
+
+- [ ] Small document (<2000 words) routes to legacy functions
+- [ ] Large document (≥2000 words) routes to coherent functions
+- [ ] Full Rewrite maintains thesis consistency across 10+ chunks
+- [ ] Position extraction returns globally-representative positions, not just chunk-local
+- [ ] Two-tier skeleton generates for 50k+ word documents
+- [ ] Progress updates stream to frontend during processing
+- [ ] Interrupted processing can resume from database state
+- [ ] All existing UI elements work unchanged
+- [ ] Credit deduction works for coherent processing
+- [ ] Error handling for LLM failures mid-document
+
+---
+
+## SUMMARY
+
+1. **Don't touch existing code** — build parallel implementations
+2. **Route by word count** — <2000 uses legacy, ≥2000 uses coherent
+3. **Pattern A** (Full Rewrite, Tractatus): State-tracked generation with database persistence
+4. **Pattern B** (Positions, Quotes, Arguments): Skeleton-first, then context-aware extraction
+5. **Database stores state** — enables coherence across chunks and resume capability
+6. **Same UI, same output** — user never knows which engine is running
+
+This architecture adds robust large-document handling without risking the working small-document functionality.

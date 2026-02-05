@@ -1,0 +1,137 @@
+## STYLOMETRIC ANALYSIS
+
+**Author:** Voltaire (from *History of Charles XII*)
+
+**Word Count:** ~1,580 words
+
+---
+
+### VERTICALITY SCORE: 0.32
+
+```
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░]
+Horizontal ◄────────────────────────────────► Vertical
+```
+
+**Classification:** Moderate Horizontal
+
+---
+
+### RAW FEATURE VALUES
+
+| Feature | Value | Notes |
+|---------|-------|-------|
+| **Ego-pronoun rate** | 1.9 per 1000 words | Low; one "my" (referring to "my late memoirs"); no authorial "I think" or "I believe" |
+| **Average sentence length** | 42 words | Long, flowing, narrative chains |
+| **Max sentence length** | 98 words | Extended narrative sweeps with multiple clauses |
+| **Subordination depth** | 3.4 | Moderate; clauses chain horizontally rather than nest vertically |
+| **Semicolon frequency** | 9.5 per 1000 words | High; used for narrative pacing, not logical pivots |
+| **Colon frequency** | 3.2 per 1000 words | Moderate; used for elaboration and dramatic setup |
+| **Dash frequency** | 0 per 1000 words | None |
+| **Rhetorical question rate** | 0 per 1000 words | None |
+| **Metaphor density** | Low | "dazzled with the lustre of Charles's exploits," "flower of his army," "hovering about" |
+| **Anecdote frequency** | Frequent | Entire text is narrative; concrete events, named persons, specific dates |
+| **Impersonal construction rate** | 2.5 per 1000 words | Low; "it was," "there were" appear but sparingly |
+
+---
+
+### SIGNATURE PHRASES AND CONSTRUCTIONS
+
+- "at length" (appears 3 times)
+- "in the meanwhile"
+- "whether... or whether... or whether" (triple conditional speculation)
+- "should have" (moral judgment embedded in narration)
+- "was to" (future-in-past for dramatic tension: "was to furnish," "was to be joined")
+- Dates in brackets: "[Sept. 11.]", "[Oct. 7.]", "[Nov. 14.]"
+- Named actors as sentence subjects: "Charles," "Mazeppa," "Menzikoff," "Peter"
+- Causal chains: "but," "however," "accordingly," "thereby"
+- Parenthetical asides with sources: "(my late memoirs inform me)"
+- Moral commentary disguised as observation: "gratitude should have bound him"
+- Geographic specificity: rivers, towns, distances ("seven or eight leagues of forest")
+
+---
+
+### NEGATIVE MARKERS (What This Author Never Does)
+
+- Never uses first-person authorial voice ("I argue," "I believe")
+- Never defines terms abstractly
+- Never uses logical variables or formal equivalences
+- Never writes a sentence without concrete referent (person, place, event)
+- Never uses dashes for parenthetical precision
+- Never asks rhetorical questions
+- Never employs hypotheticals detached from narrative (all "ifs" are historical counterfactuals)
+- Never abandons chronological flow for extended philosophical digression
+- Never lets a paragraph pass without named actors doing concrete things
+
+---
+
+### SAMPLE SENTENCES
+
+1. "He was induced to take this strange resolution by Mazeppa, hetman of the Cossacks, who, being an old man of seventy and without children, ought to have thought only of ending his days in peace: gratitude should have bound him to the czar, to whom he was indebted for his present dignity; but whether he had any real cause of complaint against that prince, or that he was dazzled with the lustre of Charles's exploits, or whether, in time, he thought to make himself independent, he betrayed his benefactor, and privately espoused the interests of the king of Sweden, flattering himself with the hopes of engaging his whole nation in a rebellion with himself."
+   — 131 words; triple "whether" speculation; moral judgment ("ought to have," "gratitude should have"); semicolon-paced narrative flow
+
+2. "Charles was not at the trouble of reflecting, whether the czar was within reach of attacking the army, and depriving him of these necessary supplies."
+   — Ironic understatement; "was not at the trouble of" = polite damnation; narrative voice with embedded judgment
+
+3. "Here it was that the czar, seeing his troops in disorder, cried out to fire upon the runaways, and even upon himself, if they saw him turn back."
+   — Concrete dramatic moment; direct speech paraphrased; heroic characterization through action
+
+4. "But when they came within a few leagues of the Desna, he made them acquainted with his real design. These brave people received his declaration with disdain: they refused to betray a monarch, against whom they had no cause of complaint, for the sake of a Swede, who had invaded their country with an armed force."
+   — Moral clarity delivered through reported action; "these brave people" = authorial sympathy made visible
+
+5. "The Russians made themselves masters of a large magazine destined for the use of the king of Sweden, and of all Mazeppa's treasures."
+   — Clean narrative fact; no commentary needed; drama in the inventory
+
+---
+
+### CLOSEST AUTHOR MATCH
+
+**Primary Match:** Edward Gibbon / David Hume (historical works)
+
+**Why:**
+- Long, flowing sentences with semicolon pacing
+- Narrative voice that embeds moral judgment without breaking into explicit commentary
+- Geographic and chronological precision
+- Named actors as consistent subjects
+- Ironic understatement as primary rhetorical tool ("was not at the trouble of reflecting")
+- Aristocratic detachment from the chaos being described
+
+**Secondary Match:** Adam Smith (*Wealth of Nations* narrative passages)
+
+**Why:**
+- Same 18th-century periodic sentence structure
+- Same embedding of judgment in observation
+- Same preference for concrete over abstract
+
+**Far From:** Frege, Nagel, Kuczynski, Wittgenstein (Tractatus), Hemingway, Joyce
+
+---
+
+### PSYCHOLOGICAL PROFILE
+
+| Trait | Assessment |
+|-------|------------|
+| **Cognitive empathy** | High — anticipates reader's need for context, pacing, dramatic setup |
+| **Affective empathy** | Moderate — feels with "these brave people," judges Mazeppa's betrayal, but maintains aristocratic distance |
+| **Need for closure** | Moderate — comfortable with ambiguity ("whether... or whether... or whether") but resolves narratives cleanly |
+| **Schizoid features** | Absent — warm narrative presence throughout; wants reader engaged |
+| **Social orientation** | Social — writes as if addressing an educated salon; assumes shared values |
+| **Body/sensation** | Moderate — battles have physical reality (rivers, forests, marches) but no visceral gore |
+| **Consensus attitude** | Respectful — appeals to shared moral intuitions ("gratitude should have bound him") |
+| **Humor style** | Ironic — "was not at the trouble of reflecting"; deadpan damnation disguised as narration |
+
+**Narrative Summary:**
+
+This author writes like a brilliant dinner host recounting a war he watched from a comfortable distance. The prose flows with easy confidence, embedding sharp moral judgments inside what looks like neutral narration ("gratitude should have bound him," "was not at the trouble of reflecting"). He has high cognitive empathy — he knows exactly what the reader needs to follow the story — and moderate affective empathy — he feels for the betrayed Cossacks but never loses his aristocratic cool. There is zero schizoid detachment; this is a social writer who assumes a reader worth entertaining. The irony is constant but never cruel, the judgments firm but never shrill. He is the opposite of the vertical ghost: warm, narrative, embodied in history, confident that stories matter more than definitions.
+
+---
+
+### CLUSTERING
+
+- **Very close to:** Edward Gibbon, David Hume (historical), Adam Smith (narrative passages)
+- **Moderately close to:** Macaulay, Thucydides (in translation), Montesquieu
+- **Far from:** Frege, Nagel, Kuczynski, Wittgenstein, Hemingway, Joyce, Kerouac
+
+---
+
+There's your second analysis. Now you have one extreme vertical (the Religions vs. Cults piece) and one moderate horizontal (Voltaire). Use both as templates for the STYLOMETRICS function output.

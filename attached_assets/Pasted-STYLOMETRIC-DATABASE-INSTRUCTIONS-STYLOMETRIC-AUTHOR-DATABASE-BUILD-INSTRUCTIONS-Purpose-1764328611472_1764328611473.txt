@@ -1,0 +1,353 @@
+STYLOMETRIC DATABASE INSTRUCTIONS 
+
+# STYLOMETRIC AUTHOR DATABASE BUILD INSTRUCTIONS
+
+## Purpose
+
+This document provides complete instructions for building a reference database of ~30 authors with detailed stylometric profiles. This database will be injected into the system prompt of your Verticality Radar app, allowing the LLM to match user-uploaded text against known author profiles.
+
+---
+
+## Database Schema
+
+Each author entry must contain ALL of the following fields:
+
+### 1. VERTICALITY SCORE
+- Single float value from 0.00 to 1.00
+- 0.00 = maximum horizontal (Joyce Finnegans Wake, Kerouac)
+- 1.00 = maximum vertical (Frege, Nagel, Kuczynski)
+- This is the master number the app reports to users
+
+### 2. RAW FEATURE VALUES
+
+Collect or estimate the following metrics for each author:
+
+| Feature | How to Measure | Typical Range |
+|---------|----------------|---------------|
+| **Ego-pronoun rate** | Count of (I, me, my, mine, we, us, our, ours) per 1000 words | 0–80 |
+| **Average sentence length** | Total words ÷ total sentences | 15–60 words |
+| **Max sentence length** | Longest sentence in sample | 50–400 words |
+| **Subordination depth** | Average nested clause depth (1 = simple, 6+ = extreme) | 1–7 |
+| **Semicolon frequency** | Semicolons per 1000 words | 0–15 |
+| **Colon frequency** | Colons per 1000 words | 0–10 |
+| **Dash frequency** | Em-dashes per 1000 words | 0–20 |
+| **Rhetorical question rate** | Questions per 1000 words | 0–10 |
+| **Metaphor density** | Metaphors/similes per 1000 words (estimate: none/low/moderate/high) | none–high |
+| **Anecdote frequency** | Personal stories per 1000 words (estimate: none/rare/occasional/frequent) | none–frequent |
+| **Impersonal construction rate** | "It is," "One may," "There exists" per 1000 words | 0–20 |
+
+### 3. SIGNATURE PHRASES AND CONSTRUCTIONS
+
+List 5–15 verbal tics, scaffolding phrases, and syntactic patterns characteristic of this author.
+
+Examples:
+- "to the extent that"
+- "it is to be noted that"
+- "qua"
+- "mutatis mutandis"
+- "I am inclined to think"
+- "it seems to me"
+- "one cannot say"
+- "insofar as"
+- "viz."
+- Heavy use of "that"-clauses
+- Numbered premises
+- Parenthetical asides
+
+### 4. NEGATIVE MARKERS (What They Never Do)
+
+List 5–10 things this author virtually NEVER does. These are as diagnostic as positive markers.
+
+Examples:
+- Never uses first-person pronouns
+- Never tells anecdotes
+- Never asks rhetorical questions
+- Never uses metaphors
+- Never uses em-dashes
+- Never addresses the reader directly
+- Never uses exclamation marks
+- Never goes more than 3 sentences without "I"
+- Never writes a sentence under 20 words
+
+### 5. SAMPLE SENTENCES
+
+Provide 3–5 actual sentences from the author's work that exemplify their style. Choose sentences that:
+- Show characteristic sentence length
+- Display signature constructions
+- Demonstrate typical punctuation patterns
+- Are recognizable as "this author and no one else"
+
+Format:
+```
+"[Exact quote from author's work.]"
+— Source title, year (if known)
+```
+
+### 6. PSYCHOLOGICAL PROFILE
+
+For each author, assess the following traits. Use a scale or descriptive terms as indicated:
+
+| Trait | Scale/Options | Description |
+|-------|---------------|-------------|
+| **Cognitive empathy** | none / low / moderate / high / extreme | Ability to model others' thoughts |
+| **Affective empathy** | none / low / moderate / high / extreme | Tendency to feel others' emotions |
+| **Need for closure** | low / moderate / high / extreme | Intolerance of ambiguity |
+| **Schizoid features** | absent / mild / moderate / marked / extreme | Emotional detachment, solitary preference |
+| **Social orientation** | solitary / reserved / moderate / social / highly social | Engagement with others |
+| **Body/sensation relationship** | disembodied / low / moderate / embodied / hyper-embodied | Attention to physical experience |
+| **Consensus attitude** | respectful / neutral / skeptical / dismissive / contemptuous | Attitude toward group opinion |
+| **Humor style** | none / dry-rare / ironic / warm / frequent-performative | How and whether they use humor |
+
+Also write a 2–4 sentence narrative summary of the psychological profile.
+
+### 7. CLUSTERING DATA
+
+List:
+- **Very close to:** (1–3 authors with Delta distance < 0.5 SD)
+- **Moderately close to:** (2–4 authors with Delta distance 0.5–1.5 SD)
+- **Far from:** (2–4 authors with Delta distance > 2.0 SD)
+
+This helps the LLM triangulate when a text falls between known authors.
+
+---
+
+## Recommended Author List (~30 Authors)
+
+### Extreme Vertical (0.85–1.00)
+1. Gottlob Frege
+2. Ernest Nagel
+3. John-Michael Kuczynski
+4. Arthur Schopenhauer (late essays)
+5. Carl Hempel
+6. Timothy Williamson
+7. Wittgenstein (Tractatus only)
+
+### High Vertical (0.70–0.84)
+8. Bertrand Russell (technical works)
+9. W.V.O. Quine
+10. Saul Kripke
+11. Donald Davidson
+12. Kit Fine
+
+### Mid-Range (0.40–0.69)
+13. David Hume
+14. Adam Smith
+15. John Stuart Mill
+16. Sigmund Freud
+17. Gilbert Ryle
+18. J.L. Austin
+19. Joan Didion
+20. Annie Dillard
+21. George Orwell (essays)
+
+### Low Vertical / High Horizontal (0.20–0.39)
+22. William James
+23. Voltaire
+24. Wittgenstein (Philosophical Investigations)
+25. David Foster Wallace
+26. Henry James
+27. Virginia Woolf
+
+### Extreme Horizontal (0.00–0.19)
+28. James Joyce (Finnegans Wake)
+29. Jack Kerouac (Visions of Cody)
+30. William S. Burroughs (Naked Lunch)
+
+---
+
+## Build Process
+
+### Step 1: Gather Source Texts
+For each author, collect at least 5,000–10,000 words of representative text. Use:
+- Project Gutenberg
+- Internet Archive
+- Academic repositories
+- Your own library
+
+### Step 2: Compute Raw Features
+For each author:
+1. Run word count
+2. Count ego-pronouns (I, me, my, mine, we, us, our, ours)
+3. Count sentences, compute average/max length
+4. Count semicolons, colons, dashes
+5. Count rhetorical questions
+6. Estimate subordination depth (sample 10 sentences, count nested clauses)
+7. Estimate metaphor density (read 1000 words, count metaphors/similes)
+8. Estimate anecdote frequency (read 2000 words, count personal stories)
+
+### Step 3: Identify Signature Phrases
+Read 3000–5000 words carefully. Note:
+- Repeated logical connectives
+- Unusual word choices
+- Characteristic sentence openers
+- Punctuation habits
+- Anything that makes you think "that's so [Author]"
+
+### Step 4: Identify Negative Markers
+Ask: "What does this author NEVER do that other authors do?"
+- Compare to authors at opposite end of spectrum
+- Note absences as carefully as presences
+
+### Step 5: Select Sample Sentences
+Choose 3–5 sentences that:
+- Are self-contained (make sense without context)
+- Display multiple signature features at once
+- Could not have been written by anyone else
+
+### Step 6: Assess Psychological Profile
+Based on:
+- Biographical information
+- The style itself (style IS psychology made visible)
+- Your own judgment
+
+Be honest and blunt. Don't hedge.
+
+### Step 7: Determine Clustering
+Compare each author to all others:
+- Who writes most similarly?
+- Who writes most differently?
+- Who is a "neighbor" in style-space?
+
+---
+
+## Output Format
+
+For each author, produce an entry in this exact format:
+
+```
+================================================================================
+AUTHOR: [Full Name]
+================================================================================
+
+VERTICALITY SCORE: [0.00–1.00]
+
+--------------------------------------------------------------------------------
+RAW FEATURE VALUES
+--------------------------------------------------------------------------------
+Ego-pronoun rate:        [X] per 1000 words
+Average sentence length: [X] words
+Max sentence length:     [X] words
+Subordination depth:     [X] (1–7 scale)
+Semicolon frequency:     [X] per 1000 words
+Colon frequency:         [X] per 1000 words
+Dash frequency:          [X] per 1000 words
+Rhetorical question rate:[X] per 1000 words
+Metaphor density:        [none / low / moderate / high]
+Anecdote frequency:      [none / rare / occasional / frequent]
+Impersonal constructions:[X] per 1000 words
+
+--------------------------------------------------------------------------------
+SIGNATURE PHRASES AND CONSTRUCTIONS
+--------------------------------------------------------------------------------
+• [phrase 1]
+• [phrase 2]
+• [phrase 3]
+• [phrase 4]
+• [phrase 5]
+• [etc.]
+
+--------------------------------------------------------------------------------
+NEGATIVE MARKERS (What They Never Do)
+--------------------------------------------------------------------------------
+• Never [X]
+• Never [Y]
+• Never [Z]
+• [etc.]
+
+--------------------------------------------------------------------------------
+SAMPLE SENTENCES
+--------------------------------------------------------------------------------
+1. "[Exact quote]"
+   — [Source]
+
+2. "[Exact quote]"
+   — [Source]
+
+3. "[Exact quote]"
+   — [Source]
+
+4. "[Exact quote]" (optional)
+   — [Source]
+
+5. "[Exact quote]" (optional)
+   — [Source]
+
+--------------------------------------------------------------------------------
+PSYCHOLOGICAL PROFILE
+--------------------------------------------------------------------------------
+Cognitive empathy:       [none / low / moderate / high / extreme]
+Affective empathy:       [none / low / moderate / high / extreme]
+Need for closure:        [low / moderate / high / extreme]
+Schizoid features:       [absent / mild / moderate / marked / extreme]
+Social orientation:      [solitary / reserved / moderate / social / highly social]
+Body/sensation:          [disembodied / low / moderate / embodied / hyper-embodied]
+Consensus attitude:      [respectful / neutral / skeptical / dismissive / contemptuous]
+Humor style:             [none / dry-rare / ironic / warm / frequent-performative]
+
+NARRATIVE SUMMARY:
+[2–4 sentences describing the psychological profile in plain English. Be blunt.]
+
+--------------------------------------------------------------------------------
+CLUSTERING
+--------------------------------------------------------------------------------
+Very close to:      [Author 1], [Author 2]
+Moderately close:   [Author 3], [Author 4], [Author 5]
+Far from:           [Author 6], [Author 7]
+
+================================================================================
+```
+
+---
+
+## Quality Control Checklist
+
+Before finalizing each entry, verify:
+
+- [ ] Verticality score is consistent with raw features
+- [ ] All raw feature fields are populated
+- [ ] At least 5 signature phrases listed
+- [ ] At least 5 negative markers listed
+- [ ] 3–5 sample sentences included with sources
+- [ ] All psychological profile fields populated
+- [ ] Narrative summary is blunt and specific (not generic)
+- [ ] Clustering data references other authors in the database
+- [ ] Entry is 300–500 words total
+
+---
+
+## Integration Notes
+
+Once all ~30 entries are complete:
+
+1. **Concatenate** all entries into a single document
+2. **Add header** explaining the document's purpose to the LLM
+3. **Add analysis instructions** telling the LLM how to use the reference data
+4. **Inject** the entire document into the system prompt of your Claude API call
+5. **Test** with known texts from authors in the database (should match correctly)
+6. **Test** with unknown texts (should find plausible nearest neighbor)
+
+Expected total size: 9,000–15,000 words (~12,000–20,000 tokens)
+
+This fits comfortably within Claude's context window.
+
+---
+
+## Timeline Suggestion
+
+- **Days 1–2:** Gather source texts for all 30 authors
+- **Days 3–5:** Compute raw features (batch process where possible)
+- **Days 6–8:** Write signature phrases, negative markers, sample sentences
+- **Days 9–10:** Complete psychological profiles and clustering
+- **Day 11:** Quality control pass
+- **Day 12:** Integration and testing
+
+---
+
+## Final Notes
+
+- Be ruthlessly honest in the psychological profiles. Hedging defeats the purpose.
+- The sample sentences are the most important part. The LLM pattern-matches against actual prose better than against feature descriptions.
+- Negative markers are as valuable as positive markers. "Never uses X" is highly diagnostic.
+- Update the database over time as you encounter edge cases and mismatches.
+
+Good luck. Build it right and this thing will actually work.

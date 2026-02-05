@@ -1,0 +1,20 @@
+I WANT YOU TO ADD A 5TH FUNCTION. CALL IT: TEXT ANALYZER. ADD A 5TH BUTTON FOR THIS FUNCTION. HERE IS HOW IT WORKS. I UPLOADED A PAPER ON PRAGMATISM. AND I ALSO UPLOADED AN 'ANALYSIS' OF IT, TO WIT: kuczynski_pragmatism.txt  
+**Domain**: Epistemology - Critique of Pragmatism
+**Main Thesis**: Pragmatism commits a category error by confusing properties of TRUTH with properties of KNOWLEDGE. James's claim that "truth is what works" conflates objective truth (observation-transcendent, discovered) with subjective knowledge (verification-dependent, useful). Truth doesn't "happen to" ideas or get "made" - it's discovered. The pragmatist cannot explain why some truths are useless or why usefulness varies by person and context.
+
+**Representative Quotations**:
+1. "The meaning of a hypothesis—what it says about the world—lies in its observable consequences." [James's position]
+2. "TRUE IDEAS ARE THOSE THAT WE CAN ASSIMILATE, VALIDATE, CORROBORATE, AND VERIFY. FALSE IDEAS ARE THOSE THAT WE CANNOT." [James's position]
+3. "Truth happens to an idea." [James's position - criticized]
+4. "Truth is made, not discovered." [James's position - criticized]
+5. "There is a difference between properties of TRUTH and properties of KNOWLEDGE. Truth is objective, discovered, observation-transcendent. Knowledge is subjective, verification-dependent."
+6. "The pragmatist confuses what makes a claim TRUE with what makes it KNOWN or USEFUL."
+7. "Why is some knowledge impractical? The realist can answer: because truth and usefulness are different properties. The pragmatist can't - for him they're identical."
+8. "If truth = usefulness, then truths would vary by person. But 2+2=4 is true whether it's useful to you or not."
+
+**Analytical Moves Deployed**:
+- Category error detection (truth vs knowledge properties)
+- Reductio ad absurdum (pragmatist can't explain useless truths)
+- Conceptual analysis (distinguishing objective from subjective properties)
+
+FOR ANY PAPER/BOOK THAT THE USER UPLOADS, THE TEXT ANALYZER FUNCTION DOES THE SAME THING: IDENTIFIES DOMAIN/MAIN THESIS/REPRESENTATIVE QUOTATIONS/ANALYTICAL MOVES DEPLOYED. THE ONLY ISSUE IS THAT YOU WILL DO THIS IN MUCH MORE DEPTH; I.E. THE ANALYSIS OF THE PRAGMATISM PAPER I GAVE YOU IS AROUND ONE THIRD THE LENGTH/DEPTH THAT I WANT, BUT IT HAS THE RIGHT FORM. DO YOU FOLLOW?

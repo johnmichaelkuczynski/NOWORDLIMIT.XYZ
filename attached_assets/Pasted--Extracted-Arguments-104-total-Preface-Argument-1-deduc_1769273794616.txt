@@ -1,0 +1,1593 @@
+# Extracted Arguments (104 total)
+
+## Preface
+
+### Argument 1 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- The present work argues that laws are governmental assurances of protections of rights.
+- Consequently, the concepts of law and legal obligation must be understood in moral terms.
+
+**→ Conclusion:** The concepts of law and legal obligation must be understood in moral terms.
+
+*Source: Preface | Importance: 10/10*
+
+---
+
+### Argument 2 (definitional)
+**Author:** kuczynski
+
+**Premises:**
+- What are laws, and do they necessarily have any basis in morality?
+- The present work argues that laws are governmental assurances of protections of rights and that, consequently, the concepts of law and legal obligation must be understood in moral terms.
+
+**→ Conclusion:** Laws are governmental assurances of protections of rights and must be understood in moral terms.
+
+*Source: Preface | Importance: 9/10*
+
+---
+
+### Argument 3 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- There are, of course, many immoral laws.
+- Once certain basic truths are taken into account – in particular, that moral principles have a 'dimension of weight', to use an expression of Ronald Dworkin’s, and also that principled relations are not always expressed by perfect statistical concomitances – the existence of iniquitous laws poses no significant threat to a moralistic analysis of law.
+
+**→ Conclusion:** The existence of iniquitous laws poses no significant threat to a moralistic analysis of law.
+
+**Counterarguments addressed:**
+- There are, of course, many immoral laws.
+
+*Source: Preface | Importance: 8/10*
+
+---
+
+### Argument 4 (evaluative)
+**Author:** kuczynski
+
+**Premises:**
+- Special attention is paid to the debate between Ronald Dworkin and H.L.A. Hart.
+- Dworkin’s over-all position is argued to be correct, but issue is taken with his argument for that position.
+
+**→ Conclusion:** Dworkin’s over-all position is argued to be correct, but issue is taken with his argument for that position.
+
+*Source: Preface | Importance: 7/10*
+
+---
+
+### Argument 5 (critique)
+**Author:** kuczynski
+
+**Premises:**
+- Special attention is paid to the debate between Ronald Dworkin and H.L.A. Hart.
+- Hart’s analysis is found to be vitiated by an impoverished conception of morality and also of the nature of government.
+
+**→ Conclusion:** Hart’s analysis is found to be vitiated by an impoverished conception of morality and also of the nature of government.
+
+*Source: Preface | Importance: 7/10*
+
+---
+
+### Argument 6 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Our analysis of law enables us to answer three questions that, at this juncture of history, are of special importance: Are there international laws? If not, could such laws exist? And if they could exist, would their existence necessarily be desirable?
+- The answers to these questions are, respectively: 'no', 'yes', and 'no.'
+
+**→ Conclusion:** The answers to these questions are, respectively: 'no', 'yes', and 'no.'
+
+*Source: Preface | Importance: 6/10*
+
+---
+
+### Argument 7 (comparative)
+**Author:** kuczynski
+
+**Premises:**
+- Our analysis of law enables us to hold onto the presumption that so-called legal interpretation is a principled endeavor, and that some legal interpretations are truer to existing laws than others.
+- At the same time, it accommodates the obvious fact that the sense in which a physicist interprets meter-readings, or in which a physician interprets a patient’s symptoms, is different from the sense in which judges interpret the law.
+
+**→ Conclusion:** Our analysis of law enables us to hold onto the presumption that so-called legal interpretation is a principled endeavor, and that some legal interpretations are truer to existing laws than others.
+
+*Source: Preface | Importance: 6/10*
+
+---
+
+### Argument 8 (dialectical)
+**Author:** kuczynski
+
+**Premises:**
+- Our analysis of law enables us to avoid the extreme views that have thus far dominated debates concerning the nature of legal interpretation.
+- On the one hand, it becomes possible to avoid the cynical view (held by the so-called 'legal realists') that legal interpretation is mere legislation and that no legal interpretation is more correct than any other.
+- On the other hand, it becomes possible to avoid Blackstone’s view (rightly descried by Austin as a 'childish fiction') that judges merely discover, and do not create, the law.
+
+**→ Conclusion:** Our analysis of law enables us to avoid the extreme views that have thus far dominated debates concerning the nature of legal interpretation.
+
+**Counterarguments addressed:**
+- The cynical view (held by the so-called 'legal realists') that legal interpretation is mere legislation and that no legal interpretation is more correct than any other.
+- Blackstone’s view (rightly descried by Austin as a 'childish fiction') that judges merely discover, and do not create, the law.
+
+*Source: Preface | Importance: 6/10*
+
+---
+
+## Summary of the Present Work
+
+### Argument 9 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- I would have a moral, but not a legal, obligation to refrain from punching him if we both fell outside the scope of any legal system, such as on a desert island.
+- My actual legal obligation not to punch fellow citizen Smith (given that he and I both fall within the jurisdiction of some one legal system) is distinct from my moral obligation not to do so.
+- My legal obligation not to punch Smith is a moral obligation: it is a moral obligation to comply with a system of rules on which people depend for protections of their most basic rights: a system which builds highways and hospitals, prevents people from killing and stealing from one another, and holds physicians and other professionals accountable to certain ethical standards.
+
+**→ Conclusion:** My legal obligation not to punch Smith is a moral obligation.
+
+*Source: Summary of the Present Work | Importance: 10/10*
+
+---
+
+### Argument 10 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- A government is a success precisely to the extent that it serves the interests of those whom it governs.
+- The same is therefore true of laws, given that laws are among the instruments of government.
+
+**→ Conclusion:** The concept of law is to be understood in moral terms, even though there are immoral laws.
+
+*Source: Summary of the Present Work | Importance: 10/10*
+
+---
+
+### Argument 11 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- One may have a legal obligation to commit an immoral act.
+- In such a case, one’s legal obligation is not morally hollow.
+- One’s legal obligation to commit an immoral act is identical with one’s moral obligation to comply with a system of the kind just described.
+- Discharging that obligation involves committing an immoral act, but that obligation is not itself morally negative or morally hollow.
+
+**→ Conclusion:** One’s legal obligation to commit an immoral act is not morally hollow.
+
+*Source: Summary of the Present Work | Importance: 9/10*
+
+---
+
+### Argument 12 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Governments often behave in an unspeakably evil manner towards their own constituents; and oftentimes this misconduct involves, or even coincides with, the issuing of laws.
+- Many have concluded that the concept of law is not to be understood in moral terms.
+- This line of thought involves a failure to make three important distinctions: (i) The distinction between individual and institutional frames of evaluation; (ii) the distinction between functional and purely factual frames of evaluation; and (iii) the distinction between suspensions of protections of rights, on the one hand, and positive violations of rights, on the other.
+
+**→ Conclusion:** The conclusion that the concept of law is not to be understood in moral terms is flawed.
+
+**Counterarguments addressed:**
+- Many have concluded that the concept of law is not to be understood in moral terms.
+
+*Source: Summary of the Present Work | Importance: 9/10*
+
+---
+
+### Argument 13 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- The personal success of a head of government may not involve his serving the interests of his constituents, and it may even involve his thwarting those interests.
+- A head of government is a success as a head of government of state precisely to the extent that he serves the interests of his constituents.
+- Stalin failed as a head of government precisely because he did not serve the interests of his constituents.
+
+**→ Conclusion:** The objective of government – of any government - is to protect the interests of the governed.
+
+*Source: Summary of the Present Work | Importance: 9/10*
+
+---
+
+### Argument 14 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- It is one thing to have an obligation to do X, and it is quite another to have an obligation the fulfillment of which involves doing X.
+- A surgeon has an obligation to heal his patient. Fulfilling that obligation involves causing his patient to suffer. But a surgeon doesn’t have an obligation to cause his patient to suffer.
+- Similarly, fulfilling one’s legal obligations may involve committing an immoral or morally neutral act.
+- If I have a legal obligation to do X, that means that I have a moral obligation the fulfillment of which involves my doing X. It does not mean that I have a moral obligation to do X.
+
+**→ Conclusion:** A legal obligation to commit an immoral act may be morally wholesome.
+
+*Source: Summary of the Present Work | Importance: 8/10*
+
+---
+
+### Argument 15 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Given that one has legal obligations to commit immoral acts, it follows that legal obligations are not moral obligations.
+- This argument is invalid because having a legal obligation to do something immoral does not mean the obligation itself is immoral, but rather that fulfilling it involves an immoral act.
+
+**→ Conclusion:** One of the more obvious obstacles to accepting a moralistic analysis of law has been removed.
+
+**Counterarguments addressed:**
+- Given that one has legal obligations to commit immoral acts, it follows that legal obligations are not moral obligations.
+
+*Source: Summary of the Present Work | Importance: 8/10*
+
+---
+
+### Argument 16 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If a dictator issues a law that harms his constituents, he fails as a law-maker, even though issuing that law may help him achieve personal success of some kind – even though, for example, it may help him hold onto power.
+- In general, one fails as law-maker if one issues a law that hurts those who are subject to it.
+
+**→ Conclusion:** The purpose of a legal system per se is to serve the interests of those who are subject to it – even though that may not be the objective of all, or even any, of the individuals who created that legal system.
+
+*Source: Summary of the Present Work | Importance: 8/10*
+
+---
+
+### Argument 17 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Even if everyone alive suddenly succumbed to liver-disease, and each person’s liver stopped removing toxins from his blood-stream, there would still be a significant sense in which livers were to be understood as removers of toxins.
+- If one accepts a strictly fact-based frame of evaluation, one is blind to this obvious fact; and one is not blind to it if one accepts a frame of evaluation that allows for functional categories.
+- An analogue of this line of thought holds of law and government.
+
+**→ Conclusion:** Even if every government were thoroughly corrupt and exploitative, there would still be a significant sense in which governments were to be understood as protectors of rights, and in which the laws issued by governments were to be understood as attempts to provide protections of rights.
+
+*Source: Summary of the Present Work | Importance: 7/10*
+
+---
+
+## Key Concepts
+
+### Argument 18 (thesis statement)
+**Author:** kuczynski
+
+**Premises:**
+- Do laws necessarily have some kind of moral basis? Yes – or so the present work will argue.
+
+**→ Conclusion:** Laws necessarily have some kind of moral basis.
+
+**Counterarguments addressed:**
+- From Augustine to the present, every attempt to identify a necessary connection between law and morality has been flawed, giving credibility to the position that there is no necessary connection.
+
+*Source: Key Concepts | Importance: 10/10*
+
+---
+
+### Argument 19 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If a certain legal system doesn’t prohibit anyone from violating Smith’s rights, then Smith falls outside the jurisdiction of that system.
+- There is legal obligation only where there is moral protection, and the moral core of one’s legal obligations lies in this fact.
+
+**→ Conclusion:** Legal obligation presupposes moral protection.
+
+**Counterarguments addressed:**
+- People have legal obligations under governments that harm them.
+
+*Source: Key Concepts | Importance: 9/10*
+
+---
+
+### Argument 20 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- People have legal obligations under governments that harm them.
+- Even while I am being beaten, the government continues to protect my rights: anyone caught attempting to burgle my house or kidnap my children will be arrested; and it may even be other police officers who, acting in the name of duty, stop Smith from further beating me.
+- Smith’s misconduct is a case where a positive violation of my rights is superimposed on the continued existence of governmental protections of those same rights.
+- The same thing is true of any case where one has legal obligations under a government that harms one.
+
+**→ Conclusion:** Even though one may have legal obligations towards a government that harms one, it doesn’t follow that legal obligation doesn’t presuppose moral protection.
+
+*Source: Key Concepts | Importance: 8/10*
+
+---
+
+### Argument 21 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If the judge rules that the money is Smith’s, then the bank-manager is acting illegally if he refuses to give Smith the key to the safety-deposit box.
+- If the judge rules that the money is not Smith’s, then the bank-manager is acting illegally if he does give Smith the key.
+- The judge may or may not make his decision on the basis of a moral principle.
+- In either case, the law is what the judge says it is.
+
+**→ Conclusion:** This is the antithesis of the idea that there is any necessary relationship between law and morality, even though it is obviously compatible with the idea that the two may sometimes overlap.
+
+*Source: Key Concepts | Importance: 7/10*
+
+---
+
+### Argument 22 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- We’ve already seen why law is to be understood in terms of morality, notwithstanding that Dworkin’s argument for this conclusion is less than cogent.
+- If our criticism of Dworkin is correct, it seems to follow the legal interpretation (so-called) is mere legislation, and thus isn’t interpretation at all.
+
+**→ Conclusion:** Legal interpretation is not mere legislation, and this is perfectly compatible with the fact that the law is what the judge says it is.
+
+*Source: Key Concepts | Importance: 7/10*
+
+---
+
+### Argument 23 (critical evaluation)
+**Author:** kuczynski
+
+**Premises:**
+- Ronald Dworkin argues that the concept of law is to be understood in moral terms.
+- His argument is that judicial decisions are often made on moral, as opposed to narrowly statutory, grounds.
+
+**→ Conclusion:** Dworkin’s argument is less than probative.
+
+*Source: Key Concepts | Importance: 6/10*
+
+---
+
+### Argument 24 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- The layperson’s concept of temperature has no application outside of what are, from a physicist’s viewpoint, extremely narrow horizons.
+- When physicists identified heat with molecular motion, they were not identifying the content of the layperson’s concept of temperature.
+- Rather, they were replacing the lay-person’s concept with one that is consistent with it, within its narrow sphere of applicability, but is more precisely defined and also has a much wider sphere of application.
+- Such principled extensions of existing concepts are referred to as 'delineations' or 'precisifications.'
+- Any judicial ruling is ipso facto an extension, not an identification, of existing law.
+- Judicial rulings are principled extensions of the law, i.e. they are delineations of it, and are not cases of law being created out of whole cloth.
+
+**→ Conclusion:** Judicial rulings are delineations of the law, similar to how physicists delineated the concept of temperature.
+
+*Source: Key Concepts | Importance: 6/10*
+
+---
+
+### Argument 25 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Given that same argument, we must disagree with the nihilistic view, held by the so-called 'legal realists', that judicial interpretation is mere legislation, and isn’t answerable to objective standards.
+
+**→ Conclusion:** Judicial interpretation is not mere legislation and is answerable to objective standards.
+
+**Counterarguments addressed:**
+- Legal realists’ view that judicial interpretation is mere legislation.
+
+*Source: Key Concepts | Importance: 6/10*
+
+---
+
+### Argument 26 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Just as some delineations of the concept of temperature ('a body’s temperature is the sum of the velocities of its constituent molecules divided by the number of those particles') are truer to pre-theoretic data than others ('heat is dephlogistinated matter'), so some interpretations of law are truer to existing law than others.
+
+**→ Conclusion:** Some interpretations of law are truer to existing law than others.
+
+*Source: Key Concepts | Importance: 5/10*
+
+---
+
+### Argument 27 (appeal to authority)
+**Author:** kuczynski
+
+**Premises:**
+- Blackstone said that judges identify, and do not create, law.
+- Austin described Blackstone’s position as a 'childish fiction.'
+- Given the argument just outlined – and, in fact, independently of that argument -- we must agree with Austin.
+
+**→ Conclusion:** We must agree with Austin that Blackstone’s position is a 'childish fiction.'
+
+*Source: Key Concepts | Importance: 4/10*
+
+---
+
+## Can There Be Morally Empty Laws and Legal Systems?
+
+### Argument 28 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If we think of morality in terms of weight, then we can see laws for what they are: things that have some basis in morality, but that must sometimes be disobeyed if some weightier moral imperative is to be upheld.
+
+**→ Conclusion:** Laws have some basis in morality, but must sometimes be disobeyed if some weightier moral imperative is to be upheld.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 10/10*
+
+---
+
+### Argument 29 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If we say that, under the circumstances just described, stealing from Walgreen’s is good in an absolute sense, rather than merely being less bad than the alternative, we are led to say that there is no moral value to obeying the law.
+- The law comes to be morally hollow or, at best, to have a highly circumstantial connection with morality.
+
+**→ Conclusion:** A binary conception of morality leads to the view that laws are morally hollow or only circumstantially connected to morality.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 9/10*
+
+---
+
+### Argument 30 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If we think in terms of absolute right and absolute wrong, we cannot say that a law is at all moral unless obedience to it is morally de rigueur.
+- If we concede (as we surely must) that stealing from Walgreen’s is not a wholly good thing, then we end up embracing the absurd and evil view that saving your child’s life is less important than your not committing some misdemeanor.
+- Laws are falsely elevated to the status of moral verities.
+
+**→ Conclusion:** If we think of morality in binary terms, then either laws end up being morally arbitrary or they become unsurpassable excellences to be obeyed at all costs.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 9/10*
+
+---
+
+### Argument 31 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Good and bad are not binary concepts. They have 'a dimension of weight', to use an expression of Ronald Dworkin’s.
+- It would be better to steal penicillin from the pharmacy than it would be to let your child succumb to his life-threatening infection.
+- So given only those two choices, the right thing to do is to steal.
+
+**→ Conclusion:** Stealing from Walgreen’s is not good in an absolute sense, but it is less bad than the alternative.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 8/10*
+
+---
+
+### Argument 32 (causal)
+**Author:** kuczynski
+
+**Premises:**
+- The idea that laws can have no moral value derives from the tendency, just discussed, to think that whatever is comparatively good or bad is absolutely so.
+
+**→ Conclusion:** The belief that laws can be morally empty stems from a binary view of morality.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 8/10*
+
+---
+
+### Argument 33 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- There is a difference between having moral value, on the one hand, and being deserving of moral credit or commendation, on the other.
+- A rabbit doesn’t deserve moral credit. It is not in the same category as somebody who works for the Red Cross or Doctor’s Without Borders.
+- Being an amoral creature, a rabbit is ineligible for any kind of moral commendation.
+- But a rabbit’s life has moral value. That is why it would be wrong to torture or needlessly kill a rabbit.
+
+**→ Conclusion:** Thus, what is good does not always deserve commendation. To have moral value and to be commendable are not the same thing.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 7/10*
+
+---
+
+### Argument 34 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- A bit of fiction will remove the appearance of paradox from this last point, and will thus help unveil the moral underpinnings of law.
+- Human flourishing is surely a good thing, as seen in Smith’s case, even if it involves actions that harm others and may deserve condemnation.
+
+**→ Conclusion:** The moral underpinnings of law can be understood through recognizing that actions with moral value (like human flourishing) may still conflict with other moral considerations, similar to how laws may have moral value but require disobedience in certain contexts.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 7/10*
+
+---
+
+### Argument 35 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Something that has moral value may not only be unworthy of commendation, but may even deserve condemnation.
+- Smith is a talented pianist. He is at a phase of his pianistic development where it is especially important that he practice.
+- The only piano to which Smith has access is in his tiny apartment, which he shares with several other people.
+- Given his work-schedule, the only time Smith can practice is late at night. There is thus no way that Smith can practice without preventing his roommates from sleeping.
+- Each of his roommates has a peculiar medical condition whereby the sound of piano-playing causes permanent physical and psychological damage.
+- For various reasons, it is not an option for Smith to find other roommates.
+- Smith doesn’t want to harm anyone. But like everyone else, he wants to flourish as a human being. In his case, this involves playing the piano.
+- So Smith does practice late at night. In doing so, he experiences ecstasies and sharpenings of awareness that fulfill his inner nature as nothing else could.
+
+**→ Conclusion:** In practicing, Smith is flourishing. Human flourishing is surely a good thing, even though his actions may deserve condemnation due to the harm caused.
+
+*Source: Can There Be Morally Empty Laws and Legal Systems? | Importance: 6/10*
+
+---
+
+## Dworkin on the Separation of Law and Morality
+
+### Argument 36 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Many planes are defective and therefore don’t fly.
+- But there is certainly a principled relation between a thing’s being a plane and its being something that flies.
+- Because something is a plane in virtue of, at least in part, what it is supposed to do, and not merely in virtue of what it actually does.
+- The concept of law, I believe, has a teleological component.
+- If this is right, then something is a law in virtue of, at least in part, what it is supposed to do and not merely in virtue of what it actually does.
+
+**→ Conclusion:** I will argue that, in fact, there is a significant sense in which laws are supposed to protect moral goods.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 10/10*
+
+---
+
+### Argument 37 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- Granting this, I will argue that, as a matter of conceptual necessity, a legal system as a whole is not only supposed to do good, but must succeed in doing so.
+- There are legal systems (e.g. that of Stalin) that seem to do nothing but harm.
+- But such a view, I will argue, involves our comparing such legal systems not to the absence of a legal system, but rather to better legal systems (e.g. that of the present-day Swedish government).
+- When we wish to assess whether legal systems are categorically good things, our benchmark must be the absence of a legal system, and not the presence of a superb legal system.
+
+**→ Conclusion:** We will find that, as a matter of analytic necessity, even the worst legal systems do a fair amount of good in absolute terms.
+
+**Counterarguments addressed:**
+- There are legal systems (e.g. that of Stalin) that seem to do nothing but harm.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 10/10*
+
+---
+
+### Argument 38 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Principled relations are not typically expressed by strict and invariable concomitances.
+- There might be F’s that are not G’s. It could even be that there is only one F that is a G, and a billion F’s that are not.
+- Principled relations are often given by ceteris paribus propositions – propositions of the form all other things being equal.
+- If, all other things being equal, F’s are G’s, then there is a principled relationship between a thing’s being an F and its being a G, even though in circumstances where all other things are not equal, an F may not be a G.
+
+**→ Conclusion:** So given only that there are morally empty laws, it doesn’t follow that there isn’t a principled relationship between a thing’s being a law and its protecting a moral good.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 9/10*
+
+---
+
+### Argument 39 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Once this is granted, it is not hard to show that there is a moral basis to law.
+- There are laws that fail to do any good and even though there are laws that are created by people who have no intention of doing good.
+
+**→ Conclusion:** There is a moral basis to law, even though there are laws that fail to do any good and even though there are laws that are created by people who have no intention of doing good.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 9/10*
+
+---
+
+### Argument 40 (critical analysis)
+**Author:** kuczynski
+
+**Premises:**
+- There are laws that, while not licensing positively evil conduct, fail to encourage or protect commendable action.
+- On the basis of these facts, many have inferred that laws can protect things that have no moral value and, consequently, that laws can have no connection to morality.
+
+**→ Conclusion:** Such an inference embodies two muddles.
+
+**Counterarguments addressed:**
+- Many have inferred that laws can protect things that have no moral value and, consequently, that laws can have no connection to morality.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 8/10*
+
+---
+
+### Argument 41 (comparative)
+**Author:** kuczynski
+
+**Premises:**
+- An assassin who kills only the wicked is not, on that account, better as an assassin than one who kills the good.
+- But a law that does good is, on that account, better as a law than one that fails to do so.
+
+**→ Conclusion:** It thus seems that it is the purpose of laws to do good (notwithstanding that this is often not the objective of the person, or persons, who make the law).
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 8/10*
+
+---
+
+### Argument 42 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Smith’s practicing is ruining the lives of his roommates.
+- So in practicing, Smith is doing something condemnable.
+- Suppose that some law were enacted that permitted Smith to practice under these circumstances.
+- That law would protect a moral good – Smith’s flourishing – while also protecting behavior that is positively condemnable.
+
+**→ Conclusion:** There are laws that protect moral goods and, in the same stroke, practically guarantee the occurrence of the most despicable and condemnable behaviors.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 7/10*
+
+---
+
+### Argument 43 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Such an inference embodies two muddles.
+- First, it fails to distinguish the concept of having moral value from the concept of being deserving of moral credit.
+- Second, it assumes that anything having moral value cannot be condemnable.
+- The failure to make these distinctions is yet another expression of the binary moral thinking discussed earlier.
+
+**→ Conclusion:** If we think in terms of absolute right and wrong, then Smith’s practicing is either totally lacking in moral value or it becomes an unimpeachable excellence; and any law that allows Smith to practice is either completely divorced from morality or it becomes a moral verity unto itself.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 7/10*
+
+---
+
+### Argument 44 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Even a bad doctor can do much good – he knows how to set a broken leg, to perform CPR, and so on.
+- It is only compared to a good doctor that he can be regarded as doing harm.
+- When a doctor 'does harm', it is almost always by failing to do good – by failing to do what a good doctor would have done in the same circumstances.
+- When we wish to assess whether doctors are, as a rule, good things, we must compare the presence of doctors with the absence of doctors; we mustn’t compare bad doctors with good doctors.
+
+**→ Conclusion:** Similarly, when we wish to assess whether legal systems are categorically good things, our benchmark must be the absence of law altogether, and not the presence of some superlative system of law.
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 7/10*
+
+---
+
+### Argument 45 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- If we think in terms of weight, we can see such a law for what it is.
+- A law that allows Smith to practice protects a moral good (Smith’s flourishing).
+- At the same time, such a law is probably wrong and should be abolished due to the condemnable behavior it permits.
+
+**→ Conclusion:** We can see such a law for what it is: something that is probably wrong and should be abolished, but that also protects a moral good (Smith’s flourishing).
+
+*Source: Dworkin on the Separation of Law and Morality | Importance: 6/10*
+
+---
+
+## The Moral Background
+
+### Argument 46 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- Ronald Dworkin is one of the great exponents of the view that law and morality have some kind of non-trivial relationship to each other
+- The first part of the present work is spent showing why Dworkin’s defense of this position is unsatisfactory
+- The rest is an attempt to show that, even though Dworkin’s arguments are less than probative, the position he is defending is a reasonable one
+
+**→ Conclusion:** even though Dworkin’s arguments are less than probative, the position he is defending is a reasonable one
+
+**Counterarguments addressed:**
+- Dworkin’s defense of this position is unsatisfactory
+
+*Source: The Moral Background | Importance: 9/10*
+
+---
+
+### Argument 47 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- It is an empirical fact that there are immoral laws and legal systems
+- There would be sheer anarchy, and hence a de facto absence of law, in any society permitting unrestricted murder, theft, and arson
+- So any legal system worthy of the name must forbid such iniquities and must to that extent coincide with the dictates of morality
+
+**→ Conclusion:** any legal system worthy of the name must forbid such iniquities and must to that extent coincide with the dictates of morality
+
+**Counterarguments addressed:**
+- It is an empirical fact that there are immoral laws and legal systems
+
+*Source: The Moral Background | Importance: 9/10*
+
+---
+
+### Argument 48 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- any actual law does in fact protect some moral good, even though, in many cases, that good is dwarfed by some evil with which the law in question is incompatible
+- leaving aside those laws that result from patent deviations of the normal law-making mechanisms, any actual law does in fact protect some moral good
+
+**→ Conclusion:** any actual law does in fact protect some moral good
+
+**Counterarguments addressed:**
+- some evil with which the law in question is incompatible may outweigh the good
+
+*Source: The Moral Background | Importance: 8/10*
+
+---
+
+### Argument 49 (causal)
+**Author:** kuczynski
+
+**Premises:**
+- Dworkin’s discussion of the difference between rules and principles gives us the key to seeing the moral structure of legal obligation
+- even though Dworkin’s arguments are not always decisive, some of the points involved in those arguments are indispensable to a proper understanding of the deep but delicate relationship between the concepts of law and morality
+
+**→ Conclusion:** Dworkin’s discussion of the difference between rules and principles gives us the key to seeing the moral structure of legal obligation
+
+**Counterarguments addressed:**
+- Dworkin’s arguments are not always decisive
+
+*Source: The Moral Background | Importance: 8/10*
+
+---
+
+### Argument 50 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Dworkin argues against a position that he refers to as 'positivism'
+- positivism consists of three theses: (i) Laws are either applied or not applied, and can no more be interpreted than the rules of chess. When a judge 'interprets' the law, he is creating new law; and when a judge exercises his so-called 'judicial discretion', he is either applying existing statutes or he is creating new law on the spot
+- (ii) The law is nothing other than a set of rules. Consider the various statutes that fill our law books. Those are the law, and nothing else is. Any principle that hasn’t been converted into a statute is no part of the law
+- (iii) For something to be a law, it has to have a certain 'pedigree', i.e. it has to issue from a certain kind of authority. So a moral principle is no part of the law unless the relevant authority wants it to be
+- Dworkin argues that each of (i)-(iii) is false
+
+**→ Conclusion:** Given that (i)-(iii) are wrong, it follows that law necessarily embodies some kind of morality
+
+**Counterarguments addressed:**
+- Author will argue that Dworkin’s criticisms of (i)-(iii) are not cogent and that (i)-(iii) are in fact correct
+
+*Source: The Moral Background | Importance: 8/10*
+
+---
+
+### Argument 51 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- even though many laws are unjust, there is a sense in which they are always supposed to be just
+- a legal system that promotes the ends of justice is, on that very account, more successful as a legal system than one that fails to promote those ends
+- By contrast, a military campaign that kills only the wicked is not, on that account, more successful as a military campaign than one that kills the innocent
+
+**→ Conclusion:** there would seem to be a sense in which any legal system necessarily aspires to be just, even though many fall sadly short
+
+**Counterarguments addressed:**
+- many laws are unjust
+- many legal systems fall sadly short
+
+*Source: The Moral Background | Importance: 7/10*
+
+---
+
+### Argument 52 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- I will argue that Dworkin’s criticisms of (i)-(iii) are not cogent and that (i)-(iii) are in fact correct
+- I will also argue that, even if (i)-(iii) were completely wrong, it would in no way follow that there were a significant necessary connection between law and morality
+- The question of whether morality and the law are internally related is independent of the question of whether (i)-(iii) are correct
+
+**→ Conclusion:** The question of whether morality and the law are internally related is independent of the question of whether (i)-(iii) are correct
+
+**Counterarguments addressed:**
+- Dworkin’s implicit claim that disproving (i)-(iii) implies a necessary connection between law and morality
+
+*Source: The Moral Background | Importance: 7/10*
+
+---
+
+### Argument 53 (causal)
+**Author:** kuczynski
+
+**Premises:**
+- there are good laws and legal systems, and this fact may even have deep roots in human nature
+- It may be rooted in a desire that people generally have, to some degree or other, to be virtuous
+- It may also be rooted in facts about human frailty: since any given person is vulnerable to practically any other person, it is ceteris paribus in one’s interest to live under the dominion of a fair legal system
+
+**→ Conclusion:** there are good laws and legal systems, and this fact may even have deep roots in human nature
+
+*Source: The Moral Background | Importance: 6/10*
+
+---
+
+### Argument 54 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- some hold that any relations between law and morality are entirely contingent
+- according to the view in question, there is nothing self-contradictory or absurd in the thought of an entirely wicked or amoral legal system
+- To the extent that we are prone to see laws in terms of morality, we are guilty of some kind of blunder
+
+**→ Conclusion:** there is nothing self-contradictory or absurd in the thought of an entirely wicked or amoral legal system
+
+**Counterarguments addressed:**
+- Author plans to argue against this view implicitly through other arguments
+
+*Source: The Moral Background | Importance: 5/10*
+
+---
+
+## Hart on the Separation of Law and Morality
+
+### Argument 55 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- there is a deep, internal connection between the concepts of law and morality
+- despite the fact that there are wicked legal systems, it is impossible on purely conceptual grounds that any legal system should altogether fail to incorporate some kind of morality
+
+**→ Conclusion:** it is impossible on purely conceptual grounds that any legal system should altogether fail to incorporate some kind of morality
+
+**Counterarguments addressed:**
+- the existence of wicked legal systems
+
+*Source: Hart on the Separation of Law and Morality | Importance: 10/10*
+
+---
+
+### Argument 56 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- there is a deep, internal connection between the concepts of law and morality
+- we will find an objective basis for our pre-theoretic intuition that there is some sense in which one is always supposed to obey the law
+
+**→ Conclusion:** there is some sense in which one is always supposed to obey the law
+
+*Source: Hart on the Separation of Law and Morality | Importance: 9/10*
+
+---
+
+### Argument 57 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- In chapter 7, we will develop the points concerning government outlined in the previous chapter
+- given a plausible conception of the nature of government, it follows quite directly that, even though there are morally unsatisfactory laws and legal systems, laws must be seen as attempts to protect moral goods
+- as a matter of conceptual necessity, a legal system cannot completely fail to do a non-trivial amount of good
+
+**→ Conclusion:** laws must be seen as attempts to protect moral goods
+
+**Counterarguments addressed:**
+- existence of morally unsatisfactory laws and legal systems
+
+*Source: Hart on the Separation of Law and Morality | Importance: 9/10*
+
+---
+
+### Argument 58 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- In chapter 10, we will delineate the moral structure of legal obligation
+- we will see that legal obligation is a kind of moral obligation
+- we will already have seen (in previous chapters) that all laws have a moral component
+- the relationship between these two facts, though deep and necessary, is anything but straightforward
+
+**→ Conclusion:** legal obligation is a kind of moral obligation
+
+*Source: Hart on the Separation of Law and Morality | Importance: 9/10*
+
+---
+
+### Argument 59 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- In chapter 6, we will discuss the defense of positivism found in Hart’s classic paper 'the Separation of Law and Morals'
+- We will find that two of Hart’s apparently more compelling arguments are not valid
+- they incorporate an untenable, binary conception of morality and also a misunderstanding of the nature of government
+
+**→ Conclusion:** two of Hart’s apparently more compelling arguments are not valid
+
+**Counterarguments addressed:**
+- Hart’s defense of positivism
+
+*Source: Hart on the Separation of Law and Morality | Importance: 8/10*
+
+---
+
+### Argument 60 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- In chapter 7, we will argue that, given a plausible conception of the nature of government
+- as a matter of conceptual necessity, a legal system cannot completely fail to do a non-trivial amount of good
+
+**→ Conclusion:** a legal system cannot completely fail to do a non-trivial amount of good
+
+*Source: Hart on the Separation of Law and Morality | Importance: 8/10*
+
+---
+
+### Argument 61 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- In chapter 9, I will discuss the plausible point, recently made by an eminent philosopher of law, that the laws of a brutal dictator can be as lacking in moral content as the demands of a gunman
+- even though a brutal dictator may be in the same psychological category as a gunman, it would only be in rather singular circumstances that the dictator’s laws were in the same moral category as a gunman’s threats
+
+**→ Conclusion:** it would only be in rather singular circumstances that the dictator’s laws were in the same moral category as a gunman’s threats
+
+**Counterarguments addressed:**
+- laws of a brutal dictator can be as lacking in moral content as the demands of a gunman
+
+*Source: Hart on the Separation of Law and Morality | Importance: 7/10*
+
+---
+
+### Argument 62 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- In chapter 10, we will find reason to reject wholesale some prima facie reasonable attempts to find a moral basis for legal obligation
+- the relationship between legal obligation and moral obligation, though deep and necessary, is anything but straightforward
+
+**→ Conclusion:** some prima facie reasonable attempts to find a moral basis for legal obligation should be rejected
+
+**Counterarguments addressed:**
+- prima facie reasonable attempts to find a moral basis for legal obligation
+
+*Source: Hart on the Separation of Law and Morality | Importance: 7/10*
+
+---
+
+## The Concept of Government as a Basis for a Moralistic Conception of Law
+
+### Argument 63 (conditional)
+**Author:** kuczynski
+
+**Premises:**
+- (iii) doesn’t say that for something to be a law, it is necessary and sufficient that it issue from a certain kind of earthly authority.
+- It is left open whether it must satisfy additional conditions.
+- So depending on what, if any, additional conditions there are, (iii) is compatible with the view that laws must be moral.
+- For example, it could be said that a law is something that (a) meets certain standards of morality and (b) issues from certain kinds of earthly authorities.
+
+**→ Conclusion:** (iii) is compatible with the view that laws must be moral.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 9/10*
+
+---
+
+### Argument 64 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- The laws of morality obviously don’t have anything to do with earthly authority. Their basis lies in Pure Reason or in the Form of the Good.
+- (iii) says that laws (in the legal sense) must issue from some earthly authority.
+
+**→ Conclusion:** (iii) says, or suggests, that morality is one thing, law another.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 8/10*
+
+---
+
+### Argument 65 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- (i) implies that morals are a part of the law only when rules and rulings allow them to be.
+- If it is granted – as it surely must be – that rules and rulings may be completely amoral.
+
+**→ Conclusion:** it would certainly seem to follow that (i) entails that the law needn’t embody any morality.
+
+**Counterarguments addressed:**
+- Later I will argue that, in fact, even if (i) is true, it does not follow that laws needn’t embody any morality.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 8/10*
+
+---
+
+### Argument 66 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- what counts as law is quite arbitrary. Consider the various regulations involved in military life or in the administration of some bureaucracy.
+- These regulations are obviously not moral laws. It isn’t a law of morality that you must use a number-two pencil when filling out a certain form.
+- (ii) basically says that 'the law' consists of nothing other than such regulations.
+
+**→ Conclusion:** (ii) is consistent with the existence of laws that are immoral or lacking in any kind of morality, whether positive or negative.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 7/10*
+
+---
+
+### Argument 67 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- (i) says that, when a judge goes beyond these man-made things, he is going beyond the law itself.
+- This straightforwardly implies that rules exhaust the law, i.e. it entails the truth of (ii).
+
+**→ Conclusion:** (i) implies that rules exhaust the law.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 7/10*
+
+---
+
+### Argument 68 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- each of (i)-(iii) is a way of saying that laws are things that people make up.
+- no more have to embody any morality than do the army-regulations concerning the kind of boot-polish one may use.
+
+**→ Conclusion:** each of (i)-(iii) is a way of saying that laws ... no more have to embody any morality than do the army-regulations.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 7/10*
+
+---
+
+### Argument 69 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- A certain judge must decide a case. None of the rules are on point.
+- Since the rules are silent, the judge bases his decision on some ethical principle.
+- If (i) is right, then by going beyond the rules, the judge was going beyond the law.
+
+**→ Conclusion:** This means that his decision was based on an ethical principle that was not already a part of the law: that principle became a part of the law only in so far as it was incorporated into the judge’s ruling.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 6/10*
+
+---
+
+### Argument 70 (conditional)
+**Author:** kuczynski
+
+**Premises:**
+- if each of (i)-(iii) should turn out to be false.
+
+**→ Conclusion:** it wouldn’t follow that laws do have some kind of necessary connection with the moral.
+
+*Source: The Concept of Government as a Basis for a Moralistic Conception of Law | Importance: 6/10*
+
+---
+
+## Laws as Narrow-Scope Assurances: The Triviality Problem
+
+### Argument 71 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Given what we’ve just said, even if all of (i)-(iii) were false, it wouldn’t necessarily follow that the law embodied any kind of morality.
+
+**→ Conclusion:** So we must remember that, even if Dworkin’s criticisms of (i)-(iii) go through, that by itself doesn’t entail that there is an element of morality to the law.
+
+**Counterarguments addressed:**
+- Dworkin’s criticisms of (i)-(iii) suggesting a moral element in law.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 9/10*
+
+---
+
+### Argument 72 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Suppose that laws don’t have to have a certain pedigree.
+- It doesn’t follow that they must be moral.
+- That would follow only if it could be shown that their not having to issue from an earthly authority entailed that they did have to emanate from the Form of the Good, or some such.
+- But, as we will see, there is a third option.
+
+**→ Conclusion:** It doesn’t follow that [laws] must be moral.
+
+**Counterarguments addressed:**
+- The assumption that lack of earthly authority necessitates a moral source like the Form of the Good.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 8/10*
+
+---
+
+### Argument 73 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- In Dworkin’s view, it is a matter of empirical fact that the law includes principles that are not explicitly mentioned anywhere in the rule books.
+- In defense of this view, he cites two landmark cases.
+- In Riggs v. Palmer a New York court had to adjudicate the following problem: A young man stood to inherit a great deal of money from his still alive and healthy grandfather. The young man decided not to wait, and killed his grandfather.
+- Obviously there was a law forbidding murder, and the young man was found guilty of breaking that law.
+- But, at the time, there was no statute saying that one forfeits one’s inheritance if one kills the testator.
+- Nonetheless the courts decided that the young man had forfeited his inheritance.
+- The principle at work was that one should not be allowed to profit from wrong doing or illegal action.
+
+**→ Conclusion:** On the face of it, these two cases provide us with clear evidence that moral principles are part of the law.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 8/10*
+
+---
+
+### Argument 74 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- Dworkin also discusses the case of Henningsen v. Bloomfield Motors.
+- Henningsen bought a car. He signed a contract absolving the car-maker from any criminal liability in the event that he (Henningsen) should be injured as a result of some defect in the car that the automaker could have foreseen.
+- The car did have such a defect, and that did lead to Henningsen’s sustaining severe injuries.
+- Henningsen sued Bloomfield Motors.
+- The courts decided that the contract was void, and found for Henningsen.
+- The principle at work was that a valid legal contract must meet certain minimum standards of decency and fairness.
+- The contract in question did not meet these standards: hence the court’s decision.
+
+**→ Conclusion:** On the face of it, these two cases provide us with clear evidence that moral principles are part of the law, and also that the law is not confined to the rule books.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 8/10*
+
+---
+
+### Argument 75 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Suppose that (i) is false, i.e. that when judges 'interpret' statutes, they are not necessarily making up new law.
+- It doesn’t follow, as Hart pointed out, that judicial interpretation provides a contact point between law and morality.
+- Suppose that the principle governing the judge’s interpretations is this: (*) I must interpret the statutes in the way that is the most convenient from the viewpoint of the nefarious mega-corporation that is secretly running this country.
+- To the extent that a given statute is ambiguous or vague, I must delineate it in the way that best serves the interests of that corporation.
+
+**→ Conclusion:** In that case, presumably, the falsity of (i) wouldn’t demand that there be some intersection between the law and morality.
+
+**Counterarguments addressed:**
+- Hart’s view that judicial interpretation might connect law and morality.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 7/10*
+
+---
+
+### Argument 76 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Suppose that (ii) is wrong.
+- That by itself doesn’t mean that there is any component of moral principle to the law.
+- Suppose that (*) is the principle underlying judicial interpretation, but that (*) were not itself one of the statutes.
+- In that case, the law would include something other than various statutes, and (ii) would be false.
+
+**→ Conclusion:** But the falsity of (ii) plainly wouldn’t entail that there was an element of moral principle to the law.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 7/10*
+
+---
+
+### Argument 77 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- First of all, we must distinguish laws from what we call 'the law.'
+- When we talk about particular laws, we are not referring to diffuse ethical principles, but to specific statutes – we are referring to penal code 76.5 subsection B, or some such.
+- Unless it could be shown that such particular laws exhausted the law, it would not follow that the latter was nothing but a set of rules.
+
+**→ Conclusion:** It would not follow that the latter [the law] was nothing but a set of rules.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 6/10*
+
+---
+
+### Argument 78 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Suppose that (*) is the principle underlying judicial interpretation, but that (*) were not itself one of the statutes.
+- In that case, the law would include something other than various statutes.
+
+**→ Conclusion:** The principle would be purely pragmatic.
+
+*Source: Laws as Narrow-Scope Assurances: The Triviality Problem | Importance: 5/10*
+
+---
+
+## How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats?
+
+### Argument 79 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Our legal system comprises the principle that people should be allowed to pursue prosperity.
+- It also comprises the principle that business must be conducted with a certain decency and that, consequently, the pursuit of prosperity should be subject to certain restraints.
+- But our legal system is not incoherent on account of comprising both those principles. This is because, unlike rules, principles are not binary, and apply to varying degrees.
+
+**→ Conclusion:** The existence within a single legal system of two opposed principles does not constitute a contradiction, though it does create certain tensions that judges must manage.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 9/10*
+
+---
+
+### Argument 80 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Principles have a 'dimension of weight.' Rules do not.
+- A rule either applies or it doesn’t. Principles can apply to varying degrees.
+- Suppose there is a law saying that three people must witness the signing of a will if that will is to be valid. This rule either applies or it doesn’t.
+
+**→ Conclusion:** Rules are binary in application, while principles are not.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 8/10*
+
+---
+
+### Argument 81 (reductio ad absurdum)
+**Author:** kuczynski
+
+**Premises:**
+- It is not a rule that people cannot profit from their own wrong-doing. If this were a rule, then all sly deal-making, all wheeling and dealing, would be against the law.
+- There would be no commercial activity at all, and our economy would grind to a halt.
+- But this doesn’t mean that connivance and manipulation are to be given free reign. Judges give weight to the principle that business should be conducted with decency.
+
+**→ Conclusion:** The idea that people cannot profit from wrong-doing is a principle with weight, not a binary rule.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 8/10*
+
+---
+
+### Argument 82 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Since principles have a dimension of weight, they are not rules.
+- It is therefore not in the cards to say that ethical principles, such as those motivating the judges in Riggs and Henningsen, are actually rules.
+
+**→ Conclusion:** So (ii) is wrong.
+
+**Counterarguments addressed:**
+- Positivist view that ethical principles are de facto rules
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 8/10*
+
+---
+
+### Argument 83 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Moral principles are not created by governments or by any other earthly authority.
+- We just saw that they are a part of the law.
+
+**→ Conclusion:** Therefore (iii) is wrong.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 8/10*
+
+---
+
+### Argument 84 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- First, he can say: 'the judges in those cases were going beyond the law; they were doing the right thing, not the legal thing.'
+- As we will later see, there is much to be said for this position.
+
+**→ Conclusion:** The positivist by no means has to concede defeat.
+
+**Counterarguments addressed:**
+- Positivist position that judges acted beyond the law but did the right thing
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 7/10*
+
+---
+
+### Argument 85 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- A consequence is that a coherent legal system cannot have two conflicting rules.
+- It cannot have one rule saying that the signing of a will must be witnessed by three people if that will is to be valid, and another rule saying that only two people must be present. One of those rules would have to go.
+
+**→ Conclusion:** A coherent legal system cannot sustain conflicting rules.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 7/10*
+
+---
+
+### Argument 86 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Rules are not interpreted: they are either applied or not applied.
+- You don’t interpret a mathematical rule (e.g. a function from numbers to other numbers); you either apply it or you don’t.
+- For the same reason, you don’t interpret a legal rule: you either apply it or you don’t.
+
+**→ Conclusion:** The concept of interpretation doesn’t apply to legal rules.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 7/10*
+
+---
+
+### Argument 87 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- The positivist could also say that the ethical principles guiding the judges were really de facto rules.
+- There is a rule in our legal system requiring judges to nullify absurdly immoral contracts; there is a rule requiring judges not let a murderer benefit from his crime.
+
+**→ Conclusion:** Ethical principles guiding judges can be considered de facto rules within the legal system.
+
+**Counterarguments addressed:**
+- Dworkin’s distinction between rules and principles challenges this view
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 6/10*
+
+---
+
+### Argument 88 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Of course, every rule has a certain degree of vagueness.
+- What if, in the future, there are cyborgs? Do they count as possible witnesses from the standpoint of the law just discussed? What about people with autism? People who are extremely drunk? People who are slightly drunk, but still more or less functional?
+- But for a rule to be vague or indeterminate is not for it to have a dimension of weight. If cyborgs are people, then they are viable witnesses. If not, not.
+
+**→ Conclusion:** The vagueness of a rule does not equate to having a dimension of weight like principles do.
+
+*Source: How Are a Brutal Dictator’s Laws Different from a Gunman’s Threats? | Importance: 6/10*
+
+---
+
+## The Moral Structure of Legal Obligation
+
+### Argument 89 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Sometimes when we say that a judgment involves 'discretion', we mean only that it is not mechanical and embodies sensitivity to the relevant principles.
+- Given only that a problem cannot be solved mechanically, and that a certain amount of 'discretion' is involved, it doesn’t follow that there is no right answer.
+- To say otherwise would be to say that there are no truths outside of first order sentential logic.
+- The fact that judges have to exercise discretion means only that some understanding of the relevant legal precepts is involved.
+- It doesn’t imply that the law is absent and that the judge must therefore fill the void with a new law of his own making.
+
+**→ Conclusion:** The fact that judges exercise discretion does not imply that the law is absent or that they are creating new law.
+
+**Counterarguments addressed:**
+- The positivist view that discretion implies creating new law due to gaps in the law.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 9/10*
+
+---
+
+### Argument 90 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- The very point the positivist is trying to establish is that no ethical principle has a place in the law, unless it is incorporated into some statute.
+- Therefore the positivist cannot argue that, since the judge based his decision on principles not already embodied in the statutes, he was therefore going beyond the law.
+- That would be question-begging, as it is the very point that the positivist wishes to establish.
+
+**→ Conclusion:** The positivist argument that a judge going beyond statutes is creating law is question-begging.
+
+**Counterarguments addressed:**
+- Positivist claim that decisions based on non-statutory principles are beyond the law.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 9/10*
+
+---
+
+### Argument 91 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- So legal interpretation is necessary precisely where there is an indeterminacy or gap in the law, and it therefore consists in creating law where there was previously an absence of law.
+- Put another way, judicial 'discretion' is necessary precisely when there is a gap in the law, and the exercise of such discretion therefore consists in the inventing of new law.
+
+**→ Conclusion:** Legal interpretation consists in creating law where there was previously an absence of law.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 8/10*
+
+---
+
+### Argument 92 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- The term 'indeterminate' has two meanings: one ontological, the other epistemological.
+- If we say that Smith’s whereabouts are 'indeterminate', we mean that we don’t know where Smith is; we don’t mean that there is no objective fact of the matter.
+- If we say that it is indeterminate whether a person who is 5 ft 10 inches is tall, we mean that there is no objective fact of the matter: the concept of tallness leaves the matter open.
+- It is true that, in some cases, the law is 'indeterminate'. But that doesn’t necessarily mean that there is no fact as to what the law demands.
+- It could mean simply that, as of yet, it is unknown what the law demands.
+- Therefore, the existence of 'indeterminacy' in the law doesn’t entail the existence of gaps in the law, unless the indeterminacy in question is ontological.
+
+**→ Conclusion:** The existence of 'indeterminacy' in the law doesn’t entail the existence of gaps in the law unless the indeterminacy is ontological.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 8/10*
+
+---
+
+### Argument 93 (analogical)
+**Author:** kuczynski
+
+**Premises:**
+- Sometimes when we say that a decision is at so and so’s discretion, we mean that so and so’s decision on the matter cannot be overturned.
+- If an umpire decides that a pitch was a strike, then that decision cannot be overturned.
+- Whether the pitch was a strike or a ball is at the umpire’s discretion. But that doesn’t mean that there was no fact of the matter.
+- It means that the umpire is the one who decides what the fact of the matter is.
+- Given only that it is at the judge’s discretion how to apply the law, it doesn’t follow that there is no fact as to what the law is.
+- It follows only that the judge is the one who decides what that fact is.
+
+**→ Conclusion:** The fact that a decision is at the judge’s discretion does not mean there is no fact as to what the law is; it means the judge decides what that fact is.
+
+**Counterarguments addressed:**
+- Positivist view that discretion implies no objective legal fact exists.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 7/10*
+
+---
+
+### Argument 94 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- Consider Henningsen v. Bloomfield Motors. The judge made a decision. But the decision was obviously not predetermined by the statutes.
+- In fact, if we look at the statutes, we find not only that they did not determine that decision, but that they nearly enough ruled it out.
+- Going by what the rule-books say, the contract was legal. But the judge decided on grounds of principle that the contract should be thrown out.
+- Evidently, it was in the judge’s power to override the statutes: it was at his discretion.
+- This seems to mean that the law was the judge’s to invent.
+- Of course, it will be said that the judge 'interpreted' the law, and did not invent it. But such a statement appears to distort the facts.
+- This, presumably, is the sort of thing that defenders of (i) have in mind. The judge was called on to 'interpret' the law. But really he usurped it and replaced it with a new law.
+
+**→ Conclusion:** Legal interpretation is legal creation; when a judge exercises his 'discretion', he is making up new law.
+
+**Counterarguments addressed:**
+- The view that the judge merely interpreted the law rather than created it.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 7/10*
+
+---
+
+### Argument 95 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Suppose the law requires that somebody convicted of such and such be given a sentence of anywhere from five to twenty years in jail.
+- In this case, it is at the judge’s discretion whether to hand down a sentence of five years, or seven, or twelve.
+- If the judge imposes a sentence of twelve years, he is following, not creating, the law.
+
+**→ Conclusion:** The existence of this sort of judicial discretion provides no support for the view that judges create new law.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 6/10*
+
+---
+
+### Argument 96 (causal)
+**Author:** kuczynski
+
+**Premises:**
+- Our background knowledge about American culture and mores makes it hard to be objective about cases like the ones Dworkin discusses.
+- As Americans, we idolize the renegade detective who is out for justice and is willing to break the rules.
+- We spurn the rule-bound police-chief who forces him to do things 'by the book', making it practically impossible to catch the bad guy.
+- Such background knowledge tends to color our analysis of the cases that Dworkin discusses.
+
+**→ Conclusion:** Cultural biases in American society may influence the analysis of judicial discretion and legal interpretation in cases like those Dworkin discusses.
+
+*Source: The Moral Structure of Legal Obligation | Importance: 5/10*
+
+---
+
+## International Law and Legal Interpretation
+
+### Argument 97 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- But no matter what the judge decides, the legal obligations of bailiffs and law enforcement personnel, and consequently of the general public, line up with that decision.
+- Legality, and therefore the law, necessarily mould themselves around the judge’s decision.
+
+**→ Conclusion:** This entails that the judge’s decision creates, and does not identify, the law.
+
+*Source: International Law and Legal Interpretation | Importance: 10/10*
+
+---
+
+### Argument 98 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- This entails that the judge’s decision creates, and does not identify, the law.
+
+**→ Conclusion:** The positivist is victorious.
+
+**Counterarguments addressed:**
+- Anti-positivist views on law interpretation
+
+*Source: International Law and Legal Interpretation | Importance: 10/10*
+
+---
+
+### Argument 99 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- The traditional picture is this. In some cases, the rules are silent. Such cases go to a judge.
+- The judge makes a decision. His decision represents an interpretation of the law. The judge is not making up new law.
+- This is the picture that Dworkin is defending.
+
+**→ Conclusion:** I would like to argue against it.
+
+**Counterarguments addressed:**
+- Dworkin’s view that judges interpret rather than create law
+
+*Source: International Law and Legal Interpretation | Importance: 9/10*
+
+---
+
+### Argument 100 (reductio ad absurdum)
+**Author:** kuczynski
+
+**Premises:**
+- Suppose a bailiff or sheriff’s deputy says the following to a judge who has just decided some case where the rules are silent: 'I appreciate the sincere effort you have made to interpret the law. Unfortunately, you misinterpreted it. You see, contrary to what you said, the law requires such and such. Therefore, I am not going to abide by your ruling, and will regard as a law-breaker anyone who tries to stop me.'
+- Such a display would be ludicrous.
+- But far from being ludicrous, such behavior would often be de rigueur if judges interpreted, and did not create, the law.
+- If judges are really interpreting the law, then they are attempting to identify what the law already demands and, therewith, what legal obligations people already have.
+- An erroneous decision would misidentify those legal obligations: it would misidentify the legal obligations of law enforcement personnel (including the bailiff) and, by extension, of every civilian.
+- In that case, unless the judges in this country happen to be superhumanly incapable of error, it would often be illegal for a bailiff not to defy the judge’s ruling.
+
+**→ Conclusion:** But no matter what the judge decides, the legal obligations of bailiffs and law enforcement personnel, and consequently of the general public, line up with that decision.
+
+**Counterarguments addressed:**
+- The view that judges merely interpret the law
+
+*Source: International Law and Legal Interpretation | Importance: 9/10*
+
+---
+
+### Argument 101 (inductive)
+**Author:** kuczynski
+
+**Premises:**
+- Some of us may have the intuition that the judge in Henningsen was just applying the law, even though he was overriding the statutes.
+- Dworkin’s argument relies on the validity of this intuition.
+- But as we’ve just seen, if we keep the law the same, and vary the nature of the cultural background, our intuitions become very different.
+
+**→ Conclusion:** This suggests that the intuitions to which Dworkin is appealing are not hewed to the narrowly legal realities, but to extra-legal cultural realities.
+
+*Source: International Law and Legal Interpretation | Importance: 8/10*
+
+---
+
+### Argument 102 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- Let us start with a truism: what is legal is what is permitted by the law, and what is illegal is what is forbidden by the law.
+- Suppose that the judge in Riggs had decided that the young man was entitled to the money. In that case, anyone carrying out the judge’s decision would have been acting legally.
+- It would have been legal for the bank manager to open the safe-deposit for the young-man; and it would have been illegal for embittered police officers and indignant relatives of the deceased to prevent the young man from claiming his fortune.
+- Now suppose the judge had decided that Riggs was not entitled to the money. In that case, it would have been illegal for the bank-manager to open the safe-deposit box for the young man; and it would have been legal for the police to prevent the young man from attempting to open the safe-deposit box.
+
+**→ Conclusion:** It doesn’t matter what the judge decided: anyone carrying out the judge’s decision was ipso facto acting legally, and anyone defying it was ipso facto acting illegally.
+
+*Source: International Law and Legal Interpretation | Importance: 8/10*
+
+---
+
+### Argument 103 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- If the judge decides that Smith is entitled to the money, then it is illegal for law enforcement personnel, and by extension the general public, not to abide by that decision.
+- If the judge decides that Smith is not entitled to the money, then it is illegal for law enforcement personnel, and by extension the general public, not to abide by that decision.
+
+**→ Conclusion:** So what can legally be done by law enforcement personnel, and by extension the general public, is determined by the judge’s ruling.
+
+*Source: International Law and Legal Interpretation | Importance: 8/10*
+
+---
+
+### Argument 104 (deductive)
+**Author:** kuczynski
+
+**Premises:**
+- You are a famous judge. Because of your well-known legal prowess, a foreign government asks you to settle a case in their court-system.
+- You don’t know anything about the customs of this other country. In particular, you don’t know if they are extremely liberal or aggressively traditional.
+- You are told at the outset that your job is to apply their legal system as strictly as possible.
+- Like anyone else who breaks their law, you will be severely punished if it is felt that you are replacing their legal system with your own conception of justice.
+- The case you must decide is an exact analogue of Henningsen v. Bloomfield Motors.
+- Your reasoning would be: 'I have no idea how this culture would react to principled violations of the law; so I’d better not break it – I’d better be a stickler for it. I’m going to go by the book.'
+
+**→ Conclusion:** It seems to me that the path of caution would be to rule against the plaintiff -- to uphold the contract and dismiss the suit.
+
+*Source: International Law and Legal Interpretation | Importance: 6/10*
+
+---
+

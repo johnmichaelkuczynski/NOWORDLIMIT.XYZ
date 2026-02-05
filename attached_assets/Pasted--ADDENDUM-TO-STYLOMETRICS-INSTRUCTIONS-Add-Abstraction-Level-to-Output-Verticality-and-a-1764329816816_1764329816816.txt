@@ -1,0 +1,109 @@
+# ADDENDUM TO STYLOMETRICS INSTRUCTIONS
+
+## Add "Abstraction Level" to Output
+
+Verticality and abstraction are effectively the same axis. High vertical = high abstraction. This is not a correlation — it's near-identity. The features that define verticality (ego-absence, impersonal constructions, logical scaffolding, zero anecdotes, zero sensory language) just *are* the features of abstract prose.
+
+### Implementation
+
+Add an "ABSTRACTION LEVEL" field to the stylometric output, immediately after the VERTICALITY SCORE section.
+
+The abstraction level is **derived directly from the verticality score** — no separate calculation needed.
+
+### Mapping
+
+| Verticality Score | Abstraction Level | Description |
+|-------------------|-------------------|-------------|
+| 0.85 – 1.00 | Extreme Abstraction | Prose operates at the level of pure logical relations. No particulars survive. Variables, not names. Structure, not story. |
+| 0.60 – 0.84 | High Abstraction | Conceptual architecture dominates. Concrete examples appear but are subordinated to logical structure. |
+| 0.40 – 0.59 | Mixed | Abstraction and particularity in tension. Neither dominates. |
+| 0.20 – 0.39 | Low Abstraction | Concrete particulars dominate. Concepts emerge from stories, examples, and sensory detail. |
+| 0.00 – 0.19 | Extreme Concreteness | Pure sensory/narrative immersion. Abstraction dissolved into bodies, voices, and experience. |
+
+### Output Format Update
+
+After the verticality score section, add:
+
+```
+---
+
+### ABSTRACTION LEVEL: [Level]
+
+[One-sentence description from the table above]
+
+---
+```
+
+### Example (High Vertical Text)
+
+```
+### VERTICALITY SCORE: 0.88
+
+[████████████████████████████████████░░░░░]
+Horizontal ◄────────────────────────────────► Vertical
+
+**Classification:** High Vertical
+
+---
+
+### ABSTRACTION LEVEL: Extreme Abstraction
+
+Prose operates at the level of pure logical relations. No particulars survive. Variables, not names. Structure, not story.
+
+---
+```
+
+### Example (Moderate Horizontal Text)
+
+```
+### VERTICALITY SCORE: 0.32
+
+[████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░]
+Horizontal ◄────────────────────────────────► Vertical
+
+**Classification:** Moderate Horizontal
+
+---
+
+### ABSTRACTION LEVEL: Low Abstraction
+
+Concrete particulars dominate. Concepts emerge from stories, examples, and sensory detail.
+
+---
+```
+
+### LLM Prompt Update
+
+Add this to the LLM prompt instructions:
+
+```
+11. DETERMINE abstraction level based on verticality score:
+    - 0.85-1.00 = "Extreme Abstraction" — Prose operates at the level of pure logical relations. No particulars survive.
+    - 0.60-0.84 = "High Abstraction" — Conceptual architecture dominates. Concrete examples subordinated to structure.
+    - 0.40-0.59 = "Mixed" — Abstraction and particularity in tension.
+    - 0.20-0.39 = "Low Abstraction" — Concrete particulars dominate. Concepts emerge from stories.
+    - 0.00-0.19 = "Extreme Concreteness" — Pure sensory/narrative immersion. Abstraction dissolved into experience.
+    
+    Include this in the output immediately after the Verticality Score section.
+```
+
+### Comparative Report Update
+
+For two-text comparisons, add abstraction level to the comparison table:
+
+```
+### TEXTS COMPARED
+
+| | TEXT A | TEXT B |
+|---|---|---|
+| **Author** | [Name] | [Name] |
+| **Word Count** | [X] | [X] |
+| **Verticality Score** | [X] | [X] |
+| **Abstraction Level** | [Level] | [Level] |
+| **Classification** | [X] | [X] |
+| **Closest Match** | [Author] | [Author] |
+```
+
+---
+
+That's it. This is a display change only — no new calculations required. The abstraction level is a direct translation of the verticality score into a more intuitive label.

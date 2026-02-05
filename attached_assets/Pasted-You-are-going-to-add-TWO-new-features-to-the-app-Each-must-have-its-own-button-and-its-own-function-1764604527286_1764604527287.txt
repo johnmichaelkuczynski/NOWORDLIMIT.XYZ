@@ -1,0 +1,77 @@
+You are going to add TWO new features to the app. Each must have its own button and its own function.
+
+—————————————————————
+FEATURE 1 — INTELLIGENCE METER (single text)
+Button label: “Measure Intelligence”
+—————————————————————
+When the user pastes or uploads a text and presses this button, extract ONLY the truly sharp, unmistakably brilliant lines and compute density + score exactly as described below.
+
+FEATURE 2 — COMPARATIVE INTELLIGENCE (two texts)
+Button label: “Compare Intelligence (Text A vs Text B)”
+—————————————————————
+Same extraction logic, then display side-by-side comparison + verdict.
+
+USE THIS EXACT CALIBRATION SET FOREVER (never deviate):
+
+1. Bureaucrats / Psychopaths / OCD text (~6,500 words)  
+   → 10 sharp quotes:  
+     1. “Psychopaths are Rogue Bureaucrats And Bureaucrats are Non-rogue Psychopaths”  
+     2. “The reason psychopaths can pass lie detector tests is that psychopaths don’t believe anything. So they don’t have to lie.”  
+     3. “In the psychopath, rationalizations have replaced beliefs.”  
+     4. “The bureaucrat is just as amorphous and insubstantial as the psychopath, but he has the external reinforcement of an institution.”  
+     5. “Double-think is possible because double-think is about not believing anything.”  
+     6. “For the bureaucrat, there is no difference between being allowed to do such and such and being required to do such and such.”  
+     7. “When the bureaucrat says ‘my hands are tied’, he is telling the truth. The truth is that his hands are tied: he can’t do anything at all.”  
+     8. “A person with a cause and no money has almost everything. A person with all the money in the world and no cause has almost nothing.”  
+     9. “Intrusive thoughts are not the problem; the person who is making a eunuch of himself is the problem; the intrusive thoughts are the last gasp of the still robust part of one’s mind.”  
+     10. “All people are dominated by compulsions. In the case of the non-obsessive-compulsive, those compulsions are unconscious. In the case of the obsessive-compulsive, they are conscious…”
+
+2. Transcendental empiricism dissertation abstract (~350 words)  
+   → 0 sharp quotes
+
+3. Wittgenstein + Cantor’s diagonal argument text (~220 words)  
+   → 0 sharp quotes
+
+4. “On the Optimal Number of Truth Values” (~650 words)  
+   → exactly these 4 sharp quotes:  
+     1. “n = 1: degenerate  n = 2: maximal per-value information… n > 2: declining per-value specificity, proliferation of connective definitions, weakening of logical consequence”  
+     2. “Credibility is relational; truth is not.”  
+     3. “Truth is monadic: “s is true” or “s is false,” independently of who holds the belief. Credibility is dyadic…”  
+     4. “infinite-valued truth is information-poor in isolation.”
+
+5. Gareth Evans defense paper (~450 words)  
+   → 0 sharp quotes
+
+6. “This is a book about everything” blurb (~350 words)  
+   → 0 sharp quotes
+
+7. Anti-Rawls polemic (~250 words)  
+   → exactly these 3 sharp quotes:  
+     1. “Such a society would be a squalid bureaucratic wasteland, similar to the Soviet Union, and its entire structure would be a weapon for the mediocre to hold back the gifted…”  
+     2. “There is obviously a sense in which the social contract described by Rawls is ‘fair’, but there is no meaningful sense in which the resulting society would be just.”  
+     3. “since a Rawlsian society would quickly degenerate into a condition of bureaucratic tyranny… it would be irrelevant that its inception occurred in a ‘fair’ way.”
+
+8. LLMs / Emperor’s New Clothes text (~150 words)  
+   → exactly these 4 sharp quotes:  
+     1. “We built machines that sound like they know things. They don’t. They weave patterns from what we’ve already said and sell it back to us as truth.”  
+     2. “The Emperor’s New Clothes, but the tailors are algorithms and we’re all clapping.”  
+     3. “Anyone who writes about the bullshit is also producing content for the same machine. No clean hands here.”  
+     4. “You learn to smell it after a while—when someone’s weaving fabric that isn’t there.”
+
+9. Alonzo Church synonymy criteria text (~200 words)  
+   → 0 sharp quotes
+
+10. Carnap/Kripke/Kaplan introduction (~200 words)  
+    → 0 sharp quotes
+
+11. Sense-perceptions vs representations text (~150 words)  
+    → exactly these 3 sharp quotes:  
+      1. “Sense-perceptions do not have to be deciphered… they are presentations, not representations. Linguistic expressions do have to be deciphered… they are representations, not presentations.”  
+      2. “It is viciously regressive to suppose that information-bearing mental entities are categorically in the nature of representations… and it is therefore incoherent to suppose that thought is mediated by expressions…”  
+      3. “Attempts to neutralize this criticism inevitably overextend the concept of what it is to be a linguistic symbol, the result being that such attempts eviscerate the very position that it is their purpose to defend.”
+
+Scoring (same for both features):
+Density = (number of sharp quotes × 1000) / word count (2 decimals)
+0–1 per 1000 → 0–30 | 1–3 → 30–65 | 3–6 → 65–90 | 6+ → 90–100
+
+Implement both buttons now with clean UI. These 11 examples are the eternal standard.

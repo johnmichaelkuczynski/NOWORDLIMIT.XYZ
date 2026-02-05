@@ -1,0 +1,44 @@
+SPINOZA POSITIONS EXTRACTED
+==================================================
+
+Total positions: 13
+
+1. [Introduction] (Importance: 9)
+   "Man, Spinoza held, is a part of Nature, and Nature is governed by eternal and immutable laws."
+
+2. [Introduction] (Importance: 9)
+   "The central controlling idea of Spinozas philosophy is that all things are necessarily determined in Nature, which he conceives to be an absolutely infinite unified and uniform order."
+
+3. [Introduction] (Importance: 9)
+   "The truth, he devoutly believed, would make us free."
+
+4. [Editor] (Importance: 8)
+   "THE PHILOSOPHY OF SPINOZA edited by JOSEPH RATNER."
+
+5. [Introduction] (Importance: 8)
+   "Spinozas belief in the self-sufficing, lawful order of Nature, and the adequacy of the natural powers of our mind to understand the mysteries of heaven and earth, the singular expository style of the Ethics emphasizes in unmistakable fashion."
+
+6. [Introduction] (Importance: 8)
+   "Spinoza lived the ethics he wrote."
+
+7. [Introduction] (Importance: 8)
+   "He was content to search for the truth and to explain what he found as best he could."
+
+8. [Preface] (Importance: 7)
+   "The object in taking the Ethics as much as possible out of the geometrical form, was not to improve upon the author's text; it was to give the lay reader a text of Spinoza he would find pleasanter to read and easier to understand."
+
+9. [Introduction] (Importance: 7)
+   "Spinozas philosophy has suffered not a little from the highly abstruse and technical form in which the Ethics is written."
+
+10. [Introduction] (Importance: 7)
+   "Spinozas courage and strength of mind are as impressively manifested in the constant daily life he lived as in the few severe crises he resolutely faced."
+
+11. [Preface] (Importance: 6)
+   "A continuous reading of the original Ethics, even on a single topic, is impossible."
+
+12. [Preface] (Importance: 6)
+   "Every care has been taken not to distort in any way the meaning of the text."
+
+13. [Preface] (Importance: 5)
+   "It is the only time, probably, dismembering a treatise actually made it more unified."
+

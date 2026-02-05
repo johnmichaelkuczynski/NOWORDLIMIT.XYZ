@@ -1,0 +1,30 @@
+EMERGENCY FIX: Custom function is ignoring the uploaded full text and hallucinating about translations/reception instead of the actual book content.
+
+Specific changes:
+
+1. Add debug logging in Custom processing:
+   - After file upload/text input, log "Full text length: X characters / Y words"
+   - After generateOutline, log "Outline generated with Z sections"
+   - Before any LLM call, log "Full text being passed: first 500 chars + last 500 chars"
+
+2. Force full text inclusion:
+   - In EVERY LLM call for Custom (including task-specific ones), ALWAYS include the raw full text in the prompt, even if it means dynamic chunking for token limits.
+   - If text too large for single call: automatically slice by outline sections, process task per section, then final unification call with "Combine into exact user-requested structure using the full content".
+
+3. Add pre-processing validation:
+   - Before executing instructions, LLM call with:
+     system: "Confirm you have the actual Sartre 'Being and Nothingness' text, not a review or Wikipedia article."
+     user: "First 1000 chars of text: [first 1000] Last 1000 chars: [last 1000]. Is this the real book? Yes/No + quote a key phrase like 'being-in-itself' or 'bad faith' from it."
+   - If "No", abort and show error "Full text not loaded properly".
+
+4. Strict instruction enforcement:
+   - Parse user instructions into numbered tasks.
+   - For each task, separate LLM call with:
+     system: "You have the FULL raw text of the book. You MUST use ONLY content from it. Do not mention translations, reception, Richmond, Barnes, or historical context unless the book itself does. Output ONLY the requested section at exact word count."
+   - Enforce single coherent dialogue for dialogue tasks.
+
+5. UI: Add "Debug Mode" toggle that shows the logs above.
+
+This diagnoses if the full text is actually reaching the LLM and forces fidelity to the real book content.
+
+Do this now. Then test with Being and Nothingness + the exact same prompt.

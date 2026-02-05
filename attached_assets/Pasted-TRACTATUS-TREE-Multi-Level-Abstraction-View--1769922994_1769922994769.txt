@@ -1,0 +1,513 @@
+TRACTATUS TREE - Multi-Level Abstraction View
+==================================================
+
+--- Full Detail (14 statements) ---
+
+1.0 Philosophy is the analysis of the categories in terms of which we understand the world.
+2.0 Philosophical knowledge is metaknowledge—knowledge about knowledge.
+3.0 Analytic philosophy is distinguished by its method, which originates with Frege.
+4.0 A fundamental error is to assume that grammatical similarity implies semantic or logical similarity.
+5.0 Analytic philosophy is ontologically conservative compared to pre-analytic philosophy.
+6.0 Philosophical puzzles differ in kind from empirical puzzles.
+7.0 Not all philosophical analysis is linguistic analysis.
+8.0 One must distinguish between sentences and propositions.
+9.0 Logical Positivism, inspired by the *Tractatus*, is an untenable doctrine.
+10.0 The picture theory of meaning is false.
+11.0 Not all entailment is formal entailment.
+12.0 The concept of a logically perfect language is incoherent.
+13.0 Strict empiricism is self-refuting.
+14.0 The sub-disciplines of philosophy analyze different but interconnected categories.
+
+
+--- Level 4 (61 statements) ---
+
+1.0 Philosophy is the analysis of the categories in terms of which we understand the world.
+1.1 These categories—such as person, fact, cause, knowledge, language, and justice—structure all thought.
+1.2 The function of philosophy is to delineate the structures of these categories.
+1.3 Philosophy is therefore the analysis of the preconditions of all knowledge.
+2.0 Philosophical knowledge is metaknowledge—knowledge about knowledge.
+2.1 The philosopher is interested in the laws governing the laws, not in the specific facts those laws describe.
+2.2 The relationship of philosophy to other disciplines is one of increasing abstraction.
+3.0 Analytic philosophy is distinguished by its method, which originates with Frege.
+3.1 Analytic philosophy is driven by the acceptance of a key insight: logical form is not grammatical form.
+3.2 Frege demonstrated that philosophical puzzles are solved by analyzing meanings, not by positing new entities.
+3.3 Analytic philosophy is thus philosophy that seeks clarity through the logical analysis of statements.
+4.0 A fundamental error is to assume that grammatical similarity implies semantic or logical similarity.
+4.1 The wrong way to react is to twist reality to fit grammatical assumptions.
+4.2 The right way to react is to discern the logical form beneath the grammatical surface.
+4.3 Philosophical explanation is achieved by clarifying statements, not by doing para-science.
+5.0 Analytic philosophy is ontologically conservative compared to pre-analytic philosophy.
+5.1 Analytic philosophers do not solve problems by "ontologizing"—positing new entities without necessity.
+5.2 Non-analytic philosophers, like Brentano and Meinong, epitomized the ontologizing method.
+6.0 Philosophical puzzles differ in kind from empirical puzzles.
+6.1 Empirical puzzles result from a lack of factual data or from inadequate modeling of available data.
+6.2 Philosophical puzzles are purely conceptual; they result from confusion, not ignorance.
+7.0 Not all philosophical analysis is linguistic analysis.
+7.1 Wittgenstein erroneously held that all philosophical problems arise from the misuse of language.
+7.2 These positions are incoherent and self-refuting.
+7.3 Many philosophical disputes (e.g., in epistemology or philosophy of law) concern the truth of propositions whose meaning is agreed upon.
+8.0 One must distinguish between sentences and propositions.
+8.1 Sentences are linguistic artifacts; propositions are their mind- and language-independent meanings.
+8.2 Truth and falsity are primarily properties of propositions.
+8.3 Philosophical analysis is ultimately the analysis of propositions, not sentences.
+9.0 Logical Positivism, inspired by the *Tractatus*, is an untenable doctrine.
+9.1 Its core thesis: a statement is meaningful iff it is either tautological or empirically verifiable/falsifiable.
+9.2 This thesis is self-defeating, as it is itself neither a tautology nor an empirical statement.
+9.3 Furthermore, there are clear counterexamples: meaningful non-tautological, non-empirical truths exist.
+9.4 The verificationist and falsificationist criteria of meaning are demonstrably inadequate.
+10.0 The picture theory of meaning is false.
+10.1 Sentences are not pictures of the facts they describe.
+10.2 The empiricist motivation for the picture theory fails.
+11.0 Not all entailment is formal entailment.
+11.1 A formal entailment holds when the conditional linking premise to conclusion is formally true.
+11.2 Many analytic truths (e.g., "circles are two-dimensional") are not formally true.
+11.3 Therefore, the *Tractatus* project of reducing all logical relations to formal relations is impossible.
+12.0 The concept of a logically perfect language is incoherent.
+12.1 In a logically perfect language, grammatical form would perfectly mirror logical form.
+12.2 This is impossible because no finite grammar can reflect the infinite complexity of logical relations.
+12.3 Natural languages, despite their imperfections, are expressively superior to any putative logically perfect language.
+13.0 Strict empiricism is self-refuting.
+13.1 Empiricism claims all knowledge is based on observation.
+13.2 This claim itself cannot be known through observation.
+13.3 Therefore, if empiricism is true, there can be no grounds for believing it true.
+13.4 Furthermore, foundational parts of scientific knowledge (e.g., involving irrational numbers) cannot have a strictly observational basis.
+14.0 The sub-disciplines of philosophy analyze different but interconnected categories.
+14.1 Philosophy of Mind studies categories like thought, belief, perception, and consciousness.
+14.2 Philosophy of Language studies meaning, reference, and the nature of linguistic representation.
+14.3 Epistemology studies the nature, scope, and limits of knowledge.
+14.4 Philosophical Logic studies entailment, validity, and the structure of propositions.
+14.5 Metaphysics studies existence, possibility, necessity, identity, and causation.
+14.6 Philosophy of Science studies explanation, theory, confirmation, and the structure of scientific inquiry.
+14.7 Ethics studies the nature of good, bad, right, and wrong.
+14.8 Political and Legal Philosophy study the nature of law, government, justice, and legitimacy.
+14.9 Philosophy of Religion studies concepts of divinity, faith, and religious knowledge.
+14.10 Formal Logic studies the systematic formalization of valid inference.
+
+
+--- Level 3 (99 statements) ---
+
+1.0 Philosophy is the analysis of the categories in terms of which we understand the world.
+1.1 These categories—such as person, fact, cause, knowledge, language, and justice—structure all thought.
+1.1.1 We are adept at using these categories but seldom make them objects of thought.
+1.1.2 Consequently, we possess little explicit knowledge about the categories themselves.
+1.2 The function of philosophy is to delineate the structures of these categories.
+1.2.1 This delineation constitutes the sole legitimate task of philosophy.
+1.3 Philosophy is therefore the analysis of the preconditions of all knowledge.
+1.3.1 It is the analysis of analysis, the logic of logic, the science of science.
+2.0 Philosophical knowledge is metaknowledge—knowledge about knowledge.
+2.1 The philosopher is interested in the laws governing the laws, not in the specific facts those laws describe.
+2.1.1 The philosopher seeks to know what it would make sense to claim, not merely what is the case.
+2.2 The relationship of philosophy to other disciplines is one of increasing abstraction.
+2.2.1 The stranded motorist wants his car to work.
+2.2.2 Thus, the philosopher's interest in specifics is subordinate to an interest in the categories they instantiate.
+3.0 Analytic philosophy is distinguished by its method, which originates with Frege.
+3.1 Analytic philosophy is driven by the acceptance of a key insight: logical form is not grammatical form.
+3.1.1 When a belief seems to have an absurd consequence, one must question whether the absurdity truly follows.
+3.1.2 Pre-Fregean philosophy often posited bizarre entities to reconcile beliefs with their apparent grammatical consequences.
+3.2 Frege demonstrated that philosophical puzzles are solved by analyzing meanings, not by positing new entities.
+3.2.1 For example, "nothing is a square circle" does not refer to a non-entity.
+3.3 Analytic philosophy is thus philosophy that seeks clarity through the logical analysis of statements.
+4.0 A fundamental error is to assume that grammatical similarity implies semantic or logical similarity.
+4.1 The wrong way to react is to twist reality to fit grammatical assumptions.
+4.1.1 For example, assuming "someone" functions like "John" leads to positing ambiguous or non-specific persons.
+4.1.2 This path results in absurd theses about non-existent entities.
+4.2 The right way to react is to discern the logical form beneath the grammatical surface.
+4.2.1 Frege showed that "someone smokes" asserts the property of being a smoker is instantiated.
+4.2.2 Quantified statements like "nobody smokes" are about properties (being uninstantiated), not about strange individuals.
+4.3 Philosophical explanation is achieved by clarifying statements, not by doing para-science.
+5.0 Analytic philosophy is ontologically conservative compared to pre-analytic philosophy.
+5.1 Analytic philosophers do not solve problems by "ontologizing"—positing new entities without necessity.
+5.1.1 Ontologizing is appropriate only when required to validate indisputably correct forms of inference.
+5.1.2 When necessary, the posited entities are always abstract, never spatiotemporal.
+5.2 Non-analytic philosophers, like Brentano and Meinong, epitomized the ontologizing method.
+5.2.1 To account for hallucinations, they posited non-existent objects as the targets of mental acts.
+5.2.2 Proper analysis shows that hallucinations, like veridical perceptions, encode existence-claims.
+6.0 Philosophical puzzles differ in kind from empirical puzzles.
+6.1 Empirical puzzles result from a lack of factual data or from inadequate modeling of available data.
+6.1.1 Their solution involves acquiring new data or constructing better models of old data.
+6.2 Philosophical puzzles are purely conceptual; they result from confusion, not ignorance.
+6.2.1 Their solution requires logical analysis, not new observations.
+6.2.2 Frege's solutions involved no new empirical discoveries, only a clearer understanding of what was already meant.
+7.0 Not all philosophical analysis is linguistic analysis.
+7.1 Wittgenstein erroneously held that all philosophical problems arise from the misuse of language.
+7.1.1 In the *Tractatus*, he claimed philosophical statements are syntactically ill-formed nonsense.
+7.1.2 In the *Investigations*, he claimed meaning is use and puzzles dissolve by examining ordinary usage.
+7.2 These positions are incoherent and self-refuting.
+7.2.1 The claim that all philosophical statements are nonsense is itself a philosophical statement.
+7.2.2 Meaning cannot be identical with use, for knowledge of meaning guides use.
+7.3 Many philosophical disputes (e.g., in epistemology or philosophy of law) concern the truth of propositions whose meaning is agreed upon.
+7.3.1 The dispute is not about language but about whether a given proposition correctly describes reality.
+8.0 One must distinguish between sentences and propositions.
+8.1 Sentences are linguistic artifacts; propositions are their mind- and language-independent meanings.
+8.2 Truth and falsity are primarily properties of propositions.
+8.2.1 A sentence is true if it encodes a true proposition.
+8.3 Philosophical analysis is ultimately the analysis of propositions, not sentences.
+8.3.1 Frege's analyses of sentences were a means to discover general logical principles governing propositions.
+9.0 Logical Positivism, inspired by the *Tractatus*, is an untenable doctrine.
+9.1 Its core thesis: a statement is meaningful iff it is either tautological or empirically verifiable/falsifiable.
+9.2 This thesis is self-defeating, as it is itself neither a tautology nor an empirical statement.
+9.3 Furthermore, there are clear counterexamples: meaningful non-tautological, non-empirical truths exist.
+9.3.1 Mathematical truths (e.g., truths of arithmetic) are not tautologies in the stipulated sense.
+9.3.2 Principles of logic itself are not empirically verifiable.
+9.4 The verificationist and falsificationist criteria of meaning are demonstrably inadequate.
+9.4.1 Universal generalizations cannot be conclusively verified.
+9.4.2 Existential statements cannot be conclusively falsified.
+10.0 The picture theory of meaning is false.
+10.1 Sentences are not pictures of the facts they describe.
+10.1.1 Sentential representation is heavily conventional; pictorial representation is not.
+10.1.2 Sentences have digital, discrete structures; pictures have analog, continuous structures.
+10.2 The empiricist motivation for the picture theory fails.
+10.2.1 Not all knowledge can be rendered in pictorial form (e.g., negative facts, logical relations).
+10.2.2 The rules for converting perceptual input into knowledge are not themselves pictorial or empirically derived.
+11.0 Not all entailment is formal entailment.
+11.1 A formal entailment holds when the conditional linking premise to conclusion is formally true.
+11.2 Many analytic truths (e.g., "circles are two-dimensional") are not formally true.
+11.2.1 Their truth depends on the content of concepts, not merely on logical form.
+11.3 Therefore, the *Tractatus* project of reducing all logical relations to formal relations is impossible.
+12.0 The concept of a logically perfect language is incoherent.
+12.1 In a logically perfect language, grammatical form would perfectly mirror logical form.
+12.2 This is impossible because no finite grammar can reflect the infinite complexity of logical relations.
+12.2.1 For every formal truth in such a language, there are infinitely many informal analytic truths it cannot express.
+12.3 Natural languages, despite their imperfections, are expressively superior to any putative logically perfect language.
+13.0 Strict empiricism is self-refuting.
+13.1 Empiricism claims all knowledge is based on observation.
+13.2 This claim itself cannot be known through observation.
+13.3 Therefore, if empiricism is true, there can be no grounds for believing it true.
+13.4 Furthermore, foundational parts of scientific knowledge (e.g., involving irrational numbers) cannot have a strictly observational basis.
+14.0 The sub-disciplines of philosophy analyze different but interconnected categories.
+14.1 Philosophy of Mind studies categories like thought, belief, perception, and consciousness.
+14.2 Philosophy of Language studies meaning, reference, and the nature of linguistic representation.
+14.3 Epistemology studies the nature, scope, and limits of knowledge.
+14.4 Philosophical Logic studies entailment, validity, and the structure of propositions.
+14.5 Metaphysics studies existence, possibility, necessity, identity, and causation.
+14.6 Philosophy of Science studies explanation, theory, confirmation, and the structure of scientific inquiry.
+14.7 Ethics studies the nature of good, bad, right, and wrong.
+14.8 Political and Legal Philosophy study the nature of law, government, justice, and legitimacy.
+14.9 Philosophy of Religion studies concepts of divinity, faith, and religious knowledge.
+14.10 Formal Logic studies the systematic formalization of valid inference.
+
+
+--- Level 2 (103 statements) ---
+
+1.0 Philosophy is the analysis of the categories in terms of which we understand the world.
+1.1 These categories—such as person, fact, cause, knowledge, language, and justice—structure all thought.
+1.1.1 We are adept at using these categories but seldom make them objects of thought.
+1.1.2 Consequently, we possess little explicit knowledge about the categories themselves.
+1.2 The function of philosophy is to delineate the structures of these categories.
+1.2.1 This delineation constitutes the sole legitimate task of philosophy.
+1.3 Philosophy is therefore the analysis of the preconditions of all knowledge.
+1.3.1 It is the analysis of analysis, the logic of logic, the science of science.
+2.0 Philosophical knowledge is metaknowledge—knowledge about knowledge.
+2.1 The philosopher is interested in the laws governing the laws, not in the specific facts those laws describe.
+2.1.1 The philosopher seeks to know what it would make sense to claim, not merely what is the case.
+2.2 The relationship of philosophy to other disciplines is one of increasing abstraction.
+2.2.1 The stranded motorist wants his car to work.
+2.2.1.1 The engineer wants to know the mechanisms that will make the car work.
+2.2.2 Thus, the philosopher's interest in specifics is subordinate to an interest in the categories they instantiate.
+3.0 Analytic philosophy is distinguished by its method, which originates with Frege.
+3.1 Analytic philosophy is driven by the acceptance of a key insight: logical form is not grammatical form.
+3.1.1 When a belief seems to have an absurd consequence, one must question whether the absurdity truly follows.
+3.1.2 Pre-Fregean philosophy often posited bizarre entities to reconcile beliefs with their apparent grammatical consequences.
+3.2 Frege demonstrated that philosophical puzzles are solved by analyzing meanings, not by positing new entities.
+3.2.1 For example, "nothing is a square circle" does not refer to a non-entity.
+3.2.1.1 Its logical form is: the set of squares does not overlap with the set of circles.
+3.2.1.2 It attributes a property (being uninstantiated) to the property of being a square circle.
+3.3 Analytic philosophy is thus philosophy that seeks clarity through the logical analysis of statements.
+4.0 A fundamental error is to assume that grammatical similarity implies semantic or logical similarity.
+4.1 The wrong way to react is to twist reality to fit grammatical assumptions.
+4.1.1 For example, assuming "someone" functions like "John" leads to positing ambiguous or non-specific persons.
+4.1.2 This path results in absurd theses about non-existent entities.
+4.2 The right way to react is to discern the logical form beneath the grammatical surface.
+4.2.1 Frege showed that "someone smokes" asserts the property of being a smoker is instantiated.
+4.2.2 Quantified statements like "nobody smokes" are about properties (being uninstantiated), not about strange individuals.
+4.3 Philosophical explanation is achieved by clarifying statements, not by doing para-science.
+5.0 Analytic philosophy is ontologically conservative compared to pre-analytic philosophy.
+5.1 Analytic philosophers do not solve problems by "ontologizing"—positing new entities without necessity.
+5.1.1 Ontologizing is appropriate only when required to validate indisputably correct forms of inference.
+5.1.2 When necessary, the posited entities are always abstract, never spatiotemporal.
+5.2 Non-analytic philosophers, like Brentano and Meinong, epitomized the ontologizing method.
+5.2.1 To account for hallucinations, they posited non-existent objects as the targets of mental acts.
+5.2.2 Proper analysis shows that hallucinations, like veridical perceptions, encode existence-claims.
+5.2.2.1 A false existence-claim does not require a non-existent object to be its referent.
+6.0 Philosophical puzzles differ in kind from empirical puzzles.
+6.1 Empirical puzzles result from a lack of factual data or from inadequate modeling of available data.
+6.1.1 Their solution involves acquiring new data or constructing better models of old data.
+6.2 Philosophical puzzles are purely conceptual; they result from confusion, not ignorance.
+6.2.1 Their solution requires logical analysis, not new observations.
+6.2.2 Frege's solutions involved no new empirical discoveries, only a clearer understanding of what was already meant.
+7.0 Not all philosophical analysis is linguistic analysis.
+7.1 Wittgenstein erroneously held that all philosophical problems arise from the misuse of language.
+7.1.1 In the *Tractatus*, he claimed philosophical statements are syntactically ill-formed nonsense.
+7.1.2 In the *Investigations*, he claimed meaning is use and puzzles dissolve by examining ordinary usage.
+7.2 These positions are incoherent and self-refuting.
+7.2.1 The claim that all philosophical statements are nonsense is itself a philosophical statement.
+7.2.2 Meaning cannot be identical with use, for knowledge of meaning guides use.
+7.3 Many philosophical disputes (e.g., in epistemology or philosophy of law) concern the truth of propositions whose meaning is agreed upon.
+7.3.1 The dispute is not about language but about whether a given proposition correctly describes reality.
+8.0 One must distinguish between sentences and propositions.
+8.1 Sentences are linguistic artifacts; propositions are their mind- and language-independent meanings.
+8.2 Truth and falsity are primarily properties of propositions.
+8.2.1 A sentence is true if it encodes a true proposition.
+8.3 Philosophical analysis is ultimately the analysis of propositions, not sentences.
+8.3.1 Frege's analyses of sentences were a means to discover general logical principles governing propositions.
+9.0 Logical Positivism, inspired by the *Tractatus*, is an untenable doctrine.
+9.1 Its core thesis: a statement is meaningful iff it is either tautological or empirically verifiable/falsifiable.
+9.2 This thesis is self-defeating, as it is itself neither a tautology nor an empirical statement.
+9.3 Furthermore, there are clear counterexamples: meaningful non-tautological, non-empirical truths exist.
+9.3.1 Mathematical truths (e.g., truths of arithmetic) are not tautologies in the stipulated sense.
+9.3.2 Principles of logic itself are not empirically verifiable.
+9.4 The verificationist and falsificationist criteria of meaning are demonstrably inadequate.
+9.4.1 Universal generalizations cannot be conclusively verified.
+9.4.2 Existential statements cannot be conclusively falsified.
+10.0 The picture theory of meaning is false.
+10.1 Sentences are not pictures of the facts they describe.
+10.1.1 Sentential representation is heavily conventional; pictorial representation is not.
+10.1.2 Sentences have digital, discrete structures; pictures have analog, continuous structures.
+10.2 The empiricist motivation for the picture theory fails.
+10.2.1 Not all knowledge can be rendered in pictorial form (e.g., negative facts, logical relations).
+10.2.2 The rules for converting perceptual input into knowledge are not themselves pictorial or empirically derived.
+11.0 Not all entailment is formal entailment.
+11.1 A formal entailment holds when the conditional linking premise to conclusion is formally true.
+11.2 Many analytic truths (e.g., "circles are two-dimensional") are not formally true.
+11.2.1 Their truth depends on the content of concepts, not merely on logical form.
+11.3 Therefore, the *Tractatus* project of reducing all logical relations to formal relations is impossible.
+12.0 The concept of a logically perfect language is incoherent.
+12.1 In a logically perfect language, grammatical form would perfectly mirror logical form.
+12.2 This is impossible because no finite grammar can reflect the infinite complexity of logical relations.
+12.2.1 For every formal truth in such a language, there are infinitely many informal analytic truths it cannot express.
+12.3 Natural languages, despite their imperfections, are expressively superior to any putative logically perfect language.
+13.0 Strict empiricism is self-refuting.
+13.1 Empiricism claims all knowledge is based on observation.
+13.2 This claim itself cannot be known through observation.
+13.3 Therefore, if empiricism is true, there can be no grounds for believing it true.
+13.4 Furthermore, foundational parts of scientific knowledge (e.g., involving irrational numbers) cannot have a strictly observational basis.
+14.0 The sub-disciplines of philosophy analyze different but interconnected categories.
+14.1 Philosophy of Mind studies categories like thought, belief, perception, and consciousness.
+14.2 Philosophy of Language studies meaning, reference, and the nature of linguistic representation.
+14.3 Epistemology studies the nature, scope, and limits of knowledge.
+14.4 Philosophical Logic studies entailment, validity, and the structure of propositions.
+14.5 Metaphysics studies existence, possibility, necessity, identity, and causation.
+14.6 Philosophy of Science studies explanation, theory, confirmation, and the structure of scientific inquiry.
+14.7 Ethics studies the nature of good, bad, right, and wrong.
+14.8 Political and Legal Philosophy study the nature of law, government, justice, and legitimacy.
+14.9 Philosophy of Religion studies concepts of divinity, faith, and religious knowledge.
+14.10 Formal Logic studies the systematic formalization of valid inference.
+
+
+--- Level 1 (104 statements) ---
+
+1.0 Philosophy is the analysis of the categories in terms of which we understand the world.
+1.1 These categories—such as person, fact, cause, knowledge, language, and justice—structure all thought.
+1.1.1 We are adept at using these categories but seldom make them objects of thought.
+1.1.2 Consequently, we possess little explicit knowledge about the categories themselves.
+1.2 The function of philosophy is to delineate the structures of these categories.
+1.2.1 This delineation constitutes the sole legitimate task of philosophy.
+1.3 Philosophy is therefore the analysis of the preconditions of all knowledge.
+1.3.1 It is the analysis of analysis, the logic of logic, the science of science.
+2.0 Philosophical knowledge is metaknowledge—knowledge about knowledge.
+2.1 The philosopher is interested in the laws governing the laws, not in the specific facts those laws describe.
+2.1.1 The philosopher seeks to know what it would make sense to claim, not merely what is the case.
+2.2 The relationship of philosophy to other disciplines is one of increasing abstraction.
+2.2.1 The stranded motorist wants his car to work.
+2.2.1.1 The engineer wants to know the mechanisms that will make the car work.
+2.2.1.1.1 The physicist wants to know the laws embodied in those mechanisms.
+2.2.2 Thus, the philosopher's interest in specifics is subordinate to an interest in the categories they instantiate.
+3.0 Analytic philosophy is distinguished by its method, which originates with Frege.
+3.1 Analytic philosophy is driven by the acceptance of a key insight: logical form is not grammatical form.
+3.1.1 When a belief seems to have an absurd consequence, one must question whether the absurdity truly follows.
+3.1.2 Pre-Fregean philosophy often posited bizarre entities to reconcile beliefs with their apparent grammatical consequences.
+3.2 Frege demonstrated that philosophical puzzles are solved by analyzing meanings, not by positing new entities.
+3.2.1 For example, "nothing is a square circle" does not refer to a non-entity.
+3.2.1.1 Its logical form is: the set of squares does not overlap with the set of circles.
+3.2.1.2 It attributes a property (being uninstantiated) to the property of being a square circle.
+3.3 Analytic philosophy is thus philosophy that seeks clarity through the logical analysis of statements.
+4.0 A fundamental error is to assume that grammatical similarity implies semantic or logical similarity.
+4.1 The wrong way to react is to twist reality to fit grammatical assumptions.
+4.1.1 For example, assuming "someone" functions like "John" leads to positing ambiguous or non-specific persons.
+4.1.2 This path results in absurd theses about non-existent entities.
+4.2 The right way to react is to discern the logical form beneath the grammatical surface.
+4.2.1 Frege showed that "someone smokes" asserts the property of being a smoker is instantiated.
+4.2.2 Quantified statements like "nobody smokes" are about properties (being uninstantiated), not about strange individuals.
+4.3 Philosophical explanation is achieved by clarifying statements, not by doing para-science.
+5.0 Analytic philosophy is ontologically conservative compared to pre-analytic philosophy.
+5.1 Analytic philosophers do not solve problems by "ontologizing"—positing new entities without necessity.
+5.1.1 Ontologizing is appropriate only when required to validate indisputably correct forms of inference.
+5.1.2 When necessary, the posited entities are always abstract, never spatiotemporal.
+5.2 Non-analytic philosophers, like Brentano and Meinong, epitomized the ontologizing method.
+5.2.1 To account for hallucinations, they posited non-existent objects as the targets of mental acts.
+5.2.2 Proper analysis shows that hallucinations, like veridical perceptions, encode existence-claims.
+5.2.2.1 A false existence-claim does not require a non-existent object to be its referent.
+6.0 Philosophical puzzles differ in kind from empirical puzzles.
+6.1 Empirical puzzles result from a lack of factual data or from inadequate modeling of available data.
+6.1.1 Their solution involves acquiring new data or constructing better models of old data.
+6.2 Philosophical puzzles are purely conceptual; they result from confusion, not ignorance.
+6.2.1 Their solution requires logical analysis, not new observations.
+6.2.2 Frege's solutions involved no new empirical discoveries, only a clearer understanding of what was already meant.
+7.0 Not all philosophical analysis is linguistic analysis.
+7.1 Wittgenstein erroneously held that all philosophical problems arise from the misuse of language.
+7.1.1 In the *Tractatus*, he claimed philosophical statements are syntactically ill-formed nonsense.
+7.1.2 In the *Investigations*, he claimed meaning is use and puzzles dissolve by examining ordinary usage.
+7.2 These positions are incoherent and self-refuting.
+7.2.1 The claim that all philosophical statements are nonsense is itself a philosophical statement.
+7.2.2 Meaning cannot be identical with use, for knowledge of meaning guides use.
+7.3 Many philosophical disputes (e.g., in epistemology or philosophy of law) concern the truth of propositions whose meaning is agreed upon.
+7.3.1 The dispute is not about language but about whether a given proposition correctly describes reality.
+8.0 One must distinguish between sentences and propositions.
+8.1 Sentences are linguistic artifacts; propositions are their mind- and language-independent meanings.
+8.2 Truth and falsity are primarily properties of propositions.
+8.2.1 A sentence is true if it encodes a true proposition.
+8.3 Philosophical analysis is ultimately the analysis of propositions, not sentences.
+8.3.1 Frege's analyses of sentences were a means to discover general logical principles governing propositions.
+9.0 Logical Positivism, inspired by the *Tractatus*, is an untenable doctrine.
+9.1 Its core thesis: a statement is meaningful iff it is either tautological or empirically verifiable/falsifiable.
+9.2 This thesis is self-defeating, as it is itself neither a tautology nor an empirical statement.
+9.3 Furthermore, there are clear counterexamples: meaningful non-tautological, non-empirical truths exist.
+9.3.1 Mathematical truths (e.g., truths of arithmetic) are not tautologies in the stipulated sense.
+9.3.2 Principles of logic itself are not empirically verifiable.
+9.4 The verificationist and falsificationist criteria of meaning are demonstrably inadequate.
+9.4.1 Universal generalizations cannot be conclusively verified.
+9.4.2 Existential statements cannot be conclusively falsified.
+10.0 The picture theory of meaning is false.
+10.1 Sentences are not pictures of the facts they describe.
+10.1.1 Sentential representation is heavily conventional; pictorial representation is not.
+10.1.2 Sentences have digital, discrete structures; pictures have analog, continuous structures.
+10.2 The empiricist motivation for the picture theory fails.
+10.2.1 Not all knowledge can be rendered in pictorial form (e.g., negative facts, logical relations).
+10.2.2 The rules for converting perceptual input into knowledge are not themselves pictorial or empirically derived.
+11.0 Not all entailment is formal entailment.
+11.1 A formal entailment holds when the conditional linking premise to conclusion is formally true.
+11.2 Many analytic truths (e.g., "circles are two-dimensional") are not formally true.
+11.2.1 Their truth depends on the content of concepts, not merely on logical form.
+11.3 Therefore, the *Tractatus* project of reducing all logical relations to formal relations is impossible.
+12.0 The concept of a logically perfect language is incoherent.
+12.1 In a logically perfect language, grammatical form would perfectly mirror logical form.
+12.2 This is impossible because no finite grammar can reflect the infinite complexity of logical relations.
+12.2.1 For every formal truth in such a language, there are infinitely many informal analytic truths it cannot express.
+12.3 Natural languages, despite their imperfections, are expressively superior to any putative logically perfect language.
+13.0 Strict empiricism is self-refuting.
+13.1 Empiricism claims all knowledge is based on observation.
+13.2 This claim itself cannot be known through observation.
+13.3 Therefore, if empiricism is true, there can be no grounds for believing it true.
+13.4 Furthermore, foundational parts of scientific knowledge (e.g., involving irrational numbers) cannot have a strictly observational basis.
+14.0 The sub-disciplines of philosophy analyze different but interconnected categories.
+14.1 Philosophy of Mind studies categories like thought, belief, perception, and consciousness.
+14.2 Philosophy of Language studies meaning, reference, and the nature of linguistic representation.
+14.3 Epistemology studies the nature, scope, and limits of knowledge.
+14.4 Philosophical Logic studies entailment, validity, and the structure of propositions.
+14.5 Metaphysics studies existence, possibility, necessity, identity, and causation.
+14.6 Philosophy of Science studies explanation, theory, confirmation, and the structure of scientific inquiry.
+14.7 Ethics studies the nature of good, bad, right, and wrong.
+14.8 Political and Legal Philosophy study the nature of law, government, justice, and legitimacy.
+14.9 Philosophy of Religion studies concepts of divinity, faith, and religious knowledge.
+14.10 Formal Logic studies the systematic formalization of valid inference.
+
+
+--- Top Level Only (105 statements) ---
+
+1.0 Philosophy is the analysis of the categories in terms of which we understand the world.
+1.1 These categories—such as person, fact, cause, knowledge, language, and justice—structure all thought.
+1.1.1 We are adept at using these categories but seldom make them objects of thought.
+1.1.2 Consequently, we possess little explicit knowledge about the categories themselves.
+1.2 The function of philosophy is to delineate the structures of these categories.
+1.2.1 This delineation constitutes the sole legitimate task of philosophy.
+1.3 Philosophy is therefore the analysis of the preconditions of all knowledge.
+1.3.1 It is the analysis of analysis, the logic of logic, the science of science.
+2.0 Philosophical knowledge is metaknowledge—knowledge about knowledge.
+2.1 The philosopher is interested in the laws governing the laws, not in the specific facts those laws describe.
+2.1.1 The philosopher seeks to know what it would make sense to claim, not merely what is the case.
+2.2 The relationship of philosophy to other disciplines is one of increasing abstraction.
+2.2.1 The stranded motorist wants his car to work.
+2.2.1.1 The engineer wants to know the mechanisms that will make the car work.
+2.2.1.1.1 The physicist wants to know the laws embodied in those mechanisms.
+2.2.1.1.1.1 The philosopher wants to know what it is to be a law, a mechanism, or a cause.
+2.2.2 Thus, the philosopher's interest in specifics is subordinate to an interest in the categories they instantiate.
+3.0 Analytic philosophy is distinguished by its method, which originates with Frege.
+3.1 Analytic philosophy is driven by the acceptance of a key insight: logical form is not grammatical form.
+3.1.1 When a belief seems to have an absurd consequence, one must question whether the absurdity truly follows.
+3.1.2 Pre-Fregean philosophy often posited bizarre entities to reconcile beliefs with their apparent grammatical consequences.
+3.2 Frege demonstrated that philosophical puzzles are solved by analyzing meanings, not by positing new entities.
+3.2.1 For example, "nothing is a square circle" does not refer to a non-entity.
+3.2.1.1 Its logical form is: the set of squares does not overlap with the set of circles.
+3.2.1.2 It attributes a property (being uninstantiated) to the property of being a square circle.
+3.3 Analytic philosophy is thus philosophy that seeks clarity through the logical analysis of statements.
+4.0 A fundamental error is to assume that grammatical similarity implies semantic or logical similarity.
+4.1 The wrong way to react is to twist reality to fit grammatical assumptions.
+4.1.1 For example, assuming "someone" functions like "John" leads to positing ambiguous or non-specific persons.
+4.1.2 This path results in absurd theses about non-existent entities.
+4.2 The right way to react is to discern the logical form beneath the grammatical surface.
+4.2.1 Frege showed that "someone smokes" asserts the property of being a smoker is instantiated.
+4.2.2 Quantified statements like "nobody smokes" are about properties (being uninstantiated), not about strange individuals.
+4.3 Philosophical explanation is achieved by clarifying statements, not by doing para-science.
+5.0 Analytic philosophy is ontologically conservative compared to pre-analytic philosophy.
+5.1 Analytic philosophers do not solve problems by "ontologizing"—positing new entities without necessity.
+5.1.1 Ontologizing is appropriate only when required to validate indisputably correct forms of inference.
+5.1.2 When necessary, the posited entities are always abstract, never spatiotemporal.
+5.2 Non-analytic philosophers, like Brentano and Meinong, epitomized the ontologizing method.
+5.2.1 To account for hallucinations, they posited non-existent objects as the targets of mental acts.
+5.2.2 Proper analysis shows that hallucinations, like veridical perceptions, encode existence-claims.
+5.2.2.1 A false existence-claim does not require a non-existent object to be its referent.
+6.0 Philosophical puzzles differ in kind from empirical puzzles.
+6.1 Empirical puzzles result from a lack of factual data or from inadequate modeling of available data.
+6.1.1 Their solution involves acquiring new data or constructing better models of old data.
+6.2 Philosophical puzzles are purely conceptual; they result from confusion, not ignorance.
+6.2.1 Their solution requires logical analysis, not new observations.
+6.2.2 Frege's solutions involved no new empirical discoveries, only a clearer understanding of what was already meant.
+7.0 Not all philosophical analysis is linguistic analysis.
+7.1 Wittgenstein erroneously held that all philosophical problems arise from the misuse of language.
+7.1.1 In the *Tractatus*, he claimed philosophical statements are syntactically ill-formed nonsense.
+7.1.2 In the *Investigations*, he claimed meaning is use and puzzles dissolve by examining ordinary usage.
+7.2 These positions are incoherent and self-refuting.
+7.2.1 The claim that all philosophical statements are nonsense is itself a philosophical statement.
+7.2.2 Meaning cannot be identical with use, for knowledge of meaning guides use.
+7.3 Many philosophical disputes (e.g., in epistemology or philosophy of law) concern the truth of propositions whose meaning is agreed upon.
+7.3.1 The dispute is not about language but about whether a given proposition correctly describes reality.
+8.0 One must distinguish between sentences and propositions.
+8.1 Sentences are linguistic artifacts; propositions are their mind- and language-independent meanings.
+8.2 Truth and falsity are primarily properties of propositions.
+8.2.1 A sentence is true if it encodes a true proposition.
+8.3 Philosophical analysis is ultimately the analysis of propositions, not sentences.
+8.3.1 Frege's analyses of sentences were a means to discover general logical principles governing propositions.
+9.0 Logical Positivism, inspired by the *Tractatus*, is an untenable doctrine.
+9.1 Its core thesis: a statement is meaningful iff it is either tautological or empirically verifiable/falsifiable.
+9.2 This thesis is self-defeating, as it is itself neither a tautology nor an empirical statement.
+9.3 Furthermore, there are clear counterexamples: meaningful non-tautological, non-empirical truths exist.
+9.3.1 Mathematical truths (e.g., truths of arithmetic) are not tautologies in the stipulated sense.
+9.3.2 Principles of logic itself are not empirically verifiable.
+9.4 The verificationist and falsificationist criteria of meaning are demonstrably inadequate.
+9.4.1 Universal generalizations cannot be conclusively verified.
+9.4.2 Existential statements cannot be conclusively falsified.
+10.0 The picture theory of meaning is false.
+10.1 Sentences are not pictures of the facts they describe.
+10.1.1 Sentential representation is heavily conventional; pictorial representation is not.
+10.1.2 Sentences have digital, discrete structures; pictures have analog, continuous structures.
+10.2 The empiricist motivation for the picture theory fails.
+10.2.1 Not all knowledge can be rendered in pictorial form (e.g., negative facts, logical relations).
+10.2.2 The rules for converting perceptual input into knowledge are not themselves pictorial or empirically derived.
+11.0 Not all entailment is formal entailment.
+11.1 A formal entailment holds when the conditional linking premise to conclusion is formally true.
+11.2 Many analytic truths (e.g., "circles are two-dimensional") are not formally true.
+11.2.1 Their truth depends on the content of concepts, not merely on logical form.
+11.3 Therefore, the *Tractatus* project of reducing all logical relations to formal relations is impossible.
+12.0 The concept of a logically perfect language is incoherent.
+12.1 In a logically perfect language, grammatical form would perfectly mirror logical form.
+12.2 This is impossible because no finite grammar can reflect the infinite complexity of logical relations.
+12.2.1 For every formal truth in such a language, there are infinitely many informal analytic truths it cannot express.
+12.3 Natural languages, despite their imperfections, are expressively superior to any putative logically perfect language.
+13.0 Strict empiricism is self-refuting.
+13.1 Empiricism claims all knowledge is based on observation.
+13.2 This claim itself cannot be known through observation.
+13.3 Therefore, if empiricism is true, there can be no grounds for believing it true.
+13.4 Furthermore, foundational parts of scientific knowledge (e.g., involving irrational numbers) cannot have a strictly observational basis.
+14.0 The sub-disciplines of philosophy analyze different but interconnected categories.
+14.1 Philosophy of Mind studies categories like thought, belief, perception, and consciousness.
+14.2 Philosophy of Language studies meaning, reference, and the nature of linguistic representation.
+14.3 Epistemology studies the nature, scope, and limits of knowledge.
+14.4 Philosophical Logic studies entailment, validity, and the structure of propositions.
+14.5 Metaphysics studies existence, possibility, necessity, identity, and causation.
+14.6 Philosophy of Science studies explanation, theory, confirmation, and the structure of scientific inquiry.
+14.7 Ethics studies the nature of good, bad, right, and wrong.
+14.8 Political and Legal Philosophy study the nature of law, government, justice, and legitimacy.
+14.9 Philosophy of Religion studies concepts of divinity, faith, and religious knowledge.
+14.10 Formal Logic studies the systematic formalization of valid inference.
+
+

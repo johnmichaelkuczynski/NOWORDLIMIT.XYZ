@@ -1,0 +1,3 @@
+{
+  "error": "{\"error\":\"API Error: 429 - {\\\"code\\\":\\\"Some resource has been exhausted\\\",\\\"error\\\":\\\"Your team 3881f39f-0633-4600-b2a2-e30e2afdc1a1 has either used all available credits or reached its monthly spending limit. To continue making API requests, please purchase more credits or raise your spending limit.\\\"}\"}"
+}

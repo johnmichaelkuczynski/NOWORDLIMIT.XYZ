@@ -1,0 +1,103 @@
+You are going to add TWO new features to the app. Each must have its own button and its own function.
+
+—————————————————————
+FEATURE 1 — INTELLIGENCE METER (single text)
+—————————————————————
+Button label: “Measure Intelligence”
+
+When the user pastes or uploads a text and presses this button, do the following EXACTLY:
+
+1. Count the total word count of the text (let’s call it W).
+2. Extract ONLY the truly sharp, unmistakably brilliant lines / sentences / short phrases — the kind that make a very smart reader stop and say “damn, that’s a cold insight / brutal formulation / razor observation”.  
+   Rules for what counts as sharp (be extremely strict — most texts will have 0–4, almost never more than 10 per 1000 words):
+   - High insight-to-word ratio
+   - Unexpected reversal or pattern-break
+   - Elegant compression of a big idea
+   - Dry/dark wit that reveals deep understanding
+   - Precise distinction everyone else blurs
+   - Must feel like a “knife” — never merely correct, eloquent, academic, or moralising
+3. Output visibly on screen:
+   - The numbered list of sharp quotes you found (if zero, say “No unmistakably sharp quotes detected”)
+   - Word count: W words
+   - Sharp quote density: X per 1000 words (X = (number of sharp quotes × 1000) / W, shown with 2 decimals)
+   - Final Intelligence Meter score: a 0–100 scale where roughly:
+       0–1 sharp quotes per 1000 words  → 0–30
+       1–3   sharp quotes per 1000 words  → 30–65
+       3–6   sharp quotes per 1000 words  → 65–90
+       6+    sharp quotes per 1000 words  → 90–100
+     (you can fine-tune the curve slightly, but keep it monotonic and strict)
+
+Use the following REAL examples as your permanent calibration set (these are the exact outputs I must get if the user pastes these texts):
+
+[Include every single example we tested, exactly like this — copy-paste this block verbatim into the prompt]
+
+EXAMPLE CALIBRATION SET (never change these outputs):
+
+1. Long text about bureaucrats/psychopaths/OCD (~6500 words)  
+   → 10 sharp quotes (the ten I listed)  
+   → density ≈ 1.54 per 1000 → score in 50–60 range
+
+2. Academic dissertation abstract on transcendental empiricism (~350 words)  
+   → 0 sharp quotes
+
+3. Short text on Wittgenstein + Cantor’s diagonal (~220 words)  
+   → 0 sharp quotes
+
+4. “On the Optimal Number of Truth Values” (~650 words)  
+   → exactly these 4 sharp quotes:  
+     “n = 1: degenerate … n > 2: declining per-value specificity…”  
+     “Credibility is relational; truth is not.”  
+     “Truth is monadic… Credibility is dyadic…”  
+     “infinite-valued truth is information-poor in isolation.”
+
+5. Academic defense of Gareth Evans (~450 words)  
+   → 0 sharp quotes
+
+6. Book blurb “This is a book about everything…” (~350 words)  
+   → 0 sharp quotes
+
+7. Anti-Rawls polemic (~250 words)  
+   → exactly these 3 sharp quotes:  
+     “a squalid bureaucratic wasteland… weapon for the mediocre to hold back the gifted…”  
+     “There is obviously a sense in which … no meaningful sense in which the resulting society would be just.”  
+     “it would be irrelevant that its inception occurred in a ‘fair’ way.”
+
+8. Text about LLMs / Emperor’s New Clothes (~150 words)  
+   → exactly these 4 sharp quotes:  
+     “We built machines that sound like they know things. They don’t…”  
+     “The Emperor’s New Clothes, but the tailors are algorithms…”  
+     “Anyone who writes about the bullshit is also producing content…”  
+     “You learn to smell it after a while—when someone’s weaving fabric that isn’t there.”
+
+9. Alonzo Church synonymy criteria text (~200 words)  
+   → 0 sharp quotes
+
+10. Introduction mentioning Carnap/Kripke/Kaplan (~200 words)  
+    → 0 sharp quotes
+
+11. Sense-perceptions vs representations text (~150 words)  
+    → exactly these 3 sharp quotes:  
+      “Sense-perceptions do not have to be deciphered… presentations, not representations…”  
+      “It is viciously regressive to suppose… therefore incoherent to suppose that thought is mediated by expressions…”  
+      “Attempts to neutralize this criticism inevitably overextend… eviscerate the very position…”
+
+These 11 examples are your eternal gold standard. Never deviate from them.
+
+—————————————————————
+FEATURE 2 — COMPARATIVE INTELLIGENCE (two texts)
+—————————————————————
+Button label: “Compare Intelligence (Text A vs Text B)”
+
+User pastes or uploads two texts (A and B). When button is pressed:
+
+- Run the exact same sharp-quote extraction and density calculation on Text A and Text B separately.
+- Display side-by-side:
+  - Sharp quotes for A | Sharp quotes for B
+  - Density A: X.XX per 1000 | Density B: Y.YY per 1000
+  - Score A: NN/100 | Score B: MM/100
+  - Winner declaration: “Text A is sharper” / “Text B is sharper” / “Essentially equal” (within 0.3 per 1000 is equal)
+  - One-sentence verdict (e.g. “Text A is almost twice as dense with razor insights” or “Both texts are academically clean but intellectually dull”)
+
+Use the exact same strict standard and the same 11-example calibration set for both texts.
+
+Implement both features now. Make the UI clean and obvious. Do not add any extra commentary unless the user explicitly asks.
