@@ -3890,7 +3890,7 @@ ${parsed.analyzer}`);
                   <DialogHeader>
                     <DialogTitle className="flex items-center gap-2">
                       <User className="w-5 h-5 text-primary" />
-                      Login to Text Intelligence Studio
+                      Login to No Word Limit
                     </DialogTitle>
                     <DialogDescription>
                       Enter a username to save your stylometric profiles and analysis history.
