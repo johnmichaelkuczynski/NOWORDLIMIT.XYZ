@@ -1,0 +1,413 @@
+PART 1 — LONG ANSWER FUNCTION (100K coherent output)
+Goal
+
+Add a new feature: user enters a question → system generates a massive coherent answer (up to 100k words) by using a two-phase generation architecture:
+
+Generate a global skeleton / outline (wireframe).
+
+Expand each skeleton section sequentially (top-down fill), with memory of prior sections, until complete.
+
+This must work for OpenAI and Claude, selected by user.
+
+Backend Implementation Plan
+Step 1: Create a new service file
+
+Create:
+
+server/services/longAnswerService.ts
+
+This file should export a function like:
+
+generateLongAnswerStream({ prompt, provider, mode, ... })
+
+It must implement the 2-phase approach:
+
+Phase A: Skeleton
+
+Call LLM once to produce:
+
+Title
+
+Table of contents
+
+Section list
+
+Subsection list
+
+Target word counts per section
+
+Explicit constraints (“do not repeat”, “keep internal references consistent”)
+
+Return JSON structure like:
+
+{
+  "title": "...",
+  "sections": [
+    { "id": 1, "heading": "...", "goal": "...", "target_words": 4000 },
+    ...
+  ]
+}
+
+
+Skeleton must be stored in memory server-side for that request (no need to save permanently yet).
+
+Phase B: Fill (Top-Down Expansion)
+
+Loop over skeleton sections:
+
+For each section:
+
+Feed the model:
+
+original user prompt
+
+entire skeleton
+
+all previously generated sections (or compressed summary)
+
+current section spec (heading + goal + word count)
+
+Generate section text.
+
+Append to final answer.
+
+Step 2: Add streaming endpoint
+
+In server/routes.ts, add a new endpoint:
+
+POST /api/longanswer/stream
+
+Request body should include:
+
+prompt: string
+
+provider: "openai" | "anthropic" (or whatever naming you already use)
+
+model?: string
+
+mode: "normal" | "pure" (pure will be used later)
+
+optional: maxWords?: number
+
+This endpoint must stream output in the same style as the existing endpoints (you already have streaming patterns in routes.ts).
+
+The endpoint should call longAnswerService.generateLongAnswerStream().
+
+Step 3: Make sure provider abstraction supports it
+
+Do NOT build new LLM logic in the route.
+
+Use the existing server/llm.ts provider abstraction.
+
+The longAnswerService should call the same standardized interface used by the other analyzers (likely you already have a callLLMStream function or similar in llm.ts).
+
+If streaming chunk-by-chunk is hard, then stream section-by-section (still acceptable).
+
+Step 4: Add token safety + chunk sizing
+
+In longAnswerService.ts, enforce:
+
+Each section generation should be limited (ex: 6k–12k tokens max)
+
+For 100k word total, you must generate many sections
+
+Use summarization of prior output if context becomes too large:
+
+Keep a rolling “memory summary” that compresses earlier sections into a few thousand tokens.
+
+This is required to prevent Claude/OpenAI context overflow.
+
+Frontend Implementation Plan
+Step 5: Add new UI tab or mode selector
+
+In client/src/pages/Home.tsx, add:
+
+A new tab or button: Long Answer
+
+Input: prompt textarea
+
+Dropdown: provider selection (Claude/OpenAI) (already exists somewhere)
+
+Dropdown: output mode selector: Normal / Pure (Pure mode will be implemented later)
+
+Button: “Generate Long Answer”
+
+This triggers a fetch to /api/longanswer/stream.
+
+Stream response into output window.
+
+Step 6: Output display
+
+Because answers may be huge:
+
+render output inside ScrollArea
+
+allow “copy output”
+
+allow “download as .txt”
+
+This is purely UI work inside Home.tsx.
+
+PART 2 — PURE ANSWER FUNCTION (Primary-source only evaluation)
+Goal
+
+Add a second mode called PURE.
+
+In PURE mode:
+
+the model must base all evaluative claims exclusively on primary source text stored in your database or uploaded ad hoc.
+
+It must quote directly.
+
+It must explicitly forbid “reputation metadata” reasoning (schools, jobs, prizes, famousness, etc.).
+
+This is not just prompt wording. It requires a retrieval step.
+
+PURE MODE ARCHITECTURE (what the agent must implement)
+Key principle
+
+PURE mode is a pipeline:
+
+Step A: Determine which primary sources exist in DB for entities mentioned.
+Step B: Retrieve relevant passages.
+Step C: Feed those passages into the LLM with strict instruction:
+
+“Answer ONLY using these passages.”
+
+Backend Implementation Plan
+Step 1: Add new database tables (in shared/schema.ts)
+
+In shared/schema.ts, add tables for a corpus library system:
+
+corpus_documents
+
+id
+
+user_id
+
+author_name
+
+work_title
+
+raw_text
+
+created_at
+
+corpus_chunks
+
+id
+
+document_id
+
+chunk_index
+
+chunk_text
+
+created_at
+
+Optionally add embeddings later, but don’t require it initially.
+
+These tables must be implemented via Drizzle and migrated.
+
+This integrates with the Neon DB already used.
+No new DB allowed.
+
+Step 2: Extend storage.ts
+
+In server/storage.ts, implement functions:
+
+addCorpusDocument(userId, authorName, title, rawText)
+
+getCorpusDocumentsByAuthor(userId, authorName)
+
+getChunksByAuthor(userId, authorName, limit)
+
+searchCorpusChunks(userId, queryText, limit)
+
+Initial search can be simple ILIKE keyword match.
+
+Later you can add embeddings, but not needed to get Pure mode working.
+
+Step 3: Add upload endpoint for standing libraries
+
+In server/routes.ts, add:
+
+POST /api/corpus/upload
+
+This accepts:
+
+file upload (pdf/doc/txt)
+
+authorName
+
+title
+
+Use existing file parsing logic from:
+
+server/services/fileParser.ts
+
+Store the raw extracted text in corpus_documents.
+
+Then split into chunks (~1500–3000 characters) and store in corpus_chunks.
+
+Step 4: Add endpoint for ad hoc uploads
+
+Add:
+
+POST /api/corpus/upload-adhoc
+
+Same as above, but instead of saving permanently, it can store in memory OR store in DB with a flag is_adhoc=true.
+
+Better: store it in DB tied to user, with a library_type: "permanent" | "adhoc" field.
+
+Step 5: Create Pure mode answer service
+
+Create file:
+
+server/services/pureAnswerService.ts
+
+This must export:
+
+generatePureAnswerStream({ prompt, provider, userId })
+
+Pipeline:
+
+Extract entity names from prompt.
+
+Example: "John-Michael Kuczynski" and "Michael Dummett"
+
+Query corpus_documents to see if texts exist for those entities.
+
+Pull relevant chunks for each entity by keyword searching:
+
+look for “logic”, “mind”, “induction”, etc depending on prompt.
+
+Build a “primary source packet”:
+
+=== SOURCE: Michael Dummett, Frege: Philosophy of Language ===
+[Quote 1]
+[Quote 2]
+
+=== SOURCE: John-Michael Kuczynski, Positions File ===
+[Quote 1]
+[Quote 2]
+
+
+Feed this packet into LLM with strict instructions:
+
+You are forbidden from using external knowledge.
+
+You may not mention schools/jobs/prizes.
+
+You must cite only from provided sources.
+
+If evidence is missing, you must say “Insufficient primary material uploaded.”
+
+Then generate the structured Pure output (like Example 1).
+
+This service should stream output.
+
+Step 6: Integrate Pure mode into Long Answer mode
+
+The Long Answer service must accept a mode flag:
+
+if mode === normal: skeleton + fill directly from prompt.
+
+if mode === pure:
+
+first build a primary-source packet using pureAnswerService retrieval logic
+
+then skeleton + fill must be done using that packet as the knowledge base
+
+Meaning: Pure mode becomes the “input corpus” for long answer generation.
+
+FRONTEND PURE MODE UI
+Step 7: Add “Library Upload” UI section
+
+In client/src/pages/Home.tsx add:
+
+A “Text Library” section
+
+Input fields:
+
+Author Name
+
+Work Title
+
+Upload file button
+
+Submit → calls /api/corpus/upload
+
+Also add a second upload option:
+
+“Ad hoc upload for this analysis only”
+
+calls /api/corpus/upload-adhoc
+
+Step 8: Add mode toggle
+
+In the Long Answer UI:
+
+toggle: Normal / Pure
+
+If Pure is selected:
+
+show warning text:
+“Pure mode requires uploaded primary source texts.”
+
+CRITICAL SAFETY RULES (must be included in agent instructions)
+DO NOT use Replit DB
+
+All storage must go through:
+
+server/db.ts
+
+server/storage.ts
+
+Drizzle schema in shared/schema.ts
+
+If Pure mode has no texts, it must refuse
+
+If no primary texts exist for the named person, the output must say:
+
+“Insufficient primary source material in database. Upload texts.”
+
+No hallucinated biography, no Wikipedia-style answer.
+
+MINIMUM DELIVERABLE VERSION
+
+Tell the agent explicitly:
+
+Implement keyword-based chunk retrieval first (ILIKE search).
+
+No embeddings required for v1.
+
+Streaming output can be section-by-section.
+
+WHERE EACH FEATURE LIVES IN THIS CODEBASE (summary)
+Long Answer Mode
+
+server/services/longAnswerService.ts (new)
+
+server/routes.ts (new endpoint /api/longanswer/stream)
+
+client/src/pages/Home.tsx (new UI panel + streaming call)
+
+Pure Mode
+
+shared/schema.ts (new tables)
+
+server/storage.ts (CRUD + chunk search)
+
+server/services/pureAnswerService.ts (new)
+
+server/routes.ts (/api/corpus/upload, /api/pureanswer/stream)
+
+client/src/pages/Home.tsx (upload UI + Pure toggle)
+
+FINAL POINT (most important instruction to agent)
+
+Pure Mode is not “prompt engineering.”
+It is prompt + enforced retrieval constraint.
+
+If the system answers without quoting the uploaded text, Pure mode is not implemented.

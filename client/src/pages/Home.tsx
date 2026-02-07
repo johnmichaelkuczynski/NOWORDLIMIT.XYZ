@@ -438,6 +438,22 @@ export default function Home() {
   const [generatedDocument, setGeneratedDocument] = useState("");
   const [writeNewRefineInstructions, setWriteNewRefineInstructions] = useState("");
   
+  // Long Answer state
+  const [showLongAnswerDialog, setShowLongAnswerDialog] = useState(false);
+  const [longAnswerPrompt, setLongAnswerPrompt] = useState("");
+  const [longAnswerTargetWords, setLongAnswerTargetWords] = useState("20000");
+  const [longAnswerMode, setLongAnswerMode] = useState<"normal" | "pure">("normal");
+  const [isGeneratingLongAnswer, setIsGeneratingLongAnswer] = useState(false);
+  const [longAnswerProgress, setLongAnswerProgress] = useState<{current: number, total: number, message: string, phase?: string} | null>(null);
+  const [longAnswerOutput, setLongAnswerOutput] = useState("");
+  const [longAnswerRefineInstructions, setLongAnswerRefineInstructions] = useState("");
+  const [longAnswerProvider, setLongAnswerProvider] = useState<string>("openai");
+  const longAnswerUploadRef = useRef<HTMLInputElement>(null);
+  const [longAnswerUploadAuthor, setLongAnswerUploadAuthor] = useState("");
+  const [longAnswerUploadTitle, setLongAnswerUploadTitle] = useState("");
+  const [isUploadingForPure, setIsUploadingForPure] = useState(false);
+  const [pureUploadStatus, setPureUploadStatus] = useState("");
+  
   // Corpus Manager state
   const [showCorpusManager, setShowCorpusManager] = useState(false);
   const [corpusAuthors, setCorpusAuthors] = useState<any[]>([]);
@@ -3085,6 +3101,143 @@ ${holisticStylometricsCompareResult.comparison?.sameRoomScenario ? `If They Met:
     URL.revokeObjectURL(url);
   };
 
+  // Long Answer handler
+  const handleLongAnswer = async () => {
+    if (!longAnswerPrompt.trim()) {
+      toast({ title: "Missing Prompt", description: "Please enter a question or prompt", variant: "destructive" });
+      return;
+    }
+
+    setIsGeneratingLongAnswer(true);
+    setLongAnswerProgress({ current: 0, total: 1, message: "Starting..." });
+    setLongAnswerOutput("");
+
+    try {
+      const response = await fetch('/api/longanswer/stream', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          prompt: longAnswerPrompt,
+          provider: longAnswerProvider,
+          mode: longAnswerMode,
+          maxWords: parseInt(longAnswerTargetWords) || 20000,
+          username
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Long answer request failed");
+      }
+
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+      let generated = "";
+
+      if (reader) {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value);
+          const lines = chunk.split('\n').filter(line => line.startsWith('data: '));
+
+          for (const line of lines) {
+            try {
+              const parsed = JSON.parse(line.slice(6));
+              if (parsed.type === 'progress') {
+                setLongAnswerProgress({
+                  current: parsed.current || 0,
+                  total: parsed.total || 1,
+                  message: parsed.message || "Processing...",
+                  phase: parsed.phase
+                });
+              } else if (parsed.type === 'content') {
+                generated += parsed.content;
+                setLongAnswerOutput(generated);
+              } else if (parsed.type === 'complete') {
+                setLongAnswerOutput(parsed.result || generated);
+                toast({
+                  title: "Long Answer Complete",
+                  description: `Generated ${parsed.wordCount?.toLocaleString() || ''} words in ${parsed.sectionCount || ''} sections`,
+                });
+              } else if (parsed.type === 'error') {
+                throw new Error(parsed.error);
+              }
+            } catch (parseError: any) {
+              if (parseError.message && !parseError.message.includes('JSON')) {
+                throw parseError;
+              }
+            }
+          }
+        }
+      }
+    } catch (error: any) {
+      console.error('Long answer error:', error);
+      toast({
+        title: "Generation Failed",
+        description: error.message || "Unknown error occurred",
+        variant: "destructive",
+      });
+    } finally {
+      setIsGeneratingLongAnswer(false);
+      setLongAnswerProgress(null);
+      fetchCredits();
+    }
+  };
+
+  const handlePureUpload = async (file: File) => {
+    if (!longAnswerUploadAuthor.trim() || !longAnswerUploadTitle.trim()) {
+      toast({ title: "Missing Info", description: "Please enter author name and work title before uploading", variant: "destructive" });
+      return;
+    }
+
+    setIsUploadingForPure(true);
+    setPureUploadStatus("Uploading...");
+
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('authorName', longAnswerUploadAuthor.trim());
+      formData.append('title', longAnswerUploadTitle.trim());
+
+      const response = await fetch('/api/corpus/upload', {
+        method: 'POST',
+        credentials: 'include',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Upload failed");
+      }
+
+      setPureUploadStatus(result.message || "Upload complete");
+      toast({ title: "Upload Complete", description: result.message });
+    } catch (error: any) {
+      setPureUploadStatus("");
+      toast({ title: "Upload Failed", description: error.message, variant: "destructive" });
+    } finally {
+      setIsUploadingForPure(false);
+    }
+  };
+
+  const copyLongAnswer = () => {
+    navigator.clipboard.writeText(longAnswerOutput);
+    toast({ title: "Copied", description: "Long answer copied to clipboard" });
+  };
+
+  const downloadLongAnswer = () => {
+    const blob = new Blob([longAnswerOutput], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'long_answer.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   // Generic refine function for all outputs
   const handleRefineOutput = async (
     currentOutput: string,
@@ -4503,6 +4656,24 @@ ${parsed.analyzer}`);
                       <>
                         <Sparkles className="w-5 h-5 mr-2" />
                         WRITE NEW
+                      </>
+                    )}
+                  </Button>
+                  <Button 
+                    onClick={() => setShowLongAnswerDialog(true)}
+                    disabled={isGeneratingLongAnswer}
+                    className="h-12 text-sm font-semibold px-5 bg-gradient-to-r from-violet-600 to-indigo-700 text-white hover:shadow-lg transition-all hover:scale-105"
+                    data-testid="button-long-answer"
+                  >
+                    {isGeneratingLongAnswer ? (
+                      <>
+                        <div className="w-5 h-5 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        GENERATING...
+                      </>
+                    ) : (
+                      <>
+                        <BookOpen className="w-5 h-5 mr-2" />
+                        LONG ANSWER
                       </>
                     )}
                   </Button>
@@ -8030,6 +8201,255 @@ Freedom is the ratio essendi of the moral law."
                 variant="outline"
                 onClick={() => setShowRewriteDialog(false)}
                 data-testid="button-close-rewrite-dialog"
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </ResizableDialogContent>
+      </ResizableDialog>
+
+      {/* Long Answer Dialog */}
+      <ResizableDialog open={showLongAnswerDialog} onOpenChange={setShowLongAnswerDialog}>
+        <ResizableDialogContent defaultWidth={950} defaultHeight={750} minWidth={500} minHeight={400}>
+          <ResizableDialogHeader>
+            <ResizableDialogTitle className="flex items-center gap-2 text-xl">
+              <BookOpen className="w-6 h-6 text-violet-600" />
+              Long Answer
+              <span className="text-sm font-normal text-muted-foreground ml-2">
+                (Up to 100K words — Skeleton + Fill Architecture)
+              </span>
+            </ResizableDialogTitle>
+          </ResizableDialogHeader>
+          
+          <div className="flex-1 overflow-auto space-y-4 p-4">
+            <div className="bg-violet-50 border border-violet-200 rounded-lg p-4">
+              <p className="text-sm text-violet-800">
+                <strong>How it works:</strong> Enter a question or prompt. The system generates a structural skeleton,
+                then expands each section sequentially with memory of prior sections, producing massive coherent output.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <Label htmlFor="long-answer-prompt" className="text-sm font-medium">Question / Prompt</Label>
+              <Textarea
+                id="long-answer-prompt"
+                value={longAnswerPrompt}
+                onChange={(e) => setLongAnswerPrompt(e.target.value)}
+                className="min-h-[120px] text-sm"
+                placeholder="E.g., Provide a comprehensive analysis of the epistemological foundations of quantum mechanics, covering all major interpretations..."
+                data-testid="textarea-long-answer-prompt"
+              />
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div className="space-y-2">
+                <Label className="text-sm font-medium">Provider</Label>
+                <Select value={longAnswerProvider} onValueChange={(v) => setLongAnswerProvider(v)}>
+                  <SelectTrigger data-testid="select-long-answer-provider">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="openai">OpenAI (GPT-4o)</SelectItem>
+                    <SelectItem value="anthropic">Claude (Anthropic)</SelectItem>
+                    <SelectItem value="deepseek">DeepSeek</SelectItem>
+                    <SelectItem value="grok">Grok (xAI)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label className="text-sm font-medium">Mode</Label>
+                <Select value={longAnswerMode} onValueChange={(v) => setLongAnswerMode(v as "normal" | "pure")}>
+                  <SelectTrigger data-testid="select-long-answer-mode">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="normal">Normal</SelectItem>
+                    <SelectItem value="pure">Pure (Primary Sources Only)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="long-answer-words" className="text-sm font-medium">Target Words</Label>
+                <Input
+                  id="long-answer-words"
+                  type="number"
+                  value={longAnswerTargetWords}
+                  onChange={(e) => setLongAnswerTargetWords(e.target.value)}
+                  min="2000"
+                  max="100000"
+                  step="5000"
+                  data-testid="input-long-answer-words"
+                />
+              </div>
+            </div>
+
+            {longAnswerMode === "pure" && (
+              <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 space-y-3">
+                <div className="flex items-center gap-2">
+                  <Lock className="w-4 h-4 text-amber-700" />
+                  <span className="text-sm font-semibold text-amber-800">Pure Mode — Primary Source Constraint</span>
+                </div>
+                <p className="text-xs text-amber-700">
+                  Pure mode requires uploaded primary source texts. The AI will answer ONLY using quotes from uploaded material.
+                  No external knowledge, no biographical metadata, no reputation reasoning.
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <Label className="text-xs">Author Name</Label>
+                    <Input
+                      value={longAnswerUploadAuthor}
+                      onChange={(e) => setLongAnswerUploadAuthor(e.target.value)}
+                      placeholder="E.g., Immanuel Kant"
+                      className="mt-1 text-sm"
+                      data-testid="input-pure-author"
+                    />
+                  </div>
+                  <div>
+                    <Label className="text-xs">Work Title</Label>
+                    <Input
+                      value={longAnswerUploadTitle}
+                      onChange={(e) => setLongAnswerUploadTitle(e.target.value)}
+                      placeholder="E.g., Critique of Pure Reason"
+                      className="mt-1 text-sm"
+                      data-testid="input-pure-title"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="file"
+                    ref={longAnswerUploadRef}
+                    className="hidden"
+                    accept=".txt,.pdf,.doc,.docx"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) handlePureUpload(file);
+                    }}
+                    data-testid="input-pure-file"
+                  />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => longAnswerUploadRef.current?.click()}
+                    disabled={isUploadingForPure || !longAnswerUploadAuthor.trim() || !longAnswerUploadTitle.trim()}
+                    className="text-xs"
+                    data-testid="button-pure-upload"
+                  >
+                    {isUploadingForPure ? (
+                      <><div className="w-3 h-3 mr-1 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" /> Uploading...</>
+                    ) : (
+                      <><Upload className="w-3 h-3 mr-1" /> Upload Source Text</>
+                    )}
+                  </Button>
+                  {pureUploadStatus && (
+                    <span className="text-xs text-green-700">{pureUploadStatus}</span>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {longAnswerProgress && (
+              <div className="bg-gradient-to-r from-violet-50 to-indigo-50 rounded-lg p-4 border border-violet-200">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-5 h-5 border-2 border-violet-600 border-t-transparent rounded-full animate-spin" />
+                  <span className="font-medium text-violet-800">{longAnswerProgress.message}</span>
+                </div>
+                <Progress value={(longAnswerProgress.current / Math.max(longAnswerProgress.total, 1)) * 100} className="h-2" />
+                <p className="text-xs text-violet-600 mt-2">
+                  Section {longAnswerProgress.current} of {longAnswerProgress.total}
+                </p>
+              </div>
+            )}
+
+            {longAnswerOutput && (() => {
+              const wc = longAnswerOutput.split(/\s+/).filter(Boolean).length;
+              const shouldPaywall = !hasCredits && wc > PAYWALL_WORD_LIMIT;
+
+              return (
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <Label className="text-sm font-medium">Generated Answer</Label>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" onClick={copyLongAnswer} className="h-7 text-xs" data-testid="button-copy-long-answer">
+                      <Copy className="w-3 h-3 mr-1" /> Copy
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={downloadLongAnswer} className="h-7 text-xs" data-testid="button-download-long-answer">
+                      <Download className="w-3 h-3 mr-1" /> Download
+                    </Button>
+                  </div>
+                </div>
+                <ScrollArea className="h-[300px] border rounded-lg p-4 bg-white">
+                  {shouldPaywall ? (
+                    <PaywallOverlay content={longAnswerOutput} onBuyCredits={handleBuyCredits} />
+                  ) : (
+                    <div className="prose prose-sm max-w-none whitespace-pre-wrap">
+                      {longAnswerOutput}
+                    </div>
+                  )}
+                </ScrollArea>
+                <p className="text-xs text-muted-foreground">
+                  {wc.toLocaleString()} words generated
+                </p>
+
+                {!shouldPaywall && (
+                  <div className="mt-4 p-3 bg-violet-50 rounded-lg border border-violet-200">
+                    <Label className="text-sm font-medium text-violet-800">Refine this output</Label>
+                    <Textarea
+                      value={longAnswerRefineInstructions}
+                      onChange={(e) => setLongAnswerRefineInstructions(e.target.value)}
+                      placeholder="E.g., Expand the section on X, add more citations, make it more rigorous..."
+                      className="mt-2 min-h-[60px] text-sm border-violet-200"
+                      data-testid="textarea-long-answer-refine"
+                    />
+                    <Button
+                      onClick={() => handleRefineOutput(
+                        longAnswerOutput,
+                        longAnswerRefineInstructions,
+                        setLongAnswerOutput,
+                        setLongAnswerProgress,
+                        setIsGeneratingLongAnswer,
+                        "long_answer"
+                      )}
+                      disabled={isGeneratingLongAnswer || !longAnswerRefineInstructions.trim()}
+                      className="mt-2 bg-violet-600 hover:bg-violet-700"
+                      size="sm"
+                      data-testid="button-refine-long-answer"
+                    >
+                      <RotateCcw className="w-3 h-3 mr-1" />
+                      Refine Output
+                    </Button>
+                  </div>
+                )}
+              </div>
+              );
+            })()}
+
+            <div className="flex gap-3 pt-4 border-t">
+              <Button
+                onClick={handleLongAnswer}
+                disabled={isGeneratingLongAnswer || !longAnswerPrompt.trim()}
+                className="flex-1 bg-gradient-to-r from-violet-600 to-indigo-600"
+                data-testid="button-start-long-answer"
+              >
+                {isGeneratingLongAnswer ? (
+                  <>
+                    <div className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Generating Long Answer...
+                  </>
+                ) : (
+                  <>
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Generate Long Answer
+                  </>
+                )}
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => setShowLongAnswerDialog(false)}
+                data-testid="button-close-long-answer-dialog"
               >
                 Close
               </Button>

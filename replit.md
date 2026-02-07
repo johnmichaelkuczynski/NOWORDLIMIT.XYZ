@@ -1,4 +1,4 @@
-# Text Intelligence Studio
+# No Word Limit
 
 ## Overview
 Text Intelligence Studio is a web application designed for advanced text analysis using multiple Large Language Model (LLM) providers. It processes text documents to produce structured outputs such as extracted quotes, annotated quotes, compressed summaries, and database representations. The application supports various analysis functions, including intelligence metering, comparison, major view identification, and a quote finder, alongside a corpus management system. Its core purpose is to provide users with comprehensive tools for extracting, organizing, and analyzing information from extensive textual data.
@@ -66,6 +66,10 @@ Preferred communication style: Simple, everyday language.
 - **Development Tools**: Replit-specific Vite plugins (runtime error modal, cartographer, dev banner), custom meta images plugin.
 
 ## Recent Changes (February 2026)
+- **App Renamed**: Changed from "Text Intelligence Studio" to "No Word Limit".
+- **Long Answer Mode**: New feature generating massive coherent answers (up to 100K words) using 2-phase skeleton+fill architecture with rolling memory summarization. Service: `server/services/longAnswerService.ts`. Endpoint: `POST /api/longanswer/stream` (SSE). UI: Long Answer dialog in Home.tsx with provider selector, mode toggle, word count target.
+- **Pure Mode**: Primary-source-only evaluation mode. Extracts entities from prompt, retrieves corpus chunks from existing DB tables (`corpus_authors`, `corpus_works`, `work_sections`), builds source packet, and constrains LLM to quote only from uploaded material. Refuses if no texts exist. Service: `server/services/pureAnswerService.ts`. Integrated with Long Answer mode via mode toggle.
+- **Corpus Upload Endpoints**: `POST /api/corpus/upload` (permanent) and `POST /api/corpus/upload-adhoc` (session-only) for uploading primary source texts for Pure mode.
 - **Tractatus Tree Word Download**: Added Word (.docx) export with clean formatting - custom title as H1, levels as H2, numbered statements with proper indentation.
 - **Custom Title Input**: Users can enter document title before generating Tractatus Tree.
 - **Level Naming**: Changed from "Top Level/Full Detail" to consistent "Level 1, Level 2, Level 3..." naming.

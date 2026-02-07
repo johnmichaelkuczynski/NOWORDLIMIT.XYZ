@@ -2971,6 +2971,244 @@ Otherwise return JSON array:
     }
   });
 
+  // ============ LONG ANSWER + PURE MODE ENDPOINTS ============
+
+  app.post("/api/longanswer/stream", async (req, res) => {
+    const { prompt, provider, mode, maxWords, username } = req.body;
+
+    if (!prompt || typeof prompt !== "string") {
+      return res.status(400).json({ error: "Missing or invalid 'prompt' field" });
+    }
+
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+    res.setHeader('X-Accel-Buffering', 'no');
+    res.flushHeaders();
+
+    try {
+      const { generateLongAnswerStream } = await import("./services/longAnswerService");
+      let sourcePacket: string | undefined;
+
+      if (mode === "pure") {
+        const { extractEntitiesFromPrompt, buildSourcePacket } = await import("./services/pureAnswerService");
+        
+        res.write(`data: ${JSON.stringify({ type: 'progress', phase: 'retrieval', message: 'Extracting entities from prompt...' })}\n\n`);
+        
+        const entities = await extractEntitiesFromPrompt(prompt, provider || "openai");
+        
+        if (entities.length === 0) {
+          res.write(`data: ${JSON.stringify({ type: 'progress', phase: 'retrieval', message: 'No named entities found in prompt. Searching corpus broadly...' })}\n\n`);
+        } else {
+          res.write(`data: ${JSON.stringify({ type: 'progress', phase: 'retrieval', message: `Found entities: ${entities.join(", ")}. Retrieving source material...` })}\n\n`);
+        }
+
+        const result = await buildSourcePacket(entities, prompt);
+        
+        if (!result.packet || result.packet.trim().length === 0) {
+          res.write(`data: ${JSON.stringify({ type: 'error', error: 'Insufficient primary source material in database. Upload texts for the entities mentioned in your question before using Pure mode.' })}\n\n`);
+          res.end();
+          return;
+        }
+
+        sourcePacket = result.packet;
+        res.write(`data: ${JSON.stringify({ type: 'progress', phase: 'retrieval', message: `Retrieved ${result.sources.length} source(s). Starting generation...` })}\n\n`);
+      }
+
+      let generatedText = "";
+
+      const longResult = await generateLongAnswerStream({
+        prompt,
+        provider: provider || "openai",
+        mode: mode || "normal",
+        maxWords: Math.min(Math.max(parseInt(maxWords) || 20000, 2000), 100000),
+        sourcePacket,
+        onProgress: (progress) => {
+          if (progress.content) {
+            generatedText += progress.content;
+            res.write(`data: ${JSON.stringify({ type: 'content', content: progress.content })}\n\n`);
+          }
+          res.write(`data: ${JSON.stringify({
+            type: 'progress',
+            current: progress.current,
+            total: progress.total,
+            message: progress.message,
+            phase: progress.phase
+          })}\n\n`);
+        }
+      });
+
+      if (username && typeof username === "string" && username.trim().length >= 2) {
+        try {
+          const cleanUsername = username.trim().toLowerCase();
+          let user = await storage.getUserByUsername(cleanUsername);
+          if (!user) {
+            user = await storage.createUser({ username: cleanUsername });
+          }
+          await storage.createAnalysisHistory({
+            userId: user.id,
+            analysisType: "long_answer",
+            provider: provider || "openai",
+            inputPreview: prompt.substring(0, 200) + (prompt.length > 200 ? "..." : ""),
+            outputData: {
+              generatedText: longResult.generatedText.substring(0, 50000),
+              wordCount: longResult.wordCount,
+              sectionCount: longResult.sectionCount,
+              mode: mode || "normal",
+              prompt
+            }
+          });
+        } catch (saveError) {
+          console.error("Failed to save long answer to history:", saveError);
+        }
+      }
+
+      res.write(`data: ${JSON.stringify({
+        type: 'complete',
+        result: longResult.generatedText,
+        wordCount: longResult.wordCount,
+        sectionCount: longResult.sectionCount,
+        title: longResult.title
+      })}\n\n`);
+      res.end();
+    } catch (error: any) {
+      console.error("Long answer error:", error);
+      res.write(`data: ${JSON.stringify({ type: 'error', error: error.message })}\n\n`);
+      res.end();
+    }
+  });
+
+  app.post("/api/corpus/upload", upload.single('file'), async (req, res) => {
+    try {
+      const { authorName, title } = req.body;
+
+      if (!authorName || !title) {
+        return res.status(400).json({ error: "Author name and title are required" });
+      }
+
+      let rawText = "";
+
+      if (req.file) {
+        const parsed = await parseFile(req.file.buffer, req.file.originalname, req.file.mimetype);
+        rawText = parsed.text || "";
+      } else if (req.body.text) {
+        rawText = req.body.text;
+      } else {
+        return res.status(400).json({ error: "File or text content required" });
+      }
+
+      if (!rawText || rawText.trim().length < 50) {
+        return res.status(400).json({ error: "Text content too short" });
+      }
+
+      let author = await storage.findCorpusAuthorByName(authorName);
+      if (!author) {
+        author = await storage.createCorpusAuthor({ name: authorName });
+      }
+
+      const wordCount = rawText.split(/\s+/).filter(Boolean).length;
+      const work = await storage.createCorpusWork({
+        authorId: author.id,
+        title,
+        wordCount,
+      });
+
+      const chunkSize = 2500;
+      const chunks: string[] = [];
+      let start = 0;
+      while (start < rawText.length) {
+        let end = Math.min(start + chunkSize, rawText.length);
+        if (end < rawText.length) {
+          const breakPoint = Math.max(
+            rawText.lastIndexOf(".", end),
+            rawText.lastIndexOf("\n", end)
+          );
+          if (breakPoint > start + chunkSize * 0.5) end = breakPoint + 1;
+        }
+        const chunk = rawText.substring(start, end).trim();
+        if (chunk.length > 0) chunks.push(chunk);
+        start = end;
+      }
+
+      const sections = chunks.map((chunk, i) => ({
+        workId: work.id,
+        sectionNumber: i + 1,
+        content: chunk,
+      }));
+
+      await storage.createWorkSections(sections);
+
+      res.json({
+        success: true,
+        authorId: author.id,
+        workId: work.id,
+        wordCount,
+        chunkCount: chunks.length,
+        message: `Uploaded "${title}" by ${authorName}: ${wordCount} words in ${chunks.length} chunks`
+      });
+    } catch (error: any) {
+      console.error("Corpus upload error:", error);
+      res.status(500).json({ error: error.message || "Failed to upload corpus text" });
+    }
+  });
+
+  app.post("/api/corpus/upload-adhoc", upload.single('file'), async (req, res) => {
+    try {
+      const { authorName, title } = req.body;
+
+      if (!authorName || !title) {
+        return res.status(400).json({ error: "Author name and title are required" });
+      }
+
+      let rawText = "";
+
+      if (req.file) {
+        const parsed = await parseFile(req.file.buffer, req.file.originalname, req.file.mimetype);
+        rawText = parsed.text || "";
+      } else if (req.body.text) {
+        rawText = req.body.text;
+      } else {
+        return res.status(400).json({ error: "File or text content required" });
+      }
+
+      if (!rawText || rawText.trim().length < 50) {
+        return res.status(400).json({ error: "Text content too short" });
+      }
+
+      const wordCount = rawText.split(/\s+/).filter(Boolean).length;
+
+      const chunks: string[] = [];
+      const chunkSize = 2500;
+      let start = 0;
+      while (start < rawText.length) {
+        let end = Math.min(start + chunkSize, rawText.length);
+        if (end < rawText.length) {
+          const breakPoint = Math.max(
+            rawText.lastIndexOf(".", end),
+            rawText.lastIndexOf("\n", end)
+          );
+          if (breakPoint > start + chunkSize * 0.5) end = breakPoint + 1;
+        }
+        const chunk = rawText.substring(start, end).trim();
+        if (chunk.length > 0) chunks.push(chunk);
+        start = end;
+      }
+
+      res.json({
+        success: true,
+        authorName,
+        title,
+        wordCount,
+        chunkCount: chunks.length,
+        chunks,
+        message: `Ad hoc upload: "${title}" by ${authorName}: ${wordCount} words (not saved permanently)`
+      });
+    } catch (error: any) {
+      console.error("Ad hoc upload error:", error);
+      res.status(500).json({ error: error.message || "Failed to process ad hoc upload" });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
